@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 840)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -190,7 +190,7 @@
 	<td class="specification-value">UILabel</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/PSPDFAttributedLabel.html">PSPDFAttributedLabel</a><br />UIGestureRecognizerDelegate</td>
+	<td class="specification-value">PSPDFAttributedLabel<br />UIGestureRecognizerDelegate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFAttributedLabel.h</td>
@@ -210,9 +210,9 @@
 <p>For the most part, <code>PSPDFAttributedLabel</code> behaves just like <code>UILabel</code>. The following are notable exceptions, in which <code>PSPDFAttributedLabel</code> properties may act differently:</p>
 
 <ul>
-<li><code>text</code> &ndash; This property now takes an <code>id</code> type argument, which can either be a kind of <code>NSString</code> or <code>NSAttributedString</code> (mutable or immutable in both cases)</li>
-<li><code>lineBreakMode</code> &ndash; This property displays only the first line when the value is <code>UILineBreakModeHeadTruncation</code>, <code>UILineBreakModeTailTruncation</code>, or <code>UILineBreakModeMiddleTruncation</code></li>
-<li><code>adjustsFontsizeToFitWidth</code> &ndash; This property is effective for any value of <code>numberOfLines</code> greater than zero</li>
+<li><code>text</code> - This property now takes an <code>id</code> type argument, which can either be a kind of <code>NSString</code> or <code>NSAttributedString</code> (mutable or immutable in both cases)</li>
+<li><code>lineBreakMode</code> - This property displays only the first line when the value is <code>UILineBreakModeHeadTruncation</code>, <code>UILineBreakModeTailTruncation</code>, or <code>UILineBreakModeMiddleTruncation</code></li>
+<li><code>adjustsFontsizeToFitWidth</code> - This property is effective for any value of <code>numberOfLines</code> greater than zero</li>
 </ul>
 
 					</div>
@@ -470,7 +470,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@discussion A <code>PSPDFAttributedLabel</code> delegate responds to messages sent by tapping on <a href="#//api/name/links">links</a> in the label. You can use the delegate to respond to <a href="#//api/name/links">links</a> referencing a URL, address, phone number, date, or date with a specified time zone and duration.</p>
+		<p>A <code>PSPDFAttributedLabel</code> delegate responds to messages sent by tapping on <a href="#//api/name/links">links</a> in the label. You can use the delegate to respond to <a href="#//api/name/links">links</a> referencing a URL, address, phone number, date, or date with a specified time zone and duration.</p>
 	</div>
 	
 	
@@ -718,7 +718,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>@discussion The <code>UIEdgeInset</code> members correspond to paragraph style properties rather than a particular geometry, and can change depending on the writing direction.</p>
+		<p>The <code>UIEdgeInset</code> members correspond to paragraph style properties rather than a particular geometry, and can change depending on the writing direction.</p>
 
 <h2><code>UIEdgeInset</code> Member Correspondence With <code>CTParagraphStyleSpecifier</code> Values:</h2>
 
@@ -813,9 +813,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>range</em></dt>
-			<dd><p>The range in the label text of the link. The range must not exceed the bounds of the receiver.</p>
-
-<p>@discussion The address component dictionary keys are described in <code>NSTextCheckingResult</code>&rsquo;s &ldquo;Keys for Address Components.&rdquo;</p></dd>
+			<dd><p>The range in the label text of the link. The range must not exceed the bounds of the receiver.</p></dd>
 		</dl>
 		
 	</div>
@@ -825,6 +823,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The address component dictionary keys are described in <code>NSTextCheckingResult</code>&rsquo;s &ldquo;Keys for Address Components.&rdquo;</p>
+	</div>
 	
 	
 	
@@ -1114,9 +1117,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>text</em></dt>
-			<dd><p>An <code>NSString</code> or <code>NSAttributedString</code> object to be displayed by the label. If the specified text is an <code>NSString</code>, the label will display the text like a <code>UILabel</code>, inheriting the text styles of the label. If the specified text is an <code>NSAttributedString</code>, the label text styles will be overridden by the styles specified in the attributed string.</p>
-
-<p>@discussion This method overrides <code>UILabel -setText:</code> to accept both <code>NSString</code> and <code>NSAttributedString</code> objects. This string is <code>nil</code> by default.</p></dd>
+			<dd><p>An <code>NSString</code> or <code>NSAttributedString</code> object to be displayed by the label. If the specified text is an <code>NSString</code>, the label will display the text like a <code>UILabel</code>, inheriting the text styles of the label. If the specified text is an <code>NSAttributedString</code>, the label text styles will be overridden by the styles specified in the attributed string.</p></dd>
 		</dl>
 		
 	</div>
@@ -1126,6 +1127,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method overrides <code>UILabel -setText:</code> to accept both <code>NSString</code> and <code>NSAttributedString</code> objects. This string is <code>nil</code> by default.</p>
+	</div>
 	
 	
 	
@@ -1165,9 +1171,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>block</em></dt>
-			<dd><p>A block object that returns an <code>NSMutableAttributedString</code> object and takes a single argument, which is an <code>NSMutableAttributedString</code> object with the text from the first parameter, and the text attributes inherited from the label text styles. For example, if you specified the <code>font</code> of the label to be <code>[UIFont boldSystemFontOfSize:14]</code> and <code>textColor</code> to be <code>UIColor.redColor</code>, the <code>NSAttributedString</code> argument of the block would be contain the <code>NSAttributedString</code> attribute equivalents of those properties. In this block, you can set further attributes on particular ranges.</p>
-
-<p>@discussion This string is <code>nil</code> by default.</p></dd>
+			<dd><p>A block object that returns an <code>NSMutableAttributedString</code> object and takes a single argument, which is an <code>NSMutableAttributedString</code> object with the text from the first parameter, and the text attributes inherited from the label text styles. For example, if you specified the <code>font</code> of the label to be <code>[UIFont boldSystemFontOfSize:14]</code> and <code>textColor</code> to be <code>UIColor.redColor</code>, the <code>NSAttributedString</code> argument of the block would be contain the <code>NSAttributedString</code> attribute equivalents of those properties. In this block, you can set further attributes on particular ranges.</p></dd>
 		</dl>
 		
 	</div>
@@ -1177,6 +1181,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This string is <code>nil</code> by default.</p>
+	</div>
 	
 	
 	
@@ -1207,7 +1216,7 @@
 					<div class="footer-copyright">
 						<p><span class="copyright">&copy; 2013 Peter Steinberger. All rights reserved. (Last updated: 2013-08-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

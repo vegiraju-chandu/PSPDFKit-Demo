@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 840)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -343,9 +343,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Thumbnail View">Thumbnail View</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Internal Methods">Internal Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
 </ul></li>
 
@@ -667,7 +667,7 @@
 
 <p>Make sure to correctly use viewController containment when adding this as a child view controller. If you override this class, ensure all UIViewController methods you&rsquo;re using do call super. (e.g. viewWillAppear).</p>
 
-<p>For subclassing, please use <a href="#//api/name/overrideClassNames">overrideClassNames</a> to register your custom subclasses. (Cast the key class to (id) to hide the copy warning &ndash; classes can be copied without a problem)</p>
+<p>For subclassing, please use <a href="#//api/name/overrideClassNames">overrideClassNames</a> to register your custom subclasses. (Cast the key class to (id) to hide the copy warning - classes can be copied without a problem)</p>
 
 <p>The best time for setting the properties is during initialization, in <a href="#//api/name/commonInitWithDocument:">commonInitWithDocument:</a>. Some properties require a call to <a href="#//api/name/reloadData">reloadData</a> if they are changed after the controller has been displayed. Do not set properties during a rotation phase or view appearance (e.g. viewWillAppear is bad, viewDidAppear is ok) since that could corrupt internal state, instead use <a href="#//api/name/updateSettingsForRotation:">updateSettingsForRotation:</a>.</p>
 					</div>
@@ -1284,8 +1284,8 @@ Reloads the view, unless it is set while rotation is active. Thus, one can custo
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fitToWidthEnabled">&nbsp;&nbsp;fitToWidthEnabled</a></code>
-		<span class="tooltip"><p>If true, pages are fit to screen width, not to either height or width (which one is larger &ndash; usually height.) Defaults to NO.
-iPhone switches to yes in willRotateToInterfaceOrientation &ndash; reset back to no if you don&rsquo;t want this.
+		<span class="tooltip"><p>If true, pages are fit to screen width, not to either height or width (which one is larger - usually height.) Defaults to NO.
+iPhone switches to yes in willRotateToInterfaceOrientation - reset back to no if you don&rsquo;t want this.
 fitToWidthEnabled is not supported for vertical scrolling or pageCurl mode. (You might want PSPDFPageScrollContinuousTransition)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -1584,6 +1584,37 @@ If you get effects like the email controller not appearing at all, override this
 						</ul>
 						
 						
+						<a title="Internal Methods" name="task_Internal Methods"></a>
+						<h3 class="subsubtitle task-title">Internal Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calculatedVisiblePageNumbers">&ndash;&nbsp;calculatedVisiblePageNumbers</a></code>
+		<span class="tooltip"><p>Return <a href="#//api/name/page">page</a> numbers that are visible. Only returns the current set <a href="#//api/name/page">page</a> in continuous scroll mode
+Useful to get exact pages for double <a href="#//api/name/page">page</a> mode.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleExternalURL:buttonCompletionBlock:">&ndash;&nbsp;handleExternalURL:buttonCompletionBlock:</a></code>
+		<span class="tooltip"><p>Callback to handle external URLs.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/twoFingerScrollModeEnabled">&nbsp;&nbsp;twoFingerScrollModeEnabled</a></code>
+		<span class="tooltip"><p>Enables two finger scroll mode for the current <a href="#//api/name/page">page</a>.
+Depending on the <a href="#//api/name/pageTransition">pageTransition</a>, this will only allow the current <a href="#//api/name/page">page</a> or all to scroll.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
 						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
 						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
 
@@ -1696,37 +1727,6 @@ bottom of the screen, depending on whether the scrobble bar is enabled. Defaults
 	<span class="tooltip">
 		<code><a href="#//api/name/thumbnailBar">&nbsp;&nbsp;thumbnailBar</a></code>
 		<span class="tooltip"><p>Thumbnail bar. Created lazily. Available if PSPDFThumbnailBarModeScrollable is set.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Internal Methods" name="task_Internal Methods"></a>
-						<h3 class="subsubtitle task-title">Internal Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/calculatedVisiblePageNumbers">&ndash;&nbsp;calculatedVisiblePageNumbers</a></code>
-		<span class="tooltip"><p>Return <a href="#//api/name/page">page</a> numbers that are visible. Only returns the current set <a href="#//api/name/page">page</a> in continuous scroll mode
-Useful to get exact pages for double <a href="#//api/name/page">page</a> mode.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/handleExternalURL:buttonCompletionBlock:">&ndash;&nbsp;handleExternalURL:buttonCompletionBlock:</a></code>
-		<span class="tooltip"><p>Callback to handle external URLs.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/twoFingerScrollModeEnabled">&nbsp;&nbsp;twoFingerScrollModeEnabled</a></code>
-		<span class="tooltip"><p>Enables two finger scroll mode for the current <a href="#//api/name/page">page</a>.
-Depending on the <a href="#//api/name/pageTransition">pageTransition</a>, this will only allow the current <a href="#//api/name/page">page</a> or all to scroll.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -2602,8 +2602,8 @@ Menu can be intercepted and customized with the shouldShowMenuItems:atSuggestedT
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If true, pages are fit to screen width, not to either height or width (which one is larger &ndash; usually height.) Defaults to NO.
-iPhone switches to yes in willRotateToInterfaceOrientation &ndash; reset back to no if you don&rsquo;t want this.
+		<p>If true, pages are fit to screen width, not to either height or width (which one is larger - usually height.) Defaults to NO.
+iPhone switches to yes in willRotateToInterfaceOrientation - reset back to no if you don&rsquo;t want this.
 fitToWidthEnabled is not supported for vertical scrolling or pageCurl mode. (You might want PSPDFPageScrollContinuousTransition)</p>
 	</div>		
 	
@@ -2761,7 +2761,7 @@ Can be useful if you&rsquo;re doing custom drawing on the <a href="../Classes/PS
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> UIKit limits the left toolbar size if space is low in the toolbar, potentially cutting off buttons in those toolbars if the title is also too long. You can either reduce the number of buttons, cut down the text or use a titleView to fix this problem. It also appears that UIKit focuses on the leftToolbar, the right one is cut off much later. This problem only appears on the iPad in portrait mode. You can also use updateSettingsForRotation to adapt the toolbar for portrait/landscape mode.</p></div><div class="note"><p><strong>Note:</strong> If you use any of the provided bar button items in a custom toolbar, make sure to set leftBarButtonItems and <a href="#//api/name/rightBarButtonItems">rightBarButtonItems</a> to nil &ndash; a UIBarButtonItem can only ever have one parent, else some icons might &ldquo;vanish&rdquo; from your toolbar.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> UIKit limits the left toolbar size if space is low in the toolbar, potentially cutting off buttons in those toolbars if the title is also too long. You can either reduce the number of buttons, cut down the text or use a titleView to fix this problem. It also appears that UIKit focuses on the leftToolbar, the right one is cut off much later. This problem only appears on the iPad in portrait mode. You can also use updateSettingsForRotation to adapt the toolbar for portrait/landscape mode.</p></div><div class="note"><p><strong>Note:</strong> If you use any of the provided bar button items in a custom toolbar, make sure to set leftBarButtonItems and <a href="#//api/name/rightBarButtonItems">rightBarButtonItems</a> to nil - a UIBarButtonItem can only ever have one parent, else some icons might &ldquo;vanish&rdquo; from your toolbar.</p></div>
 	</div>
 	
 	
@@ -3756,7 +3756,7 @@ Defaults to @[self.<a href="#//api/name/searchButtonItem">searchButtonItem</a>, 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> If you use any of the provided bar button items in a custom toolbar, make sure to set <a href="#//api/name/leftBarButtonItems">leftBarButtonItems</a> and rightBarButtonItems to nil &ndash; a UIBarButtonItem can only ever have one parent, else some icons might &ldquo;vanish&rdquo; from your toolbar.</p></div>
+		<div class="note"><p><strong>Note:</strong> If you use any of the provided bar button items in a custom toolbar, make sure to set <a href="#//api/name/leftBarButtonItems">leftBarButtonItems</a> and rightBarButtonItems to nil - a UIBarButtonItem can only ever have one parent, else some icons might &ldquo;vanish&rdquo; from your toolbar.</p></div>
 	</div>
 	
 	
@@ -6347,7 +6347,7 @@ The default implementation calls the block set in setUpdateSettingsForRotationBl
 					<div class="footer-copyright">
 						<p><span class="copyright">&copy; 2013 Peter Steinberger. All rights reserved. (Last updated: 2013-08-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

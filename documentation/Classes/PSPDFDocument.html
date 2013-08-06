@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 840)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -603,7 +603,7 @@ Documents fully support copy or serialization.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/documentWithBaseURL:fileTemplate:startPage:endPage:">+&nbsp;documentWithBaseURL:fileTemplate:startPage:endPage:</a></code>
-		<span class="tooltip"><p>If you have <a href="#//api/name/files">files</a> that have the pattern XXX_Page_0001 &ndash; XXX_Page_0200 use this initializer.
+		<span class="tooltip"><p>If you have <a href="#//api/name/files">files</a> that have the pattern XXX_Page_0001 - XXX_Page_0200 use this initializer.
 fileTemplate needs to have exactly one &lsquo;%d&rsquo; marker where the page should be.
 For leading zeros, use the default printf syntax. (%04d = 0001)</p></span>
 	</span>
@@ -1312,7 +1312,7 @@ e.g. add an entry of <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnota
 	<span class="tooltip">
 		<code><a href="#//api/name/didCreateDocumentProvider:">&ndash;&nbsp;didCreateDocumentProvider:</a></code>
 		<span class="tooltip"><p>Hook to modify/return a different <a href="#//api/name/document">document</a> provider. Called each time a documentProvider is created (which is usually on first access, and cached afterwards)
-During PSPDFDocument lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
+During PS<a href="#//api/name/PDFDocument">PDFDocument</a> lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
 This might be used to change the <a href="#//api/name/delegate">delegate</a> of the <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a>.</p></span>
 	</span>
 	
@@ -2247,7 +2247,7 @@ Set this to an empty set to disable annotation editing/creation.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Defaults to all available STRING constants (PSPDFAnnotationTypeStringHighlight, PSPDFAnnotationTypeStringInk, etc).</p>
 
-<p>Since PSPDFKit 2.8, this now is an ordered set &ndash; the order will change the button order in the toolbar and the page menu.</p><div class="warning"><p><strong>Warning:</strong> Some annotation types are only behaviorally different in PSPDFKit but are mapped to basic annotation types, so adding those will only change the creation of those types, not editing. Example: If you add PSPDFAnnotationTypeStringInk but not PSPDFAnnotationTypeStringSignature, signatures added in previous session will still be editable (since they are Ink annotations). On the other hand, if you set PSPDFAnnotationTypeStringSignature but not PSPDFAnnotationTypeStringInk, then your newly created signatures will not be movable. See <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a>.h for comments</p></div>
+<p>Since PSPDFKit 2.8, this now is an ordered set - the order will change the button order in the toolbar and the page menu.</p><div class="warning"><p><strong>Warning:</strong> Some annotation types are only behaviorally different in PSPDFKit but are mapped to basic annotation types, so adding those will only change the creation of those types, not editing. Example: If you add PSPDFAnnotationTypeStringInk but not PSPDFAnnotationTypeStringSignature, signatures added in previous session will still be editable (since they are Ink annotations). On the other hand, if you set PSPDFAnnotationTypeStringSignature but not PSPDFAnnotationTypeStringInk, then your newly created signatures will not be movable. See <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a>.h for comments</p></div>
 	</div>
 	
 	
@@ -3011,7 +3011,7 @@ Might need file operations to parse the <a href="#//api/name/document">document<
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If you have <a href="#//api/name/files">files</a> that have the pattern XXX_Page_0001 &ndash; XXX_Page_0200 use this initializer.
+		<p>If you have <a href="#//api/name/files">files</a> that have the pattern XXX_Page_0001 - XXX_Page_0200 use this initializer.
 fileTemplate needs to have exactly one &lsquo;%d&rsquo; marker where the page should be.
 For leading zeros, use the default printf syntax. (%04d = 0001)</p>
 	</div>		
@@ -3746,7 +3746,7 @@ To analyze the whole <a href="#//api/name/document">document</a>, use [NSIndexSe
 	
 	<div class="method-subsection brief-description">
 		<p>Hook to modify/return a different <a href="#//api/name/document">document</a> provider. Called each time a documentProvider is created (which is usually on first access, and cached afterwards)
-During PSPDFDocument lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
+During PS<a href="#//api/name/PDFDocument">PDFDocument</a> lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
 This might be used to change the <a href="#//api/name/delegate">delegate</a> of the <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a>.</p>
 	</div>		
 	
@@ -5032,7 +5032,7 @@ This doesn&rsquo;t harm if the <a href="#//api/name/document">document</a> is al
 					<div class="footer-copyright">
 						<p><span class="copyright">&copy; 2013 Peter Steinberger. All rights reserved. (Last updated: 2013-08-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>

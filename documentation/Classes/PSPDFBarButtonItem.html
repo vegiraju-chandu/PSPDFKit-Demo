@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 840)" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -202,7 +202,7 @@
 
 <p>Call updateBarButtonItem:animated: if you need to change tie image/customView/systemImage after the barButton has been displayed.</p>
 
-<p>Do not change target/selector &ndash; if the case of UIActionSheet/moreButton we call target/selector of the selected barButtonItem but with the sender argument of the <a href="../Classes/PSPDFMoreBarButtonItem.html">PSPDFMoreBarButtonItem</a>. This is needed to get the correct coordinates in case a UIPopoverController follows (which will originate from that moreBarButtonItem). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p>
+<p>Do not change target/selector - if the case of UIActionSheet/moreButton we call target/selector of the selected barButtonItem but with the sender argument of the <a href="../Classes/PSPDFMoreBarButtonItem.html">PSPDFMoreBarButtonItem</a>. This is needed to get the correct coordinates in case a UIPopoverController follows (which will originate from that moreBarButtonItem). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p>
 					</div>
 					
 					
@@ -249,7 +249,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/systemItem">&ndash;&nbsp;systemItem</a></code>
-		<span class="tooltip"><p>Defaults to (UIBarButtonSystemItem)-1. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the <a href="../Classes/PSPDFSearchBarButtonItem.html">PSPDFSearchBarButtonItem</a> class, register it at overrideClassNames, return (UIBarButtonSystemItem)-1 here and implement image/<a href="#//api/name/landscapeImagePhone">landscapeImagePhone</a>.</p></span>
+		<span class="tooltip"><p>Defaults to (UIBarButtonSystemItem)-1. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the PSPDFSearchBarButtonItem class, register it at overrideClassNames, return (UIBarButtonSystemItem)-1 here and implement image/<a href="#//api/name/landscapeImagePhone">landscapeImagePhone</a>.</p></span>
 	</span>
 	
 	
@@ -327,7 +327,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/popoverControllerForObject:">+&nbsp;popoverControllerForObject:</a></code>
-		<span class="tooltip"><p>Peeks into certain Apple classes to get the internal UIPopoverController. (e.g. UIPrintInteractionController. I&rsquo;ve written rdars to allow access to the internal popoverController &ndash; but this is the best way in the mean time)</p></span>
+		<span class="tooltip"><p>Peeks into certain Apple classes to get the internal UIPopoverController. (e.g. UIPrintInteractionController. I&rsquo;ve written rdars to allow access to the internal popoverController - but this is the best way in the mean time)</p></span>
 	</span>
 	
 	
@@ -441,7 +441,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Peeks into certain Apple classes to get the internal UIPopoverController. (e.g. UIPrintInteractionController. I&rsquo;ve written rdars to allow access to the internal popoverController &ndash; but this is the best way in the mean time)</p>
+		<p>Peeks into certain Apple classes to get the internal UIPopoverController. (e.g. UIPrintInteractionController. I&rsquo;ve written rdars to allow access to the internal popoverController - but this is the best way in the mean time)</p>
 	</div>		
 	
 	
@@ -907,7 +907,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Defaults to (UIBarButtonSystemItem)-1. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the <a href="../Classes/PSPDFSearchBarButtonItem.html">PSPDFSearchBarButtonItem</a> class, register it at overrideClassNames, return (UIBarButtonSystemItem)-1 here and implement image/<a href="#//api/name/landscapeImagePhone">landscapeImagePhone</a>.</p>
+		<p>Defaults to (UIBarButtonSystemItem)-1. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the PSPDFSearchBarButtonItem class, register it at overrideClassNames, return (UIBarButtonSystemItem)-1 here and implement image/<a href="#//api/name/landscapeImagePhone">landscapeImagePhone</a>.</p>
 	</div>		
 	
 	
@@ -985,7 +985,7 @@ Defaults to enabled, as long as a document is set and valid on pdfViewController
 					<div class="footer-copyright">
 						<p><span class="copyright">&copy; 2013 Peter Steinberger. All rights reserved. (Last updated: 2013-08-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
 					</div>
 				</div>
