@@ -72,8 +72,10 @@ documentation: current-menu-item current_page_item
 	<div id="localization" class="col-full section">
 	  <h2 class="section-title">Localization</h2>
 	  <p>The PSPDFKit.bundle file contains localization for german, english, french, italian and spanish. You can either add further localization via adding the corresponding folders, or (the preferred way) set new localization programmatically.<br>(Set before displaying PSPDFViewController, your AppDelegate is a good place)</p><br>
-	  <p>To see all strings that should be localized, look inside PSPDFKit/PSPDFKit.bundle/en.lproj/PSPDFKit.strings. PSPDFKit uses [NSLocale preferredLanguages] to determine the language and falls back to english if this method doesn't return anything or the language is not available either in the PSPDFKit.bundle or the language dictionary. PSPDFKit will NOT look into your default project strings file. To get all strings translated (including OS-level default buttons like "Edit" or "Done") you need to add a Localizable.strings file of your target language to your project.</p>
+	  <p>To see all strings that should be localized, look inside PSPDFKit/PSPDFKit.bundle/en.lproj/PSPDFKit.strings. PSPDFKit uses <pre>NSLocale.preferredLanguages</pre> to determine the language and falls back to english if this method doesn't return anything or the language is not available either in the PSPDFKit.bundle or the language dictionary. PSPDFKit will NOT look into your default project strings file. To get all strings translated (including OS-level default buttons like "Edit" or "Done") you need to add a Localizable.strings file of your target language to your project.</p>
 	<script src="https://gist.github.com/1409651.js"> </script>
+	<p>As a further option, you can also use <pre>PSPDFSetLocalizationBlock(NSString *(^)(NSString *stringToLocalize))</pre> to register a block that is called every time a string is translated. This way you can easily use your default bundle or a custom bundle with using <pre>NSLocalizedStringFromTableInBundle</pre>
+	<script src="https://gist.github.com/steipete/6357231.js"></script>
 	</div>
 
 	<div id="multimedia-features" class="col-full section">
