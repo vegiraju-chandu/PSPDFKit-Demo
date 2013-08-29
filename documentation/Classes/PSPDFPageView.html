@@ -213,9 +213,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationMenu Methods">AnnotationMenu Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationViews Methods">AnnotationViews Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationMenu Methods">AnnotationMenu Methods</a></span></li>
 	
 </ul></li>
 
@@ -844,6 +844,50 @@ Return nil if you don&rsquo;t show the actionSheet, or return the object you&rsq
 						</ul>
 						
 						
+						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
+						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedAnnotation">&nbsp;&nbsp;selectedAnnotation</a></code>
+		<span class="tooltip"><p>Currently selected annotation (selected by a tap; showing a menu)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
+		<span class="tooltip"><p>Hit-testing for a single PSPDFPage. This is usually a relayed event from the parent <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a>.
+Returns YES if the tap has been handled, else NO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
+		<span class="tooltip"><p>Handle long press, potentially relay to subviews.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
+		<span class="tooltip"><p>In PSPDFKit, annotations are managed in two ways:</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
+		<span class="tooltip"><p>Remove an annotation from the view.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="AnnotationMenu Methods" name="task_AnnotationMenu Methods"></a>
 						<h3 class="subsubtitle task-title">AnnotationMenu Methods</h3>
 
@@ -947,50 +991,6 @@ This will usually call menuItemsForAnnotation to show a UIMenuController, except
 		<code><a href="#//api/name/passthroughViewsForPopoverController">&ndash;&nbsp;passthroughViewsForPopoverController</a></code>
 		<span class="tooltip"><p>Returns the passthrough views for the popover controllers (e.g. color picker).
 By default this is fairly aggressive and returns the pdfController/navController. If you dislike this behavior return nil to enforce the rule first touch after popover = no reaction. However the passthroughViews allow a faster editing of annotations.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
-						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/selectedAnnotation">&nbsp;&nbsp;selectedAnnotation</a></code>
-		<span class="tooltip"><p>Currently selected annotation (selected by a tap; showing a menu)</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
-		<span class="tooltip"><p>Hit-testing for a single PSPDFPage. This is usually a relayed event from the parent <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a>.
-Returns YES if the tap has been handled, else NO.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
-		<span class="tooltip"><p>Handle long press, potentially relay to subviews.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
-		<span class="tooltip"><p>In PSPDFKit, annotations are managed in two ways:</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
-		<span class="tooltip"><p>Remove an annotation from the view.</p></span>
 	</span>
 	
 	
@@ -3447,7 +3447,7 @@ The point will have a variance of a few pixels to improve touch recognition.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-08-06)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-08-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
