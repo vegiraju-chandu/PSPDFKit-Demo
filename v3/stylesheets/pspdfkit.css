@@ -88,7 +88,9 @@ nav.sub {
         font-size: 16px;
         line-height: 40px;
         text-decoration: none;
-        color: #fff; }
+        color: #fff;
+        font-family: "Gotham";
+        font-weight: 300; }
         nav.sub ul li a:hover {
           background-color: rgba(14, 108, 174, 0.5); }
         nav.sub ul li a:active {
@@ -183,7 +185,7 @@ body.frontpage section.clients {
 body.frontpage section.apps {
   position: relative;
   min-height: 360px;
-  padding-top: 1px; }
+  padding: 1px 0 40px 0; }
   body.frontpage section.apps a {
     color: #7e8992;
     text-decoration: none; }
@@ -306,6 +308,94 @@ body.references section.case-studies {
         top: 680px; }
       body.references section.case-studies .aw__slideshow__scroller .aw__slideshow__container h2 {
         text-align: left; }
+body.references section.apps {
+  position: relative;
+  min-height: 360px;
+  padding: 100px 0 40px 0; }
+  body.references section.apps a {
+    color: #7e8992;
+    text-decoration: none; }
+  body.references section.apps .appgrid {
+    *zoom: 1;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px 0 20px 0; }
+    body.references section.apps .appgrid:before, body.references section.apps .appgrid:after {
+      content: " ";
+      display: table; }
+    body.references section.apps .appgrid:after {
+      clear: both; }
+    body.references section.apps .appgrid .app {
+      width: 80px;
+      height: 120px;
+      margin: 0 10px 40px 10px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: text-top; }
+      body.references section.apps .appgrid .app img {
+        display: block;
+        width: 64px;
+        height: auto;
+        margin: 0 auto; }
+      body.references section.apps .appgrid .app p {
+        margin-top: 10px;
+        color: #334450;
+        font-size: 13px;
+        line-height: 14px;
+        font-family: "Gotham";
+        font-weight: 300; }
+      body.references section.apps .appgrid .app small {
+        color: #7e8992;
+        font-size: 11px;
+        line-height: 14px; }
+  body.references section.apps .footer.link {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    opacity: 0.25; }
+    body.references section.apps .footer.link:hover {
+      opacity: 1.0; }
+body.references section.companies-using-pspdfkit {
+  display: block;
+  padding: 100px 0 40px 0; }
+  body.references section.companies-using-pspdfkit ul.companies-list {
+    *zoom: 1;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em; }
+    body.references section.companies-using-pspdfkit ul.companies-list:before, body.references section.companies-using-pspdfkit ul.companies-list:after {
+      content: " ";
+      display: table; }
+    body.references section.companies-using-pspdfkit ul.companies-list:after {
+      clear: both; }
+    body.references section.companies-using-pspdfkit ul.companies-list li {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-bottom: 1em; }
+      body.references section.companies-using-pspdfkit ul.companies-list li:last-child {
+        margin-right: 0; }
+      body.references section.companies-using-pspdfkit ul.companies-list li:nth-child(3n+0) {
+        margin-right: 0; }
+      body.references section.companies-using-pspdfkit ul.companies-list li a {
+        display: block;
+        text-decoration: none;
+        color: #085075;
+        font-family: "Gotham";
+        font-weight: 300;
+        font-size: 18px; }
+        body.references section.companies-using-pspdfkit ul.companies-list li a:hover {
+          color: #0c81c7; }
+      body.references section.companies-using-pspdfkit ul.companies-list li small {
+        color: #7e8992;
+        font-size: 11px;
+        line-height: 14px; }
 
 body.purchase section.products {
   width: 100%;

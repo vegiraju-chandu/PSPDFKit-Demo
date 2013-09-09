@@ -1,0 +1,98 @@
+/* line 1, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+.aw__slideshow__scroller {
+  position: relative; }
+  /* line 4, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+  .aw__slideshow__scroller .aw__slideshow__container {
+    position: relative; }
+    /* line 7, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+    .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__items {
+      position: relative;
+      clear: both;
+      z-index: 1;
+      transition: left 0.3s; }
+      /* line 12, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+      .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__items > * {
+        transition: opacity 0.5s; }
+    /* line 16, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+    .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation {
+      position: relative;
+      z-index: 2; }
+      /* line 20, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+      .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-left {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 80px;
+        height: 80px;
+        background: transparent url("aw_gallery_scroller-arrows.png") no-repeat 0px 0px;
+        background-size: 480px 80px;
+        cursor: pointer; }
+        /* line 30, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-left:hover {
+          background-position: -80px 0px; }
+        /* line 33, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-left:active {
+          background-position: -160px 0px; }
+      /* line 37, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+      .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-right {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 80px;
+        height: 80px;
+        background: transparent url("aw_gallery_scroller-arrows.png") no-repeat -240px 0px;
+        background-size: 480px 80px;
+        cursor: pointer; }
+        /* line 47, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-right:hover {
+          background-position: -320px 0px; }
+        /* line 50, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__navigation .aw__slideshow__look-right:active {
+          background-position: -400px 0px; }
+    /* line 55, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+    .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 20px;
+      z-index: 2;
+      text-align: center;
+      box-align: center; }
+      /* line 63, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+      .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator {
+        position: relative;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer; }
+        /* line 73, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator:hover {
+          background: #fff;
+          border-color: #0893da; }
+        /* line 77, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator:active {
+          background: #ccc; }
+      /* line 81, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+      .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator_active {
+        position: relative;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid #0972a8;
+        background: #0893da;
+        border-radius: 6px;
+        cursor: pointer; }
+        /* line 92, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator_active:hover {
+          background: #0893da; }
+        /* line 95, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/aw_slideshow.scss */
+        .aw__slideshow__scroller .aw__slideshow__container .aw__slideshow__pagination-indicators .aw__pagination__indicator_active:active {
+          background: #0893da; }
