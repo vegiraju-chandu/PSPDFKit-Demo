@@ -1,0 +1,42 @@
+body.features { 
+  
+  section.viewing-pdfs {
+    padding-top: 120px;
+
+  }
+
+  section.annotating-pdfs {
+    padding-top: 80px;
+
+  }
+  section.working-with-content {
+    padding-top: 80px;
+
+  }
+
+  section.and-more {
+    overflow: hidden;
+    padding: 20px 0 40px 0;
+
+    .container {
+      @include outer-container;
+    }
+  }
+
+  section.info {
+    width: 100%;
+    padding-top: 400px;
+
+    .container {
+      @include outer-container;
+      
+      .row {
+        @include row();
+      }
+    }
+  }  
+
+}
+
+
+

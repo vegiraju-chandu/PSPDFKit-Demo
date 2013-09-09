@@ -1,0 +1,52 @@
+body.references { 
+  
+  section.case-studies {
+    padding-top: 120px;
+    height: 1280px;
+
+    .aw__slideshow__scroller {
+      background: transparent url("/images/references/case-study-bg.png") repeat-x;
+      .aw__slideshow__container {
+        @include outer-container;
+        
+        .aw__slideshow__items {
+          .description {
+            opacity: 0.001;
+            transition: opacity 0.75s;
+          }
+        }
+
+        .aw__slideshow__navigation {
+          .aw__slideshow__look-left {
+            top:300px;
+            left: -40px;
+            border-radius: 7px;
+            &:active {
+              background-color: rgba(0,0,0,0.05);
+            }
+          }
+          .aw__slideshow__look-right {
+            top: 300px;
+            right: -40px;
+            border-radius: 7px;
+            &:active {
+              background-color: rgba(0,0,0,0.05);
+            }
+          }
+        }
+
+        .aw__slideshow__pagination-indicators {
+          position: absolute;
+          top: 680px;
+        }
+        h2 {
+          text-align: left;
+        }
+      }
+    }
+
+  }
+}
+
+
+

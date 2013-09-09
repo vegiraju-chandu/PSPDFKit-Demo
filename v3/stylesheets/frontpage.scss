@@ -1,0 +1,128 @@
+body.frontpage {
+
+  section.hero {
+    width: 100%;
+    height: 800px;
+    padding-top: 80px;
+    @include linear-gradient(50deg, #0173bc 0%, #27a9e8 100%, $fallback: $pspdfkitblue);
+
+    .container {
+      @include outer-container;
+
+      h1 { color: #fff; }
+    }
+
+  }  
+
+  section.why {
+    width: 100%;
+    padding-bottom: 20px;
+    
+    .container {
+      @include outer-container;
+      
+      .row {
+        @include row();
+      }
+    }
+  }  
+
+  section.clients {
+    position: relative;
+    min-height: 360px;
+    padding: 1px 0 40px 0;
+    @include linear-gradient(50deg, #0173bc 0%, #27a9e8 100%, $fallback: $pspdfkitblue);
+
+    color: #fff;
+    h1 { 
+      color: #fff;
+    }
+    a { 
+      color: #bdebfd; 
+      text-decoration: none;
+    }
+    .testimonials {
+      @include outer-container;
+      clear: both;
+      blockquote {
+        padding: 0 10%;
+        margin-bottom: 20px;
+        p {
+          color: #fff;
+        }
+        footer {
+          text-align: right;
+          color: #bdebfd;
+        }
+      }
+    }
+    .footer.link {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      opacity: 0.25;
+      &:hover {
+        opacity: 1.0;
+      }
+    }
+  }
+
+  section.apps {
+    position: relative;
+    min-height: 360px;
+    padding-top: 1px;
+
+    a { 
+      color: #7e8992;
+      text-decoration: none;
+    }
+    .appgrid {
+      @include outer-container;
+      text-align: center;
+      padding-bottom: 20px;
+
+      .app {
+        width: 150px;
+        height: 200px;
+        margin: 0 10px 40px 10px;
+        display: inline-block;
+        text-align: center;
+        vertical-align:text-top;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+        p {
+          margin-top: 10px;
+          color: #334450;
+          font-size: 18px;
+          line-height: 24px;
+          font-family: "Gotham";
+          font-weight: 300;
+        }
+        small {
+          color: #7e8992;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+    .footer.link {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      opacity: 0.25;
+      &:hover {
+        opacity: 1.0;
+      }
+    }
+  }
+}
+
+
+
