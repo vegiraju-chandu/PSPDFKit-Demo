@@ -1,0 +1,1393 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PSPDFAnnotationToolbar Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PSPDFKit </a></h1>
+				<a id="developerHome" href="../index.html">PSPDFKit GmbH</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PSPDFAnnotationToolbar Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/additionalBarButtonItems">&nbsp;&nbsp;&nbsp;&nbsp;additionalBarButtonItems</option>
+	
+	<option value="//api/name/annotationGroups">&nbsp;&nbsp;&nbsp;&nbsp;annotationGroups</option>
+	
+	<option value="//api/name/annotationToolbarDelegate">&nbsp;&nbsp;&nbsp;&nbsp;annotationToolbarDelegate</option>
+	
+	<option value="//api/name/combineInk">&nbsp;&nbsp;&nbsp;&nbsp;combineInk</option>
+	
+	<option value="//api/name/drawColor">&nbsp;&nbsp;&nbsp;&nbsp;drawColor</option>
+	
+	<option value="//api/name/fadeToolbar">&nbsp;&nbsp;&nbsp;&nbsp;fadeToolbar</option>
+	
+	<option value="//api/name/fillColor">&nbsp;&nbsp;&nbsp;&nbsp;fillColor</option>
+	
+	<option value="//api/name/fontName">&nbsp;&nbsp;&nbsp;&nbsp;fontName</option>
+	
+	<option value="//api/name/fontSize">&nbsp;&nbsp;&nbsp;&nbsp;fontSize</option>
+	
+	<option value="//api/name/hideAfterDrawingDidFinish">&nbsp;&nbsp;&nbsp;&nbsp;hideAfterDrawingDidFinish</option>
+	
+	<option value="//api/name/lineEnd1">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd1</option>
+	
+	<option value="//api/name/lineEnd2">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd2</option>
+	
+	<option value="//api/name/lineWidth">&nbsp;&nbsp;&nbsp;&nbsp;lineWidth</option>
+	
+	<option value="//api/name/pdfController">&nbsp;&nbsp;&nbsp;&nbsp;pdfController</option>
+	
+	<option value="//api/name/saveAfterToolbarHiding">&nbsp;&nbsp;&nbsp;&nbsp;saveAfterToolbarHiding</option>
+	
+	<option value="//api/name/slideToolbar">&nbsp;&nbsp;&nbsp;&nbsp;slideToolbar</option>
+	
+	<option value="//api/name/textAlignment">&nbsp;&nbsp;&nbsp;&nbsp;textAlignment</option>
+	
+	<option value="//api/name/toolbarMode">&nbsp;&nbsp;&nbsp;&nbsp;toolbarMode</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/allowedButtonCount">&nbsp;&nbsp;&nbsp;&nbsp;- allowedButtonCount</option>
+	
+	<option value="//api/name/flashToolbar">&nbsp;&nbsp;&nbsp;&nbsp;- flashToolbar</option>
+	
+	<option value="//api/name/hideToolbarAnimated:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- hideToolbarAnimated:completion:</option>
+	
+	<option value="//api/name/initWithPDFController:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithPDFController:</option>
+	
+	<option value="//api/name/showToolbarInRect:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- showToolbarInRect:animated:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/additionalBarButtonItems">additionalBarButtonItems</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationGroups">annotationGroups</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbarDelegate">annotationToolbarDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/combineInk">combineInk</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawColor">drawColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fadeToolbar">fadeToolbar</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fillColor">fillColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontName">fontName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontSize">fontSize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hideAfterDrawingDidFinish">hideAfterDrawingDidFinish</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd1">lineEnd1</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd2">lineEnd2</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineWidth">lineWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfController">pdfController</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAfterToolbarHiding">saveAfterToolbarHiding</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/slideToolbar">slideToolbar</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textAlignment">textAlignment</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toolbarMode">toolbarMode</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowedButtonCount">allowedButtonCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/flashToolbar">flashToolbar</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hideToolbarAnimated:completion:">hideToolbarAnimated:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithPDFController:">initWithPDFController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showToolbarInRect:animated:">showToolbarInRect:animated:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PSPDFAnnotationToolbar Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PSPDFAnnotationToolbar Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIToolbar</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/PSPDFDrawViewDelegate.html">PSPDFDrawViewDelegate</a><br /><a href="../Protocols/PSPDFSelectionViewDelegate.html">PSPDFSelectionViewDelegate</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PSPDFAnnotationToolbar.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The annotation toolbar allows creation of most annotation types supported by PSPDFKit.</p><div class="note"><p><strong>Note:</strong> This class does a lot of state management, so you might also just use it in a headless state calling down to the various action methods expoxed in the SubclassingHooks category.
+To customize which annotation icons should be displayed, edit <code>editableAnnotationTypes</code> in <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a>.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithPDFController:">&ndash;&nbsp;initWithPDFController:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showToolbarInRect:animated:">&ndash;&nbsp;showToolbarInRect:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hideToolbarAnimated:completion:">&ndash;&nbsp;hideToolbarAnimated:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/flashToolbar">&ndash;&nbsp;flashToolbar</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationToolbarDelegate">&nbsp;&nbsp;annotationToolbarDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pdfController">&nbsp;&nbsp;pdfController</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/toolbarMode">&nbsp;&nbsp;toolbarMode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawColor">&nbsp;&nbsp;drawColor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd1">&nbsp;&nbsp;lineEnd1</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd2">&nbsp;&nbsp;lineEnd2</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fontName">&nbsp;&nbsp;fontName</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fontSize">&nbsp;&nbsp;fontSize</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textAlignment">&nbsp;&nbsp;textAlignment</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hideAfterDrawingDidFinish">&nbsp;&nbsp;hideAfterDrawingDidFinish</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveAfterToolbarHiding">&nbsp;&nbsp;saveAfterToolbarHiding</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fadeToolbar">&nbsp;&nbsp;fadeToolbar</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/slideToolbar">&nbsp;&nbsp;slideToolbar</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/combineInk">&nbsp;&nbsp;combineInk</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationGroups">&nbsp;&nbsp;annotationGroups</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/additionalBarButtonItems">&nbsp;&nbsp;additionalBarButtonItems</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allowedButtonCount">&ndash;&nbsp;allowedButtonCount</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/additionalBarButtonItems" title="additionalBarButtonItems"></a>
+	<h3 class="subsubtitle method-title">additionalBarButtonItems</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows custom <code>UIBarButtonItem</code> objects to be added after the buttons in <a href="#//api/name/annotationGroups"><code>annotationGroups</code></a>. Defaults to nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *additionalBarButtonItems</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Do not insert space objects - this is managed by PSPDFKit.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationGroups" title="annotationGroups"></a>
+	<h3 class="subsubtitle method-title">annotationGroups</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Annotations are grouped by default. Set to nil to disable grouping.
+Groups are defined as dictionaries containing arrays of editableAnnotationType-objects, paired with an index indicating the current choice within each array.
+Annotation types that are defined in the group but are missing in the <a href="#//api/name/editableAnnotationTypes"><code>editableAnnotationTypes</code></a> will be ignored silently.
+Use <code>PSPDFAnnotationGroupKeyChoice</code> and <code>PSPDFAnnotationGroupKeyGroup</code> as constants to configure the array.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *annotationGroups</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationToolbarDelegate" title="annotationToolbarDelegate"></a>
+	<h3 class="subsubtitle method-title">annotationToolbarDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Annotation toolbar delegate. (Can be freely set to any receiver)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) IBOutlet id&lt;PSPDFAnnotationToolbarDelegate&gt; annotationToolbarDelegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/combineInk" title="combineInk"></a>
+	<h3 class="subsubtitle method-title">combineInk</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Advanced property that allows you to customize how ink annotations are created.
+Set to NO to cause separate ink drawings in the same drawing session to result in separate ink annotations. Defaults to YES.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL combineInk</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawColor" title="drawColor"></a>
+	<h3 class="subsubtitle method-title">drawColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default/current drawing color (PSPDFAnnotationToolbarModeDraw, PSPDFAnnotationToolbarModeRectangle, PSPDFAnnotationToolbarModeEllipse, PSPDFAnnotationToolbarModeLine, PSPDFAnnotationToolbarModePolygon, PSPDFAnnotationToolbarModePolyLine).
+Defaults to [UIColor colorWithRed:0.121f green:0.35f blue:1.f alpha:1.f]</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *drawColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> PSPDFKit will save the last used drawing color in the NSUserDefaults.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fadeToolbar" title="fadeToolbar"></a>
+	<h3 class="subsubtitle method-title">fadeToolbar</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enable to cause the toolbar to fade in and out. Defaults to YES.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL fadeToolbar</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="subsubtitle method-title">fillColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default/current fill color (PSPDFAnnotationToolbarModeDraw, PSPDFAnnotationToolbarModeRectangle, PSPDFAnnotationToolbarModeEllipse, PSPDFAnnotationToolbarModeLine, PSPDFAnnotationToolbarModePolygon, PSPDFAnnotationToolbarModePolyLine).
+Defaults to nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *fillColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> PSPDFKit will save the last used fill color in the NSUserDefaults.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fontName" title="fontName"></a>
+	<h3 class="subsubtitle method-title">fontName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Font name for free text annotations.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *fontName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fontSize" title="fontSize"></a>
+	<h3 class="subsubtitle method-title">fontSize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Font size for free text annotations.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat fontSize</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hideAfterDrawingDidFinish" title="hideAfterDrawingDidFinish"></a>
+	<h3 class="subsubtitle method-title">hideAfterDrawingDidFinish</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enable to auto-hide toolbar after drawing finishes. Defaults to NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL hideAfterDrawingDidFinish</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineEnd1" title="lineEnd1"></a>
+	<h3 class="subsubtitle method-title">lineEnd1</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starting line end type for lines and polylines.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd1</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineEnd2" title="lineEnd2"></a>
+	<h3 class="subsubtitle method-title">lineEnd2</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ending line end type for lines and polylines.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd2</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="subsubtitle method-title">lineWidth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Current drawing line width. Defaults to 3.f</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat lineWidth</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pdfController" title="pdfController"></a>
+	<h3 class="subsubtitle method-title">pdfController</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attached pdfController.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFViewController *pdfController</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> If you update alertViewTintColor, barStyle, etc - this needs to be set again to re-capture changed states.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveAfterToolbarHiding" title="saveAfterToolbarHiding"></a>
+	<h3 class="subsubtitle method-title">saveAfterToolbarHiding</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This will issue a save event after the toolbar has been dismissed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL saveAfterToolbarHiding</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Since saving can take some time, this defaults to NO.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/slideToolbar" title="slideToolbar"></a>
+	<h3 class="subsubtitle method-title">slideToolbar</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enable to cause the toolbar to slide into place. Defaults to YES.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL slideToolbar</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Only effective if <a href="#//api/name/fadeToolbar">fadeToolbar</a> is set to YES.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/textAlignment" title="textAlignment"></a>
+	<h3 class="subsubtitle method-title">textAlignment</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Text alignment for free text annotations.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSTextAlignment textAlignment</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/toolbarMode" title="toolbarMode"></a>
+	<h3 class="subsubtitle method-title">toolbarMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Active annotation toolbar mode. Mode is an annotation type, e.g. PSPDFAnnotationStringHighlight.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *toolbarMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Setting a toolbar mode will temporarily disable the long press gesture recognizer on the <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a> to disable the new annotation menu.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/allowedButtonCount" title="allowedButtonCount"></a>
+	<h3 class="subsubtitle method-title">allowedButtonCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the number of buttons allowed in the toolbar.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)allowedButtonCount</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/flashToolbar" title="flashToolbar"></a>
+	<h3 class="subsubtitle method-title">flashToolbar</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flashes the toolbar red (e.g. if user tries to hide the HUD.)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)flashToolbar</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hideToolbarAnimated:completion:" title="hideToolbarAnimated:completion:"></a>
+	<h3 class="subsubtitle method-title">hideToolbarAnimated:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Hide the toolbar.
+You need to manually remove the toolbar from the view in the completion block, if the finished parameter is set to YES.
+This is just to get the animation right.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)hideToolbarAnimated:(BOOL)<em>animated</em> completion:(void ( ^ ) ( BOOL finished ))<em>completionBlock</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This will restore the HUDViewMode that was set when <a href="#//api/name/showToolbarInRect:animated:">showToolbarInRect:animated:</a> has been called.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithPDFController:" title="initWithPDFController:"></a>
+	<h3 class="subsubtitle method-title">initWithPDFController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithPDFController:(PSPDFViewController *)<em>pdfController</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showToolbarInRect:animated:" title="showToolbarInRect:animated:"></a>
+	<h3 class="subsubtitle method-title">showToolbarInRect:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Show the toolbar in target rect. Rect should be the same height as the toolbar. (44px)
+You need to manually add the toolbar to the view. This is just to get the animation right.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)showToolbarInRect:(CGRect)<em>rect</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

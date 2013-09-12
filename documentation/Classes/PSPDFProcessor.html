@@ -1,0 +1,635 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PSPDFProcessor Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PSPDFKit </a></h1>
+				<a id="developerHome" href="../index.html">PSPDFKit GmbH</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PSPDFProcessor Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/conversionOperationQueue">&nbsp;&nbsp;&nbsp;&nbsp;+ conversionOperationQueue</option>
+	
+	<option value="//api/name/defaultProcessor">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultProcessor</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRange:options:progressBlock:error:</option>
+	
+	<option value="//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</option>
+	
+	<option value="//api/name/generatePDFFromHTMLString:options:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromHTMLString:options:</option>
+	
+	<option value="//api/name/generatePDFFromHTMLString:outputFileURL:options:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromHTMLString:outputFileURL:options:</option>
+	
+	<option value="//api/name/generatePDFFromURL:outputFileURL:options:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromURL:outputFileURL:options:completionBlock:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/conversionOperationQueue">conversionOperationQueue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultProcessor">defaultProcessor</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">generatePDFFromDocument:pageRange:options:progressBlock:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromHTMLString:options:">generatePDFFromHTMLString:options:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromHTMLString:outputFileURL:options:">generatePDFFromHTMLString:outputFileURL:options:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromURL:outputFileURL:options:completionBlock:">generatePDFFromURL:outputFileURL:options:completionBlock:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PSPDFProcessor Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PSPDFProcessor Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PSPDFProcessor.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Create, merge or modify PDF documents. Also allows to flatten annotation data.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultProcessor">+&nbsp;defaultProcessor</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRange:options:progressBlock:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromHTMLString:outputFileURL:options:">&ndash;&nbsp;generatePDFFromHTMLString:outputFileURL:options:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromHTMLString:options:">&ndash;&nbsp;generatePDFFromHTMLString:options:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromURL:outputFileURL:options:completionBlock:">&ndash;&nbsp;generatePDFFromURL:outputFileURL:options:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/conversionOperationQueue">+&nbsp;conversionOperationQueue</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/conversionOperationQueue" title="conversionOperationQueue"></a>
+	<h3 class="subsubtitle method-title">conversionOperationQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default queue for conversion operations.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSOperationQueue *)conversionOperationQueue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultProcessor" title="defaultProcessor"></a>
+	<h3 class="subsubtitle method-title">defaultProcessor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Access the processor via singleton.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)defaultProcessor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:" title="generatePDFFromDocument:pageRange:options:progressBlock:error:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRange:options:progressBlock:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> into data. &lsquo;options&rsquo; can also contain CGPDFContext options.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRange:(NSIndexSet *)<em>pageRange</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Don&rsquo;t use with large files, since iOS has no virtual memory the process will be force-closed on exhaustive memory usage. 10-20MB should be the maximum for safe in-memory usage.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:" title="generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> into a file. &lsquo;options&rsquo; can also contain CGPDFContext options.
+For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)] to convert the whole document.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRange:(NSIndexSet *)<em>pageRange</em> outputFileURL:(NSURL *)<em>fileURL</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generatePDFFromHTMLString:options:" title="generatePDFFromHTMLString:options:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromHTMLString:options:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Like the above, but create a temporary PDF in memory.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)generatePDFFromHTMLString:(NSString *)<em>HTML</em> options:(NSDictionary *)<em>options</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generatePDFFromHTMLString:outputFileURL:options:" title="generatePDFFromHTMLString:outputFileURL:options:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromHTMLString:outputFileURL:options:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates a PDF from a string. Does allow simple html tags.
+Will not work with complex HTML pages.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)generatePDFFromHTMLString:(NSString *)<em>HTML</em> outputFileURL:(NSURL *)<em>fileURL</em> options:(NSDictionary *)<em>options</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>e.g. @&ldquo;This is a <b>test</b> in <span style='color:red'>color.</span>&rdquo;
+Can be used in a thread and is pretty fast. Experimental feature.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generatePDFFromURL:outputFileURL:options:completionBlock:" title="generatePDFFromURL:outputFileURL:options:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromURL:outputFileURL:options:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Renders a PDF from a URL (web or fileURL). This will take a while and is non-blocking.
+Upon completion, the completionBlock will be called.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (PSPDFConversionOperation *)generatePDFFromURL:(NSURL *)<em>inputURL</em> outputFileURL:(NSURL *)<em>outputURL</em> options:(NSDictionary *)<em>options</em> completionBlock:(PSPDFCompletionBlockWithError)<em>completionBlock</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Supported are web pages and certain file types like pages, keynote, word, powerpoint, excel, rtf, jpg, png, &hellip;
+See <a href="https://developer.apple.com/library/ios/">https://developer.apple.com/library/ios/</a>#qa/qa2008/qa1630.html for the full list.</p>
+
+<p>Certain documents might not have the correct pagination.
+(Try to manually define PSPDFProcessorPageRect to fine-tune this)</p>
+
+<p>&lsquo;options&rsquo; can contain both the PSPDF constants listed above and any kCGPDFContext constants.
+For example, to password protect the pdf, you can use:
+@{(id)kCGPDFContextUserPassword  : password,
+   (id)kCGPDFContextOwnerPassword : password,
+   (id)kCGPDFContextEncryptionKeyLength : @128}</p>
+
+<p>Other useful properties are:
+- kCGPDFContextAllowsCopying
+- kCGPDFContextAllowsPrinting
+- kCGPDFContextKeywords
+- kCGPDFContextAuthor</p>
+
+<p>Experimental feature.
+Don&rsquo;t manually override NSOperation&rsquo;s completionBlock.
+If this helper is used, operation will be automatically queued in <a href="#//api/name/conversionOperationQueue">conversionOperationQueue</a>.</p>
+
+<p>PSPDFKit Annotate feature.</p><div class="warning"><p><strong>Warning:</strong> When a password is set, only link annotations can be added as dictionary (this does not affect flattening)</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

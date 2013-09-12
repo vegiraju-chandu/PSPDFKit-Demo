@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PSPDFErrorCode Constants Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PSPDFKit </a></h1>
+				<a id="developerHome" href="../index.html">PSPDFKit GmbH</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PSPDFErrorCode Constants Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PSPDFErrorCode Constants Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PSPDFErrorCode Constants Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PSPDFError.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					
+                    
+                    
+                    <h3 class="subsubtitle method-title">PSPDFErrorCode</h3>
+                    
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSInteger, PSPDFErrorCode ) {<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodePageInvalid</a> = 100,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeUnableToOpenPDF</a> = 200,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeUnableToGetPageReference</a> = 210,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeUnableToGetStream</a> = 220,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodePageRenderSizeIsEmpty</a> = 220,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodePageRenderClipRectTooLarge</a> = 230,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodePageRenderGraphicsContextNil</a> = 240,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeDocumentLocked</a> = 300,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToLoadAnnotations</a> = 400,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToWriteAnnotations</a> = 410,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToLoadBookmarks</a> = 450,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeOutlineParser</a> = 500,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeUnableToConvertToDataRepresentation</a> = 600,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeRemoveCacheError</a> = 700,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToConvertToPDF</a> = 800,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToGeneratePDFInvalidArguments</a> = 810,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToGeneratePDFDocumentInvalid</a> = 820,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeFailedToUpdatePageObject</a> = 850,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeMicPermissionNotGranted</a> = 900,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeXFDFParserLackingInputStream</a> = 1000,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeXFDFParserAlreadyCompleted</a> = 1010,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeXFDFParserAlreadyStarted</a> = 1020,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeXMLParserError</a> = 1100,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeXFDFWriterCannotWriteToStream</a> = 1200,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeSoundEncoderInvalidInput</a> = 1300,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorFeatureNotEnabled</a> = 100000,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFErrorCodeUnknown</a> = NSIntegerMax,<br/>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="PSPDFErrorCodePageInvalid"></a><code>PSPDFErrorCodePageInvalid</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeUnableToOpenPDF"></a><code>PSPDFErrorCodeUnableToOpenPDF</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeUnableToGetPageReference"></a><code>PSPDFErrorCodeUnableToGetPageReference</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeUnableToGetStream"></a><code>PSPDFErrorCodeUnableToGetStream</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodePageRenderSizeIsEmpty"></a><code>PSPDFErrorCodePageRenderSizeIsEmpty</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodePageRenderClipRectTooLarge"></a><code>PSPDFErrorCodePageRenderClipRectTooLarge</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodePageRenderGraphicsContextNil"></a><code>PSPDFErrorCodePageRenderGraphicsContextNil</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeDocumentLocked"></a><code>PSPDFErrorCodeDocumentLocked</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToLoadAnnotations"></a><code>PSPDFErrorCodeFailedToLoadAnnotations</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToWriteAnnotations"></a><code>PSPDFErrorCodeFailedToWriteAnnotations</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToLoadBookmarks"></a><code>PSPDFErrorCodeFailedToLoadBookmarks</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeOutlineParser"></a><code>PSPDFErrorCodeOutlineParser</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeUnableToConvertToDataRepresentation"></a><code>PSPDFErrorCodeUnableToConvertToDataRepresentation</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeRemoveCacheError"></a><code>PSPDFErrorCodeRemoveCacheError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToConvertToPDF"></a><code>PSPDFErrorCodeFailedToConvertToPDF</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToGeneratePDFInvalidArguments"></a><code>PSPDFErrorCodeFailedToGeneratePDFInvalidArguments</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToGeneratePDFDocumentInvalid"></a><code>PSPDFErrorCodeFailedToGeneratePDFDocumentInvalid</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeFailedToUpdatePageObject"></a><code>PSPDFErrorCodeFailedToUpdatePageObject</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeMicPermissionNotGranted"></a><code>PSPDFErrorCodeMicPermissionNotGranted</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeXFDFParserLackingInputStream"></a><code>PSPDFErrorCodeXFDFParserLackingInputStream</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeXFDFParserAlreadyCompleted"></a><code>PSPDFErrorCodeXFDFParserAlreadyCompleted</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeXFDFParserAlreadyStarted"></a><code>PSPDFErrorCodeXFDFParserAlreadyStarted</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeXMLParserError"></a><code>PSPDFErrorCodeXMLParserError</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeXFDFWriterCannotWriteToStream"></a><code>PSPDFErrorCodeXFDFWriterCannotWriteToStream</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeSoundEncoderInvalidInput"></a><code>PSPDFErrorCodeSoundEncoderInvalidInput</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorFeatureNotEnabled"></a><code>PSPDFErrorFeatureNotEnabled</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFErrorCodeUnknown"></a><code>PSPDFErrorCodeUnknown</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFError.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+                    
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
