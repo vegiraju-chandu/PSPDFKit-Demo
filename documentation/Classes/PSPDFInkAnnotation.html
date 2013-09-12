@@ -40,16 +40,11 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/bezierPath">&nbsp;&nbsp;&nbsp;&nbsp;bezierPath</option>
+	
 	<option value="//api/name/lines">&nbsp;&nbsp;&nbsp;&nbsp;lines</option>
 	
-	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;path</option>
 	
-	
-	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/linesTransformer">&nbsp;&nbsp;&nbsp;&nbsp;+ linesTransformer</option>
 	
 	
 	
@@ -86,19 +81,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bezierPath">bezierPath</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lines">lines</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
-	
 </ul></li>
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linesTransformer">linesTransformer</a></span></li>
-	
-</ul></li>
 
 
 
@@ -134,7 +123,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : <a href="../Classes/PSPDFModel.html">PSPDFModel</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : PSPDFModel : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFInkAnnotation.h</td>
@@ -182,7 +171,7 @@ Example: annotation.lines = @[@[BOXED(CGPointMake(100,100)), BOXED(CGPointMake(1
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
+		<code><a href="#//api/name/bezierPath">&nbsp;&nbsp;bezierPath</a></code>
 		<span class="tooltip"><p>UIBezierPath.
 Will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.</p></span>
 	</span>
@@ -204,13 +193,6 @@ This is used internally when boundingBox is changed.</p></span>
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/linesTransformer">+&nbsp;linesTransformer</a></code>
-		<span class="tooltip"><p>NSArray of NSStrings &lt;-> NSArray of CGRects transformer.</p></span>
-	</span>
-	
-	
 </li>
 						</ul>
 						
@@ -223,6 +205,41 @@ This is used internally when boundingBox is changed.</p></span>
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/bezierPath" title="bezierPath"></a>
+	<h3 class="subsubtitle method-title">bezierPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>UIBezierPath.
+Will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) UIBezierPath *bezierPath</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFInkAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/lines" title="lines"></a>
@@ -260,84 +277,9 @@ Example: annotation.lines = @[@[BOXED(CGPointMake(100,100)), BOXED(CGPointMake(1
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/path" title="path"></a>
-	<h3 class="subsubtitle method-title">path</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>UIBezierPath.
-Will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) UIBezierPath *path</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFInkAnnotation.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/linesTransformer" title="linesTransformer"></a>
-	<h3 class="subsubtitle method-title">linesTransformer</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>NSArray of NSStrings &lt;-> NSArray of CGRects transformer.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>+ (NSValueTransformer *)linesTransformer</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFInkAnnotation.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					

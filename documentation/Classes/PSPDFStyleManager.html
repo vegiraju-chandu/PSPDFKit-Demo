@@ -82,7 +82,7 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Conveniece Helpers">Conveniece Helpers</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Convenience Helpers">Convenience Helpers</a></span></li>
 	
 </ul></li>
 
@@ -215,8 +215,8 @@ Might return nil if there isn&rsquo;t anything saved yet.</p></span>
 						</ul>
 						
 						
-						<a title="Conveniece Helpers" name="task_Conveniece Helpers"></a>
-						<h3 class="subsubtitle task-title">Conveniece Helpers</h3>
+						<a title="Convenience Helpers" name="task_Convenience Helpers"></a>
+						<h3 class="subsubtitle task-title">Convenience Helpers</h3>
 
 						<ul class="task-list">
 							<li>
@@ -236,7 +236,10 @@ Might return nil if there isn&rsquo;t anything saved yet.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setLastUsedValue:forProperty:forKey:">&ndash;&nbsp;setLastUsedValue:forProperty:forKey:</a></code>
-		<span class="tooltip"><p>Convenience method. Will set the last used style for <code>key</code> and styleProperty.</p></span>
+		<span class="tooltip"><p>Convenience method. Will set the last used style for <code>key</code> and styleProperty.
+<code>value</code> might be a boxed CGFloat, color or whatever matches the property.
+<code>styleProperty</code> is the NSString-name for the property (e.g. NSStringFromSelector(@selector(fontSize))
+<code>key</code> is the annotation key, e.g. PSPDFAnnotationStringFreeText.</p></span>
 	</span>
 	
 	
@@ -485,7 +488,10 @@ Might return nil if there isn&rsquo;t anything saved yet.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convenience method. Will set the last used style for <code>key</code> and styleProperty.</p>
+		<p>Convenience method. Will set the last used style for <code>key</code> and styleProperty.
+<code>value</code> might be a boxed CGFloat, color or whatever matches the property.
+<code>styleProperty</code> is the NSString-name for the property (e.g. NSStringFromSelector(@selector(fontSize))
+<code>key</code> is the annotation key, e.g. PSPDFAnnotationStringFreeText.</p>
 	</div>		
 	
 	

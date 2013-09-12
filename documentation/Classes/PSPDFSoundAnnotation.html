@@ -40,9 +40,17 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/URL">&nbsp;&nbsp;&nbsp;&nbsp;URL</option>
+	<option value="//api/name/bits">&nbsp;&nbsp;&nbsp;&nbsp;bits</option>
+	
+	<option value="//api/name/channels">&nbsp;&nbsp;&nbsp;&nbsp;channels</option>
+	
+	<option value="//api/name/encoding">&nbsp;&nbsp;&nbsp;&nbsp;encoding</option>
 	
 	<option value="//api/name/iconName">&nbsp;&nbsp;&nbsp;&nbsp;iconName</option>
+	
+	<option value="//api/name/rate">&nbsp;&nbsp;&nbsp;&nbsp;rate</option>
+	
+	<option value="//api/name/soundURL">&nbsp;&nbsp;&nbsp;&nbsp;soundURL</option>
 	
 	
 	
@@ -72,9 +80,17 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URL">URL</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bits">bits</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/channels">channels</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encoding">encoding</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iconName">iconName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rate">rate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/soundURL">soundURL</a></span></li>
 	
 </ul></li>
 
@@ -104,7 +120,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFLinkAnnotation.html">PSPDFLinkAnnotation</a> : <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : <a href="../Classes/PSPDFModel.html">PSPDFModel</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/PSPDFLinkAnnotation.html">PSPDFLinkAnnotation</a> : <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : PSPDFModel : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFSoundAnnotation.h</td>
@@ -142,8 +158,36 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/URL">&nbsp;&nbsp;URL</a></code>
-		<span class="tooltip"><p>URL to the file content.</p></span>
+		<code><a href="#//api/name/soundURL">&nbsp;&nbsp;soundURL</a></code>
+		<span class="tooltip"><p>URL to the sound content.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bits">&nbsp;&nbsp;bits</a></code>
+		<span class="tooltip"><p>Bits of the sound stream.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rate">&nbsp;&nbsp;rate</a></code>
+		<span class="tooltip"><p>Sampling rate of the sound stream.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/channels">&nbsp;&nbsp;channels</a></code>
+		<span class="tooltip"><p>Channel count of the sound stream.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encoding">&nbsp;&nbsp;encoding</a></code>
+		<span class="tooltip"><p>Encoding of the sound stream.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -161,17 +205,85 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/URL" title="URL"></a>
-	<h3 class="subsubtitle method-title">URL</h3>
+	<a name="//api/name/bits" title="bits"></a>
+	<h3 class="subsubtitle method-title">bits</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>URL to the file content.</p>
+		<p>Bits of the sound stream.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSURL *URL</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger bits</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSoundAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/channels" title="channels"></a>
+	<h3 class="subsubtitle method-title">channels</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Channel count of the sound stream.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger channels</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSoundAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encoding" title="encoding"></a>
+	<h3 class="subsubtitle method-title">encoding</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Encoding of the sound stream.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *encoding</code></div>
 	
 	
 	
@@ -206,6 +318,74 @@
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *iconName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSoundAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rate" title="rate"></a>
+	<h3 class="subsubtitle method-title">rate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sampling rate of the sound stream.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger rate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSoundAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/soundURL" title="soundURL"></a>
+	<h3 class="subsubtitle method-title">soundURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>URL to the sound content.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSURL *soundURL</code></div>
 	
 	
 	

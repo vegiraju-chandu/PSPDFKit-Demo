@@ -55,7 +55,7 @@
 	
 	<option value="//api/name/parseDocumentWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- parseDocumentWithError:</option>
 	
-	<option value="//api/name/saveAnnotations:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotations:withError:</option>
+	<option value="//api/name/saveAnnotations:withOptions:error:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotations:withOptions:error:</option>
 	
 	
 	
@@ -72,6 +72,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
 </ul></li>
 
@@ -97,7 +99,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseDocumentWithError:">parseDocumentWithError:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotations:withError:">saveAnnotations:withError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotations:withOptions:error:">saveAnnotations:withOptions:error:</a></span></li>
 	
 </ul></li>
 
@@ -149,20 +151,13 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/parseDocumentWithError:">&ndash;&nbsp;parseDocumentWithError:</a></code>
 		<span class="tooltip"><p>Parses the PDF XRef table.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/saveAnnotations:withError:">&ndash;&nbsp;saveAnnotations:withError:</a></code>
-		<span class="tooltip"><p>Saves annotations, returns error if there was a problem.</p></span>
 	</span>
 	
 	
@@ -183,9 +178,24 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/pageObjectNumbers">&nbsp;&nbsp;pageObjectNumbers</a></code>
-		<span class="tooltip"><p>Exposed XRef objects.</p></span>
+		<span class="tooltip"><p>Exposed page object numbers.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveAnnotations:withOptions:error:">&ndash;&nbsp;saveAnnotations:withOptions:error:</a></code>
+		<span class="tooltip"><p>Saves annotations, returns error if there was a problem.</p></span>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -275,7 +285,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Exposed XRef objects.</p>
+		<p>Exposed page object numbers.</p>
 	</div>		
 	
 	
@@ -347,8 +357,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/saveAnnotations:withError:" title="saveAnnotations:withError:"></a>
-	<h3 class="subsubtitle method-title">saveAnnotations:withError:</h3>
+	<a name="//api/name/saveAnnotations:withOptions:error:" title="saveAnnotations:withOptions:error:"></a>
+	<h3 class="subsubtitle method-title">saveAnnotations:withOptions:error:</h3>
 	
 	
 	
@@ -357,7 +367,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotations:(NSDictionary *)<em>annotations</em> withError:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotations:(NSDictionary *)<em>newAnnotations</em> withOptions:(NSDictionary *)<em>options</em> error:(NSError **)<em>error</em></code></div>
 	
 	
 	
@@ -365,6 +375,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> You shouldn&rsquo;t call this method directly, use the high-level save method in <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> instead.</p></div>
+	</div>
 	
 	
 	

@@ -143,7 +143,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UITableViewController</td>
+	<td class="specification-value"><a href="../Classes/PSPDFBaseTableViewController.html">PSPDFBaseTableViewController</a> : UITableViewController</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
 	<td class="specification-value"><a href="../Protocols/PSPDFCacheDelegate.html">PSPDFCacheDelegate</a><br /><a href="../Protocols/PSPDFPopoverControllerDismissable.html">PSPDFPopoverControllerDismissable</a><br /><a href="../Protocols/PSPDFStatusBarStyleHint.html">PSPDFStatusBarStyleHint</a><br /><a href="../Protocols/PSPDFStyleable.html">PSPDFStyleable</a><br /><a href="../Protocols/PSPDFTextSearchDelegate.html">PSPDFTextSearchDelegate</a><br />UISearchBarDelegate<br />UISearchDisplayDelegate</td>
@@ -178,14 +178,14 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithDocument:delegate:">&ndash;&nbsp;initWithDocument:delegate:</a></code>
-		<span class="tooltip"><p>initializes controller.</p></span>
+		<span class="tooltip"><p>Designated initializer.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/searchText">&nbsp;&nbsp;searchText</a></code>
-		<span class="tooltip"><p>Current searchText. If set, keyboard is not shown.</p></span>
+		<span class="tooltip"><p>Current searchText. If set before showing the controller, keyboard will not be added.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -228,7 +228,7 @@ You can change attributes (e.g. barStyle) but don&rsquo;t change the <a href="#/
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/searchVisiblePagesFirst">&nbsp;&nbsp;searchVisiblePagesFirst</a></code>
-		<span class="tooltip"><p>Set to enable searching on the visible pages, then all. Was default until PSPDFKit 2.4.1. Defaults to NO.
+		<span class="tooltip"><p>Set to enable searching on the visible pages, then all. Defaults to NO.
 If not set, the natural page order is searched.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -438,7 +438,7 @@ You can change attributes (e.g. barStyle) but don&rsquo;t change the <a href="#/
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Current searchText. If set, keyboard is not shown.</p>
+		<p>Current searchText. If set before showing the controller, keyboard will not be added.</p>
 	</div>		
 	
 	
@@ -472,7 +472,7 @@ You can change attributes (e.g. barStyle) but don&rsquo;t change the <a href="#/
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set to enable searching on the visible pages, then all. Was default until PSPDFKit 2.4.1. Defaults to NO.
+		<p>Set to enable searching on the visible pages, then all. Defaults to NO.
 If not set, the natural page order is searched.</p>
 	</div>		
 	
@@ -590,7 +590,7 @@ If not set, the natural page order is searched.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>initializes controller.</p>
+		<p>Designated initializer.</p>
 	</div>		
 	
 	

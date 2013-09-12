@@ -40,8 +40,6 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/allowFileMergingAndTempFiles">&nbsp;&nbsp;&nbsp;&nbsp;allowFileMergingAndTempFiles</option>
-	
 	<option value="//api/name/documentInteractionController">&nbsp;&nbsp;&nbsp;&nbsp;documentInteractionController</option>
 	
 	<option value="//api/name/openOptions">&nbsp;&nbsp;&nbsp;&nbsp;openOptions</option>
@@ -82,8 +80,6 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowFileMergingAndTempFiles">allowFileMergingAndTempFiles</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/documentInteractionController">documentInteractionController</a></span></li>
 	
@@ -128,7 +124,7 @@
 	<td class="specification-value"><a href="../Classes/PSPDFBarButtonItem.html">PSPDFBarButtonItem</a> : UIBarButtonItem</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">UIDocumentInteractionControllerDelegate</td>
+	<td class="specification-value"><a href="../Protocols/PSPDFDocumentSharingViewControllerDelegate.html">PSPDFDocumentSharingViewControllerDelegate</a><br />UIDocumentInteractionControllerDelegate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFOpenInBarButtonItem.h</td>
@@ -160,15 +156,6 @@ Before sending the file to another application, annotations will be saved.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/allowFileMergingAndTempFiles">&nbsp;&nbsp;allowFileMergingAndTempFiles</a></code>
-		<span class="tooltip"><p>Allow content-processing to merge multiple PDF pages into one PDF, and allow saving of NSData-based documents to a temp directory?
-If set to NO, Open In will only work if the document consists of exactly one fileURL (no data, no dataProvider)
-Defaults to YES.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/showPrintAction">&nbsp;&nbsp;showPrintAction</a></code>
 		<span class="tooltip"><p>Shows the print action along with the application list. Defaults to NO.</p></span>
 	</span>
@@ -178,7 +165,7 @@ Defaults to YES.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/openOptions">&nbsp;&nbsp;openOptions</a></code>
 		<span class="tooltip"><p>Defines what we are sending. If more than one option is set, user will get a dialog to choose.
-Defaults to PSPDFOpenInOptionsOriginal | PSPDFOpenInOptionsFlattenAnnotations.</p></span>
+Defaults to PSPDFDocumentSharingOptionCurrentPageOnly|PSPDFDocumentSharingOptionAllPages|PSPDFDocumentSharingOptionEmbedAnnotations|PSPDFDocumentSharingOptionFlattenAnnotations|PSPDFDocumentSharingOptionForceMergeFiles.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -217,42 +204,6 @@ Default implementation will use <a href="../Classes/PSPDFProcessor.html">PSPDFPr
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/allowFileMergingAndTempFiles" title="allowFileMergingAndTempFiles"></a>
-	<h3 class="subsubtitle method-title">allowFileMergingAndTempFiles</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Allow content-processing to merge multiple PDF pages into one PDF, and allow saving of NSData-based documents to a temp directory?
-If set to NO, Open In will only work if the document consists of exactly one fileURL (no data, no dataProvider)
-Defaults to YES.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL allowFileMergingAndTempFiles</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFOpenInBarButtonItem.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/documentInteractionController" title="documentInteractionController"></a>
@@ -296,11 +247,11 @@ Defaults to YES.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Defines what we are sending. If more than one option is set, user will get a dialog to choose.
-Defaults to PSPDFOpenInOptionsOriginal | PSPDFOpenInOptionsFlattenAnnotations.</p>
+Defaults to PSPDFDocumentSharingOptionCurrentPageOnly|PSPDFDocumentSharingOptionAllPages|PSPDFDocumentSharingOptionEmbedAnnotations|PSPDFDocumentSharingOptionFlattenAnnotations|PSPDFDocumentSharingOptionForceMergeFiles.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFOpenInOptions openOptions</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFDocumentSharingOptions openOptions</code></div>
 	
 	
 	

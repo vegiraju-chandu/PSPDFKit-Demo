@@ -50,6 +50,14 @@
 	
 	<option value="//api/name/selectedText">&nbsp;&nbsp;&nbsp;&nbsp;selectedText</option>
 	
+	<option value="//api/name/selectionAlpha">&nbsp;&nbsp;&nbsp;&nbsp;selectionAlpha</option>
+	
+	<option value="//api/name/selectionColor">&nbsp;&nbsp;&nbsp;&nbsp;selectionColor</option>
+	
+	<option value="//api/name/selectionHitTestExtension">&nbsp;&nbsp;&nbsp;&nbsp;selectionHitTestExtension</option>
+	
+	<option value="//api/name/simpleSelectionModeEnabled">&nbsp;&nbsp;&nbsp;&nbsp;simpleSelectionModeEnabled</option>
+	
 	<option value="//api/name/trimmedSelectedText">&nbsp;&nbsp;&nbsp;&nbsp;trimmedSelectedText</option>
 	
 	
@@ -105,6 +113,14 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedImage">selectedImage</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedText">selectedText</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectionAlpha">selectionAlpha</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectionColor">selectionColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectionHitTestExtension">selectionHitTestExtension</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simpleSelectionModeEnabled">simpleSelectionModeEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trimmedSelectedText">trimmedSelectedText</a></span></li>
 	
@@ -201,6 +217,34 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/selectedImage">&nbsp;&nbsp;selectedImage</a></code>
 		<span class="tooltip"><p>Currently selected image.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectionColor">&nbsp;&nbsp;selectionColor</a></code>
+		<span class="tooltip"><p>The selection color. Defaults to [UIColor pspdf_selectionColor].</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectionAlpha">&nbsp;&nbsp;selectionAlpha</a></code>
+		<span class="tooltip"><p>The selection alpha value. Defaults to [UIColor pspdf_selectionAlpha].</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/simpleSelectionModeEnabled">&nbsp;&nbsp;simpleSelectionModeEnabled</a></code>
+		<span class="tooltip"><p>In simple selection mode, the initial selection switches to moving the drag handles directly, much like iBooks handles selection. Defaults to NO.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectionHitTestExtension">&nbsp;&nbsp;selectionHitTestExtension</a></code>
+		<span class="tooltip"><p>To make it easier to select text, we slightly increase the frame margins. Defaults to 4 pixels.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -319,7 +363,7 @@ Returns YES if a menu is displayed.</p></span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, unsafe_unretained) PSPDFPageView *pageView</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFPageView *pageView</code></div>
 	
 	
 	
@@ -422,6 +466,142 @@ Returns YES if a menu is displayed.</p></span>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *selectedText</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFTextSelectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectionAlpha" title="selectionAlpha"></a>
+	<h3 class="subsubtitle method-title">selectionAlpha</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The selection alpha value. Defaults to [UIColor pspdf_selectionAlpha].</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat selectionAlpha</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFTextSelectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectionColor" title="selectionColor"></a>
+	<h3 class="subsubtitle method-title">selectionColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The selection color. Defaults to [UIColor pspdf_selectionColor].</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *selectionColor</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFTextSelectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectionHitTestExtension" title="selectionHitTestExtension"></a>
+	<h3 class="subsubtitle method-title">selectionHitTestExtension</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To make it easier to select text, we slightly increase the frame margins. Defaults to 4 pixels.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat selectionHitTestExtension</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFTextSelectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simpleSelectionModeEnabled" title="simpleSelectionModeEnabled"></a>
+	<h3 class="subsubtitle method-title">simpleSelectionModeEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>In simple selection mode, the initial selection switches to moving the drag handles directly, much like iBooks handles selection. Defaults to NO.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL simpleSelectionModeEnabled</code></div>
 	
 	
 	

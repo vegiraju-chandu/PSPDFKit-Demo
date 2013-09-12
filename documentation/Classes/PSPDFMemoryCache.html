@@ -53,7 +53,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/cacheInfoForImageWithUID:andPage:withSize:infoSelector:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheInfoForImageWithUID:andPage:withSize:infoSelector:</option>
+	<option value="//api/name/cacheInfoForImageWithUID:page:size:infoSelector:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheInfoForImageWithUID:page:size:infoSelector:</option>
 	
 	<option value="//api/name/clearCache">&nbsp;&nbsp;&nbsp;&nbsp;- clearCache</option>
 	
@@ -61,9 +61,9 @@
 	
 	<option value="//api/name/invalidateAllImagesWithUID:">&nbsp;&nbsp;&nbsp;&nbsp;- invalidateAllImagesWithUID:</option>
 	
-	<option value="//api/name/invalidateAllImagesWithUID:andPage:infoArraySelector:">&nbsp;&nbsp;&nbsp;&nbsp;- invalidateAllImagesWithUID:andPage:infoArraySelector:</option>
+	<option value="//api/name/invalidateAllImagesWithUID:page:infoArraySelector:">&nbsp;&nbsp;&nbsp;&nbsp;- invalidateAllImagesWithUID:page:infoArraySelector:</option>
 	
-	<option value="//api/name/storeImage:withUID:andPage:withReceipt:">&nbsp;&nbsp;&nbsp;&nbsp;- storeImage:withUID:andPage:withReceipt:</option>
+	<option value="//api/name/storeImage:UID:page:receipt:">&nbsp;&nbsp;&nbsp;&nbsp;- storeImage:UID:page:receipt:</option>
 	
 	
 	
@@ -111,7 +111,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheInfoForImageWithUID:andPage:withSize:infoSelector:">cacheInfoForImageWithUID:andPage:withSize:infoSelector:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheInfoForImageWithUID:page:size:infoSelector:">cacheInfoForImageWithUID:page:size:infoSelector:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearCache">clearCache</a></span></li>
 	
@@ -119,9 +119,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateAllImagesWithUID:">invalidateAllImagesWithUID:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateAllImagesWithUID:andPage:infoArraySelector:">invalidateAllImagesWithUID:andPage:infoArraySelector:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateAllImagesWithUID:page:infoArraySelector:">invalidateAllImagesWithUID:page:infoArraySelector:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storeImage:withUID:andPage:withReceipt:">storeImage:withUID:andPage:withReceipt:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storeImage:UID:page:receipt:">storeImage:UID:page:receipt:</a></span></li>
 	
 </ul></li>
 
@@ -179,7 +179,7 @@ On a memory warning, it will call <a href="#//api/name/clearCache">clearCache</a
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/cacheInfoForImageWithUID:andPage:withSize:infoSelector:">&ndash;&nbsp;cacheInfoForImageWithUID:andPage:withSize:infoSelector:</a></code>
+		<code><a href="#//api/name/cacheInfoForImageWithUID:page:size:infoSelector:">&ndash;&nbsp;cacheInfoForImageWithUID:page:size:infoSelector:</a></code>
 		<span class="tooltip"><p>Access an image from the memory cache.</p></span>
 	</span>
 	
@@ -194,7 +194,7 @@ On a memory warning, it will call <a href="#//api/name/clearCache">clearCache</a
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/storeImage:withUID:andPage:withReceipt:">&ndash;&nbsp;storeImage:withUID:andPage:withReceipt:</a></code>
+		<code><a href="#//api/name/storeImage:UID:page:receipt:">&ndash;&nbsp;storeImage:UID:page:receipt:</a></code>
 		<span class="tooltip"><p>Store images into the cache. Storing is async.</p></span>
 	</span>
 	
@@ -216,7 +216,7 @@ On a memory warning, it will call <a href="#//api/name/clearCache">clearCache</a
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/invalidateAllImagesWithUID:andPage:infoArraySelector:">&ndash;&nbsp;invalidateAllImagesWithUID:andPage:infoArraySelector:</a></code>
+		<code><a href="#//api/name/invalidateAllImagesWithUID:page:infoArraySelector:">&ndash;&nbsp;invalidateAllImagesWithUID:page:infoArraySelector:</a></code>
 		<span class="tooltip"><p>Invalidate all images that match <code>UID</code> and <code>page</code> and match <code>infoSelector</code>.</p></span>
 	</span>
 	
@@ -254,14 +254,14 @@ One pixel roughly needs 4 byte (+structure overhead).</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/maxNumberOfPixels">&nbsp;&nbsp;maxNumberOfPixels</a></code>
-		<span class="tooltip"><p>Maximum number of pixels allowed to be cached. Device dependant.</p></span>
+		<span class="tooltip"><p>Maximum number of pixels allowed to be cached. Device dependent.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/maxNumberOfPixelsUnderStress">&nbsp;&nbsp;maxNumberOfPixelsUnderStress</a></code>
-		<span class="tooltip"><p>Maximum number of pixels allowed to be cached after a memory warning. Device dependant.</p></span>
+		<span class="tooltip"><p>Maximum number of pixels allowed to be cached after a memory warning. Device dependent.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -285,7 +285,7 @@ One pixel roughly needs 4 byte (+structure overhead).</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Maximum number of pixels allowed to be cached. Device dependant.</p>
+		<p>Maximum number of pixels allowed to be cached. Device dependent.</p>
 	</div>		
 	
 	
@@ -319,7 +319,7 @@ One pixel roughly needs 4 byte (+structure overhead).</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Maximum number of pixels allowed to be cached after a memory warning. Device dependant.</p>
+		<p>Maximum number of pixels allowed to be cached after a memory warning. Device dependent.</p>
 	</div>		
 	
 	
@@ -392,8 +392,8 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/cacheInfoForImageWithUID:andPage:withSize:infoSelector:" title="cacheInfoForImageWithUID:andPage:withSize:infoSelector:"></a>
-	<h3 class="subsubtitle method-title">cacheInfoForImageWithUID:andPage:withSize:infoSelector:</h3>
+	<a name="//api/name/cacheInfoForImageWithUID:page:size:infoSelector:" title="cacheInfoForImageWithUID:page:size:infoSelector:"></a>
+	<h3 class="subsubtitle method-title">cacheInfoForImageWithUID:page:size:infoSelector:</h3>
 	
 	
 	
@@ -402,7 +402,7 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (PSPDFCacheInfo *)cacheInfoForImageWithUID:(NSString *)<em>UID</em> andPage:(NSUInteger)<em>page</em> withSize:(CGSize)<em>size</em> infoSelector:(PSPDFCacheInfoSelector)<em>infoSelector</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (PSPDFCacheInfo *)cacheInfoForImageWithUID:(NSString *)<em>UID</em> page:(NSUInteger)<em>page</em> size:(CGSize)<em>size</em> infoSelector:(PSPDFCacheInfoSelector)<em>infoSelector</em></code></div>
 	
 	
 	
@@ -528,8 +528,8 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/invalidateAllImagesWithUID:andPage:infoArraySelector:" title="invalidateAllImagesWithUID:andPage:infoArraySelector:"></a>
-	<h3 class="subsubtitle method-title">invalidateAllImagesWithUID:andPage:infoArraySelector:</h3>
+	<a name="//api/name/invalidateAllImagesWithUID:page:infoArraySelector:" title="invalidateAllImagesWithUID:page:infoArraySelector:"></a>
+	<h3 class="subsubtitle method-title">invalidateAllImagesWithUID:page:infoArraySelector:</h3>
 	
 	
 	
@@ -538,7 +538,7 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)invalidateAllImagesWithUID:(NSString *)<em>UID</em> andPage:(NSUInteger)<em>page</em> infoArraySelector:(PSPDFCacheInfoArraySelector)<em>infoSelector</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)invalidateAllImagesWithUID:(NSString *)<em>UID</em> page:(NSUInteger)<em>page</em> infoArraySelector:(PSPDFCacheInfoArraySelector)<em>infoSelector</em></code></div>
 	
 	
 	
@@ -562,8 +562,8 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/storeImage:withUID:andPage:withReceipt:" title="storeImage:withUID:andPage:withReceipt:"></a>
-	<h3 class="subsubtitle method-title">storeImage:withUID:andPage:withReceipt:</h3>
+	<a name="//api/name/storeImage:UID:page:receipt:" title="storeImage:UID:page:receipt:"></a>
+	<h3 class="subsubtitle method-title">storeImage:UID:page:receipt:</h3>
 	
 	
 	
@@ -572,7 +572,7 @@ One pixel roughly needs 4 byte (+structure overhead).</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)storeImage:(UIImage *)<em>image</em> withUID:(NSString *)<em>UID</em> andPage:(NSUInteger)<em>page</em> withReceipt:(NSString *)<em>renderReceipt</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)storeImage:(UIImage *)<em>image</em> UID:(NSString *)<em>UID</em> page:(NSUInteger)<em>page</em> receipt:(NSString *)<em>renderReceipt</em></code></div>
 	
 	
 	

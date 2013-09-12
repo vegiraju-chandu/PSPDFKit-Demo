@@ -44,8 +44,6 @@
 	
 	<option value="//api/name/imageTransform">&nbsp;&nbsp;&nbsp;&nbsp;imageTransform</option>
 	
-	<option value="//api/name/subject">&nbsp;&nbsp;&nbsp;&nbsp;subject</option>
-	
 	<option value="//api/name/subtext">&nbsp;&nbsp;&nbsp;&nbsp;subtext</option>
 	
 	
@@ -66,6 +64,10 @@
 	
 	<option value="//api/name/loadImageWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- loadImageWithError:</option>
 	
+	<option value="//api/name/sizeThatFits:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeThatFits:</option>
+	
+	<option value="//api/name/sizeToFit">&nbsp;&nbsp;&nbsp;&nbsp;- sizeToFit</option>
+	
 	
 	
 </select>
@@ -82,6 +84,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sizing">Sizing</a></span></li>
+	
 </ul></li>
 
 
@@ -93,8 +97,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/image">image</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageTransform">imageTransform</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subject">subject</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subtext">subtext</a></span></li>
 	
@@ -117,6 +119,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSubject:">initWithSubject:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadImageWithError:">loadImageWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeThatFits:">sizeThatFits:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeToFit">sizeToFit</a></span></li>
 	
 </ul></li>
 
@@ -142,7 +148,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : <a href="../Classes/PSPDFModel.html">PSPDFModel</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : PSPDFModel : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFStampAnnotation.h</td>
@@ -157,7 +163,7 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>PDF Stamp annotation.</p>
 
-<p>PSPDFKit supports all common stamp types (<a href="#//api/name/subject">subject</a>, <a href="#//api/name/image">image</a>) and has even has limited support for stamps built using appearance streams.</p>
+<p>PSPDFKit supports all common stamp types (subject, <a href="#//api/name/image">image</a>) and has even has limited support for stamps built using appearance streams.</p>
 					</div>
 					
 					
@@ -170,7 +176,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -190,21 +196,15 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithSubject:">&ndash;&nbsp;initWithSubject:</a></code>
-		<span class="tooltip"><p>Init with a default <a href="#//api/name/subject">subject</a> and uses a matching color.</p></span>
+		<span class="tooltip"><p>Init with a default subject and uses a matching color.</p></span>
 	</span>
 	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/subject">&nbsp;&nbsp;subject</a></code>
-		<span class="tooltip"><p>Stamp subject. Will be displayed uppercase italic bold.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/subtext">&nbsp;&nbsp;subtext</a></code>
-		<span class="tooltip"><p>Stamp subtext.</p></span>
+		<span class="tooltip"><p>Stamp subtext.
+Used for custom stamps, will render beneath the subject or as the subject if subject is not set.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -229,6 +229,29 @@ Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p></s
 		<span class="tooltip"><p>Stamp <a href="#//api/name/image">image</a> transform. Defaults to CGAffineTransformIdentity.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Sizing" name="task_Sizing"></a>
+						<h3 class="subsubtitle task-title">Sizing</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeThatFits:">&ndash;&nbsp;sizeThatFits:</a></code>
+		<span class="tooltip"><p>Return &lsquo;best&rsquo; size to fit given size. does not actually resize the <code>boundingBox</code>.
+Will only work for simple stamp annotations with a <a href="#//api/name/subtext">subtext</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeToFit">&ndash;&nbsp;sizeToFit</a></code>
+		<span class="tooltip"><p>Calls <a href="#//api/name/sizeThatFits:"><code>sizeThatFits:</code></a> with the current <code>boundingBox</code> and changes the <code>boundingBox</code>.</p></span>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -312,47 +335,14 @@ Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p></s
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/subject" title="subject"></a>
-	<h3 class="subsubtitle method-title">subject</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Stamp subject. Will be displayed uppercase italic bold.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *subject</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFStampAnnotation.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/subtext" title="subtext"></a>
 	<h3 class="subsubtitle method-title">subtext</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stamp subtext.</p>
+		<p>Stamp subtext.
+Used for custom stamps, will render beneath the subject or as the subject if subject is not set.</p>
 	</div>		
 	
 	
@@ -364,11 +354,6 @@ Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p></s
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Used for custom stamps, will render beneath the <a href="#//api/name/subject">subject</a> or as the <a href="#//api/name/subject">subject</a> if <a href="#//api/name/subject">subject</a> is not set.</p>
-	</div>
 	
 	
 	
@@ -475,7 +460,7 @@ Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p></s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Init with a default <a href="#//api/name/subject">subject</a> and uses a matching color.</p>
+		<p>Init with a default subject and uses a matching color.</p>
 	</div>		
 	
 	
@@ -515,6 +500,75 @@ Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>- (UIImage *)loadImageWithError:(NSError **)<em>error</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStampAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeThatFits:" title="sizeThatFits:"></a>
+	<h3 class="subsubtitle method-title">sizeThatFits:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return &lsquo;best&rsquo; size to fit given size. does not actually resize the <code>boundingBox</code>.
+Will only work for simple stamp annotations with a <a href="#//api/name/subtext">subtext</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeThatFits:(CGSize)<em>size</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStampAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeToFit" title="sizeToFit"></a>
+	<h3 class="subsubtitle method-title">sizeToFit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calls <a href="#//api/name/sizeThatFits:"><code>sizeThatFits:</code></a> with the current <code>boundingBox</code> and changes the <code>boundingBox</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sizeToFit</code></div>
 	
 	
 	

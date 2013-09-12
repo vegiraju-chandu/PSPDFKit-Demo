@@ -46,6 +46,10 @@
 	
 	<option value="//api/name/annotationStyleController:didChangeProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationStyleController:didChangeProperty:</option>
 	
+	<option value="//api/name/annotationStyleController:didEndChangingProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationStyleController:didEndChangingProperty:</option>
+	
+	<option value="//api/name/annotationStyleController:willStartChangingProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationStyleController:willStartChangingProperty:</option>
+	
 	
 	
 </select>
@@ -76,6 +80,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationStyleController:didChangeProperty:">annotationStyleController:didChangeProperty:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationStyleController:didEndChangingProperty:">annotationStyleController:didEndChangingProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationStyleController:willStartChangingProperty:">annotationStyleController:willStartChangingProperty:</a></span></li>
+	
 </ul></li>
 
 
@@ -100,7 +108,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value">PSPDFOverridable</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFAnnotationStyleViewController.h</td>
@@ -136,6 +144,20 @@
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationStyleController:willStartChangingProperty:">&ndash;&nbsp;annotationStyleController:willStartChangingProperty:</a></code>
+		<span class="tooltip"><p>Called when a user starts changing a property (e.g. touch down on the slider)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationStyleController:didEndChangingProperty:">&ndash;&nbsp;annotationStyleController:didEndChangingProperty:</a></code>
+		<span class="tooltip"><p>Called when a user finishes changing a property (e.g. slider touch up)</p></span>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -172,6 +194,84 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationStyleViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationStyleController:didEndChangingProperty:" title="annotationStyleController:didEndChangingProperty:"></a>
+	<h3 class="subsubtitle method-title">annotationStyleController:didEndChangingProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a user finishes changing a property (e.g. slider touch up)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)annotationStyleController:(PSPDFAnnotationStyleViewController *)<em>styleController</em> didEndChangingProperty:(NSString *)<em>propertyName</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Will not be fired for all properties.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationStyleViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationStyleController:willStartChangingProperty:" title="annotationStyleController:willStartChangingProperty:"></a>
+	<h3 class="subsubtitle method-title">annotationStyleController:willStartChangingProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a user starts changing a property (e.g. touch down on the slider)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)annotationStyleController:(PSPDFAnnotationStyleViewController *)<em>styleController</em> willStartChangingProperty:(NSString *)<em>propertyName</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> There might not be a call to didChangeProperty if the user doesn&rsquo;t actually change the value (just touches it)</p></div><div class="note"><p><strong>Note:</strong> Will not be fired for all properties.</p></div>
+	</div>
 	
 	
 	

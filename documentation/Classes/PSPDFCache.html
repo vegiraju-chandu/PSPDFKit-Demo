@@ -78,15 +78,15 @@
 	
 	<option value="//api/name/cacheDocument:startAtPage:sizes:diskCacheStrategy:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheDocument:startAtPage:sizes:diskCacheStrategy:</option>
 	
-	<option value="//api/name/cacheStatusForImageFromDocument:andPage:withSize:options:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheStatusForImageFromDocument:andPage:withSize:options:</option>
+	<option value="//api/name/cacheStatusForImageFromDocument:page:size:options:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheStatusForImageFromDocument:page:size:options:</option>
 	
-	<option value="//api/name/cancelRequestForImageFromDocument:andPage:withSize:">&nbsp;&nbsp;&nbsp;&nbsp;- cancelRequestForImageFromDocument:andPage:withSize:</option>
+	<option value="//api/name/cancelRequestForImageFromDocument:page:size:">&nbsp;&nbsp;&nbsp;&nbsp;- cancelRequestForImageFromDocument:page:size:</option>
 	
 	<option value="//api/name/clearCache">&nbsp;&nbsp;&nbsp;&nbsp;- clearCache</option>
 	
-	<option value="//api/name/imageFromDocument:andPage:withSize:options:">&nbsp;&nbsp;&nbsp;&nbsp;- imageFromDocument:andPage:withSize:options:</option>
+	<option value="//api/name/imageFromDocument:page:size:options:">&nbsp;&nbsp;&nbsp;&nbsp;- imageFromDocument:page:size:options:</option>
 	
-	<option value="//api/name/invalidateImageFromDocument:andPage:">&nbsp;&nbsp;&nbsp;&nbsp;- invalidateImageFromDocument:andPage:</option>
+	<option value="//api/name/invalidateImageFromDocument:page:">&nbsp;&nbsp;&nbsp;&nbsp;- invalidateImageFromDocument:page:</option>
 	
 	<option value="//api/name/pauseCachingForService:">&nbsp;&nbsp;&nbsp;&nbsp;- pauseCachingForService:</option>
 	
@@ -96,7 +96,7 @@
 	
 	<option value="//api/name/resumeCachingForService:">&nbsp;&nbsp;&nbsp;&nbsp;- resumeCachingForService:</option>
 	
-	<option value="//api/name/saveImage:fromDocument:andPage:withReceipt:">&nbsp;&nbsp;&nbsp;&nbsp;- saveImage:fromDocument:andPage:withReceipt:</option>
+	<option value="//api/name/saveImage:document:page:receipt:">&nbsp;&nbsp;&nbsp;&nbsp;- saveImage:document:page:receipt:</option>
 	
 	<option value="//api/name/stopCachingDocument:">&nbsp;&nbsp;&nbsp;&nbsp;- stopCachingDocument:</option>
 	
@@ -120,7 +120,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Store into cache">Store into cache</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Document preprocessing">Document preprocessing</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Document pre-processing">Document pre-processing</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cache invalidation">Cache invalidation</a></span></li>
 	
@@ -184,15 +184,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheDocument:startAtPage:sizes:diskCacheStrategy:">cacheDocument:startAtPage:sizes:diskCacheStrategy:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheStatusForImageFromDocument:andPage:withSize:options:">cacheStatusForImageFromDocument:andPage:withSize:options:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheStatusForImageFromDocument:page:size:options:">cacheStatusForImageFromDocument:page:size:options:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelRequestForImageFromDocument:andPage:withSize:">cancelRequestForImageFromDocument:andPage:withSize:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelRequestForImageFromDocument:page:size:">cancelRequestForImageFromDocument:page:size:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearCache">clearCache</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageFromDocument:andPage:withSize:options:">imageFromDocument:andPage:withSize:options:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageFromDocument:page:size:options:">imageFromDocument:page:size:options:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateImageFromDocument:andPage:">invalidateImageFromDocument:andPage:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/invalidateImageFromDocument:page:">invalidateImageFromDocument:page:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pauseCachingForService:">pauseCachingForService:</a></span></li>
 	
@@ -202,7 +202,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resumeCachingForService:">resumeCachingForService:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveImage:fromDocument:andPage:withReceipt:">saveImage:fromDocument:andPage:withReceipt:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveImage:document:page:receipt:">saveImage:document:page:receipt:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopCachingDocument:">stopCachingDocument:</a></span></li>
 	
@@ -247,7 +247,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>This singleton manages both memory and disk cache, and adds new render requests to <a href="../Classes/PSPDFRenderQueue.html">PSPDFRenderQueue</a>.
-Most settings are device dependant.</p>
+Most settings are device dependent.</p>
 					</div>
 					
 					
@@ -280,15 +280,15 @@ Most settings are device dependant.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/cacheStatusForImageFromDocument:andPage:withSize:options:">&ndash;&nbsp;cacheStatusForImageFromDocument:andPage:withSize:options:</a></code>
+		<code><a href="#//api/name/cacheStatusForImageFromDocument:page:size:options:">&ndash;&nbsp;cacheStatusForImageFromDocument:page:size:options:</a></code>
 		<span class="tooltip"><p>Get the cache status of a rendered image.
-<code>options</code> will ignore all entires except PSPDFCacheOptionSize*.</p></span>
+<code>options</code> will ignore all entities except PSPDFCacheOptionSize*.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageFromDocument:andPage:withSize:options:">&ndash;&nbsp;imageFromDocument:andPage:withSize:options:</a></code>
+		<code><a href="#//api/name/imageFromDocument:page:size:options:">&ndash;&nbsp;imageFromDocument:page:size:options:</a></code>
 		<span class="tooltip"><p>Get the image for a certain document page.
 Will first check the memory cache, then the disk cache and lastly queues a request to render.
 Returns the image instantly if the memory cache was filled, else will queue and call the delegate.
@@ -306,7 +306,7 @@ If <code>requireExactSize</code> is set, images will either be downscaled or dyn
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/saveImage:fromDocument:andPage:withReceipt:">&ndash;&nbsp;saveImage:fromDocument:andPage:withReceipt:</a></code>
+		<code><a href="#//api/name/saveImage:document:page:receipt:">&ndash;&nbsp;saveImage:document:page:receipt:</a></code>
 		<span class="tooltip"><p>Caches the image in memory and disk for later re-use.
 PSPDFCache will decide at runtime if the image is worth saving into memory or just disk. (And disk will only be hit if the image is different)</p></span>
 	</span>
@@ -316,8 +316,8 @@ PSPDFCache will decide at runtime if the image is worth saving into memory or ju
 						</ul>
 						
 						
-						<a title="Document preprocessing" name="task_Document preprocessing"></a>
-						<h3 class="subsubtitle task-title">Document preprocessing</h3>
+						<a title="Document pre-processing" name="task_Document pre-processing"></a>
+						<h3 class="subsubtitle task-title">Document pre-processing</h3>
 
 						<ul class="task-list">
 							<li>
@@ -344,14 +344,14 @@ PSPDFCache will decide at runtime if the image is worth saving into memory or ju
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/cancelRequestForImageFromDocument:andPage:withSize:">&ndash;&nbsp;cancelRequestForImageFromDocument:andPage:withSize:</a></code>
+		<code><a href="#//api/name/cancelRequestForImageFromDocument:page:size:">&ndash;&nbsp;cancelRequestForImageFromDocument:page:size:</a></code>
 		<span class="tooltip"><p>Cancels any open image request (disk load/render).</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/invalidateImageFromDocument:andPage:">&ndash;&nbsp;invalidateImageFromDocument:andPage:</a></code>
+		<code><a href="#//api/name/invalidateImageFromDocument:page:">&ndash;&nbsp;invalidateImageFromDocument:page:</a></code>
 		<span class="tooltip"><p>Allows to invalidate a single page in the document.
 This usually is called after an annotation changes (and thus the image needs to be re-rendered)</p></span>
 	</span>
@@ -413,7 +413,7 @@ Enable <code>deleteDocument</code> to remove the document and the associated met
 	<span class="tooltip">
 		<code><a href="#//api/name/diskCacheStrategy">&nbsp;&nbsp;diskCacheStrategy</a></code>
 		<span class="tooltip"><p>Defines the global disk cache strategy. Defaults to PSPDFDiskCacheStrategyEverything.
-If <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> also defines a strategy, that one is priorized.</p></span>
+If <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> also defines a strategy, that one is prioritized.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -468,7 +468,7 @@ For <code>service</code> use the class object that requested the pause.</p></spa
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/addDelegate:">&ndash;&nbsp;addDelegate:</a></code>
-		<span class="tooltip"><p>Register a delegate to be notifiec of new cache load events.</p></span>
+		<span class="tooltip"><p>Register a delegate to be notified of new cache load events.</p></span>
 	</span>
 	
 	
@@ -498,7 +498,7 @@ If you have very text-like pages, you might want to set this to NO.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/JPGFormatCompression">&nbsp;&nbsp;JPGFormatCompression</a></code>
-		<span class="tooltip"><p>Compression strength for JPG. (PNG is lossless)
+		<span class="tooltip"><p>Compression strength for JPG. (PNG is loss-less)
 The higher the compression, the larger the files and the slower is decompression. Defaults to 0.9.
 This will load the pdf and remove any jpg artifacts.</p></span>
 	</span>
@@ -508,7 +508,7 @@ This will load the pdf and remove any jpg artifacts.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/allowImageResize">&nbsp;&nbsp;allowImageResize</a></code>
 		<span class="tooltip"><p>Will allow image resizing instead of re-rendering to generate thumbnails.
-This is conditionally enabled for older devices. This is a tradeoff between performance or quality.</p></span>
+This is conditionally enabled for older devices. This is a trade-off between performance or quality.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -556,7 +556,7 @@ If set to nil, the default implementation will be used.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Compression strength for JPG. (PNG is lossless)
+		<p>Compression strength for JPG. (PNG is loss-less)
 The higher the compression, the larger the files and the slower is decompression. Defaults to 0.9.
 This will load the pdf and remove any jpg artifacts.</p>
 	</div>		
@@ -593,7 +593,7 @@ This will load the pdf and remove any jpg artifacts.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Will allow image resizing instead of re-rendering to generate thumbnails.
-This is conditionally enabled for older devices. This is a tradeoff between performance or quality.</p>
+This is conditionally enabled for older devices. This is a trade-off between performance or quality.</p>
 	</div>		
 	
 	
@@ -647,7 +647,7 @@ This is conditionally enabled for older devices. This is a tradeoff between perf
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The cache directory is not backed up by iCloud and will be purged when memory is low.</p></div><div class="warning"><p><strong>Warning:</strong> Set this early during class initialization. Will clear the current chache before changing.</p></div>
+		<div class="note"><p><strong>Note:</strong> The cache directory is not backed up by iCloud and will be purged when memory is low.</p></div><div class="warning"><p><strong>Warning:</strong> Set this early during class initialization. Will clear the current cache before changing.</p></div>
 	</div>
 	
 	
@@ -741,7 +741,7 @@ If set to nil, the default implementation will be used.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Defines the global disk cache strategy. Defaults to PSPDFDiskCacheStrategyEverything.
-If <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> also defines a strategy, that one is priorized.</p>
+If <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> also defines a strategy, that one is prioritized.</p>
 	</div>		
 	
 	
@@ -999,7 +999,7 @@ If you have very text-like pages, you might want to set this to NO.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Register a delegate to be notifiec of new cache load events.</p>
+		<p>Register a delegate to be notified of new cache load events.</p>
 	</div>		
 	
 	
@@ -1061,18 +1061,18 @@ If you have very text-like pages, you might want to set this to NO.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/cacheStatusForImageFromDocument:andPage:withSize:options:" title="cacheStatusForImageFromDocument:andPage:withSize:options:"></a>
-	<h3 class="subsubtitle method-title">cacheStatusForImageFromDocument:andPage:withSize:options:</h3>
+	<a name="//api/name/cacheStatusForImageFromDocument:page:size:options:" title="cacheStatusForImageFromDocument:page:size:options:"></a>
+	<h3 class="subsubtitle method-title">cacheStatusForImageFromDocument:page:size:options:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
 		<p>Get the cache status of a rendered image.
-<code>options</code> will ignore all entires except PSPDFCacheOptionSize*.</p>
+<code>options</code> will ignore all entities except PSPDFCacheOptionSize*.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (PSPDFCacheStatus)cacheStatusForImageFromDocument:(PSPDFDocument *)<em>document</em> andPage:(NSUInteger)<em>page</em> withSize:(CGSize)<em>size</em> options:(PSPDFCacheOptions)<em>options</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (PSPDFCacheStatus)cacheStatusForImageFromDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em> size:(CGSize)<em>size</em> options:(PSPDFCacheOptions)<em>options</em></code></div>
 	
 	
 	
@@ -1096,8 +1096,8 @@ If you have very text-like pages, you might want to set this to NO.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/cancelRequestForImageFromDocument:andPage:withSize:" title="cancelRequestForImageFromDocument:andPage:withSize:"></a>
-	<h3 class="subsubtitle method-title">cancelRequestForImageFromDocument:andPage:withSize:</h3>
+	<a name="//api/name/cancelRequestForImageFromDocument:page:size:" title="cancelRequestForImageFromDocument:page:size:"></a>
+	<h3 class="subsubtitle method-title">cancelRequestForImageFromDocument:page:size:</h3>
 	
 	
 	
@@ -1106,7 +1106,7 @@ If you have very text-like pages, you might want to set this to NO.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)cancelRequestForImageFromDocument:(PSPDFDocument *)<em>document</em> andPage:(NSUInteger)<em>page</em> withSize:(CGSize)<em>size</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)cancelRequestForImageFromDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em> size:(CGSize)<em>size</em></code></div>
 	
 	
 	
@@ -1164,8 +1164,8 @@ If you have very text-like pages, you might want to set this to NO.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/imageFromDocument:andPage:withSize:options:" title="imageFromDocument:andPage:withSize:options:"></a>
-	<h3 class="subsubtitle method-title">imageFromDocument:andPage:withSize:options:</h3>
+	<a name="//api/name/imageFromDocument:page:size:options:" title="imageFromDocument:page:size:options:"></a>
+	<h3 class="subsubtitle method-title">imageFromDocument:page:size:options:</h3>
 	
 	
 	
@@ -1177,7 +1177,7 @@ If <code>requireExactSize</code> is set, images will either be downscaled or dyn
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (UIImage *)imageFromDocument:(PSPDFDocument *)<em>document</em> andPage:(NSUInteger)<em>page</em> withSize:(CGSize)<em>size</em> options:(PSPDFCacheOptions)<em>options</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (UIImage *)imageFromDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em> size:(CGSize)<em>size</em> options:(PSPDFCacheOptions)<em>options</em></code></div>
 	
 	
 	
@@ -1206,8 +1206,8 @@ If <code>requireExactSize</code> is set, images will either be downscaled or dyn
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/invalidateImageFromDocument:andPage:" title="invalidateImageFromDocument:andPage:"></a>
-	<h3 class="subsubtitle method-title">invalidateImageFromDocument:andPage:</h3>
+	<a name="//api/name/invalidateImageFromDocument:page:" title="invalidateImageFromDocument:page:"></a>
+	<h3 class="subsubtitle method-title">invalidateImageFromDocument:page:</h3>
 	
 	
 	
@@ -1217,7 +1217,7 @@ This usually is called after an annotation changes (and thus the image needs to 
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)invalidateImageFromDocument:(PSPDFDocument *)<em>document</em> andPage:(NSUInteger)<em>page</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)invalidateImageFromDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em></code></div>
 	
 	
 	
@@ -1395,8 +1395,8 @@ For <code>service</code> use the class object that requested the pause.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/saveImage:fromDocument:andPage:withReceipt:" title="saveImage:fromDocument:andPage:withReceipt:"></a>
-	<h3 class="subsubtitle method-title">saveImage:fromDocument:andPage:withReceipt:</h3>
+	<a name="//api/name/saveImage:document:page:receipt:" title="saveImage:document:page:receipt:"></a>
+	<h3 class="subsubtitle method-title">saveImage:document:page:receipt:</h3>
 	
 	
 	
@@ -1406,7 +1406,7 @@ PSPDFCache will decide at runtime if the image is worth saving into memory or ju
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)saveImage:(UIImage *)<em>image</em> fromDocument:(PSPDFDocument *)<em>document</em> andPage:(NSUInteger)<em>page</em> withReceipt:(NSString *)<em>renderReceipt</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)saveImage:(UIImage *)<em>image</em> document:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em> receipt:(NSString *)<em>renderReceipt</em></code></div>
 	
 	
 	

@@ -59,11 +59,6 @@
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/linkTypeTransformer">&nbsp;&nbsp;&nbsp;&nbsp;+ linkTypeTransformer</option>
-	
-	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
@@ -98,7 +93,7 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Internal Methods">Internal Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
 	
 </ul></li>
 
@@ -127,12 +122,6 @@
 </ul></li>
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linkTypeTransformer">linkTypeTransformer</a></span></li>
-	
-</ul></li>
 
 
 
@@ -176,7 +165,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : <a href="../Classes/PSPDFModel.html">PSPDFModel</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : PSPDFModel : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFLinkAnnotation.h</td>
@@ -222,23 +211,23 @@ BoundingBox defines the frame, in PDF space coordinates.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithURL:">&ndash;&nbsp;initWithURL:</a></code>
-		<span class="tooltip"><p>Initialze link annotation with target <a href="#//api/name/URL">URL</a>.</p></span>
+		<span class="tooltip"><p>Initialize link annotation with target <a href="#//api/name/URL">URL</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithURLString:">&ndash;&nbsp;initWithURLString:</a></code>
-		<span class="tooltip"><p>Initialze link annotation with target URL string.
+		<span class="tooltip"><p>Initialize link annotation with target URL string.
 Can also be used for pspdfkit:// URLs.
-For example, to add a pdpdfkit image annotation, use [NSString stringWithFormat:@&ldquo;pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg&rdquo;, UIViewContentModeScaleAspectFill, [NSBundle.mainBundle bundlePath]] as URLString.</p></span>
+For example, to add a PSPDFKit image annotation, use [NSString stringWithFormat:@&ldquo;pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg&rdquo;, UIViewContentModeScaleAspectFill, [NSBundle.mainBundle bundlePath]] as URLString.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithPage:">&ndash;&nbsp;initWithPage:</a></code>
-		<span class="tooltip"><p>Initalize link annotation with target page.</p></span>
+		<span class="tooltip"><p>Initialize link annotation with target page.</p></span>
 	</span>
 	
 	
@@ -267,14 +256,14 @@ Will update the <a href="#//api/name/linkType"><code>linkType</code></a> when se
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/URL">&nbsp;&nbsp;URL</a></code>
-		<span class="tooltip"><p>Convenience method, will create a new <a href="../Classes/PSPDFActionURL.html">PSPDFActionURL</a> and get the URL from it.</p></span>
+		<span class="tooltip"><p>Convenience method, will create a new <a href="../Classes/PSPDFURLAction.html">PSPDFURLAction</a> and get the URL from it.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/showAsLinkView">&nbsp;&nbsp;showAsLinkView</a></code>
-		<span class="tooltip"><p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if isPopover/<a href="#//api/name/modal">isModal</a> is set to yes)</p></span>
+		<span class="tooltip"><p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if isPopover/isModal is set to yes)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -317,19 +306,12 @@ Forwards to <a href="#//api/name/action">action</a>.localizedDescription.</p></s
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/linkTypeTransformer">+&nbsp;linkTypeTransformer</a></code>
-		<span class="tooltip"><p>Link Type String &lt;-> <a href="../Constants/PSPDFLinkAnnotationType.html">PSPDFLinkAnnotationType</a> transformer.</p></span>
-	</span>
-	
-	
 </li>
 						</ul>
 						
 						
-						<a title="Internal Methods" name="task_Internal Methods"></a>
-						<h3 class="subsubtitle task-title">Internal Methods</h3>
+						<a title="Private Methods" name="task_Private Methods"></a>
+						<h3 class="subsubtitle task-title">Private Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -359,7 +341,7 @@ Forwards to <a href="#//api/name/action">action</a>.localizedDescription.</p></s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convenience method, will create a new <a href="../Classes/PSPDFActionURL.html">PSPDFActionURL</a> and get the URL from it.</p>
+		<p>Convenience method, will create a new <a href="../Classes/PSPDFURLAction.html">PSPDFURLAction</a> and get the URL from it.</p>
 	</div>		
 	
 	
@@ -606,7 +588,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if isPopover/<a href="#//api/name/modal">isModal</a> is set to yes)</p>
+		<p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if isPopover/isModal is set to yes)</p>
 	</div>		
 	
 	
@@ -637,46 +619,6 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/linkTypeTransformer" title="linkTypeTransformer"></a>
-	<h3 class="subsubtitle method-title">linkTypeTransformer</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Link Type String &lt;-> <a href="../Constants/PSPDFLinkAnnotationType.html">PSPDFLinkAnnotationType</a> transformer.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>+ (NSValueTransformer *)linkTypeTransformer</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFLinkAnnotation.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
 					
 					
 					<div class="section section-methods">
@@ -694,7 +636,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (PSPDFActionURL *)URLAction</code></div>
+	<div class="method-subsection method-declaration"><code>- (PSPDFURLAction *)URLAction</code></div>
 	
 	
 	
@@ -758,7 +700,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initalize link annotation with target page.</p>
+		<p>Initialize link annotation with target page.</p>
 	</div>		
 	
 	
@@ -792,7 +734,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialze link annotation with target <a href="#//api/name/URL">URL</a>.</p>
+		<p>Initialize link annotation with target <a href="#//api/name/URL">URL</a>.</p>
 	</div>		
 	
 	
@@ -826,9 +768,9 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialze link annotation with target URL string.
+		<p>Initialize link annotation with target URL string.
 Can also be used for pspdfkit:// URLs.
-For example, to add a pdpdfkit image annotation, use [NSString stringWithFormat:@&ldquo;pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg&rdquo;, UIViewContentModeScaleAspectFill, [NSBundle.mainBundle bundlePath]] as URLString.</p>
+For example, to add a PSPDFKit image annotation, use [NSString stringWithFormat:@&ldquo;pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg&rdquo;, UIViewContentModeScaleAspectFill, [NSBundle.mainBundle bundlePath]] as URLString.</p>
 	</div>		
 	
 	
@@ -923,7 +865,7 @@ Forwards to <a href="#//api/name/action">action</a>.localizedDescription.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFLinkAnnotation.h</code><br />
+		<code class="declared-in-ref">PSPDFLinkAnnotation+Private.h</code><br />
 	</div>				
 	
 	

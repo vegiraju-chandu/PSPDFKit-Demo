@@ -51,6 +51,8 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/actionClassForType:">&nbsp;&nbsp;&nbsp;&nbsp;+ actionClassForType:</option>
+	
 	<option value="//api/name/actionWithPDFDictionary:documentRef:pageCache:">&nbsp;&nbsp;&nbsp;&nbsp;+ actionWithPDFDictionary:documentRef:pageCache:</option>
 	
 	<option value="//api/name/resolveDestNames:documentRef:">&nbsp;&nbsp;&nbsp;&nbsp;+ resolveDestNames:documentRef:</option>
@@ -86,6 +88,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PageResolving Methods">PageResolving Methods</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
+	
 </ul></li>
 
 
@@ -105,6 +109,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actionClassForType:">actionClassForType:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actionWithPDFDictionary:documentRef:pageCache:">actionWithPDFDictionary:documentRef:pageCache:</a></span></li>
 	
@@ -144,7 +150,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFModel.html">PSPDFModel</a> : NSObject</td>
+	<td class="specification-value">PSPDFModel : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">PSPDFJSONSerializing</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFAction.h</td>
@@ -176,9 +185,8 @@ See the Adobe PDF Specification for more about actions and action types.</p><div
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/actionWithPDFDictionary:documentRef:pageCache:">+&nbsp;actionWithPDFDictionary:documentRef:pageCache:</a></code>
-		<span class="tooltip"><p>Parses a PDF dictionary and creates the action object.
-<code>pageCache</code> can be nil but will speed up page resolving under certain conditions.</p></span>
+		<code><a href="#//api/name/actionClassForType:">+&nbsp;actionClassForType:</a></code>
+		<span class="tooltip"><p>Return the class responsible for <code>actionType</code>.</p></span>
 	</span>
 	
 	
@@ -239,6 +247,22 @@ Will be persisted externally but not within PDF documents.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/resolveDestNames:documentRef:">+&nbsp;resolveDestNames:documentRef:</a></code>
 		<span class="tooltip"><p>Static helper, resolves named destination entries, returns dict with name -> page NSNumber</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Private Methods" name="task_Private Methods"></a>
+						<h3 class="subsubtitle task-title">Private Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/actionWithPDFDictionary:documentRef:pageCache:">+&nbsp;actionWithPDFDictionary:documentRef:pageCache:</a></code>
+		<span class="tooltip"><p>Parses a PDF dictionary and creates the action object.
+<code>pageCache</code> can be nil but will speed up page resolving under certain conditions.</p></span>
 	</span>
 	
 	
@@ -368,6 +392,40 @@ Will be persisted externally but not within PDF documents.</p>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/actionClassForType:" title="actionClassForType:"></a>
+	<h3 class="subsubtitle method-title">actionClassForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the class responsible for <code>actionType</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (Class)actionClassForType:(PSPDFActionType)<em>actionType</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAction.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/actionWithPDFDictionary:documentRef:pageCache:" title="actionWithPDFDictionary:documentRef:pageCache:"></a>
 	<h3 class="subsubtitle method-title">actionWithPDFDictionary:documentRef:pageCache:</h3>
 	
@@ -401,7 +459,7 @@ Will be persisted externally but not within PDF documents.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAction.h</code><br />
+		<code class="declared-in-ref">PSPDFAction+Private.h</code><br />
 	</div>				
 	
 	
@@ -435,7 +493,7 @@ Will be persisted externally but not within PDF documents.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAction.h</code><br />
+		<code class="declared-in-ref">PSPDFAction+Private.h</code><br />
 	</div>				
 	
 	
@@ -460,7 +518,7 @@ Will be persisted externally but not within PDF documents.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithType:(PSPDFActionType)<em>type</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithType:(PSPDFActionType)<em>actionType</em></code></div>
 	
 	
 	

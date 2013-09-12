@@ -48,6 +48,12 @@
 	
 	<option value="//api/name/annotationToolbarDidHide:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationToolbarDidHide:</option>
 	
+	<option value="//api/name/annotationToolbarDidShow:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationToolbarDidShow:</option>
+	
+	<option value="//api/name/annotationToolbarWillHide:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationToolbarWillHide:</option>
+	
+	<option value="//api/name/annotationToolbarWillShow:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationToolbarWillShow:</option>
+	
 	
 	
 </select>
@@ -79,6 +85,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbar:didChangeMode:">annotationToolbar:didChangeMode:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbarDidHide:">annotationToolbarDidHide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbarDidShow:">annotationToolbarDidShow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbarWillHide:">annotationToolbarWillHide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationToolbarWillShow:">annotationToolbarWillShow:</a></span></li>
 	
 </ul></li>
 
@@ -135,6 +147,27 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/annotationToolbarWillShow:">&ndash;&nbsp;annotationToolbarWillShow:</a></code>
+		<span class="tooltip"><p>The annotation toolbar will be displayed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationToolbarDidShow:">&ndash;&nbsp;annotationToolbarDidShow:</a></code>
+		<span class="tooltip"><p>The annotation toolbar has been displayed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationToolbarWillHide:">&ndash;&nbsp;annotationToolbarWillHide:</a></code>
+		<span class="tooltip"><p>Called when the Done button has been pressed to hide the toolbar.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/annotationToolbarDidHide:">&ndash;&nbsp;annotationToolbarDidHide:</a></code>
 		<span class="tooltip"><p>Called when the Done button has been pressed to hide the toolbar.</p></span>
 	</span>
@@ -175,7 +208,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)annotationToolbar:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em> didChangeMode:(PSPDFAnnotationToolbarMode)<em>newMode</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)annotationToolbar:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em> didChangeMode:(NSString *)<em>newMode</em></code></div>
 	
 	
 	
@@ -210,6 +243,108 @@
 	
 	
 	<div class="method-subsection method-declaration"><code>- (void)annotationToolbarDidHide:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationToolbarDidShow:" title="annotationToolbarDidShow:"></a>
+	<h3 class="subsubtitle method-title">annotationToolbarDidShow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The annotation toolbar has been displayed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)annotationToolbarDidShow:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationToolbarWillHide:" title="annotationToolbarWillHide:"></a>
+	<h3 class="subsubtitle method-title">annotationToolbarWillHide:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the Done button has been pressed to hide the toolbar.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)annotationToolbarWillHide:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationToolbar.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/annotationToolbarWillShow:" title="annotationToolbarWillShow:"></a>
+	<h3 class="subsubtitle method-title">annotationToolbarWillShow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The annotation toolbar will be displayed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)annotationToolbarWillShow:(PSPDFAnnotationToolbar *)<em>annotationToolbar</em></code></div>
 	
 	
 	

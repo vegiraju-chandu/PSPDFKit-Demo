@@ -40,8 +40,6 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/actionSheetCustomizationBlock">&nbsp;&nbsp;&nbsp;&nbsp;actionSheetCustomizationBlock</option>
-	
 	<option value="//api/name/mailComposeViewControllerCustomizationBlock">&nbsp;&nbsp;&nbsp;&nbsp;mailComposeViewControllerCustomizationBlock</option>
 	
 	<option value="//api/name/sendOptions">&nbsp;&nbsp;&nbsp;&nbsp;sendOptions</option>
@@ -73,8 +71,6 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actionSheetCustomizationBlock">actionSheetCustomizationBlock</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mailComposeViewControllerCustomizationBlock">mailComposeViewControllerCustomizationBlock</a></span></li>
 	
@@ -111,7 +107,7 @@
 	<td class="specification-value"><a href="../Classes/PSPDFBarButtonItem.html">PSPDFBarButtonItem</a> : UIBarButtonItem</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">MFMailComposeViewControllerDelegate</td>
+	<td class="specification-value">MFMailComposeViewControllerDelegate<br /><a href="../Protocols/PSPDFDocumentSharingViewControllerDelegate.html">PSPDFDocumentSharingViewControllerDelegate</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFEmailBarButtonItem.h</td>
@@ -148,7 +144,7 @@ To figure out the name, PSPDFDocument&rsquo;s fileNamesWithDataDictionary will b
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sendOptions">&nbsp;&nbsp;sendOptions</a></code>
-		<span class="tooltip"><p>Control what data is sent. Defaults to PSPDFEmailSendVisiblePagesFlattened|PSPDFEmailSendMergedFilesIfNeeded|PSPDFEmailSendMergedFilesIfNeededFlattened.
+		<span class="tooltip"><p>Control what data is sent. Defaults to PSPDFDocumentSharingOptionCurrentPageOnly|PSPDFDocumentSharingOptionAllPages|PSPDFDocumentSharingOptionEmbedAnnotations|PSPDFDocumentSharingOptionFlattenAnnotations|PSPDFDocumentSharingOptionAnnotationsSummary|PSPDFDocumentSharingOptionOfferMergeFiles.
 If only one option is set here, no menu will be displayed.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -157,13 +153,6 @@ If only one option is set here, no menu will be displayed.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/mailComposeViewControllerCustomizationBlock">&nbsp;&nbsp;mailComposeViewControllerCustomizationBlock</a></code>
 		<span class="tooltip"><p>Allows customization of the mail compose controller before it&rsquo;s displayed. (e.g. set custom body text)</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/actionSheetCustomizationBlock">&nbsp;&nbsp;actionSheetCustomizationBlock</a></code>
-		<span class="tooltip"><p>Allows to add custom buttons in the action sheet. Will be called before the Cancel button is added.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -179,40 +168,6 @@ If only one option is set here, no menu will be displayed.</p></span>
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/actionSheetCustomizationBlock" title="actionSheetCustomizationBlock"></a>
-	<h3 class="subsubtitle method-title">actionSheetCustomizationBlock</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Allows to add custom buttons in the action sheet. Will be called before the Cancel button is added.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) void ( ^ ) ( PSPDFActionSheet *) actionSheetCustomizationBlock</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFEmailBarButtonItem.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/mailComposeViewControllerCustomizationBlock" title="mailComposeViewControllerCustomizationBlock"></a>
@@ -255,12 +210,12 @@ If only one option is set here, no menu will be displayed.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Control what data is sent. Defaults to PSPDFEmailSendVisiblePagesFlattened|PSPDFEmailSendMergedFilesIfNeeded|PSPDFEmailSendMergedFilesIfNeededFlattened.
+		<p>Control what data is sent. Defaults to PSPDFDocumentSharingOptionCurrentPageOnly|PSPDFDocumentSharingOptionAllPages|PSPDFDocumentSharingOptionEmbedAnnotations|PSPDFDocumentSharingOptionFlattenAnnotations|PSPDFDocumentSharingOptionAnnotationsSummary|PSPDFDocumentSharingOptionOfferMergeFiles.
 If only one option is set here, no menu will be displayed.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFEmailSendOptions sendOptions</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFDocumentSharingOptions sendOptions</code></div>
 	
 	
 	
@@ -271,11 +226,8 @@ If only one option is set here, no menu will be displayed.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>***Flattened control if annotations should be flattened.
-Annotations that are not flattened are not displayed in Mobile Mail/Mobile Safari.
-Note that annotations will be removed if this is set to NO for every option but PSPDFEmailSendOriginalDocumentFiles.</p>
-
-<p>PSPDFEmailSendMergedFilesIfNeeded will be equal to PSPDFEmailSendOriginalDocumentFiles if the document has just one document provider.</p>
+		<p>*Flattened controls if annotations should be flattened.
+Annotations that are not flattened are not displayed in Mobile Mail/Mobile Safari (partly as of iOS 7).</p>
 	</div>
 	
 	

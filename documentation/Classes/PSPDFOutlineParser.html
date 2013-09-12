@@ -63,8 +63,6 @@
 	
 	<option value="//api/name/outlineElementForPage:exactPageOnly:">&nbsp;&nbsp;&nbsp;&nbsp;- outlineElementForPage:exactPageOnly:</option>
 	
-	<option value="//api/name/resolveDestinationNameForOutlineElement:">&nbsp;&nbsp;&nbsp;&nbsp;- resolveDestinationNameForOutlineElement:</option>
-	
 	
 	
 </select>
@@ -80,8 +78,6 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Deprecated Methods">Deprecated Methods</a></span></li>
 	
 </ul></li>
 
@@ -114,8 +110,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDocumentProvider:">initWithDocumentProvider:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/outlineElementForPage:exactPageOnly:">outlineElementForPage:exactPageOnly:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resolveDestinationNameForOutlineElement:">resolveDestinationNameForOutlineElement:</a></span></li>
 	
 </ul></li>
 
@@ -167,7 +161,7 @@
 						
 						
 						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						
 
 						<ul class="task-list">
 							<li>
@@ -228,22 +222,6 @@ Used to remember the position in <a href="../Classes/PSPDFOutlineViewController.
 		<span class="tooltip"><p>Named destinations can be slow to resolve. By default, the <a href="#//api/name/outline">outline</a> parser will resolve up to 500 destinations. If more than 500 destinations are set, resolving is delayed to when the <a href="../Classes/PSPDFOutlineElement.html">PSPDFOutlineElement</a> is first used.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Deprecated Methods" name="task_Deprecated Methods"></a>
-						<h3 class="subsubtitle task-title">Deprecated Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/resolveDestinationNameForOutlineElement:">&ndash;&nbsp;resolveDestinationNameForOutlineElement:</a></code>
-		<span class="tooltip"><p>Resolve the destinationName of an <a href="#//api/name/outline">outline</a> element.
-Will return NO if destinationName is nil or couldn&rsquo;t be resolved.</p></span>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -539,41 +517,6 @@ Will return NO if <a href="#//api/name/outline">outline</a> is not yet parsed.</
 		<p>If exactPageOnly is set, the <a href="#//api/name/outline">outline</a> will only be returned if it&rsquo;s from the specific page.
 Else the last active set <a href="#//api/name/outline">outline</a> will be returned.</p>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFOutlineParser.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/resolveDestinationNameForOutlineElement:" title="resolveDestinationNameForOutlineElement:"></a>
-	<h3 class="subsubtitle method-title">resolveDestinationNameForOutlineElement:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Resolve the destinationName of an <a href="#//api/name/outline">outline</a> element.
-Will return NO if destinationName is nil or couldn&rsquo;t be resolved.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (BOOL)resolveDestinationNameForOutlineElement:(PSPDFOutlineElement *)<em>outlineElement</em></code></div>
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

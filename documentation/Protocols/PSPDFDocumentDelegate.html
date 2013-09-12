@@ -44,11 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:</option>
+	<option value="//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:</option>
 	
 	<option value="//api/name/pdfDocument:didSaveAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:didSaveAnnotations:</option>
 	
-	<option value="//api/name/pdfDocument:failedToSaveAnnotations:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:failedToSaveAnnotations:withError:</option>
+	<option value="//api/name/pdfDocument:failedToSaveAnnotations:error:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:failedToSaveAnnotations:error:</option>
 	
 	<option value="//api/name/pdfDocument:resolveCustomAnnotationPathToken:">&nbsp;&nbsp;&nbsp;&nbsp;- pdfDocument:resolveCustomAnnotationPathToken:</option>
 	
@@ -80,11 +80,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:">pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:">pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:didSaveAnnotations:">pdfDocument:didSaveAnnotations:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:failedToSaveAnnotations:withError:">pdfDocument:failedToSaveAnnotations:withError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:failedToSaveAnnotations:error:">pdfDocument:failedToSaveAnnotations:error:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pdfDocument:resolveCustomAnnotationPathToken:">pdfDocument:resolveCustomAnnotationPathToken:</a></span></li>
 	
@@ -125,7 +125,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Delegate to receive events regarding <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> (annotation saving; path resolving)</p>
+						<p>Delegate to receive events regarding <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a>.</p>
 					</div>
 					
 					
@@ -143,7 +143,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:">&ndash;&nbsp;pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:</a></code>
+		<code><a href="#//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:">&ndash;&nbsp;pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:</a></code>
 		<span class="tooltip"><p>Callback for a render operation. Will be called on a thread (since rendering is async)
 You can use the context to add custom drawing.</p></span>
 	</span>
@@ -166,7 +166,7 @@ If there are no dirty annotations, delegates will not be called.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pdfDocument:failedToSaveAnnotations:withError:">&ndash;&nbsp;pdfDocument:failedToSaveAnnotations:withError:</a></code>
+		<code><a href="#//api/name/pdfDocument:failedToSaveAnnotations:error:">&ndash;&nbsp;pdfDocument:failedToSaveAnnotations:error:</a></code>
 		<span class="tooltip"><p>Called after saving failed. When an error occurs, annotations will not be the complete set in multi-file documents.</p></span>
 	</span>
 	
@@ -189,8 +189,8 @@ If there are no dirty annotations, delegates will not be called.</p></span>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:" title="pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:"></a>
-	<h3 class="subsubtitle method-title">pdfDocument:didRenderPage:inContext:withSize:clippedToRect:withAnnotations:options:</h3>
+	<a name="//api/name/pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:" title="pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:"></a>
+	<h3 class="subsubtitle method-title">pdfDocument:didRenderPage:inContext:withSize:clippedToRect:annotations:options:</h3>
 	
 	
 	
@@ -200,7 +200,7 @@ You can use the context to add custom drawing.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)pdfDocument:(PSPDFDocument *)<em>document</em> didRenderPage:(NSUInteger)<em>page</em> inContext:(CGContextRef)<em>context</em> withSize:(CGSize)<em>fullSize</em> clippedToRect:(CGRect)<em>clipRect</em> withAnnotations:(NSArray *)<em>annotations</em> options:(NSDictionary *)<em>options</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)pdfDocument:(PSPDFDocument *)<em>document</em> didRenderPage:(NSUInteger)<em>page</em> inContext:(CGContextRef)<em>context</em> withSize:(CGSize)<em>fullSize</em> clippedToRect:(CGRect)<em>clipRect</em> annotations:(NSArray *)<em>annotations</em> options:(NSDictionary *)<em>options</em></code></div>
 	
 	
 	
@@ -244,6 +244,11 @@ If there are no dirty annotations, delegates will not be called.</p>
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> <code>annotations</code> might not include all changes, especially if annotations have been deleted or an annotation provider didn&rsquo;t implement dirtyAnnotations.</p></div><div class="warning"><p><strong>Warning:</strong> Might be called from a thread.</p></div>
+	</div>
+	
 	
 	
 	
@@ -259,8 +264,8 @@ If there are no dirty annotations, delegates will not be called.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/pdfDocument:failedToSaveAnnotations:withError:" title="pdfDocument:failedToSaveAnnotations:withError:"></a>
-	<h3 class="subsubtitle method-title">pdfDocument:failedToSaveAnnotations:withError:</h3>
+	<a name="//api/name/pdfDocument:failedToSaveAnnotations:error:" title="pdfDocument:failedToSaveAnnotations:error:"></a>
+	<h3 class="subsubtitle method-title">pdfDocument:failedToSaveAnnotations:error:</h3>
 	
 	
 	
@@ -269,7 +274,7 @@ If there are no dirty annotations, delegates will not be called.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)pdfDocument:(PSPDFDocument *)<em>document</em> failedToSaveAnnotations:(NSArray *)<em>annotations</em> withError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)pdfDocument:(PSPDFDocument *)<em>document</em> failedToSaveAnnotations:(NSArray *)<em>annotations</em> error:(NSError *)<em>error</em></code></div>
 	
 	
 	
@@ -277,6 +282,11 @@ If there are no dirty annotations, delegates will not be called.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> <code>annotations</code> might not include all changes, especially if annotations have been deleted or an annotation provider didn&rsquo;t implement dirtyAnnotations.</p></div><div class="warning"><p><strong>Warning:</strong> Might be called from a thread.</p></div>
+	</div>
 	
 	
 	

@@ -40,6 +40,8 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/bookmarkImageView">&nbsp;&nbsp;&nbsp;&nbsp;bookmarkImageView</option>
+	
 	<option value="//api/name/document">&nbsp;&nbsp;&nbsp;&nbsp;document</option>
 	
 	<option value="//api/name/edgeInsets">&nbsp;&nbsp;&nbsp;&nbsp;edgeInsets</option>
@@ -50,11 +52,11 @@
 	
 	<option value="//api/name/pageLabel">&nbsp;&nbsp;&nbsp;&nbsp;pageLabel</option>
 	
+	<option value="//api/name/pageLabelEnabled">&nbsp;&nbsp;&nbsp;&nbsp;pageLabelEnabled</option>
+	
 	<option value="//api/name/selectedBackgroundView">&nbsp;&nbsp;&nbsp;&nbsp;selectedBackgroundView</option>
 	
 	<option value="//api/name/shadowEnabled">&nbsp;&nbsp;&nbsp;&nbsp;shadowEnabled</option>
-	
-	<option value="//api/name/showingPageLabel">&nbsp;&nbsp;&nbsp;&nbsp;showingPageLabel</option>
 	
 	
 	
@@ -99,6 +101,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bookmarkImageView">bookmarkImageView</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/document">document</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/edgeInsets">edgeInsets</a></span></li>
@@ -109,11 +113,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pageLabel">pageLabel</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pageLabelEnabled">pageLabelEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedBackgroundView">selectedBackgroundView</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowEnabled">shadowEnabled</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showingPageLabel">showingPageLabel</a></span></li>
 	
 </ul></li>
 
@@ -219,7 +223,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/showingPageLabel">&nbsp;&nbsp;showingPageLabel</a></code>
+		<code><a href="#//api/name/pageLabelEnabled">&nbsp;&nbsp;pageLabelEnabled</a></code>
 		<span class="tooltip"><p>Enable <a href="#//api/name/page">page</a> label.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -263,6 +267,13 @@ Modify this to change the look of the selection/highlight state.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/bookmarkImageView">&nbsp;&nbsp;bookmarkImageView</a></code>
+		<span class="tooltip"><p>Allows to update the bookmark image.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/pathShadowForView:">&ndash;&nbsp;pathShadowForView:</a></code>
 		<span class="tooltip"><p>Creates the shadow. Subclass to change. Returns a CGPathRef.</p></span>
 	</span>
@@ -301,6 +312,40 @@ Modify this to change the look of the selection/highlight state.</p></span>
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/bookmarkImageView" title="bookmarkImageView"></a>
+	<h3 class="subsubtitle method-title">bookmarkImageView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows to update the bookmark image.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIImageView *bookmarkImageView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFThumbnailGridViewCell.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/document" title="document"></a>
@@ -473,6 +518,40 @@ Modify this to change the look of the selection/highlight state.</p></span>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/pageLabelEnabled" title="pageLabelEnabled"></a>
+	<h3 class="subsubtitle method-title">pageLabelEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enable <a href="#//api/name/page">page</a> label.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isPageLabelEnabled) BOOL pageLabelEnabled</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFThumbnailGridViewCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/selectedBackgroundView" title="selectedBackgroundView"></a>
 	<h3 class="subsubtitle method-title">selectedBackgroundView</h3>
 	
@@ -519,40 +598,6 @@ Modify this to change the look of the selection/highlight state.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isShadowEnabled) BOOL shadowEnabled</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFThumbnailGridViewCell.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/showingPageLabel" title="showingPageLabel"></a>
-	<h3 class="subsubtitle method-title">showingPageLabel</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Enable <a href="#//api/name/page">page</a> label.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isShowingPageLabel) BOOL showingPageLabel</code></div>
 	
 	
 	

@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -61,7 +63,7 @@
 	
 	<option value="//api/name/canBeScaledDownToSize:">&nbsp;&nbsp;&nbsp;&nbsp;- canBeScaledDownToSize:</option>
 	
-	<option value="//api/name/initWithUID:andPage:ofSize:withReceipt:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithUID:andPage:ofSize:withReceipt:</option>
+	<option value="//api/name/initWithUID:page:size:receipt:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithUID:page:size:receipt:</option>
 	
 	
 	
@@ -72,6 +74,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -109,7 +113,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canBeScaledDownToSize:">canBeScaledDownToSize:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithUID:andPage:ofSize:withReceipt:">initWithUID:andPage:ofSize:withReceipt:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithUID:page:size:receipt:">initWithUID:page:size:receipt:</a></span></li>
 	
 </ul></li>
 
@@ -148,6 +152,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Equality checks for <a href="#//api/name/page">page</a>, <a href="#//api/name/size">size</a> and <a href="#//api/name/UID">UID</a>.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -161,7 +173,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithUID:andPage:ofSize:withReceipt:">&ndash;&nbsp;initWithUID:andPage:ofSize:withReceipt:</a></code>
+		<code><a href="#//api/name/initWithUID:page:size:receipt:">&ndash;&nbsp;initWithUID:page:size:receipt:</a></code>
 		<span class="tooltip"><p>Designated initializer.</p></span>
 	</span>
 	
@@ -197,7 +209,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastAccessTime">&nbsp;&nbsp;lastAccessTime</a></code>
-		<span class="tooltip"><p>The last time the <a href="#//api/name/image">image</a> has been accessed.</p></span>
+		<span class="tooltip"><p>The last time the <a href="#//api/name/image">image</a> has been accessed. Atomic because it might change at any time.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -344,7 +356,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The last time the <a href="#//api/name/image">image</a> has been accessed.</p>
+		<p>The last time the <a href="#//api/name/image">image</a> has been accessed. Atomic because it might change at any time.</p>
 	</div>		
 	
 	
@@ -518,8 +530,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithUID:andPage:ofSize:withReceipt:" title="initWithUID:andPage:ofSize:withReceipt:"></a>
-	<h3 class="subsubtitle method-title">initWithUID:andPage:ofSize:withReceipt:</h3>
+	<a name="//api/name/initWithUID:page:size:receipt:" title="initWithUID:page:size:receipt:"></a>
+	<h3 class="subsubtitle method-title">initWithUID:page:size:receipt:</h3>
 	
 	
 	
@@ -528,7 +540,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithUID:(NSString *)<em>UID</em> andPage:(NSUInteger)<em>page</em> ofSize:(CGSize)<em>size</em> withReceipt:(NSString *)<em>renderReceipt</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithUID:(NSString *)<em>UID</em> page:(NSUInteger)<em>page</em> size:(CGSize)<em>size</em> receipt:(NSString *)<em>renderReceipt</em></code></div>
 	
 	
 	

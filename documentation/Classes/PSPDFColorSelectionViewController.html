@@ -49,9 +49,9 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/colorsFromPalletURL:addDarkenedVariants:">&nbsp;&nbsp;&nbsp;&nbsp;+ colorsFromPalletURL:addDarkenedVariants:</option>
+	<option value="//api/name/colorsFromPaletteURL:addDarkenedVariants:">&nbsp;&nbsp;&nbsp;&nbsp;+ colorsFromPaletteURL:addDarkenedVariants:</option>
 	
-	<option value="//api/name/defaultColorPickerWithTitle:delegate:context:">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultColorPickerWithTitle:delegate:context:</option>
+	<option value="//api/name/defaultColorPickerWithTitle:wantTransparency:delegate:context:">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultColorPickerWithTitle:wantTransparency:delegate:context:</option>
 	
 	<option value="//api/name/monoChromeSelectionViewController">&nbsp;&nbsp;&nbsp;&nbsp;+ monoChromeSelectionViewController</option>
 	
@@ -100,9 +100,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/colorsFromPalletURL:addDarkenedVariants:">colorsFromPalletURL:addDarkenedVariants:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/colorsFromPaletteURL:addDarkenedVariants:">colorsFromPaletteURL:addDarkenedVariants:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultColorPickerWithTitle:delegate:context:">defaultColorPickerWithTitle:delegate:context:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultColorPickerWithTitle:wantTransparency:delegate:context:">defaultColorPickerWithTitle:wantTransparency:delegate:context:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/monoChromeSelectionViewController">monoChromeSelectionViewController</a></span></li>
 	
@@ -173,7 +173,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/defaultColorPickerWithTitle:delegate:context:">+&nbsp;defaultColorPickerWithTitle:delegate:context:</a></code>
+		<code><a href="#//api/name/defaultColorPickerWithTitle:wantTransparency:delegate:context:">+&nbsp;defaultColorPickerWithTitle:wantTransparency:delegate:context:</a></code>
 		<span class="tooltip"><p>Used to show the color pickers in PSPDF. Uses defaultColorArrays.
 <code>context</code> can be used to store additional context that gets sent to the delegates.</p></span>
 	</span>
@@ -196,7 +196,7 @@ Defaults to @[@(PSPDFColorPickerStyleRainbow), @(PSPDFColorPickerStyleModern), @
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/colorsFromPalletURL:addDarkenedVariants:">+&nbsp;colorsFromPalletURL:addDarkenedVariants:</a></code>
+		<code><a href="#//api/name/colorsFromPaletteURL:addDarkenedVariants:">+&nbsp;colorsFromPaletteURL:addDarkenedVariants:</a></code>
 		<span class="tooltip"><p>Helper that generates a color array from a saved plist. See PSPDFKit.bundle for examples.</p></span>
 	</span>
 	
@@ -320,8 +320,8 @@ Will reset to default if set to nil.</p></span>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/colorsFromPalletURL:addDarkenedVariants:" title="colorsFromPalletURL:addDarkenedVariants:"></a>
-	<h3 class="subsubtitle method-title">colorsFromPalletURL:addDarkenedVariants:</h3>
+	<a name="//api/name/colorsFromPaletteURL:addDarkenedVariants:" title="colorsFromPaletteURL:addDarkenedVariants:"></a>
+	<h3 class="subsubtitle method-title">colorsFromPaletteURL:addDarkenedVariants:</h3>
 	
 	
 	
@@ -330,7 +330,7 @@ Will reset to default if set to nil.</p></span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (NSArray *)colorsFromPalletURL:(NSURL *)<em>palletURL</em> addDarkenedVariants:(BOOL)<em>darkenedVariants</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)colorsFromPaletteURL:(NSURL *)<em>paletteURL</em> addDarkenedVariants:(BOOL)<em>darkenedVariants</em></code></div>
 	
 	
 	
@@ -354,8 +354,8 @@ Will reset to default if set to nil.</p></span>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/defaultColorPickerWithTitle:delegate:context:" title="defaultColorPickerWithTitle:delegate:context:"></a>
-	<h3 class="subsubtitle method-title">defaultColorPickerWithTitle:delegate:context:</h3>
+	<a name="//api/name/defaultColorPickerWithTitle:wantTransparency:delegate:context:" title="defaultColorPickerWithTitle:wantTransparency:delegate:context:"></a>
+	<h3 class="subsubtitle method-title">defaultColorPickerWithTitle:wantTransparency:delegate:context:</h3>
 	
 	
 	
@@ -365,7 +365,7 @@ Will reset to default if set to nil.</p></span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (PSPDFSimplePageViewController *)defaultColorPickerWithTitle:(NSString *)<em>title</em> delegate:(id&lt;PSPDFColorSelectionViewControllerDelegate&gt;)<em>delegate</em> context:(void *)<em>context</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (PSPDFSimplePageViewController *)defaultColorPickerWithTitle:(NSString *)<em>title</em> wantTransparency:(BOOL)<em>wantTransparency</em> delegate:(id&lt;PSPDFColorSelectionViewControllerDelegate&gt;)<em>delegate</em> context:(void *)<em>context</em></code></div>
 	
 	
 	

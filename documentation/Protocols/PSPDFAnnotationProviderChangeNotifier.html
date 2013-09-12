@@ -46,7 +46,7 @@
 	
 	<option value="//api/name/parentDocumentProvider">&nbsp;&nbsp;&nbsp;&nbsp;- parentDocumentProvider</option>
 	
-	<option value="//api/name/updateAnnotations:originalAnnotations:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- updateAnnotations:originalAnnotations:animated:</option>
+	<option value="//api/name/updateAnnotations:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- updateAnnotations:animated:</option>
 	
 	
 	
@@ -78,7 +78,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parentDocumentProvider">parentDocumentProvider</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateAnnotations:originalAnnotations:animated:">updateAnnotations:originalAnnotations:animated:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateAnnotations:animated:">updateAnnotations:animated:</a></span></li>
 	
 </ul></li>
 
@@ -118,7 +118,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>To be notified on any changes PSPDFKit does on your annotations, implement this notifier.
-It will be set as soon as your class is added to the annotationParser.</p>
+It will be set as soon as your class is added to the annotationManager.</p>
 					</div>
 					
 					
@@ -136,7 +136,7 @@ It will be set as soon as your class is added to the annotationParser.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateAnnotations:originalAnnotations:animated:">&ndash;&nbsp;updateAnnotations:originalAnnotations:animated:</a></code>
+		<code><a href="#//api/name/updateAnnotations:animated:">&ndash;&nbsp;updateAnnotations:animated:</a></code>
 		<span class="tooltip"><p>Call this from your code as soon as annotations change.
 This method can be called from any thread. (try to avoid the main thread)</p></span>
 	</span>
@@ -145,7 +145,7 @@ This method can be called from any thread. (try to avoid the main thread)</p></s
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/parentDocumentProvider">&ndash;&nbsp;parentDocumentProvider</a></code>
-		<span class="tooltip"><p>Query to get the document provider if this annotation provider is attached to the <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnotationParser</a>.</p></span>
+		<span class="tooltip"><p>Query to get the document provider if this annotation provider is attached to the <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a>.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -173,7 +173,7 @@ This method can be called from any thread. (try to avoid the main thread)</p></s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Query to get the document provider if this annotation provider is attached to the <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnotationParser</a>.</p>
+		<p>Query to get the document provider if this annotation provider is attached to the <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a>.</p>
 	</div>		
 	
 	
@@ -201,8 +201,8 @@ This method can be called from any thread. (try to avoid the main thread)</p></s
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/updateAnnotations:originalAnnotations:animated:" title="updateAnnotations:originalAnnotations:animated:"></a>
-	<h3 class="subsubtitle method-title">updateAnnotations:originalAnnotations:animated:</h3>
+	<a name="//api/name/updateAnnotations:animated:" title="updateAnnotations:animated:"></a>
+	<h3 class="subsubtitle method-title">updateAnnotations:animated:</h3>
 	
 	
 	
@@ -212,7 +212,7 @@ This method can be called from any thread. (try to avoid the main thread)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)updateAnnotations:(NSArray *)<em>annotations</em> originalAnnotations:(NSArray *)<em>originalAnnotations</em> animated:(BOOL)<em>animated</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updateAnnotations:(NSArray *)<em>annotations</em> animated:(BOOL)<em>animated</em></code></div>
 	
 	
 	

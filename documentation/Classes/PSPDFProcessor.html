@@ -55,6 +55,8 @@
 	
 	<option value="//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</option>
 	
+	<option value="//api/name/generatePDFFromHTMLString:options:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromHTMLString:options:</option>
+	
 	<option value="//api/name/generatePDFFromHTMLString:outputFileURL:options:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromHTMLString:outputFileURL:options:</option>
 	
 	<option value="//api/name/generatePDFFromURL:outputFileURL:options:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromURL:outputFileURL:options:completionBlock:</option>
@@ -98,6 +100,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">generatePDFFromDocument:pageRange:options:progressBlock:error:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromHTMLString:options:">generatePDFFromHTMLString:options:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromHTMLString:outputFileURL:options:">generatePDFFromHTMLString:outputFileURL:options:</a></span></li>
 	
@@ -183,6 +187,13 @@ For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NS
 		<code><a href="#//api/name/generatePDFFromHTMLString:outputFileURL:options:">&ndash;&nbsp;generatePDFFromHTMLString:outputFileURL:options:</a></code>
 		<span class="tooltip"><p>Generates a PDF from a string. Does allow simple html tags.
 Will not work with complex HTML pages.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatePDFFromHTMLString:options:">&ndash;&nbsp;generatePDFFromHTMLString:options:</a></code>
+		<span class="tooltip"><p>Like the above, but create a temporary PDF in memory.</p></span>
 	</span>
 	
 	
@@ -367,6 +378,40 @@ For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NS
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/generatePDFFromHTMLString:options:" title="generatePDFFromHTMLString:options:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromHTMLString:options:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Like the above, but create a temporary PDF in memory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)generatePDFFromHTMLString:(NSString *)<em>HTML</em> options:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFProcessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/generatePDFFromHTMLString:outputFileURL:options:" title="generatePDFFromHTMLString:outputFileURL:options:"></a>
 	<h3 class="subsubtitle method-title">generatePDFFromHTMLString:outputFileURL:options:</h3>
 	
@@ -434,12 +479,13 @@ Upon completion, the completionBlock will be called.</p>
 See <a href="https://developer.apple.com/library/ios/">https://developer.apple.com/library/ios/</a>#qa/qa2008/qa1630.html for the full list.</p>
 
 <p>Certain documents might not have the correct pagination.
-(Try to manually define kPSPDFProcessorPageRect to fine-tune this)</p>
+(Try to manually define PSPDFProcessorPageRect to fine-tune this)</p>
 
-<p>&lsquo;options&rsquo; can contain both the kPSPDF constants listed above and any kCGPDFContext constants.
+<p>&lsquo;options&rsquo; can contain both the PSPDF constants listed above and any kCGPDFContext constants.
 For example, to password protect the pdf, you can use:
-@{(id)kCGPDFContextUserPassword  : password, (id)kCGPDFContextOwnerPassword : password,
-   (id)kCGPDFContextEncryptionKeyLength : @(128)}</p>
+@{(id)kCGPDFContextUserPassword  : password,
+   (id)kCGPDFContextOwnerPassword : password,
+   (id)kCGPDFContextEncryptionKeyLength : @128}</p>
 
 <p>Other useful properties are:
 - kCGPDFContextAllowsCopying

@@ -40,7 +40,7 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/annotation">&nbsp;&nbsp;&nbsp;&nbsp;annotation</option>
+	<option value="//api/name/annotations">&nbsp;&nbsp;&nbsp;&nbsp;annotations</option>
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
@@ -49,11 +49,20 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/hasPropertiesForAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;+ hasPropertiesForAnnotations:</option>
+	
+	<option value="//api/name/propertiesForAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;+ propertiesForAnnotations</option>
+	
+	<option value="//api/name/setPropertiesForAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;+ setPropertiesForAnnotations:</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithAnnotation:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAnnotation:delegate:</option>
+	<option value="//api/name/initWithAnnotations:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAnnotations:delegate:</option>
 	
 	
 	
@@ -71,6 +80,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Customization">Customization</a></span></li>
+	
 </ul></li>
 
 
@@ -79,7 +90,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotation">annotation</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotations">annotations</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
@@ -89,11 +100,21 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasPropertiesForAnnotations:">hasPropertiesForAnnotations:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/propertiesForAnnotations">propertiesForAnnotations</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPropertiesForAnnotations:">setPropertiesForAnnotations:</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAnnotation:delegate:">initWithAnnotation:delegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAnnotations:delegate:">initWithAnnotations:delegate:</a></span></li>
 	
 </ul></li>
 
@@ -119,10 +140,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">PSPDFStaticTableViewController : UITableViewController</td>
+	<td class="specification-value">PSPDFStaticTableViewController : <a href="../Classes/PSPDFBaseTableViewController.html">PSPDFBaseTableViewController</a> : UITableViewController</td>
 </tr><tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/PSPDFColorSelectionViewControllerDelegate.html">PSPDFColorSelectionViewControllerDelegate</a><br /><a href="../Protocols/PSPDFFontSelectorViewControllerDelegate.html">PSPDFFontSelectorViewControllerDelegate</a><br /><a href="../Protocols/PSPDFFontStyleViewControllerDelegate.html">PSPDFFontStyleViewControllerDelegate</a></td>
+	<td class="specification-value"><a href="../Protocols/PSPDFColorSelectionViewControllerDelegate.html">PSPDFColorSelectionViewControllerDelegate</a><br /><a href="../Protocols/PSPDFFontSelectorViewControllerDelegate.html">PSPDFFontSelectorViewControllerDelegate</a><br /><a href="../Protocols/PSPDFFontStyleViewControllerDelegate.html">PSPDFFontStyleViewControllerDelegate</a><br /><a href="../Protocols/PSPDFLineEndSelectionViewControllerDelegate.html">PSPDFLineEndSelectionViewControllerDelegate</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFAnnotationStyleViewController.h</td>
@@ -135,7 +156,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Allows to set/change the style of an <a href="#//api/name/annotation">annotation</a>.</p>
+						<p>Allows to set/change the style of an annotation. The annotation &ldquo;Inspector&rdquo;.
+@note: The inspector currently only supports setting <em>one</em> annotation, but since long-term we want multi-select-change, the API has already been prepared for.</p>
 					</div>
 					
 					
@@ -148,12 +170,19 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithAnnotation:delegate:">&ndash;&nbsp;initWithAnnotation:delegate:</a></code>
+		<code><a href="#//api/name/hasPropertiesForAnnotations:">+&nbsp;hasPropertiesForAnnotations:</a></code>
+		<span class="tooltip"><p>Returns YES if we can edit this annotation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAnnotations:delegate:">&ndash;&nbsp;initWithAnnotations:delegate:</a></code>
 		<span class="tooltip"><p>Designated initializer.</p></span>
 	</span>
 	
@@ -167,8 +196,8 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/annotation">&nbsp;&nbsp;annotation</a></code>
-		<span class="tooltip"><p>The current selected annotation</p></span>
+		<code><a href="#//api/name/annotations">&nbsp;&nbsp;annotations</a></code>
+		<span class="tooltip"><p>The current selected annotations.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -178,6 +207,28 @@
 		<span class="tooltip"><p>Shows a preview area on top. Defaults to NO.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Customization" name="task_Customization"></a>
+						<h3 class="subsubtitle task-title">Customization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPropertiesForAnnotations:">+&nbsp;setPropertiesForAnnotations:</a></code>
+		<span class="tooltip"><p>Customize the inspector globally. Dictionary in format annotation type string : array of property strings.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/propertiesForAnnotations">+&nbsp;propertiesForAnnotations</a></code>
+		<span class="tooltip"><p>Return current dictionary of properties.</p></span>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -193,17 +244,17 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/annotation" title="annotation"></a>
-	<h3 class="subsubtitle method-title">annotation</h3>
+	<a name="//api/name/annotations" title="annotations"></a>
+	<h3 class="subsubtitle method-title">annotations</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The current selected annotation</p>
+		<p>The current selected annotations.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PSPDFAnnotation *annotation</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *annotations</code></div>
 	
 	
 	
@@ -237,7 +288,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PSPDFAnnotationStyleViewControllerDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) IBOutlet id&lt;PSPDFAnnotationStyleViewControllerDelegate&gt; delegate</code></div>
 	
 	
 	
@@ -298,6 +349,119 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/hasPropertiesForAnnotations:" title="hasPropertiesForAnnotations:"></a>
+	<h3 class="subsubtitle method-title">hasPropertiesForAnnotations:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns YES if we can edit this annotation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (BOOL)hasPropertiesForAnnotations:(NSArray *)<em>annotations</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationStyleViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/propertiesForAnnotations" title="propertiesForAnnotations"></a>
+	<h3 class="subsubtitle method-title">propertiesForAnnotations</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return current dictionary of properties.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSDictionary *)propertiesForAnnotations</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationStyleViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setPropertiesForAnnotations:" title="setPropertiesForAnnotations:"></a>
+	<h3 class="subsubtitle method-title">setPropertiesForAnnotations:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Customize the inspector globally. Dictionary in format annotation type string : array of property strings.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)setPropertiesForAnnotations:(NSDictionary *)<em>properties</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Setting <code>properties</code> to nil will re-set the default properties dictionary.</p></div><div class="warning"><p><strong>Warning:</strong> Only set on main thread. Set before the annotation controller is being accessed/opened.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationStyleViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -305,8 +469,8 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithAnnotation:delegate:" title="initWithAnnotation:delegate:"></a>
-	<h3 class="subsubtitle method-title">initWithAnnotation:delegate:</h3>
+	<a name="//api/name/initWithAnnotations:delegate:" title="initWithAnnotations:delegate:"></a>
+	<h3 class="subsubtitle method-title">initWithAnnotations:delegate:</h3>
 	
 	
 	
@@ -315,7 +479,7 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithAnnotation:(PSPDFAnnotation *)<em>annotation</em> delegate:(id&lt;PSPDFAnnotationStyleViewControllerDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithAnnotations:(NSArray *)<em>annotations</em> delegate:(id&lt;PSPDFAnnotationStyleViewControllerDelegate&gt;)<em>delegate</em></code></div>
 	
 	
 	

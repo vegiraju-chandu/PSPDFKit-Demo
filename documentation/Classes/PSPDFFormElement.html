@@ -1,0 +1,1297 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PSPDFFormElement Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PSPDFKit </a></h1>
+				<a id="developerHome" href="../index.html">PSPDFKit GmbH</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PSPDFFormElement Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/alternateFieldName">&nbsp;&nbsp;&nbsp;&nbsp;alternateFieldName</option>
+	
+	<option value="//api/name/defaultValue">&nbsp;&nbsp;&nbsp;&nbsp;defaultValue</option>
+	
+	<option value="//api/name/exportValue">&nbsp;&nbsp;&nbsp;&nbsp;exportValue</option>
+	
+	<option value="//api/name/fieldFlags">&nbsp;&nbsp;&nbsp;&nbsp;fieldFlags</option>
+	
+	<option value="//api/name/fieldName">&nbsp;&nbsp;&nbsp;&nbsp;fieldName</option>
+	
+	<option value="//api/name/fieldType">&nbsp;&nbsp;&nbsp;&nbsp;fieldType</option>
+	
+	<option value="//api/name/kids">&nbsp;&nbsp;&nbsp;&nbsp;kids</option>
+	
+	<option value="//api/name/mappingName">&nbsp;&nbsp;&nbsp;&nbsp;mappingName</option>
+	
+	<option value="//api/name/next">&nbsp;&nbsp;&nbsp;&nbsp;next</option>
+	
+	<option value="//api/name/parent">&nbsp;&nbsp;&nbsp;&nbsp;parent</option>
+	
+	<option value="//api/name/previous">&nbsp;&nbsp;&nbsp;&nbsp;previous</option>
+	
+	<option value="//api/name/value">&nbsp;&nbsp;&nbsp;&nbsp;value</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">&nbsp;&nbsp;&nbsp;&nbsp;+ formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/appendFieldValuePDFData:">&nbsp;&nbsp;&nbsp;&nbsp;- appendFieldValuePDFData:</option>
+	
+	<option value="//api/name/fullyQualifiedFieldName">&nbsp;&nbsp;&nbsp;&nbsp;- fullyQualifiedFieldName</option>
+	
+	<option value="//api/name/handleTapInView:">&nbsp;&nbsp;&nbsp;&nbsp;- handleTapInView:</option>
+	
+	<option value="//api/name/initWithAnnotationDictionary:documentRef:fieldsAddressMap:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAnnotationDictionary:documentRef:fieldsAddressMap:</option>
+	
+	<option value="//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</option>
+	
+	<option value="//api/name/isNoExport">&nbsp;&nbsp;&nbsp;&nbsp;- isNoExport</option>
+	
+	<option value="//api/name/isReadOnly">&nbsp;&nbsp;&nbsp;&nbsp;- isReadOnly</option>
+	
+	<option value="//api/name/isRequired">&nbsp;&nbsp;&nbsp;&nbsp;- isRequired</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alternateFieldName">alternateFieldName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultValue">defaultValue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/exportValue">exportValue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldFlags">fieldFlags</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldName">fieldName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldType">fieldType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/kids">kids</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mappingName">mappingName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/next">next</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parent">parent</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previous">previous</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/value">value</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appendFieldValuePDFData:">appendFieldValuePDFData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fullyQualifiedFieldName">fullyQualifiedFieldName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleTapInView:">handleTapInView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAnnotationDictionary:documentRef:fieldsAddressMap:">initWithAnnotationDictionary:documentRef:fieldsAddressMap:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNoExport">isNoExport</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isReadOnly">isReadOnly</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRequired">isRequired</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PSPDFFormElement Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PSPDFFormElement Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/PSPDFWidgetAnnotation.html">PSPDFWidgetAnnotation</a> : <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> : PSPDFModel : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PSPDFFormElement.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Represents a PDF form element.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAnnotationDictionary:documentRef:fieldsAddressMap:">&ndash;&nbsp;initWithAnnotationDictionary:documentRef:fieldsAddressMap:</a></code>
+		<span class="tooltip"><p>Initializes allocated instance of a form element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">&ndash;&nbsp;initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></code>
+		<span class="tooltip"><p>Initializes allocated instance of a form element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">+&nbsp;formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></code>
+		<span class="tooltip"><p>Allocates and initializes an instance of a form element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parent">&nbsp;&nbsp;parent</a></code>
+		<span class="tooltip"><p>The field that is the immediate parent of this one (the field, if any, whose
+Kids array includes this field). A field can have at most one parent; that
+is, it can be included in the Kids array of at most one other field.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/kids">&nbsp;&nbsp;kids</a></code>
+		<span class="tooltip"><p>An array of indirect references to the immediate children of this field.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldType">&nbsp;&nbsp;fieldType</a></code>
+		<span class="tooltip"><p>Field type (see table 220, PDF Reference).
+(Required for terminal fields; inheritable).</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldName">&nbsp;&nbsp;fieldName</a></code>
+		<span class="tooltip"><p>The partial field name.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mappingName">&nbsp;&nbsp;mappingName</a></code>
+		<span class="tooltip"><p>(Optional; PDF 1.3) The mapping name that shall be used when exporting interactive form field data from the document.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/alternateFieldName">&nbsp;&nbsp;alternateFieldName</a></code>
+		<span class="tooltip"><p>(Optional; PDF 1.3) An alternate field name that shall be used in place of the actual field name wherever the field shall be identified in the user interface (such as in error or status messages referring to the field). This text is also useful when extracting the document’s contents in support of accessibility to users with disabilities or for other purposes (see 14.9.3, “Alternate Descriptions”).</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldFlags">&nbsp;&nbsp;fieldFlags</a></code>
+		<span class="tooltip"><p>(Optional; inheritable) A set of flags specifying various characteristics of the field (see Table 221). Default value: 0.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+		<span class="tooltip"><p>(Optional; inheritable) The field’s value, whose format varies depending on the field type. See the descriptions of individual field types for further information.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultValue">&nbsp;&nbsp;defaultValue</a></code>
+		<span class="tooltip"><p>(Optional; inheritable) The default <a href="#//api/name/value">value</a> to which the field reverts when a reset-form action is executed (see 12.7.5.3, “Reset-Form Action”). The format of this <a href="#//api/name/value">value</a> is the same as that of V.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/exportValue">&nbsp;&nbsp;exportValue</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/value">value</a> which the field is to export when submitted. Can return either a string or an array of strings in the case of multiple selection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/next">&nbsp;&nbsp;next</a></code>
+		<span class="tooltip"><p>Links for <a href="#//api/name/previous">previous</a> control in tab order.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previous">&nbsp;&nbsp;previous</a></code>
+		<span class="tooltip"><p>Links for <a href="#//api/name/next">next</a> control in tab order.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isReadOnly">&ndash;&nbsp;isReadOnly</a></code>
+		<span class="tooltip"><p>If set, the user may not change the <a href="#//api/name/value">value</a> of the field. Any associated widget annotations will not interact with the user; that is, they will not respond to mouse clicks or change their appearance in response to mouse motions. This flag is useful for fields whose values are computed or imported from a database.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRequired">&ndash;&nbsp;isRequired</a></code>
+		<span class="tooltip"><p>If set, the field shall have a <a href="#//api/name/value">value</a> at the time it is exported by a submit- form action (see 12.7.5.2, “Submit-Form Action”).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isNoExport">&ndash;&nbsp;isNoExport</a></code>
+		<span class="tooltip"><p>If set, the field shall not be exported by a submit-form action (see 12.7.5.2, “Submit-Form Action”).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fullyQualifiedFieldName">&ndash;&nbsp;fullyQualifiedFieldName</a></code>
+		<span class="tooltip"><p>The T entry in the field dictionary (see Table 220) holds a text string defining the field’s partial field name. The fully qualified field name is not explicitly defined but shall be constructed from the partial field names of the field and all of its ancestors. For a field with no <a href="#//api/name/parent">parent</a>, the partial and fully qualified names are the same. For a field that is the child of another field, the fully qualified name shall be formed by appending the child field’s partial name to the parent’s fully qualified name, separated by a PERIOD (2Eh) — PDF Spec</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleTapInView:">&ndash;&nbsp;handleTapInView:</a></code>
+		<span class="tooltip"><p>You should implement this method in subclasses to handle tap on the form element: change state, show visual editor.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appendFieldValuePDFData:">&ndash;&nbsp;appendFieldValuePDFData:</a></code>
+		<span class="tooltip"><p>Appends <a href="#//api/name/value">value</a> of a field in PDF syntax. It must be implemented by children of the class.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/alternateFieldName" title="alternateFieldName"></a>
+	<h3 class="subsubtitle method-title">alternateFieldName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>(Optional; PDF 1.3) An alternate field name that shall be used in place of the actual field name wherever the field shall be identified in the user interface (such as in error or status messages referring to the field). This text is also useful when extracting the document’s contents in support of accessibility to users with disabilities or for other purposes (see 14.9.3, “Alternate Descriptions”).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *alternateFieldName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultValue" title="defaultValue"></a>
+	<h3 class="subsubtitle method-title">defaultValue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>(Optional; inheritable) The default <a href="#//api/name/value">value</a> to which the field reverts when a reset-form action is executed (see 12.7.5.3, “Reset-Form Action”). The format of this <a href="#//api/name/value">value</a> is the same as that of V.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id defaultValue</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/exportValue" title="exportValue"></a>
+	<h3 class="subsubtitle method-title">exportValue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/value">value</a> which the field is to export when submitted. Can return either a string or an array of strings in the case of multiple selection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) id exportValue</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldFlags" title="fieldFlags"></a>
+	<h3 class="subsubtitle method-title">fieldFlags</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>(Optional; inheritable) A set of flags specifying various characteristics of the field (see Table 221). Default value: 0.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger fieldFlags</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldName" title="fieldName"></a>
+	<h3 class="subsubtitle method-title">fieldName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The partial field name.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *fieldName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldType" title="fieldType"></a>
+	<h3 class="subsubtitle method-title">fieldType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Field type (see table 220, PDF Reference).
+(Required for terminal fields; inheritable).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *fieldType</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/kids" title="kids"></a>
+	<h3 class="subsubtitle method-title">kids</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An array of indirect references to the immediate children of this field.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *kids</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mappingName" title="mappingName"></a>
+	<h3 class="subsubtitle method-title">mappingName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>(Optional; PDF 1.3) The mapping name that shall be used when exporting interactive form field data from the document.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *mappingName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/next" title="next"></a>
+	<h3 class="subsubtitle method-title">next</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Links for <a href="#//api/name/previous">previous</a> control in tab order.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFFormElement *next</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parent" title="parent"></a>
+	<h3 class="subsubtitle method-title">parent</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The field that is the immediate parent of this one (the field, if any, whose
+Kids array includes this field). A field can have at most one parent; that
+is, it can be included in the Kids array of at most one other field.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFFormElement *parent</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previous" title="previous"></a>
+	<h3 class="subsubtitle method-title">previous</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Links for <a href="#//api/name/next">next</a> control in tab order.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFFormElement *previous</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="subsubtitle method-title">value</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>(Optional; inheritable) The field’s value, whose format varies depending on the field type. See the descriptions of individual field types for further information.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id value</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:" title="formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:"></a>
+	<h3 class="subsubtitle method-title">formElementWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allocates and initializes an instance of a form element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (PSPDFFormElement *)formElementWithAnnotationDictionary:(CGPDFDictionaryRef)<em>annotDict</em> documentRef:(CGPDFDocumentRef)<em>documentRef</em> parent:(PSPDFFormElement *)<em>parentFormElement</em> fieldsAddressMap:(NSMutableDictionary *)<em>fieldsAddressMap</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>annotDict</em></dt>
+			<dd><p>Field dictionary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>documentRef</em></dt>
+			<dd><p>Document.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parentFormElement</em></dt>
+			<dd><p>Parent form element.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fieldsAddressMap</em></dt>
+			<dd><p>annotDict to FormElement map.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/appendFieldValuePDFData:" title="appendFieldValuePDFData:"></a>
+	<h3 class="subsubtitle method-title">appendFieldValuePDFData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Appends <a href="#//api/name/value">value</a> of a field in PDF syntax. It must be implemented by children of the class.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)appendFieldValuePDFData:(NSMutableData *)<em>pdfData</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fullyQualifiedFieldName" title="fullyQualifiedFieldName"></a>
+	<h3 class="subsubtitle method-title">fullyQualifiedFieldName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The T entry in the field dictionary (see Table 220) holds a text string defining the field’s partial field name. The fully qualified field name is not explicitly defined but shall be constructed from the partial field names of the field and all of its ancestors. For a field with no <a href="#//api/name/parent">parent</a>, the partial and fully qualified names are the same. For a field that is the child of another field, the fully qualified name shall be formed by appending the child field’s partial name to the parent’s fully qualified name, separated by a PERIOD (2Eh) — PDF Spec</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)fullyQualifiedFieldName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleTapInView:" title="handleTapInView:"></a>
+	<h3 class="subsubtitle method-title">handleTapInView:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>You should implement this method in subclasses to handle tap on the form element: change state, show visual editor.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)handleTapInView:(PSPDFPageView *)<em>pdfPageView</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAnnotationDictionary:documentRef:fieldsAddressMap:" title="initWithAnnotationDictionary:documentRef:fieldsAddressMap:"></a>
+	<h3 class="subsubtitle method-title">initWithAnnotationDictionary:documentRef:fieldsAddressMap:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes allocated instance of a form element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithAnnotationDictionary:(CGPDFDictionaryRef)<em>annotDict</em> documentRef:(CGPDFDocumentRef)<em>documentRef</em> fieldsAddressMap:(NSMutableDictionary *)<em>fieldsAddressMap</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>annotDict</em></dt>
+			<dd><p>Field dictionary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>documentRef</em></dt>
+			<dd><p>Document.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fieldsAddressMap</em></dt>
+			<dd><p>annotDict to FormElement map.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:" title="initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:"></a>
+	<h3 class="subsubtitle method-title">initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes allocated instance of a form element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithAnnotationDictionary:(CGPDFDictionaryRef)<em>annotDict</em> documentRef:(CGPDFDocumentRef)<em>documentRef</em> parent:(PSPDFFormElement *)<em>parentFormElement</em> fieldsAddressMap:(NSMutableDictionary *)<em>fieldsAddressMap</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>annotDict</em></dt>
+			<dd><p>Field dictionary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>documentRef</em></dt>
+			<dd><p>Document.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parentFormElement</em></dt>
+			<dd><p>Parent form element.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fieldsAddressMap</em></dt>
+			<dd><p>annotDict to FormElement map.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isNoExport" title="isNoExport"></a>
+	<h3 class="subsubtitle method-title">isNoExport</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If set, the field shall not be exported by a submit-form action (see 12.7.5.2, “Submit-Form Action”).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isNoExport</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isReadOnly" title="isReadOnly"></a>
+	<h3 class="subsubtitle method-title">isReadOnly</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If set, the user may not change the <a href="#//api/name/value">value</a> of the field. Any associated widget annotations will not interact with the user; that is, they will not respond to mouse clicks or change their appearance in response to mouse motions. This flag is useful for fields whose values are computed or imported from a database.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isReadOnly</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRequired" title="isRequired"></a>
+	<h3 class="subsubtitle method-title">isRequired</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If set, the field shall have a <a href="#//api/name/value">value</a> at the time it is exported by a submit- form action (see 12.7.5.2, “Submit-Form Action”).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isRequired</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFormElement.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

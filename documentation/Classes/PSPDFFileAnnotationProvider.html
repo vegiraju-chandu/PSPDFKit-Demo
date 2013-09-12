@@ -42,6 +42,8 @@
 	
 	<option value="//api/name/annotationsPath">&nbsp;&nbsp;&nbsp;&nbsp;annotationsPath</option>
 	
+	<option value="//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;&nbsp;&nbsp;autodetectTextLinkTypes</option>
+	
 	<option value="//api/name/defaultAnnotationUsername">&nbsp;&nbsp;&nbsp;&nbsp;defaultAnnotationUsername</option>
 	
 	<option value="//api/name/documentProvider">&nbsp;&nbsp;&nbsp;&nbsp;documentProvider</option>
@@ -58,7 +60,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/addAnnotations:forPage:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotations:forPage:</option>
+	<option value="//api/name/addAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotations:</option>
 	
 	<option value="//api/name/annotationsForPage:pageRef:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationsForPage:pageRef:</option>
 	
@@ -72,9 +74,11 @@
 	
 	<option value="//api/name/parseAnnotationsForPage:pageRef:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnnotationsForPage:pageRef:</option>
 	
+	<option value="//api/name/removeAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotations:</option>
+	
 	<option value="//api/name/removeDeletedAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;- removeDeletedAnnotations</option>
 	
-	<option value="//api/name/saveAnnotationsWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotationsWithError:</option>
+	<option value="//api/name/saveAnnotationsWithOptions:error:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotationsWithOptions:error:</option>
 	
 	<option value="//api/name/setAnnotations:forPage:">&nbsp;&nbsp;&nbsp;&nbsp;- setAnnotations:forPage:</option>
 	
@@ -110,6 +114,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsPath">annotationsPath</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/autodetectTextLinkTypes">autodetectTextLinkTypes</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultAnnotationUsername">defaultAnnotationUsername</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/documentProvider">documentProvider</a></span></li>
@@ -128,7 +134,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotations:forPage:">addAnnotations:forPage:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotations:">addAnnotations:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsForPage:pageRef:">annotationsForPage:pageRef:</a></span></li>
 	
@@ -142,9 +148,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnnotationsForPage:pageRef:">parseAnnotationsForPage:pageRef:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotations:">removeAnnotations:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeDeletedAnnotations">removeDeletedAnnotations</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotationsWithError:">saveAnnotationsWithError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotationsWithOptions:error:">saveAnnotationsWithOptions:error:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setAnnotations:forPage:">setAnnotations:forPage:</a></span></li>
 	
@@ -192,7 +200,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Concrete implementation of the <a href="../Protocols/PSPDFAnnotationProvider.html">PSPDFAnnotationProvider</a> protocol that uses the PDF document as a file source.</p>
+						<p>Default implementation of the <a href="../Protocols/PSPDFAnnotationProvider.html"><code>PSPDFAnnotationProvider</code></a> protocol that uses the PDF document as source/target to load/save annotations. You almost always want to use the <code>PSPDFFileAnnotationProvider</code> in your <a href="../Classes/PSPDFAnnotationManager.html"><code>PSPDFAnnotationManager</code></a>. You can also use the <code>PSPDFFileAnnotationProvider</code> inside a custom annotation provider, to parse PDF annotations once and then manage them in your custom database.</p>
 					</div>
 					
 					
@@ -232,6 +240,13 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;autodetectTextLinkTypes</a></code>
+		<span class="tooltip"><p>Set to enable auto-detection of various link types. Defaults to PSPDFTextCheckingTypeNone.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/annotationsForPage:pageRef:">&ndash;&nbsp;annotationsForPage:pageRef:</a></code>
 		<span class="tooltip"><p>Performance optimized access.</p></span>
 	</span>
@@ -246,8 +261,16 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotations:forPage:">&ndash;&nbsp;addAnnotations:forPage:</a></code>
+		<code><a href="#//api/name/addAnnotations:">&ndash;&nbsp;addAnnotations:</a></code>
 		<span class="tooltip"><p>Will add the annotation to the current annotation array. Will accept any annotations.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotations:">&ndash;&nbsp;removeAnnotations:</a></code>
+		<span class="tooltip"><p>Annotations are either removed (PSPDFAnnotationsRemovedNotification) or soft-deleted if they are already saved in the PDF.
+In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDeleted as keyPath is sent instead.</p></span>
 	</span>
 	
 	
@@ -293,7 +316,7 @@ Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotation
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/saveAnnotationsWithError:">&ndash;&nbsp;saveAnnotationsWithError:</a></code>
+		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
 		<span class="tooltip"><p>Saving code.</p></span>
 	</span>
 	
@@ -367,6 +390,45 @@ If set to nil, will revert back to the default value.</p>
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/autodetectTextLinkTypes" title="autodetectTextLinkTypes"></a>
+	<h3 class="subsubtitle method-title">autodetectTextLinkTypes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set to enable auto-detection of various link types. Defaults to PSPDFTextCheckingTypeNone.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFTextCheckingType autodetectTextLinkTypes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Detecting links might be an expensive operation.</p></div>
+	</div>
 	
 	
 	
@@ -502,8 +564,8 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/addAnnotations:forPage:" title="addAnnotations:forPage:"></a>
-	<h3 class="subsubtitle method-title">addAnnotations:forPage:</h3>
+	<a name="//api/name/addAnnotations:" title="addAnnotations:"></a>
+	<h3 class="subsubtitle method-title">addAnnotations:</h3>
 	
 	
 	
@@ -512,7 +574,7 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)addAnnotations:(NSArray *)<em>annotations</em> forPage:(NSUInteger)<em>page</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)addAnnotations:(NSArray *)<em>annotations</em></code></div>
 	
 	
 	
@@ -747,6 +809,41 @@ Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotation
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/removeAnnotations:" title="removeAnnotations:"></a>
+	<h3 class="subsubtitle method-title">removeAnnotations:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Annotations are either removed (PSPDFAnnotationsRemovedNotification) or soft-deleted if they are already saved in the PDF.
+In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDeleted as keyPath is sent instead.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)removeAnnotations:(NSArray *)<em>annotations</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/removeDeletedAnnotations" title="removeDeletedAnnotations"></a>
 	<h3 class="subsubtitle method-title">removeDeletedAnnotations</h3>
 	
@@ -781,8 +878,8 @@ Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotation
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/saveAnnotationsWithError:" title="saveAnnotationsWithError:"></a>
-	<h3 class="subsubtitle method-title">saveAnnotationsWithError:</h3>
+	<a name="//api/name/saveAnnotationsWithOptions:error:" title="saveAnnotationsWithOptions:error:"></a>
+	<h3 class="subsubtitle method-title">saveAnnotationsWithOptions:error:</h3>
 	
 	
 	
@@ -791,7 +888,7 @@ Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotation
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithError:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithOptions:(NSDictionary *)<em>options</em> error:(NSError **)<em>error</em></code></div>
 	
 	
 	
@@ -838,7 +935,7 @@ Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotation
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> Usually it&rsquo;s a better idea to implement a custom AnnotationProvider, but this is kept for backwards compatibility.</p>
 
-<p>You will override any already set annotations, so if you want to mix in annotations from the PDF, use <a href="#//api/name/addAnnotations:forPage:">addAnnotations:forPage:</a> instead.
+<p>You will override any already set annotations, so if you want to mix in annotations from the PDF, use addAnnotations:page: instead.
 Setting nil as annotations will re-evaluate the pdf for annotations on the next access. Use an empty array if you want to clear annotations instead.</p></div>
 	</div>
 	

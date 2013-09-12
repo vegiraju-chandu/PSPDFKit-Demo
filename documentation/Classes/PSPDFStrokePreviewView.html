@@ -40,7 +40,15 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
+	<option value="//api/name/fillColor">&nbsp;&nbsp;&nbsp;&nbsp;fillColor</option>
+	
+	<option value="//api/name/lineEnd1">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd1</option>
+	
+	<option value="//api/name/lineEnd2">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd2</option>
+	
+	<option value="//api/name/strokeColor">&nbsp;&nbsp;&nbsp;&nbsp;strokeColor</option>
+	
+	<option value="//api/name/strokeType">&nbsp;&nbsp;&nbsp;&nbsp;strokeType</option>
 	
 	<option value="//api/name/strokeWidth">&nbsp;&nbsp;&nbsp;&nbsp;strokeWidth</option>
 	
@@ -72,7 +80,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fillColor">fillColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd1">lineEnd1</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd2">lineEnd2</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeColor">strokeColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeType">strokeType</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeWidth">strokeWidth</a></span></li>
 	
@@ -117,7 +133,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Previews a stroke line.</p>
+						<p>Previews a stroke line or shape.</p>
 					</div>
 					
 					
@@ -135,8 +151,22 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+		<code><a href="#//api/name/strokeType">&nbsp;&nbsp;strokeType</a></code>
+		<span class="tooltip"><p>Current stroke type.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/strokeColor">&nbsp;&nbsp;strokeColor</a></code>
 		<span class="tooltip"><p>Stroke line color.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+		<span class="tooltip"><p>Stroke fill color.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -144,6 +174,20 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/strokeWidth">&nbsp;&nbsp;strokeWidth</a></code>
 		<span class="tooltip"><p>Stroke line width.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd1">&nbsp;&nbsp;lineEnd1</a></code>
+		<span class="tooltip"><p>Stroke starting end line type.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd2">&nbsp;&nbsp;lineEnd2</a></code>
+		<span class="tooltip"><p>Stroke ending line end type.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -161,8 +205,110 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="subsubtitle method-title">color</h3>
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="subsubtitle method-title">fillColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stroke fill color.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *fillColor</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStrokePreviewView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineEnd1" title="lineEnd1"></a>
+	<h3 class="subsubtitle method-title">lineEnd1</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stroke starting end line type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd1</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStrokePreviewView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineEnd2" title="lineEnd2"></a>
+	<h3 class="subsubtitle method-title">lineEnd2</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stroke ending line end type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd2</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStrokePreviewView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/strokeColor" title="strokeColor"></a>
+	<h3 class="subsubtitle method-title">strokeColor</h3>
 	
 	
 	
@@ -171,7 +317,41 @@
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *color</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *strokeColor</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStrokePreviewView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/strokeType" title="strokeType"></a>
+	<h3 class="subsubtitle method-title">strokeType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Current stroke type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSString *strokeType</code></div>
 	
 	
 	

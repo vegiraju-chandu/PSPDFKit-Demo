@@ -46,15 +46,19 @@
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
-	<option value="//api/name/lineWidth">&nbsp;&nbsp;&nbsp;&nbsp;lineWidth</option>
+	<option value="//api/name/fillColor">&nbsp;&nbsp;&nbsp;&nbsp;fillColor</option>
 	
-	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;path</option>
+	<option value="//api/name/lineEnd1">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd1</option>
+	
+	<option value="//api/name/lineEnd2">&nbsp;&nbsp;&nbsp;&nbsp;lineEnd2</option>
+	
+	<option value="//api/name/lineWidth">&nbsp;&nbsp;&nbsp;&nbsp;lineWidth</option>
 	
 	<option value="//api/name/scale">&nbsp;&nbsp;&nbsp;&nbsp;scale</option>
 	
-	<option value="//api/name/shapeType">&nbsp;&nbsp;&nbsp;&nbsp;shapeType</option>
-	
 	<option value="//api/name/strokeColor">&nbsp;&nbsp;&nbsp;&nbsp;strokeColor</option>
+	
+	<option value="//api/name/strokePath">&nbsp;&nbsp;&nbsp;&nbsp;strokePath</option>
 	
 	<option value="//api/name/zoomScale">&nbsp;&nbsp;&nbsp;&nbsp;zoomScale</option>
 	
@@ -68,6 +72,8 @@
 	<option value="//api/name/canRedo">&nbsp;&nbsp;&nbsp;&nbsp;- canRedo</option>
 	
 	<option value="//api/name/canUndo">&nbsp;&nbsp;&nbsp;&nbsp;- canUndo</option>
+	
+	<option value="//api/name/clearAllActions">&nbsp;&nbsp;&nbsp;&nbsp;- clearAllActions</option>
 	
 	<option value="//api/name/redo">&nbsp;&nbsp;&nbsp;&nbsp;- redo</option>
 	
@@ -105,15 +111,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineWidth">lineWidth</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fillColor">fillColor</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd1">lineEnd1</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineEnd2">lineEnd2</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineWidth">lineWidth</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scale">scale</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shapeType">shapeType</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeColor">strokeColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokePath">strokePath</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomScale">zoomScale</a></span></li>
 	
@@ -128,6 +138,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canRedo">canRedo</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canUndo">canUndo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearAllActions">clearAllActions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/redo">redo</a></span></li>
 	
@@ -188,13 +200,6 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
-		<span class="tooltip"><p>Current line width.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/strokeColor">&nbsp;&nbsp;strokeColor</a></code>
 		<span class="tooltip"><p>Current stroke color.</p></span>
 	</span>
@@ -202,7 +207,35 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
+		<code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
+		<span class="tooltip"><p>Current fill color.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+		<span class="tooltip"><p>Current line width.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd1">&nbsp;&nbsp;lineEnd1</a></code>
+		<span class="tooltip"><p>Starting line end type for lines and polylines.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineEnd2">&nbsp;&nbsp;lineEnd2</a></code>
+		<span class="tooltip"><p>Ending line end type for lines and polylines.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/strokePath">&nbsp;&nbsp;strokePath</a></code>
 		<span class="tooltip"><p>Path of the current draw operation.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -234,13 +267,6 @@ Used to compute approximate line widths during drawing.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/annotationType">&nbsp;&nbsp;annotationType</a></code>
 		<span class="tooltip"><p>Current annotation type.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shapeType">&nbsp;&nbsp;shapeType</a></code>
-		<span class="tooltip"><p>Current shape annotation type (to be specified when <a href="#//api/name/annotationType">annotationType</a> is PSPDFAnnotationTypeShape).</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -284,6 +310,13 @@ Used to compute approximate line widths during drawing.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/redo">&ndash;&nbsp;redo</a></code>
 		<span class="tooltip"><p>Redo last action, update view.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearAllActions">&ndash;&nbsp;clearAllActions</a></code>
+		<span class="tooltip"><p>Clear all actions. No <a href="#//api/name/delegate">delegate</a> method will be called. Doesn&rsquo;t count as undo/<a href="#//api/name/redo">redo</a> operation.</p></span>
 	</span>
 	
 	
@@ -404,17 +437,17 @@ If you want to create a <a href="../Classes/PSPDFInkAnnotation.html">PSPDFInkAnn
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/lineWidth" title="lineWidth"></a>
-	<h3 class="subsubtitle method-title">lineWidth</h3>
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="subsubtitle method-title">fillColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Current line width.</p>
+		<p>Current fill color.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat lineWidth</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *fillColor</code></div>
 	
 	
 	
@@ -438,17 +471,85 @@ If you want to create a <a href="../Classes/PSPDFInkAnnotation.html">PSPDFInkAnn
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/path" title="path"></a>
-	<h3 class="subsubtitle method-title">path</h3>
+	<a name="//api/name/lineEnd1" title="lineEnd1"></a>
+	<h3 class="subsubtitle method-title">lineEnd1</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Path of the current draw operation.</p>
+		<p>Starting line end type for lines and polylines.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIBezierPath *path</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd1</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDrawView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineEnd2" title="lineEnd2"></a>
+	<h3 class="subsubtitle method-title">lineEnd2</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ending line end type for lines and polylines.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFLineEndType lineEnd2</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDrawView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="subsubtitle method-title">lineWidth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Current line width.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat lineWidth</code></div>
 	
 	
 	
@@ -507,17 +608,17 @@ Used to compute approximate line widths during drawing.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shapeType" title="shapeType"></a>
-	<h3 class="subsubtitle method-title">shapeType</h3>
+	<a name="//api/name/strokeColor" title="strokeColor"></a>
+	<h3 class="subsubtitle method-title">strokeColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Current shape annotation type (to be specified when <a href="#//api/name/annotationType">annotationType</a> is PSPDFAnnotationTypeShape).</p>
+		<p>Current stroke color.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFShapeAnnotationType shapeType</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *strokeColor</code></div>
 	
 	
 	
@@ -541,17 +642,17 @@ Used to compute approximate line widths during drawing.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/strokeColor" title="strokeColor"></a>
-	<h3 class="subsubtitle method-title">strokeColor</h3>
+	<a name="//api/name/strokePath" title="strokePath"></a>
+	<h3 class="subsubtitle method-title">strokePath</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Current stroke color.</p>
+		<p>Path of the current draw operation.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *strokeColor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIBezierPath *strokePath</code></div>
 	
 	
 	
@@ -669,6 +770,40 @@ Used to compute approximate line widths during drawing.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>- (BOOL)canUndo</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDrawView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearAllActions" title="clearAllActions"></a>
+	<h3 class="subsubtitle method-title">clearAllActions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clear all actions. No <a href="#//api/name/delegate">delegate</a> method will be called. Doesn&rsquo;t count as undo/<a href="#//api/name/redo">redo</a> operation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)clearAllActions</code></div>
 	
 	
 	

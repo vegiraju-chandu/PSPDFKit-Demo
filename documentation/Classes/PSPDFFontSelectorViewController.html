@@ -42,7 +42,7 @@
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
-	<option value="//api/name/fontFamilyNames">&nbsp;&nbsp;&nbsp;&nbsp;fontFamilyNames</option>
+	<option value="//api/name/fontFamilyDescriptors">&nbsp;&nbsp;&nbsp;&nbsp;fontFamilyDescriptors</option>
 	
 	<option value="//api/name/selectedFont">&nbsp;&nbsp;&nbsp;&nbsp;selectedFont</option>
 	
@@ -76,7 +76,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontFamilyNames">fontFamilyNames</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontFamilyDescriptors">fontFamilyDescriptors</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedFont">selectedFont</a></span></li>
 	
@@ -108,7 +108,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UITableViewController</td>
+	<td class="specification-value"><a href="../Classes/PSPDFBaseTableViewController.html">PSPDFBaseTableViewController</a> : UITableViewController</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFFontSelectorViewController.h</td>
@@ -139,8 +139,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/fontFamilyNames">&nbsp;&nbsp;fontFamilyNames</a></code>
-		<span class="tooltip"><p>All available font family names. This is set on init by querying UIFont.familyNames.</p></span>
+		<code><a href="#//api/name/fontFamilyDescriptors">&nbsp;&nbsp;fontFamilyDescriptors</a></code>
+		<span class="tooltip"><p>All available font family names as PSPDFFontDescriptors. This is set on init by querying UIFont.familyNames.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -206,17 +206,17 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/fontFamilyNames" title="fontFamilyNames"></a>
-	<h3 class="subsubtitle method-title">fontFamilyNames</h3>
+	<a name="//api/name/fontFamilyDescriptors" title="fontFamilyDescriptors"></a>
+	<h3 class="subsubtitle method-title">fontFamilyDescriptors</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>All available font family names. This is set on init by querying UIFont.familyNames.</p>
+		<p>All available font family names as PSPDFFontDescriptors. This is set on init by querying UIFont.familyNames.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *fontFamilyNames</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *fontFamilyDescriptors</code></div>
 	
 	
 	

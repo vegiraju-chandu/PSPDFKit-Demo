@@ -49,19 +49,23 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/addAnnotations:forPage:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotations:forPage:</option>
+	<option value="//api/name/addAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- addAnnotations:</option>
 	
 	<option value="//api/name/annotationViewClassForAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationViewClassForAnnotation:</option>
 	
 	<option value="//api/name/annotationsForPage:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationsForPage:</option>
 	
-	<option value="//api/name/didChangeAnnotation:originalAnnotation:keyPaths:options:">&nbsp;&nbsp;&nbsp;&nbsp;- didChangeAnnotation:originalAnnotation:keyPaths:options:</option>
+	<option value="//api/name/didChangeAnnotation:keyPaths:options:">&nbsp;&nbsp;&nbsp;&nbsp;- didChangeAnnotation:keyPaths:options:</option>
 	
 	<option value="//api/name/dirtyAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;- dirtyAnnotations</option>
 	
 	<option value="//api/name/hasLoadedAnnotationsForPage:">&nbsp;&nbsp;&nbsp;&nbsp;- hasLoadedAnnotationsForPage:</option>
 	
-	<option value="//api/name/saveAnnotationsWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotationsWithError:</option>
+	<option value="//api/name/removeAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotations:</option>
+	
+	<option value="//api/name/saveAnnotationsWithOptions:error:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotationsWithOptions:error:</option>
+	
+	<option value="//api/name/shouldSaveAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;- shouldSaveAnnotations</option>
 	
 	
 	
@@ -97,19 +101,23 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotations:forPage:">addAnnotations:forPage:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAnnotations:">addAnnotations:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationViewClassForAnnotation:">annotationViewClassForAnnotation:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsForPage:">annotationsForPage:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didChangeAnnotation:originalAnnotation:keyPaths:options:">didChangeAnnotation:originalAnnotation:keyPaths:options:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didChangeAnnotation:keyPaths:options:">didChangeAnnotation:keyPaths:options:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dirtyAnnotations">dirtyAnnotations</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasLoadedAnnotationsForPage:">hasLoadedAnnotationsForPage:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotationsWithError:">saveAnnotationsWithError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotations:">removeAnnotations:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotationsWithOptions:error:">saveAnnotationsWithOptions:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldSaveAnnotations">shouldSaveAnnotations</a></span></li>
 	
 </ul></li>
 
@@ -149,7 +157,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>With the annotation provider, you can mix in PDF annotations from any source (custom database, web, etc)
-Implement your custom provider class and register it in the <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnotationParser</a>.</p>
+Implement your custom provider class and register it in the <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a>.</p>
 
 <p>(Make sure to register the provider in the PSPDFDocument&rsquo;s didCreateDocumentProvider method, since a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> can have multiple PSPDFDocumentProviders and thus multiple PSPDFAnnotationProviders - and they can also be discarded on low memory situations.)</p>
 
@@ -173,8 +181,7 @@ Implement your custom provider class and register it in the <a href="../Classes/
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/annotationsForPage:">&ndash;&nbsp;annotationsForPage:</a></code>
-		<span class="tooltip"><p>Return any annotations that should be displayed on that page.
-This method needs to be accessible FROM ANY THREAD.</p></span>
+		<span class="tooltip"><p>Return any annotations that should be displayed on that page.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -198,14 +205,22 @@ Will be called on all annotationProviders until someone doesn&rsquo;t return nil
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotations:forPage:">&ndash;&nbsp;addAnnotations:forPage:</a></code>
-		<span class="tooltip"><p>Handle adding annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement addAnnotations at all or return NO. <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnotationParser</a> will query all registered annotationProviders until one returns YES on addAnnotations.</p></span>
+		<code><a href="#//api/name/addAnnotations:">&ndash;&nbsp;addAnnotations:</a></code>
+		<span class="tooltip"><p>Handle adding annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement <code>addAnnotations:</code> at all or return nil.
+Return all annotations that are handled by this annotation provider. <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> will call all annotation providers in the list until all annotations have been processed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/saveAnnotationsWithError:">&ndash;&nbsp;saveAnnotationsWithError:</a></code>
+		<code><a href="#//api/name/removeAnnotations:">&ndash;&nbsp;removeAnnotations:</a></code>
+		<span class="tooltip"><p>Handle removing annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement <code>removeAnnotations:</code> at all or return NO. <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> will query all registered annotationProviders until one returns YES on this method.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
 		<span class="tooltip"><p>PSPDFKit requests a save. Can be ignored if you&rsquo;re instantly persisting.
 Event is e.g. fired before the app goes into background, or when <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> is dismissed.
 Return NO + error if saving failed.</p></span>
@@ -214,14 +229,21 @@ Return NO + error if saving failed.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/dirtyAnnotations">&ndash;&nbsp;dirtyAnnotations</a></code>
-		<span class="tooltip"><p>Return all &ldquo;dirty&rdquo; = unsaved annotations. Will be used to determine if we need to save.</p></span>
+		<code><a href="#//api/name/shouldSaveAnnotations">&ndash;&nbsp;shouldSaveAnnotations</a></code>
+		<span class="tooltip"><p>Return YES if the provider requires saving.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/didChangeAnnotation:originalAnnotation:keyPaths:options:">&ndash;&nbsp;didChangeAnnotation:originalAnnotation:keyPaths:options:</a></code>
+		<code><a href="#//api/name/dirtyAnnotations">&ndash;&nbsp;dirtyAnnotations</a></code>
+		<span class="tooltip"><p>Return all &ldquo;dirty&rdquo; = unsaved annotations.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didChangeAnnotation:keyPaths:options:">&ndash;&nbsp;didChangeAnnotation:keyPaths:options:</a></code>
 		<span class="tooltip"><p>Callback if an annotation has been changed by PSPDFKit.
 This method will be called on ALL annotations, not just the ones that you provided.</p></span>
 	</span>
@@ -292,17 +314,18 @@ This method will be called on ALL annotations, not just the ones that you provid
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/addAnnotations:forPage:" title="addAnnotations:forPage:"></a>
-	<h3 class="subsubtitle method-title">addAnnotations:forPage:</h3>
+	<a name="//api/name/addAnnotations:" title="addAnnotations:"></a>
+	<h3 class="subsubtitle method-title">addAnnotations:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Handle adding annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement addAnnotations at all or return NO. <a href="../Classes/PSPDFAnnotationParser.html">PSPDFAnnotationParser</a> will query all registered annotationProviders until one returns YES on addAnnotations.</p>
+		<p>Handle adding annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement <code>addAnnotations:</code> at all or return nil.
+Return all annotations that are handled by this annotation provider. <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> will call all annotation providers in the list until all annotations have been processed.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)addAnnotations:(NSArray *)<em>annotations</em> forPage:(NSUInteger)<em>page</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)addAnnotations:(NSArray *)<em>annotations</em></code></div>
 	
 	
 	
@@ -310,6 +333,11 @@ This method will be called on ALL annotations, not just the ones that you provid
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> The annotation provider is responsible for emitting then PSPDFAnnotationsAddedNotification.</p></div>
+	</div>
 	
 	
 	
@@ -372,8 +400,7 @@ Will be called on all annotationProviders until someone doesn&rsquo;t return nil
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Return any annotations that should be displayed on that page.
-This method needs to be accessible FROM ANY THREAD.</p>
+		<p>Return any annotations that should be displayed on that page.</p>
 	</div>		
 	
 	
@@ -388,9 +415,9 @@ This method needs to be accessible FROM ANY THREAD.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>You can block here and do your processing but try to cache the result, this method is called often. (e.g. on every zoom change/rerendering)</p>
-
-<p>You&rsquo;re only getting the zero-based page index here. If needed, add a reference to <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a> during init or query the change notifier delegate.</p>
+		<div class="note"><p><strong>Note:</strong> This method needs to be accessible FROM ANY THREAD.
+You can block here and do your processing but try to cache the result, this method is called often. (e.g. on every zoom change/rerendering)
+You&rsquo;re only getting the zero-based page index here. If needed, add a reference to <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a> during init or query the change notifier delegate.</p></div>
 	</div>
 	
 	
@@ -408,8 +435,8 @@ This method needs to be accessible FROM ANY THREAD.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/didChangeAnnotation:originalAnnotation:keyPaths:options:" title="didChangeAnnotation:originalAnnotation:keyPaths:options:"></a>
-	<h3 class="subsubtitle method-title">didChangeAnnotation:originalAnnotation:keyPaths:options:</h3>
+	<a name="//api/name/didChangeAnnotation:keyPaths:options:" title="didChangeAnnotation:keyPaths:options:"></a>
+	<h3 class="subsubtitle method-title">didChangeAnnotation:keyPaths:options:</h3>
 	
 	
 	
@@ -419,7 +446,7 @@ This method will be called on ALL annotations, not just the ones that you provid
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)didChangeAnnotation:(PSPDFAnnotation *)<em>annotation</em> originalAnnotation:(PSPDFAnnotation *)<em>originalAnnotation</em> keyPaths:(NSArray *)<em>keyPaths</em> options:(NSDictionary *)<em>options</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)didChangeAnnotation:(PSPDFAnnotation *)<em>annotation</em> keyPaths:(NSArray *)<em>keyPaths</em> options:(NSDictionary *)<em>options</em></code></div>
 	
 	
 	
@@ -427,11 +454,6 @@ This method will be called on ALL annotations, not just the ones that you provid
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Also be sure to check if originalAnnotation might has been deleted because of a change operation (keyPaths will not include deleted, unless the <em>only</em> operation that has been performed was a deleted.)</p>
-	</div>
 	
 	
 	
@@ -454,7 +476,7 @@ This method will be called on ALL annotations, not just the ones that you provid
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Return all &ldquo;dirty&rdquo; = unsaved annotations. Will be used to determine if we need to save.</p>
+		<p>Return all &ldquo;dirty&rdquo; = unsaved annotations.</p>
 	</div>		
 	
 	
@@ -519,8 +541,47 @@ Defaults to YES if not implemented.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/saveAnnotationsWithError:" title="saveAnnotationsWithError:"></a>
-	<h3 class="subsubtitle method-title">saveAnnotationsWithError:</h3>
+	<a name="//api/name/removeAnnotations:" title="removeAnnotations:"></a>
+	<h3 class="subsubtitle method-title">removeAnnotations:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Handle removing annotations. A provider can decided that he doesn&rsquo;t want to add this annotation, in that case either don&rsquo;t implement <code>removeAnnotations:</code> at all or return NO. <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> will query all registered annotationProviders until one returns YES on this method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)removeAnnotations:(NSArray *)<em>annotations</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> The annotation provider is responsible for emitting then PSPDFAnnotationsRemovedNotification.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveAnnotationsWithOptions:error:" title="saveAnnotationsWithOptions:error:"></a>
+	<h3 class="subsubtitle method-title">saveAnnotationsWithOptions:error:</h3>
 	
 	
 	
@@ -531,7 +592,41 @@ Return NO + error if saving failed.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithError:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithOptions:(NSDictionary *)<em>options</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldSaveAnnotations" title="shouldSaveAnnotations"></a>
+	<h3 class="subsubtitle method-title">shouldSaveAnnotations</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if the provider requires saving.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)shouldSaveAnnotations</code></div>
 	
 	
 	

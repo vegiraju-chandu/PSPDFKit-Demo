@@ -56,7 +56,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithURL:passphrase:salt:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphrase:salt:</option>
+	<option value="//api/name/initWithURL:binaryKey:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:binaryKey:</option>
+	
+	<option value="//api/name/initWithURL:passphrase:salt:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphrase:salt:rounds:</option>
+	
+	<option value="//api/name/initWithURL:passphraseData:salt:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphraseData:salt:rounds:</option>
 	
 	
 	
@@ -100,7 +104,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphrase:salt:">initWithURL:passphrase:salt:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:binaryKey:">initWithURL:binaryKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphrase:salt:rounds:">initWithURL:passphrase:salt:rounds:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphraseData:salt:rounds:">initWithURL:passphraseData:salt:rounds:</a></span></li>
 	
 </ul></li>
 
@@ -164,8 +172,25 @@ Only available in PSPDFKit Annotate or Source.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithURL:passphrase:salt:">&ndash;&nbsp;initWithURL:passphrase:salt:</a></code>
+		<code><a href="#//api/name/initWithURL:passphrase:salt:rounds:">&ndash;&nbsp;initWithURL:passphrase:salt:rounds:</a></code>
 		<span class="tooltip"><p>Designated initializer with the passphrase and salt.
+URL must be a file-based URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:passphraseData:salt:rounds:">&ndash;&nbsp;initWithURL:passphraseData:salt:rounds:</a></code>
+		<span class="tooltip"><p>Initializer with the passphrase and salt as NSData rather than NSString.
+URL must be a file-based URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:binaryKey:">&ndash;&nbsp;initWithURL:binaryKey:</a></code>
+		<span class="tooltip"><p>Designated initializer with a prepared, stretched, binary key.
+Warning: only use this if the key is cryptographically random and of length kCCKeySizeAES256.
 URL must be a file-based URL.</p></span>
 	</span>
 	
@@ -323,8 +348,44 @@ URL must be a file-based URL.</p></span>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithURL:passphrase:salt:" title="initWithURL:passphrase:salt:"></a>
-	<h3 class="subsubtitle method-title">initWithURL:passphrase:salt:</h3>
+	<a name="//api/name/initWithURL:binaryKey:" title="initWithURL:binaryKey:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:binaryKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer with a prepared, stretched, binary key.
+Warning: only use this if the key is cryptographically random and of length kCCKeySizeAES256.
+URL must be a file-based URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> binaryKey:(NSData *)<em>key</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAESCryptoDataProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:passphrase:salt:rounds:" title="initWithURL:passphrase:salt:rounds:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:passphrase:salt:rounds:</h3>
 	
 	
 	
@@ -334,7 +395,42 @@ URL must be a file-based URL.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> passphrase:(NSString *)<em>passphrase</em> salt:(NSString *)<em>salt</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> passphrase:(NSString *)<em>passphrase</em> salt:(NSString *)<em>salt</em> rounds:(uint)<em>rounds</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAESCryptoDataProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:passphraseData:salt:rounds:" title="initWithURL:passphraseData:salt:rounds:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:passphraseData:salt:rounds:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializer with the passphrase and salt as NSData rather than NSString.
+URL must be a file-based URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> passphraseData:(NSData *)<em>passphraseData</em> salt:(NSData *)<em>saltData</em> rounds:(uint)<em>rounds</em></code></div>
 	
 	
 	
