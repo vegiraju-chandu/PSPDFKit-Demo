@@ -233,7 +233,7 @@
     </ul>
 
     <p>
-      For example, <code>pspdfkit://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8</code> will show the Apple HTTP Live streaming test page. There are <a href="/api/Protocols/PSPDFViewControllerDelegate.html#//api/name/pdfViewController:shouldDisplayAnnotation:onPageView:">delegate methods</a> if you need more control (like manually setting auto play, adding custom annotations).
+      For example, <code>pspdfkit://devimages.apple.com/bipbop/bipbopall.m3u8</code> will show the Apple HTTP Live streaming test page. There are <a href="/api/Protocols/PSPDFViewControllerDelegate.html#//api/name/pdfViewController:shouldDisplayAnnotation:onPageView:">delegate methods</a> if you need more control (like manually setting auto play, adding custom annotations).
     </p>
 
     <img src="/images/documentation/editlink-adobe.png" alt="Add annotations in Adobe Acrobat" width="944" height="597" class="border"/>
@@ -249,7 +249,7 @@
   <ul>
     <li><code>autostart:</code> starts the video as soon as the page is displayed (e.g. <code>pspdfkit://[autostart:true]devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8</code>)</li>
     <li><code>cover:</code> displays a custom play button with the cover image. If you just need the play button without a background image, use <code>cover : ""</code>. Cover uses the same path resolving like the multimedia link annotation system (<code>http://website</code> or <code>/localhost/Bundle/image.jpg</code>). Note: <code>autostart:true</code> will override the cover setting.</li>
-    <li><code>offset:</code> will start the video at a specific time in seconds. (e.g. <code>pspdfkit://[offset:10]devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8</code>)</li>
+    <li><code>offset:</code> will start the video at a specific time in seconds. (e.g. <code>pspdfkit://[offset:10]devimages.apple.com/bipbop/bipbopall.m3u8</code>)</li>
 
   </ul><br>
     <p>Note: YouTube-Links are not displayed as a inline-thumbnail on the iPhone if the PSPDFViewController is displayed modally. This is a workaround for a known Apple bug, where the UINavigationController breaks after the control returns from fullscreen.</p><br>
