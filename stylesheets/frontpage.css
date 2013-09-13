@@ -186,22 +186,24 @@ body.frontpage section.apps {
       /* line 146, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app img {
         display: block;
-        margin: 0 auto; }
-      /* line 150, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+        margin: 0 auto;
+        width: 128px;
+        height: 128px; }
+      /* line 152, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app p {
         margin-top: 10px;
         color: #334450;
         font-size: 16px;
         line-height: 20px;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300; }
-      /* line 158, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+      /* line 160, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app p.small {
         margin-top: 5px;
         color: #7e8992;
         font-size: 14px;
         line-height: 16px; }
-  /* line 166, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+  /* line 168, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
   body.frontpage section.apps .footer.link {
     position: absolute;
     bottom: 0px;
@@ -209,6 +211,6 @@ body.frontpage section.apps {
     height: 30px;
     text-align: center;
     opacity: 0.75; }
-    /* line 173, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+    /* line 175, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
     body.frontpage section.apps .footer.link:hover {
       opacity: 1.0; }

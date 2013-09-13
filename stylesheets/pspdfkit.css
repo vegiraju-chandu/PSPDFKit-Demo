@@ -69,7 +69,7 @@ nav.main {
       display: inline-block;
       float: left;
       margin-right: 5px;
-      font-family: "Gotham";
+      font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
       font-weight: 500;
       max-height: 60px;
       overflow: visible; }
@@ -143,7 +143,7 @@ nav.sub {
         line-height: 40px;
         text-decoration: none;
         color: #fff;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 400; }
         /* line 105, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.sub ul li a:hover {
@@ -344,22 +344,24 @@ body.frontpage section.apps {
       /* line 146, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app img {
         display: block;
-        margin: 0 auto; }
-      /* line 150, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+        margin: 0 auto;
+        width: 128px;
+        height: 128px; }
+      /* line 152, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app p {
         margin-top: 10px;
         color: #334450;
         font-size: 16px;
         line-height: 20px;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300; }
-      /* line 158, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+      /* line 160, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
       body.frontpage section.apps .appgrid .app p.small {
         margin-top: 5px;
         color: #7e8992;
         font-size: 14px;
         line-height: 16px; }
-  /* line 166, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+  /* line 168, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
   body.frontpage section.apps .footer.link {
     position: absolute;
     bottom: 0px;
@@ -367,7 +369,7 @@ body.frontpage section.apps {
     height: 30px;
     text-align: center;
     opacity: 0.75; }
-    /* line 173, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
+    /* line 175, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/frontpage.scss */
     body.frontpage section.apps .footer.link:hover {
       opacity: 1.0; }
 
@@ -453,7 +455,7 @@ body.features ul.iphone-screenshots {
     /* line 53, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
     body.features ul.iphone-screenshots li h2 {
       color: #085075;
-      font-family: "Gotham";
+      font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
       font-weight: 300;
       font-size: 18px;
       text-align: left; }
@@ -566,7 +568,7 @@ body.references section.apps {
         color: #334450;
         font-size: 13px;
         line-height: 14px;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300; }
       /* line 94, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/references.scss */
       body.references section.apps .appgrid .app p.small {
@@ -621,7 +623,7 @@ body.references section.companies-using-pspdfkit {
         display: block;
         text-decoration: none;
         color: #085075;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300;
         font-size: 18px; }
         /* line 134, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/references.scss */
@@ -719,7 +721,7 @@ body.purchase section.products {
           margin-bottom: 2px;
           background: #f7f8f9;
           color: #0893da;
-          font-family: "Gotham";
+          font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
           font-weight: 200;
           font-size: 36px;
           line-height: 40px;
@@ -736,7 +738,7 @@ body.purchase section.products {
         margin: 10px;
         text-align: center;
         text-decoration: none;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300;
         font-size: 18px;
         background: #0893da; }
@@ -877,7 +879,7 @@ body.documentation h2 {
 body.documentation h3 {
   margin: 2em 0 1em 0;
   font-size: 20px;
-  font-family: "Gotham";
+  font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
   font-weight: 500;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
@@ -1029,7 +1031,7 @@ h1 {
   line-height: 56px;
   font-weight: 200;
   text-align: center;
-  font-family: "Gotham"; }
+  font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif; }
 
 /* line 35, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/pspdfkit.scss */
 h2 {
@@ -1038,7 +1040,7 @@ h2 {
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  font-family: "Gotham";
+  font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
   font-weight: 300; }
 
 /* line 45, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/pspdfkit.scss */

@@ -80,7 +80,7 @@ body.features ul.iphone-screenshots {
     /* line 53, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
     body.features ul.iphone-screenshots li h2 {
       color: #085075;
-      font-family: "Gotham";
+      font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
       font-weight: 300;
       font-size: 18px;
       text-align: left; }

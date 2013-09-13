@@ -100,7 +100,7 @@ body.references section.apps {
         color: #334450;
         font-size: 13px;
         line-height: 14px;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300; }
       /* line 94, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/references.scss */
       body.references section.apps .appgrid .app p.small {
@@ -155,7 +155,7 @@ body.references section.companies-using-pspdfkit {
         display: block;
         text-decoration: none;
         color: #085075;
-        font-family: "Gotham";
+        font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 300;
         font-size: 18px; }
         /* line 134, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/references.scss */
