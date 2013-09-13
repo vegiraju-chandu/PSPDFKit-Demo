@@ -1,0 +1,92 @@
+/* line 2, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 6, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features section.viewing-pdfs {
+  padding-top: 120px; }
+/* line 9, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features section.navigating-pdfs {
+  padding-top: 80px; }
+/* line 12, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features section.annotating-pdfs {
+  padding-top: 80px; }
+/* line 15, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features section.pdf-forms {
+  padding-top: 80px; }
+/* line 18, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features section.and-more {
+  overflow: hidden;
+  padding: 20px 0 40px 0; }
+  /* line 22, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+  body.features section.and-more .container {
+    *zoom: 1;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 18, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
+    body.features section.and-more .container:before, body.features section.and-more .container:after {
+      content: " ";
+      display: table; }
+    /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
+    body.features section.and-more .container:after {
+      clear: both; }
+/* line 27, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+body.features ul.iphone-screenshots {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  text-align: center; }
+  /* line 18, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
+  body.features ul.iphone-screenshots:before, body.features ul.iphone-screenshots:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
+  body.features ul.iphone-screenshots:after {
+    clear: both; }
+  /* line 31, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+  body.features ul.iphone-screenshots li {
+    display: inline-block;
+    margin-bottom: 2em;
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    /* line 41, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/neat/grid/_span-columns.scss */
+    body.features ul.iphone-screenshots li:last-child {
+      margin-right: 0; }
+    /* line 35, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    body.features ul.iphone-screenshots li:nth-child(3n+0) {
+      margin-right: 0; }
+    /* line 38, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    body.features ul.iphone-screenshots li:nth-child(4n+0) {
+      clear: both; }
+    /* line 41, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    body.features ul.iphone-screenshots li .screenshot {
+      display: block;
+      margin: 0;
+      height: 620px;
+      background: transparent url("/images/features/iphone5_600px.png") no-repeat 0px 0px;
+      background-size: 300px 615px; }
+      /* line 47, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+      body.features ul.iphone-screenshots li .screenshot img {
+        display: block;
+        width: 300px;
+        height: 615px; }
+    /* line 53, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    body.features ul.iphone-screenshots li h2 {
+      color: #085075;
+      font-family: "Gotham";
+      font-weight: 300;
+      font-size: 18px;
+      text-align: left; }
+    /* line 60, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    body.features ul.iphone-screenshots li p {
+      color: #555;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left; }
