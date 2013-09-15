@@ -45,20 +45,20 @@
 <p>Here&rsquo;s the list of classes you will most likely use:</p>
 
 <ul>
-<li><a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a> - the base class for your PDFs. Can contain multiple document sources, files, data blobs or even CGDataProviders.</li>
-<li><a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> - the main controller to display PSPDFDocuments.</li>
-<li><a href="/api/Protocols/PSPDFViewControllerDelegate.html">PSPDFViewControllerDelegate</a> - allows to you respond to most user actions.</li>
+<li><a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a> - the base class for your PDFs. Can contain multiple document sources from files, data blobs or even CGDataProviders.</li>
+<li><a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> - the main controller to display your <a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a> objects.</li>
+<li><a href="/api/Protocols/PSPDFViewControllerDelegate.html">PSPDFViewControllerDelegate</a> - delegate to respond to user actions like tapping on a link.</li>
 <li><a href="/api/Protocols/PSPDFDocumentDelegate.html">PSPDFDocumentDelegate</a> - be notified when the document is being saved.</li>
-<li><a href="/api/Classes/PSPDFLibrary.html">PSPDFLibrary</a> - if you require a full-text search across multiple documents.</li>
+<li><a href="/api/Classes/PSPDFLibrary.html">PSPDFLibrary</a> - a full-text search across multiple documents.</li>
 <li><a href="/api/Classes/PSPDFDocumentPickerController.html">PSPDFDocumentPickerController</a> - a handy document picker table view that also allows search.</li>
-<li><a href="/api/Classes/PSPDFProcessor.html">PSPDFProcessor</a> - if you want to create new documents or password-protect existing ones.</li>
+<li><a href="/api/Classes/PSPDFProcessor.html">PSPDFProcessor</a> - create new documents or password-protect existing ones.</li>
 <li><a href="/api/Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> - the base class for all annotation objects.</li>
-<li><a href="/api/Classes/PSPDFGlyph.html">PSPDFGlyph</a> - represents a single character on a PDF document.</li>
-<li><a href="/api/Classes/PSPDFCache.html">PSPDFCache</a> - fine-tune the caching behavior or clear the disk cache.</li>
+<li><a href="/api/Classes/PSPDFGlyph.html">PSPDFGlyph</a> - represents a single character in a PDF document. Use <a href="/api/Classes/PSPDFDocument.html#//api/name/objectsAtPDFRect:page:options:">objectsAtPDFRect:page:options:</a> to extract from pages.</li>
+<li><a href="/api/Classes/PSPDFCache.html">PSPDFCache</a> - fine-tune the caching behavior or <a href="http://pspdfkit.com/api/Classes/PSPDFCache.html#//api/name/clearCache">clear the disk cache</a>.</li>
 </ul>
 
 
-<p>Via the <a href="/api/Classes/PSPDFViewController.html#//api/name/overrideClass:withClass:">overrideClass:withClass:</a> method of <a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> and <a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a>, you can override almost any class of the controller/view layer (via the controller) and the model layer (via the document) with your own subclass. Use this to customize details that are deep within PSPDFKit with minimum effort. You find some examples for this in the PSPDFCatalog example app.</p>
+<p>Via the <a href="/api/Classes/PSPDFViewController.html#//api/name/overrideClass:withClass:">overrideClass:withClass:</a> method you can override almost any class of the controller/view layer (via <a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a>) and the model layer (via <a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a>) with your own subclass. Use this to customize details that are deep within PSPDFKit with minimum effort. You find some examples for this in the PSPDFCatalog example app.</p>
 
 <p>Other generic useful classes:</p>
 
