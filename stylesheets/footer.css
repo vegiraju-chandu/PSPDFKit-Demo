@@ -17,6 +17,7 @@ body > footer {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
+    min-width: 64em;
     position: relative;
     display: block;
     padding: 20px 0; }
@@ -27,13 +28,13 @@ body > footer {
     /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
     body > footer ul:after {
       clear: both; }
-    /* line 16, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/footer.scss */
+    /* line 18, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/footer.scss */
     body > footer ul li {
       position: relative;
       display: block;
       float: left;
       margin-right: 5px; }
-      /* line 21, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/footer.scss */
+      /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/footer.scss */
       body > footer ul li a {
         display: block;
         color: #cfdbed;

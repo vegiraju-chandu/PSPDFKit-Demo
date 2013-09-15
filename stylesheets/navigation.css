@@ -33,6 +33,7 @@ nav.main {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
+    min-width: 64em;
     position: relative;
     display: block;
     padding: 20px 0 20px 140px;
@@ -44,7 +45,7 @@ nav.main {
     /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
     nav.main ul:after {
       clear: both; }
-    /* line 32, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+    /* line 33, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
     nav.main ul li {
       position: relative;
       display: inline-block;
@@ -54,20 +55,20 @@ nav.main {
       font-weight: 500;
       max-height: 60px;
       overflow: visible; }
-      /* line 42, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+      /* line 43, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
       nav.main ul li.download {
         float: right; }
-        /* line 44, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 45, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.main ul li.download a {
           color: #fff; }
-          /* line 46, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+          /* line 47, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
           nav.main ul li.download a:hover {
             color: #fff;
             background: #0e6cae; }
-          /* line 50, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+          /* line 51, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
           nav.main ul li.download a:active {
             background: #334450; }
-      /* line 55, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+      /* line 56, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
       nav.main ul li a {
         display: block;
         height: 40px;
@@ -76,15 +77,15 @@ nav.main {
         line-height: 40px;
         color: #1880c2;
         text-decoration: none; }
-        /* line 63, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 64, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.main ul li a:hover {
           color: #0e6cae;
           background: rgba(24, 128, 194, 0.05); }
-        /* line 67, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 68, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.main ul li a.active {
           color: #334450; }
 
-/* line 75, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+/* line 76, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
 nav.sub {
   position: fixed;
   display: block;
@@ -94,7 +95,7 @@ nav.sub {
   background: rgba(8, 147, 218, 0.9);
   color: #fa0;
   z-index: 100; }
-  /* line 84, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+  /* line 85, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
   nav.sub ul {
     width: auto;
     padding: 0 0 0 60px;
@@ -103,7 +104,8 @@ nav.sub {
     *zoom: 1;
     max-width: 68em;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    min-width: 64em; }
     /* line 18, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
     nav.sub ul:before, nav.sub ul:after {
       content: " ";
@@ -111,10 +113,10 @@ nav.sub {
     /* line 23, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/bourbon/addons/_clearfix.scss */
     nav.sub ul:after {
       clear: both; }
-    /* line 91, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+    /* line 93, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
     nav.sub ul li {
       display: inline-block; }
-      /* line 93, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+      /* line 95, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
       nav.sub ul li a {
         display: block;
         float: left;
@@ -126,13 +128,13 @@ nav.sub {
         color: #fff;
         font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
         font-weight: 400; }
-        /* line 105, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 107, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.sub ul li a:hover {
           background-color: rgba(14, 108, 174, 0.5); }
-        /* line 108, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 110, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.sub ul li a:active {
           background-color: #0e6cae; }
-        /* line 111, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
+        /* line 113, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/navigation.scss */
         nav.sub ul li a.active {
           color: #1880c2;
           background-color: #f7f8f9; }
