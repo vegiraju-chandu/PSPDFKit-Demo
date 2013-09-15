@@ -36,7 +36,7 @@
 						
 						<h2>About PSPDFKit</h2>
 
-<p>PSPDFKit is your framework of choice for displaying and annotating PDFs on iOS. It includes tools to display PDFs, edit PDFs, create PDFs and create/edit annotations.</p>
+<p>PSPDFKit is your framework of choice for displaying and annotating PDFs on iOS. It includes tools to display PDFs, edit PDFs, create PDFs, create/edit annotations and fill out forms.</p>
 
 <h2>At a Glance</h2>
 
@@ -49,6 +49,8 @@
 <li><a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> - the main controller to display PSPDFDocuments.</li>
 <li><a href="/api/Protocols/PSPDFViewControllerDelegate.html">PSPDFViewControllerDelegate</a> - allows to you respond to most user actions.</li>
 <li><a href="/api/Protocols/PSPDFDocumentDelegate.html">PSPDFDocumentDelegate</a> - be notified when the document is being saved.</li>
+<li><a href="/api/Classes/PSPDFLibrary.html">PSPDFLibrary</a> - if you require a full-text search across multiple documents.</li>
+<li><a href="/api/Classes/PSPDFDocumentPickerController.html">PSPDFDocumentPickerController</a> - a handy document picker table view that also allows search.</li>
 <li><a href="/api/Classes/PSPDFProcessor.html">PSPDFProcessor</a> - if you want to create new documents or password-protect existing ones.</li>
 <li><a href="/api/Classes/PSPDFAnnotation.html">PSPDFAnnotation</a> - the base class for all annotation objects.</li>
 <li><a href="/api/Classes/PSPDFGlyph.html">PSPDFGlyph</a> - represents a single character on a PDF document.</li>
@@ -56,12 +58,16 @@
 </ul>
 
 
-<p>Via the overrideClass:withClass: API of <a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> and <a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a>, you can override almost any class of the controller/view layer (via the controller) and the model layer (via the document). Use this to customize details that are deep within PSPDFKit with minimum effort. You find some examples for this in the PSPDFCatalog example app.</p>
+<p>Via the <a href="/api/Classes/PSPDFViewController.html#//api/name/overrideClass:withClass:">overrideClass:withClass:</a> method of <a href="/api/Classes/PSPDFViewController.html">PSPDFViewController</a> and <a href="/api/Classes/PSPDFDocument.html">PSPDFDocument</a>, you can override almost any class of the controller/view layer (via the controller) and the model layer (via the document) with your own subclass. Use this to customize details that are deep within PSPDFKit with minimum effort. You find some examples for this in the PSPDFCatalog example app.</p>
 
-<p>Useful classes:
-- <a href="/api/Classes/PSPDFAlertView.html">PSPDFAlertView</a> - a block-based subclass of UIAlertView.
-- <a href="/api/Classes/PSPDFActionSheet.html">PSPDFActionSheet</a> - a block-based subclass of <a href="Classes/PSPDFActionSheet.html">PSPDFActionSheet</a>.
-- <a href="/api/Classes/PSPDFMenuItem.html">PSPDFMenuItem</a> - if you want to add/change/remove menu items for text or annotation selection via the delegates in <a href="/api/Protocols/PSPDFViewControllerDelegate.html">PSPDFViewControllerDelegate</a>.</p>
+<p>Other generic useful classes:</p>
+
+<ul>
+<li><a href="/api/Classes/PSPDFAlertView.html">PSPDFAlertView</a> - a block-based subclass of UIAlertView.</li>
+<li><a href="/api/Classes/PSPDFActionSheet.html">PSPDFActionSheet</a> - a block-based subclass of <a href="Classes/PSPDFActionSheet.html">PSPDFActionSheet</a>.</li>
+<li><a href="/api/Classes/PSPDFMenuItem.html">PSPDFMenuItem</a> - a block-based subclass of UIMenuItem. Useful if you want to add/change/remove menu items for text or annotation selection via the delegates in <a href="/api/Protocols/PSPDFViewControllerDelegate.html">PSPDFViewControllerDelegate</a>.</li>
+</ul>
+
 
 <h2>Integration</h2>
 
