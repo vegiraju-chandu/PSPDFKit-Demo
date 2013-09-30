@@ -59,7 +59,7 @@
 	
 	<option value="//api/name/backgroundColor">&nbsp;&nbsp;&nbsp;&nbsp;backgroundColor</option>
 	
-	<option value="//api/name/basePath">&nbsp;&nbsp;&nbsp;&nbsp;basePath</option>
+	<option value="//api/name/baseURL">&nbsp;&nbsp;&nbsp;&nbsp;baseURL</option>
 	
 	<option value="//api/name/bookmarkParser">&nbsp;&nbsp;&nbsp;&nbsp;bookmarkParser</option>
 	
@@ -263,31 +263,31 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Attached Parsers">Attached Parsers</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Security Methods">Security Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PageLabels Methods">PageLabels Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationSaving Methods">AnnotationSaving Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Rendering Methods">Rendering Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ObjectFinder Methods">ObjectFinder Methods</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Bookmarks Methods">Bookmarks Methods</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Forms Methods">Forms Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_DataDetection Methods">DataDetection Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Caching Methods">Caching Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PageLabels Methods">PageLabels Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationSaving Methods">AnnotationSaving Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Annotations Methods">Annotations Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata Methods">Metadata Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Bookmarks Methods">Bookmarks Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Rendering Methods">Rendering Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Caching Methods">Caching Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_DataDetection Methods">DataDetection Methods</a></span></li>
 	
 </ul></li>
 
@@ -317,7 +317,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundColor">backgroundColor</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basePath">basePath</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baseURL">baseURL</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bookmarkParser">bookmarkParser</a></span></li>
 	
@@ -677,7 +677,7 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/basePath">&nbsp;&nbsp;basePath</a></code>
+		<code><a href="#//api/name/baseURL">&nbsp;&nbsp;baseURL</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -823,6 +823,56 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 						</ul>
 						
 						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/overrideClass:withClass:">&ndash;&nbsp;overrideClass:withClass:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didCreateDocumentProvider:">&ndash;&nbsp;didCreateDocumentProvider:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDidCreateDocumentProviderBlock:">&ndash;&nbsp;setDidCreateDocumentProviderBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageContentForPage:">&ndash;&nbsp;pageContentForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundColorForPage:">&ndash;&nbsp;backgroundColorForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageInfoForPage:pageRef:">&ndash;&nbsp;pageInfoForPage:pageRef:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Security Methods" name="task_Security Methods"></a>
 						<h3 class="subsubtitle task-title">Security Methods</h3>
 
@@ -873,27 +923,71 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 						</ul>
 						
 						
-						<a title="PageLabels Methods" name="task_PageLabels Methods"></a>
-						<h3 class="subsubtitle task-title">PageLabels Methods</h3>
+						<a title="Rendering Methods" name="task_Rendering Methods"></a>
+						<h3 class="subsubtitle task-title">Rendering Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pageLabelsEnabled">&nbsp;&nbsp;pageLabelsEnabled</a></code>
+		<code><a href="#//api/name/imageForPage:size:clippedToRect:annotations:options:receipt:error:">&ndash;&nbsp;imageForPage:size:clippedToRect:annotations:options:receipt:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/renderPage:context:size:clippedToRect:annotations:options:error:">&ndash;&nbsp;renderPage:context:size:clippedToRect:annotations:options:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/renderOptions">&nbsp;&nbsp;renderOptions</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pageLabelForPage:substituteWithPlainLabel:">&ndash;&nbsp;pageLabelForPage:substituteWithPlainLabel:</a></code>
+		<code><a href="#//api/name/renderAnnotationTypes">&nbsp;&nbsp;renderAnnotationTypes</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="ObjectFinder Methods" name="task_ObjectFinder Methods"></a>
+						<h3 class="subsubtitle task-title">ObjectFinder Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsAtPDFPoint:page:options:">&ndash;&nbsp;objectsAtPDFPoint:page:options:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pageForPageLabel:partialMatching:">&ndash;&nbsp;pageForPageLabel:partialMatching:</a></code>
+		<code><a href="#//api/name/objectsAtPDFRect:page:options:">&ndash;&nbsp;objectsAtPDFRect:page:options:</a></code>
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textParserForPage:">&ndash;&nbsp;textParserForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasLoadedTextParserForPage:">&ndash;&nbsp;hasLoadedTextParserForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textParserHideGlyphsOutsidePageRect">&nbsp;&nbsp;textParserHideGlyphsOutsidePageRect</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -920,6 +1014,136 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 		<code><a href="#//api/name/aspectRatioEqual">&nbsp;&nbsp;aspectRatioEqual</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Bookmarks Methods" name="task_Bookmarks Methods"></a>
+						<h3 class="subsubtitle task-title">Bookmarks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarksEnabled">&nbsp;&nbsp;bookmarksEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarkParser">&nbsp;&nbsp;bookmarkParser</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarks">&ndash;&nbsp;bookmarks</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Forms Methods" name="task_Forms Methods"></a>
+						<h3 class="subsubtitle task-title">Forms Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formsEnabled">&nbsp;&nbsp;formsEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formParser">&nbsp;&nbsp;formParser</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="DataDetection Methods" name="task_DataDetection Methods"></a>
+						<h3 class="subsubtitle task-title">DataDetection Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;autodetectTextLinkTypes</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationsFromDetectingLinkTypes:pagesInRange:progress:error:">&ndash;&nbsp;annotationsFromDetectingLinkTypes:pagesInRange:progress:error:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Caching Methods" name="task_Caching Methods"></a>
+						<h3 class="subsubtitle task-title">Caching Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearCache">&ndash;&nbsp;clearCache</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillCache">&ndash;&nbsp;fillCache</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataDirectory">&nbsp;&nbsp;dataDirectory</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ensureDataDirectoryExistsWithError:">&ndash;&nbsp;ensureDataDirectoryExistsWithError:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/diskCacheStrategy">&nbsp;&nbsp;diskCacheStrategy</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="PageLabels Methods" name="task_PageLabels Methods"></a>
+						<h3 class="subsubtitle task-title">PageLabels Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageLabelsEnabled">&nbsp;&nbsp;pageLabelsEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageLabelForPage:substituteWithPlainLabel:">&ndash;&nbsp;pageLabelForPage:substituteWithPlainLabel:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageForPageLabel:partialMatching:">&ndash;&nbsp;pageForPageLabel:partialMatching:</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -970,64 +1194,6 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 		<code><a href="#//api/name/hasDirtyAnnotations">&ndash;&nbsp;hasDirtyAnnotations</a></code>
 	</span>
 	
-	
-</li>
-						</ul>
-						
-						
-						<a title="ObjectFinder Methods" name="task_ObjectFinder Methods"></a>
-						<h3 class="subsubtitle task-title">ObjectFinder Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/objectsAtPDFPoint:page:options:">&ndash;&nbsp;objectsAtPDFPoint:page:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/objectsAtPDFRect:page:options:">&ndash;&nbsp;objectsAtPDFRect:page:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textParserForPage:">&ndash;&nbsp;textParserForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/hasLoadedTextParserForPage:">&ndash;&nbsp;hasLoadedTextParserForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textParserHideGlyphsOutsidePageRect">&nbsp;&nbsp;textParserHideGlyphsOutsidePageRect</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Forms Methods" name="task_Forms Methods"></a>
-						<h3 class="subsubtitle task-title">Forms Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/formsEnabled">&nbsp;&nbsp;formsEnabled</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/formParser">&nbsp;&nbsp;formParser</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -1098,172 +1264,6 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 		<code><a href="#//api/name/metadata">&nbsp;&nbsp;metadata</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Bookmarks Methods" name="task_Bookmarks Methods"></a>
-						<h3 class="subsubtitle task-title">Bookmarks Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarksEnabled">&nbsp;&nbsp;bookmarksEnabled</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarkParser">&nbsp;&nbsp;bookmarkParser</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarks">&ndash;&nbsp;bookmarks</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Rendering Methods" name="task_Rendering Methods"></a>
-						<h3 class="subsubtitle task-title">Rendering Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/imageForPage:size:clippedToRect:annotations:options:receipt:error:">&ndash;&nbsp;imageForPage:size:clippedToRect:annotations:options:receipt:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/renderPage:context:size:clippedToRect:annotations:options:error:">&ndash;&nbsp;renderPage:context:size:clippedToRect:annotations:options:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/renderOptions">&nbsp;&nbsp;renderOptions</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/renderAnnotationTypes">&nbsp;&nbsp;renderAnnotationTypes</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
-						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/overrideClass:withClass:">&ndash;&nbsp;overrideClass:withClass:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/didCreateDocumentProvider:">&ndash;&nbsp;didCreateDocumentProvider:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setDidCreateDocumentProviderBlock:">&ndash;&nbsp;setDidCreateDocumentProviderBlock:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/pageContentForPage:">&ndash;&nbsp;pageContentForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/backgroundColorForPage:">&ndash;&nbsp;backgroundColorForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/pageInfoForPage:pageRef:">&ndash;&nbsp;pageInfoForPage:pageRef:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Caching Methods" name="task_Caching Methods"></a>
-						<h3 class="subsubtitle task-title">Caching Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/clearCache">&ndash;&nbsp;clearCache</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fillCache">&ndash;&nbsp;fillCache</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/dataDirectory">&nbsp;&nbsp;dataDirectory</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/ensureDataDirectoryExistsWithError:">&ndash;&nbsp;ensureDataDirectoryExistsWithError:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/diskCacheStrategy">&nbsp;&nbsp;diskCacheStrategy</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="DataDetection Methods" name="task_DataDetection Methods"></a>
-						<h3 class="subsubtitle task-title">DataDetection Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;autodetectTextLinkTypes</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/annotationsFromDetectingLinkTypes:pagesInRange:progress:error:">&ndash;&nbsp;annotationsFromDetectingLinkTypes:pagesInRange:progress:error:</a></code>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -1666,18 +1666,18 @@ Defaults to white.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/basePath" title="basePath"></a>
-	<h3 class="subsubtitle method-title">basePath</h3>
+	<a name="//api/name/baseURL" title="baseURL"></a>
+	<h3 class="subsubtitle method-title">baseURL</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Common base path for pdf <a href="#//api/name/files">files</a>. Set to nil to use absolute paths for <a href="#//api/name/files">files</a>.</p>
+		<p>Common base URL for PDF <a href="#//api/name/files">files</a>. Set to nil to use absolute paths for <a href="#//api/name/files">files</a>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSURL *basePath</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSURL *baseURL</code></div>
 
     
 	
@@ -2289,8 +2289,8 @@ nil if the <a href="#//api/name/document">document</a> was initialized with init
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Array of NSString pdf files. If <a href="#//api/name/basePath">basePath</a> is set, this will be combined with the file name.
-If <a href="#//api/name/basePath">basePath</a> is not set, add the full path (as NSString) to the files.</p>
+		<p>Array of NSString pdf files. If basePath is set, this will be combined with the file name.
+If basePath is not set, add the full path (as NSString) to the files.</p>
 	</div>		
 	
     
@@ -3631,7 +3631,7 @@ It is your responsibility to add the annotations to the <a href="#//api/name/doc
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Appends a file to the current <a href="#//api/name/document">document</a>. No PDF gets modified, just displayed together. Can be a name or partial path (full path if <a href="#//api/name/basePath">basePath</a> is nil)
+		<p>Appends a file to the current <a href="#//api/name/document">document</a>. No PDF gets modified, just displayed together. Can be a name or partial path (full path if basePath is nil)
 Adding the same file multiple times is allowed.</p>
 	</div>		
 	
@@ -5001,7 +5001,7 @@ This doesn&rsquo;t harm if the <a href="#//api/name/document">document</a> is al
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-25)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-30)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

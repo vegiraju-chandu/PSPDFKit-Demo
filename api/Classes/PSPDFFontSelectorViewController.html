@@ -43,9 +43,18 @@
 	
 	<option value="//api/name/fontFamilyDescriptors">&nbsp;&nbsp;&nbsp;&nbsp;fontFamilyDescriptors</option>
 	
+	<option value="//api/name/searchEnabled">&nbsp;&nbsp;&nbsp;&nbsp;searchEnabled</option>
+	
 	<option value="//api/name/selectedFont">&nbsp;&nbsp;&nbsp;&nbsp;selectedFont</option>
 	
+	<option value="//api/name/showDownloadableFonts">&nbsp;&nbsp;&nbsp;&nbsp;showDownloadableFonts</option>
 	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/setDefaultBlocklist:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultBlocklist:</option>
 	
 	
 	
@@ -77,11 +86,21 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontFamilyDescriptors">fontFamilyDescriptors</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchEnabled">searchEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedFont">selectedFont</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showDownloadableFonts">showDownloadableFonts</a></span></li>
 	
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultBlocklist:">setDefaultBlocklist:</a></span></li>
+	
+</ul></li>
 
 
 
@@ -138,6 +157,12 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultBlocklist:">+&nbsp;setDefaultBlocklist:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/fontFamilyDescriptors">&nbsp;&nbsp;fontFamilyDescriptors</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -145,6 +170,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/selectedFont">&nbsp;&nbsp;selectedFont</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchEnabled">&nbsp;&nbsp;searchEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showDownloadableFonts">&nbsp;&nbsp;showDownloadableFonts</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -240,6 +277,42 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/searchEnabled" title="searchEnabled"></a>
+	<h3 class="subsubtitle method-title">searchEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows search. Defaults to YES on iPad.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL searchEnabled</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontSelectorViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/selectedFont" title="selectedFont"></a>
 	<h3 class="subsubtitle method-title">selectedFont</h3>
 	
@@ -275,9 +348,93 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/showDownloadableFonts" title="showDownloadableFonts"></a>
+	<h3 class="subsubtitle method-title">showDownloadableFonts</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enable font downloading from Apple&rsquo;s servers. Defaults to YES.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showDownloadableFonts</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> iOS 6+. See <a href="http://support.apple.com/kb/HT5484">http://support.apple.com/kb/HT5484</a> for the full list.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontSelectorViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultBlocklist:" title="setDefaultBlocklist:"></a>
+	<h3 class="subsubtitle method-title">setDefaultBlocklist:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allow to block specific fonts. PSPDFKit blocks several fonts by default that are less commonly used.
+Set to nil to disable blocking any fonts. Array contains string names.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultBlocklist:(NSArray *)<em>defaultBlocklist</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontSelectorViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -294,7 +451,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-25)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-09-30)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
