@@ -57,7 +57,7 @@
       <h2>Objective C &amp; Xcode</h2>
       <p>
         PSPDFKit is designed to compile both with Xcode 4.6.3 (iOS SDK 6.1 with Clang compiler) and also with the modern Xcode 5 with iOS SDK 7. To get the modern look of iOS 7, you need to use Xcode 5. With using Xcode 4 Apple switches UIKit into "legacy mode" where PSPDFKit will look just as it would on iOS 5/6.<br>
-        Apple only allows their new arm64 architecture for binaries that have a minimum deployment target of iOS 6. Thus our binaries will support iOS 6 upwards. If you have access to the source code (PSPDFKit Complete), you can still support applications down to iOS 5.0.
+        We support all iOS versions down to iOS 5, but plan to drop iOS 5 in Q1 2014 because usage is now below 5%. We also have a special arm64 build available if your application is iOS 7 - only. (This is a restriction from Apple; either iOS 7+ with arm64 or iOS 5+ but no 64bit slice. PSPDFKit works great on the iPhone 5s either way.)
       </p>
       <p><a href="/api">API Documentation</a></p>
 
