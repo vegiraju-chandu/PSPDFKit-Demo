@@ -41,11 +41,11 @@
 	
 	<option value="//api/name/ascent">&nbsp;&nbsp;&nbsp;&nbsp;ascent</option>
 	
-	<option value="//api/name/boxedToUnicodeMap">&nbsp;&nbsp;&nbsp;&nbsp;boxedToUnicodeMap</option>
-	
 	<option value="//api/name/descent">&nbsp;&nbsp;&nbsp;&nbsp;descent</option>
 	
 	<option value="//api/name/encodingArray">&nbsp;&nbsp;&nbsp;&nbsp;encodingArray</option>
+	
+	<option value="//api/name/fontCMap">&nbsp;&nbsp;&nbsp;&nbsp;fontCMap</option>
 	
 	<option value="//api/name/fontKey">&nbsp;&nbsp;&nbsp;&nbsp;fontKey</option>
 	
@@ -54,6 +54,8 @@
 	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
 	
 	<option value="//api/name/toUnicodeMap">&nbsp;&nbsp;&nbsp;&nbsp;toUnicodeMap</option>
+	
+	<option value="//api/name/ucsCMap">&nbsp;&nbsp;&nbsp;&nbsp;ucsCMap</option>
 	
 	
 	
@@ -70,6 +72,8 @@
 	<option value="//api/name/initWithFontDictionary:fontKey:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFontDictionary:fontKey:</option>
 	
 	<option value="//api/name/isEqualToFontInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToFontInfo:</option>
+	
+	<option value="//api/name/unicodeStringForCharacter:">&nbsp;&nbsp;&nbsp;&nbsp;- unicodeStringForCharacter:</option>
 	
 	<option value="//api/name/widthForCharacter:">&nbsp;&nbsp;&nbsp;&nbsp;- widthForCharacter:</option>
 	
@@ -99,11 +103,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ascent">ascent</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/boxedToUnicodeMap">boxedToUnicodeMap</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/descent">descent</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encodingArray">encodingArray</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontCMap">fontCMap</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fontKey">fontKey</a></span></li>
 	
@@ -112,6 +116,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toUnicodeMap">toUnicodeMap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ucsCMap">ucsCMap</a></span></li>
 	
 </ul></li>
 
@@ -130,6 +136,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFontDictionary:fontKey:">initWithFontDictionary:fontKey:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToFontInfo:">isEqualToFontInfo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unicodeStringForCharacter:">unicodeStringForCharacter:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/widthForCharacter:">widthForCharacter:</a></span></li>
 	
@@ -228,7 +236,13 @@ This is a class cluster and part of the text parser engine.</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/boxedToUnicodeMap">&nbsp;&nbsp;boxedToUnicodeMap</a></code>
+		<code><a href="#//api/name/fontCMap">&nbsp;&nbsp;fontCMap</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ucsCMap">&nbsp;&nbsp;ucsCMap</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -259,6 +273,12 @@ This is a class cluster and part of the text parser engine.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isEqualToFontInfo:">&ndash;&nbsp;isEqualToFontInfo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unicodeStringForCharacter:">&ndash;&nbsp;unicodeStringForCharacter:</a></code>
 	</span>
 	
 	
@@ -301,42 +321,6 @@ This is a class cluster and part of the text parser engine.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> This parameter is normalized (divided by 1000 vs the PDF spec)</p></div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFontInfo.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/boxedToUnicodeMap" title="boxedToUnicodeMap"></a>
-	<h3 class="subsubtitle method-title">boxedToUnicodeMap</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Version that boxes the keys at runtime. Slower, will be recreated on every access.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSDictionary *boxedToUnicodeMap</code></div>
-
-    
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -406,6 +390,42 @@ This is a class cluster and part of the text parser engine.</p>
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *encodingArray</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontInfo.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fontCMap" title="fontCMap"></a>
+	<h3 class="subsubtitle method-title">fontCMap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>CMap for the given encoding <a href="#//api/name/name">name</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) PSPDFCMap *fontCMap</code></div>
 
     
 	
@@ -544,12 +564,49 @@ This is a class cluster and part of the text parser engine.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Specialized dictionary that uses raw values as key pointers (use CFDictionaryGetValue)</p>
+		<p>CMap that is optionally provided for converting text strings to unicode</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *toUnicodeMap</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) PSPDFCMap *toUnicodeMap</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontInfo.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ucsCMap" title="ucsCMap"></a>
+	<h3 class="subsubtitle method-title">ucsCMap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>CMap formed from the registery and ordering information of the font,
+used for unicode conversion when <a href="#//api/name/toUnicodeMap">toUnicodeMap</a> is not present</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) PSPDFCMap *ucsCMap</code></div>
 
     
 	
@@ -698,6 +755,42 @@ This is a class cluster and part of the text parser engine.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/unicodeStringForCharacter:" title="unicodeStringForCharacter:"></a>
+	<h3 class="subsubtitle method-title">unicodeStringForCharacter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a character into unicode</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)unicodeStringForCharacter:(uint16_t)<em>character</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFontInfo.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/widthForCharacter:" title="widthForCharacter:"></a>
 	<h3 class="subsubtitle method-title">widthForCharacter:</h3>
 	
@@ -753,7 +846,7 @@ This is a class cluster and part of the text parser engine.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-10-02)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-10-04)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
