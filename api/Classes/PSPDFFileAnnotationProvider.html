@@ -47,12 +47,9 @@
 	
 	<option value="//api/name/documentProvider">&nbsp;&nbsp;&nbsp;&nbsp;documentProvider</option>
 	
+	<option value="//api/name/saveableTypes">&nbsp;&nbsp;&nbsp;&nbsp;saveableTypes</option>
 	
 	
-	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/resolvePath:forDocument:page:">&nbsp;&nbsp;&nbsp;&nbsp;+ resolvePath:forDocument:page:</option>
 	
 	
 	
@@ -67,23 +64,13 @@
 	
 	<option value="//api/name/initWithDocumentProvider:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDocumentProvider:</option>
 	
-	<option value="//api/name/loadAnnotationsWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- loadAnnotationsWithError:</option>
-	
-	<option value="//api/name/parseAnnotationLinkTarget:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnnotationLinkTarget:</option>
-	
-	<option value="//api/name/parseAnnotationsForPage:pageRef:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnnotationsForPage:pageRef:</option>
-	
 	<option value="//api/name/removeAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotations:</option>
-	
-	<option value="//api/name/removeDeletedAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;- removeDeletedAnnotations</option>
 	
 	<option value="//api/name/saveAnnotationsWithOptions:error:">&nbsp;&nbsp;&nbsp;&nbsp;- saveAnnotationsWithOptions:error:</option>
 	
 	<option value="//api/name/setAnnotations:forPage:">&nbsp;&nbsp;&nbsp;&nbsp;- setAnnotations:forPage:</option>
 	
 	<option value="//api/name/tryLoadAnnotationsFromFileWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- tryLoadAnnotationsFromFileWithError:</option>
-	
-	<option value="//api/name/updateAnnotationsPageAndDocumentReference:page:">&nbsp;&nbsp;&nbsp;&nbsp;- updateAnnotationsPageAndDocumentReference:page:</option>
 	
 	
 	
@@ -100,6 +87,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
@@ -119,15 +108,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/documentProvider">documentProvider</a></span></li>
 	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resolvePath:forDocument:page:">resolvePath:forDocument:page:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveableTypes">saveableTypes</a></span></li>
 	
 </ul></li>
+
+
 
 
 
@@ -141,23 +126,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDocumentProvider:">initWithDocumentProvider:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadAnnotationsWithError:">loadAnnotationsWithError:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnnotationLinkTarget:">parseAnnotationLinkTarget:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnnotationsForPage:pageRef:">parseAnnotationsForPage:pageRef:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotations:">removeAnnotations:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeDeletedAnnotations">removeDeletedAnnotations</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveAnnotationsWithOptions:error:">saveAnnotationsWithOptions:error:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setAnnotations:forPage:">setAnnotations:forPage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tryLoadAnnotationsFromFileWithError:">tryLoadAnnotationsFromFileWithError:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateAnnotationsPageAndDocumentReference:page:">updateAnnotationsPageAndDocumentReference:page:</a></span></li>
 	
 </ul></li>
 
@@ -275,6 +250,20 @@
 	</span>
 	
 	
+</li>
+						</ul>
+						
+						
+						<a title="Advanced Methods" name="task_Advanced Methods"></a>
+						<h3 class="subsubtitle task-title">Advanced Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveableTypes">&nbsp;&nbsp;saveableTypes</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/annotationsPath">&nbsp;&nbsp;annotationsPath</a></code>
@@ -291,43 +280,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/parseAnnotationsForPage:pageRef:">&ndash;&nbsp;parseAnnotationsForPage:pageRef:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/loadAnnotationsWithError:">&ndash;&nbsp;loadAnnotationsWithError:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/parseAnnotationLinkTarget:">&ndash;&nbsp;parseAnnotationLinkTarget:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/resolvePath:forDocument:page:">+&nbsp;resolvePath:forDocument:page:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeDeletedAnnotations">&ndash;&nbsp;removeDeletedAnnotations</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/updateAnnotationsPageAndDocumentReference:page:">&ndash;&nbsp;updateAnnotationsPageAndDocumentReference:page:</a></code>
 	</span>
 	
 	
@@ -496,27 +449,21 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 </div>
 						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
 						<div class="section-method">
-	<a name="//api/name/resolvePath:forDocument:page:" title="resolvePath:forDocument:page:"></a>
-	<h3 class="subsubtitle method-title">resolvePath:forDocument:page:</h3>
+	<a name="//api/name/saveableTypes" title="saveableTypes"></a>
+	<h3 class="subsubtitle method-title">saveableTypes</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Resolves a PSPDFKit-style URL to the appropriate NSURL.</p>
+		<p>This defaults to <code>PSPDFAnnotationTypeAll&amp;~PSPDFAnnotationTypeLink</code> by default.
+Change this to PSPDFAnnotationTypeAll to also allow link annotation saving.
+Links are not saved by default since some documents have a crazy high amount of link annotations which would make saving slow.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSURL *)resolvePath:(NSString *)<em>path</em> forDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFAnnotationType saveableTypes</code></div>
 
     
 	
@@ -525,6 +472,11 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> The default behavior previous to PSPDFKit 3.1 was <code>PSPDFAnnotationTypeAll</code>. Existing save files will be migrated after the first save. If you rely on custom link annotations to be saved, make sure you set this back to the old default.</p></div><div class="warning"><p><strong>Warning:</strong> Never exclude PSPDFAnnotationTypeWidget - Forms are specially handled.</p></div>
+	</div>
 	
 	
 	
@@ -541,6 +493,8 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 </div>
 						
 					</div>
+					
+					
 					
 					
 					
@@ -698,116 +652,6 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/loadAnnotationsWithError:" title="loadAnnotationsWithError:"></a>
-	<h3 class="subsubtitle method-title">loadAnnotationsWithError:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Load annotations (returning NO + eventually an error if it fails)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSDictionary *)loadAnnotationsWithError:(NSError **)<em>error</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/parseAnnotationLinkTarget:" title="parseAnnotationLinkTarget:"></a>
-	<h3 class="subsubtitle method-title">parseAnnotationLinkTarget:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Parses annotation link target. Override to support custom link protocols.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)parseAnnotationLinkTarget:(PSPDFLinkAnnotation *)<em>linkAnnotation</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/parseAnnotationsForPage:pageRef:" title="parseAnnotationsForPage:pageRef:"></a>
-	<h3 class="subsubtitle method-title">parseAnnotationsForPage:pageRef:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Parses the page annotation dictionary and returns the newly created annotations.
-Want to customize annotations right after parsing? This is the perfect place.
-Will be called from <a href="#//api/name/annotationsForPage:pageRef:">annotationsForPage:pageRef:</a> in a thread safe manner and later cached.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnnotationsForPage:(NSUInteger)<em>page</em> pageRef:(CGPDFPageRef)<em>pageRef</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/removeAnnotations:" title="removeAnnotations:"></a>
 	<h3 class="subsubtitle method-title">removeAnnotations:</h3>
 	
@@ -845,49 +689,15 @@ In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDelet
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/removeDeletedAnnotations" title="removeDeletedAnnotations"></a>
-	<h3 class="subsubtitle method-title">removeDeletedAnnotations</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Removes all annotations that are marked as deleted.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSUInteger)removeDeletedAnnotations</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/saveAnnotationsWithOptions:error:" title="saveAnnotationsWithOptions:error:"></a>
 	<h3 class="subsubtitle method-title">saveAnnotationsWithOptions:error:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Saving code.</p>
+		<p>PSPDFKit requests a save. Can be ignored if you&rsquo;re instantly persisting.
+Event is e.g. fired before the app goes into background, or when <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> is dismissed.
+Return NO + error if saving failed.</p>
 	</div>		
 	
     
@@ -910,7 +720,7 @@ In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDelet
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
+		<code class="declared-in-ref">PSPDFAnnotationProvider.h</code><br />
 	</div>				
 	
 	
@@ -996,42 +806,6 @@ Setting nil as annotations will re-evaluate the pdf for annotations on the next 
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/updateAnnotationsPageAndDocumentReference:page:" title="updateAnnotationsPageAndDocumentReference:page:"></a>
-	<h3 class="subsubtitle method-title">updateAnnotationsPageAndDocumentReference:page:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Ensure document/page references are set correctly before adding annotations. Used internally.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)updateAnnotationsPageAndDocumentReference:(NSArray *)<em>annotations</em> page:(NSUInteger)<em>page</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFileAnnotationProvider.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -1047,7 +821,7 @@ Setting nil as annotations will re-evaluate the pdf for annotations on the next 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-10-10)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-10-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
