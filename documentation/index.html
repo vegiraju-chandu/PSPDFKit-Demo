@@ -57,7 +57,7 @@
       <h2>Objective C &amp; Xcode</h2>
       <p>
         PSPDFKit is designed to compile both with Xcode 4.6.3 (iOS SDK 6.1 with Clang compiler) and also with the modern Xcode 5 with iOS SDK 7. To get the modern look of iOS 7, you need to use Xcode 5. With using Xcode 4 Apple switches UIKit into "legacy mode" where PSPDFKit will look just as it would on iOS 5/6.<br>
-        We support all iOS versions down to iOS 5, but plan to drop iOS 5 in Q1 2014 because usage is now below 5%. We also have a special arm64 build available if your application is iOS 7 - only. (This is a restriction from Apple; either iOS 7+ with arm64 or iOS 5+ but no 64bit slice. PSPDFKit works great on the iPhone 5s either way.)
+        We support all iOS versions down to iOS 5, but plan to drop iOS 5 in Q1 2014 because usage is now below 4%. We also have a special arm64 build available if your application is iOS 7 only. (This is a restriction from Apple; either iOS 7+ with arm64 or iOS 5+ but no 64bit slice. PSPDFKit works great on the iPhone 5s either way.)
       </p>
       <p><a href="/api">API Documentation</a></p>
 
@@ -263,69 +263,9 @@
   
   <a href="" id="troubleshooting"></a>
   <section class="troubleshooting">
-    <h1>Troubleshooting</h1>
-
+    <h1>Troubleshooting</h1>s
     <div class="container">
-
-      <p><b>Q: How do I determine what version of PSPDFKit I am using?</b><br>
-      A: Simply open PSPDFKit.embeddedframework/Resources/VERSION. Alternatively, you can query the version at runtime with calling PSPDFVersionString().</p>
-
-      <p><b>Q: I purchased PSPDFKit. Where can I download the latest version?</b><br>
-      A: Use the link you got in your initial purchase email, it always points to the latest stable version available. (You might need to update the links if it's an older purchase, see above)</p>
-
-      <p><b>Q: I upgraded from Demo to Binary/Source, but the "PSPDFKit-Demo" text doesn't disappear.</b><br>
-      A: You have either delete your app on the Simulator/Device or explicitly call [[PSPDFCache sharedCache] clearCache] to remove the demo text. Also be sure to check your linker settings, so that you don't accidentally link a demo version of the framework. Keep in mind that the distribution will contain both the demo binary (in PSPDFKit-Demo) and the full binary in the "Products" folder.</p>
-       
-      <p><b>Q: I downloaded the project but saving annotations doesn't work.</b><br>
-      A: PDF files in the Bundle directory (Resources, app folder) are not writeable. Copy your PDF to a writeable directory like Documents to test the annotation embedding. Annotation embedding is also disabled for encrypted files.</p>    
-     
-      <p><b>Q: Help! I get "PSPDFKit.bundle not found. search and annotations will not work properly" in the log.</b><br>
-      A: You need to add the PSPDFKit.bundle to your project. If you're using the source code PSPDFKit-lib.xcodeproj, drag the PSPDFKit.bundle into Xcode's tree - anywhere you want (Resources folder is a good place). If you're using Appcelerator, <a href="#appcelerator">read up here</a> how to add it.</p>
-     
-      <p><b>Q: When I start the app, I get [__NSArrayI objectAtIndexedSubscript:]: unrecognized selector sent to instance.</b><br>
-      A: You're most likely on an old version of Xcode. Upgrade to 4.6 or later to fix this problem. Also ensure you've added the linker flag -fobc-arc to your project.</p>
-     
-      <p><b>Q: When I start the app, I get "_OBJC_CLASS_$_UICollectionView", referenced from: objc-class-ref in PSPDFKit</b><br>
-      A: You're most likely on an old version of Xcode. Upgrade to latest Xcode to fix this problem. PSPDFKit will use the native UICollectionView if the device is on iOS6/7, and PSTCollectionView on iOS5.</p>
-     
-      <p><b>Q: The document doesn't show up, instead I get "Error: CFURLCreateDataAndPropertiesFromResource: failed with error code -15" in the debug log.</b><br>
-      A: You need to initialize PSPDFDocument with a *file* URL or a URL from localhost. Remote URLs are not supported - download the PDF first, for example with <a href="https://github.com/steipete/AFDownloadRequestOperation">AFDownloadRequestOperation</a>, as used in the PSPDFCatalog.</p>
-     
-      <p><b>Q: Everything works perfectly, but when I use PDF XYZ, your application crashes (this only happens on the device)</b><br>
-      A: While there are many ways in place to minimize memory usage when rendering is working, some PDF are just _too complex for iOS - meaning drawing takes too much memory. There is a hard limit of about 64MB for every application, and you most likely get killed by the system before getting that much anyway, especially on older devices like the iPad 1. While testing, we encountered PDFs that needed as much as 300MB for drawing - no way you can to this on iOS. One way to fix this problem is to remove complex vector graphics, simple re-saving it in Preview.app solves many issues.</p>
-
-      <p><b>Q: The PDF is fine in Adobe Acrobat (R), but there are missing images/fonts on the iPad.</b><br>
-      A: On iOS, the Quartz-Render-Engine is used. While overall very compatible, there are some differences in interpreting the >1000-pages pdf reference. And some newer variants may not be implemented at all. Because Apple shares most of their foundation code, please check your pdf in Preview.app first. If there are rendering problems, open it in Adobe Acrobat and re-save it File -> Save as... -> Reduced Size PDF, and select under "Make compatible with" an earlier PDF version. We had good experiences with 4.0 or 5.0. Note: File size may increase because of the older format.<br> If you experience problems with transparency (differences between Apple's rendering engine and Adobe's), it's also worth trying the <i>highest</i> possible version. One customer reported good results using PDF/X4-2008 and Acrobat 8/9 (PDF 1.7). There are also some reports that iOS6 fixes a lot of those problems.</p>
-
-      <p><b>Q: The colors on then iPad are a bit off; But everything looks fine in Adobe Acrobat</b><br>
-      A: Apple doesn't always respect color spaces in their PDF rendering engine. You can solve this by converting the document colors to either sRGB or Apple RGB in Acrobat.</p>
-      
-      <p><b>Q: I've added the printBarButtonItem but it's not showing up in the toolbar.</b><br>
-      A: Certain PDF documents might now allow printing. To check this, check the <a href="/api/Classes/PSPDFDocument.html#//api/name/allowsPrinting">allowsPrinting flag</a> on PSPDFDocument.</p>
-
-      <p><b>Q: In Adobe Acrobat, hyperlinks are clickable, but in PSPDFKit, some or all of them are not marked as touch-able.</b><br>
-      A: Adobe Acrobat and to some extend also Preview.app use custom in-text hyperlink detection to create annotations on the fly. This is nothing the PDF references specifies, and is also currently not supported my PSPDFKit. As a workaround, make proper link annotations out of your hyperlinks. This can be accomplished easily with Adobe Acrobat or Preview.app.</p>
-
-      <p><b>Q: When I use the source, there are compile errors/warnings.</b><br>
-      A: You most likely use and old Xcode and/or compiler. PSPDFKit is designed for Xcode &#8805; 4.6 (with iOS SDK &#8805; 6.1) and LLVM/Clang.<br>If you get linker errors about missing symbols, be sure that your project includes the above listed frameworks and the linker flags -ObjC and -fobjc-arc.<br>
-      Also, check that you correctly included the combined header file PSPDFKit.h. When using the framework, add '#import <PSPDFKit/PSPDFKit.h>' to your global header file (.pch), when using source add '#import "PSPDFKit.h"'</p>
-
-      <p><b>Q: Is PSPDFKit App Store safe?</b><br>Yes. PSPDFKit can use some carefully chosen private API to fix Apple bugs and enhance the experience. It's up to the developer to decide this (PSPDFKit Complete and higher). Either way, PSPDFKit is fully App Store safe.</p>
-
-      <p><b>Q: Do I need to buy another license to make a second app?</b><br>
-      A: Yes, the license is per app bundle ID. You'll find <a href="/purchase">more FAQ on the purchase page</a>.</p>
-
-      <p><b>Q: How do I change the link-color of PDF annotation links?</b><br>
-      A: Use <a href="/api/Classes/PSPDFLinkAnnotationView.html#//api/name/setGlobalBorderColor:">setGlobalBorderColor</a> to change this globally.
-      </p>
-     
-      <p><b>Q: For books, we have pages that need to be labeled with roman numbering (i, ii, iii, iv, ...). How can I customize the page number?</b><br>
-      A: You can use <a href="http://www.w3.org/WAI/GL/WCAG20-TECHS/PDF17.html">PDF Page Labels</a> which are fully supported by PSPDFKit. Use Adobe Acrobat, open the thumbnail view, right click on a page and choose "Number Pages..." to customize page numbering. Page labels will be displayed everywhere (thumbnails, popover, page label view) instead of the logical page number if they are defined.
-      </p>
-
-      <p><b>Q: I am looking for following features: adjust PDF text size/font style/ page margins.</b><br>
-      A: This is not possible due to the nature of PDF. There's no notion of "word" or sentence. With great hacking and rewriting your renderer, you could increase the font size, but all letters would just overlap. Then there's a chance that some letters aren't even letters as you would think of, but just vector curves. You are probably looking into HTML/ePub, where you can change such values with ease.</p>
-
+      <p><a href="https://github.com/PSPDFKit/PSPDFKit-Demo/wiki/_pages">Click here to see a list of FAQs</a></p>
     </div>
   </section>
 
