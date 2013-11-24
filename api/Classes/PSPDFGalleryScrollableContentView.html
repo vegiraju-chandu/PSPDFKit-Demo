@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFFreeTextAnnotationView Class Reference</title>
+		<title>PSPDFGalleryScrollableContentView Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFFreeTextAnnotationView Class Reference</h1>
+				<h1 class="hideInXcode">PSPDFGalleryScrollableContentView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,8 +25,6 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
 	
 	
 	
@@ -39,9 +37,13 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/resizableView">&nbsp;&nbsp;&nbsp;&nbsp;resizableView</option>
+	<option value="//api/name/maximumZoomScale">&nbsp;&nbsp;&nbsp;&nbsp;maximumZoomScale</option>
 	
-	<option value="//api/name/textView">&nbsp;&nbsp;&nbsp;&nbsp;textView</option>
+	<option value="//api/name/minimumZoomScale">&nbsp;&nbsp;&nbsp;&nbsp;minimumZoomScale</option>
+	
+	<option value="//api/name/zoomEnabled">&nbsp;&nbsp;&nbsp;&nbsp;zoomEnabled</option>
+	
+	<option value="//api/name/zoomScale">&nbsp;&nbsp;&nbsp;&nbsp;zoomScale</option>
 	
 	
 	
@@ -50,9 +52,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/beginEditing">&nbsp;&nbsp;&nbsp;&nbsp;- beginEditing</option>
-	
-	<option value="//api/name/endEditing">&nbsp;&nbsp;&nbsp;&nbsp;- endEditing</option>
+	<option value="//api/name/setZoomScale:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setZoomScale:animated:</option>
 	
 	
 	
@@ -63,8 +63,6 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
-
 
 
 
@@ -78,9 +76,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resizableView">resizableView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maximumZoomScale">maximumZoomScale</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textView">textView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minimumZoomScale">minimumZoomScale</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomEnabled">zoomEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomScale">zoomScale</a></span></li>
 	
 </ul></li>
 
@@ -90,9 +92,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beginEditing">beginEditing</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endEditing">endEditing</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setZoomScale:animated:">setZoomScale:animated:</a></span></li>
 	
 </ul></li>
 
@@ -101,7 +101,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFFreeTextAnnotationView Class Reference" name="top"></a>
+				<a title="PSPDFGalleryScrollableContentView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -110,7 +110,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFFreeTextAnnotationView Class Reference</h1>
+						<h1 class="title title-header">PSPDFGalleryScrollableContentView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -118,26 +118,15 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFHostingAnnotationView.html">PSPDFHostingAnnotationView</a> : <a href="../Classes/PSPDFGenericAnnotationView.html">PSPDFGenericAnnotationView</a> : UIView</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/PSPDFResizableTrackedViewDelegate.html">PSPDFResizableTrackedViewDelegate</a><br />UITextViewDelegate</td>
+	<td class="specification-value"><a href="../Classes/PSPDFGalleryContentView.html">PSPDFGalleryContentView</a> : UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFFreeTextAnnotationView.h</td>
+	<td class="specification-value">PSPDFGalleryScrollableContentView.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Free Text View. Allows inline text editing.</p>
-					</div>
-					
-					
 					
 					
 					
@@ -152,27 +141,33 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beginEditing">&ndash;&nbsp;beginEditing</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/endEditing">&ndash;&nbsp;endEditing</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textView">&nbsp;&nbsp;textView</a></code>
+		<code><a href="#//api/name/zoomEnabled">&nbsp;&nbsp;zoomEnabled</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/resizableView">&nbsp;&nbsp;resizableView</a></code>
+		<code><a href="#//api/name/maximumZoomScale">&nbsp;&nbsp;maximumZoomScale</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minimumZoomScale">&nbsp;&nbsp;minimumZoomScale</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/zoomScale">&nbsp;&nbsp;zoomScale</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setZoomScale:animated:">&ndash;&nbsp;setZoomScale:animated:</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -188,18 +183,19 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/resizableView" title="resizableView"></a>
-	<h3 class="subsubtitle method-title">resizableView</h3>
+	<a name="//api/name/maximumZoomScale" title="maximumZoomScale"></a>
+	<h3 class="subsubtitle method-title">maximumZoomScale</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The dragging view, if we are currently dragged.</p>
+		<p>The maximum zoom scale that you want to allow. Only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES.
+Defaults to 5.0.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFResizableView *resizableView</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat maximumZoomScale</code></div>
 
     
 	
@@ -217,25 +213,26 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFreeTextAnnotationView.h</code><br />
+		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/textView" title="textView"></a>
-	<h3 class="subsubtitle method-title">textView</h3>
+	<a name="//api/name/minimumZoomScale" title="minimumZoomScale"></a>
+	<h3 class="subsubtitle method-title">minimumZoomScale</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Internally used textView. Only valid during begin and before <a href="#//api/name/endEditing">endEditing</a>.</p>
+		<p>The minimum zoom scale that you want to allow. Only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES.
+Defaults to 1.0.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UITextView *textView</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat minimumZoomScale</code></div>
 
     
 	
@@ -253,7 +250,80 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFreeTextAnnotationView.h</code><br />
+		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/zoomEnabled" title="zoomEnabled"></a>
+	<h3 class="subsubtitle method-title">zoomEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set this to YES if zooming should be enabled. This value only has an effect if an image
+is currently displayed. Defaults to NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isZoomEnabled) BOOL zoomEnabled</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/zoomScale" title="zoomScale"></a>
+	<h3 class="subsubtitle method-title">zoomScale</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The current zoom scale. This is only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES. Defaults to 1.0.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat zoomScale</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
 	</div>				
 	
 	
@@ -270,18 +340,19 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/beginEditing" title="beginEditing"></a>
-	<h3 class="subsubtitle method-title">beginEditing</h3>
+	<a name="//api/name/setZoomScale:animated:" title="setZoomScale:animated:"></a>
+	<h3 class="subsubtitle method-title">setZoomScale:animated:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start editing, shows the keyboard.</p>
+		<p>Sets the current zoom scale, but only if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES and
+<a href="#//api/name/minimumZoomScale">minimumZoomScale</a> &lt;= <a href="#//api/name/zoomScale">zoomScale</a> &lt;= <a href="#//api/name/maximumZoomScale">maximumZoomScale</a> is true.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beginEditing</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setZoomScale:(CGFloat)<em>zoomScale</em> animated:(BOOL)<em>animated</em></code></div>
 
     
 	
@@ -299,43 +370,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFreeTextAnnotationView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/endEditing" title="endEditing"></a>
-	<h3 class="subsubtitle method-title">endEditing</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Ends editing, hides the keyboard</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)endEditing</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFFreeTextAnnotationView.h</code><br />
+		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
 	</div>				
 	
 	

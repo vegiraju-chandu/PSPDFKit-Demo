@@ -263,35 +263,35 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Page Info Data">Page Info Data</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Design and hints for PSPDFViewController">Design and hints for PSPDFViewController</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Design and hints for `PSPDFViewController`">Design and hints for `PSPDFViewController`</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Attached Parsers">Attached Parsers</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ObjectFinder Methods">ObjectFinder Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata Methods">Metadata Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Caching Methods">Caching Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Forms Methods">Forms Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_DataDetection Methods">DataDetection Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Rendering Methods">Rendering Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationSaving Methods">AnnotationSaving Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_ObjectFinder Methods">ObjectFinder Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Security Methods">Security Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Forms Methods">Forms Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Annotations Methods">Annotations Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Bookmarks Methods">Bookmarks Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationSaving Methods">AnnotationSaving Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PageLabels Methods">PageLabels Methods</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata Methods">Metadata Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Security Methods">Security Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_DataDetection Methods">DataDetection Methods</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Bookmarks Methods">Bookmarks Methods</a></span></li>
 	
 </ul></li>
 
@@ -545,19 +545,19 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The PSPDFDocument class represents a single logical <a href="#//api/name/document">document</a> for the user.
-It can use multiple <a href="#//api/name/data">data</a> sources (<a href="#//api/name/files">files</a>, NSData, CGDataProvider) that are then merged together on display.</p>
+						<p>The <code>PSPDFDocument</code> class represents a single logical <a href="#//api/name/document">document</a> for the user.
+It can use multiple <a href="#//api/name/data">data</a> sources (<a href="#//api/name/files"><code>files</code></a>, <code>NSData</code>, <code>CGDataProvider</code>) that are then merged together on display.</p>
 
-<p>Ensure that a PSPDFDocument is only opened by one <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> at any time.</p>
+<p>Ensure that a <code>PSPDFDocument</code> is only opened by one <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a> at any time.</p>
 
 <p>You&rsquo;re expected to set any properties on a single thread only (usually the main thread)
 Changing properties once the <a href="#//api/name/document">document</a> is visible will require calling reloadData on the controller most of the time.</p>
 
-<p>PSPDFDocument builds up some cache when properties like <a href="#//api/name/pageCount"><code>pageCount</code></a> are first accessed.
+<p><code>PSPDFDocument</code> builds up some cache when properties like <a href="#//api/name/pageCount"><code>pageCount</code></a> are first accessed.
 You want to create those objects once and keep them around, creating and destroying them on the fly is very wasteful.
 If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocument points to, you need to clear it&rsquo;s internal cache.</p>
 
-<p>To speed up the first time the <a href="#//api/name/document">document</a> is displayed in the <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>, you can call <a href="#//api/name/fillCache">fillCache</a> on any thread.</p>
+<p>To speed up the first time the <a href="#//api/name/document">document</a> is displayed in the <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>, you can call <a href="#//api/name/fillCache"><code>fillCache</code></a> on any thread.</p>
 					</div>
 					
 					
@@ -785,8 +785,8 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 						</ul>
 						
 						
-						<a title="Design and hints for PSPDFViewController" name="task_Design and hints for PSPDFViewController"></a>
-						<h3 class="subsubtitle task-title">Design and hints for PSPDFViewController</h3>
+						<a title="Design and hints for `PSPDFViewController`" name="task_Design and hints for `PSPDFViewController`"></a>
+						<h3 class="subsubtitle task-title">Design and hints for `PSPDFViewController`</h3>
 
 						<ul class="task-list">
 							<li>
@@ -824,70 +824,6 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/userInfo">&nbsp;&nbsp;userInfo</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="ObjectFinder Methods" name="task_ObjectFinder Methods"></a>
-						<h3 class="subsubtitle task-title">ObjectFinder Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/objectsAtPDFPoint:page:options:">&ndash;&nbsp;objectsAtPDFPoint:page:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/objectsAtPDFRect:page:options:">&ndash;&nbsp;objectsAtPDFRect:page:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textParserForPage:">&ndash;&nbsp;textParserForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/hasLoadedTextParserForPage:">&ndash;&nbsp;hasLoadedTextParserForPage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textParserHideGlyphsOutsidePageRect">&nbsp;&nbsp;textParserHideGlyphsOutsidePageRect</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Metadata Methods" name="task_Metadata Methods"></a>
-						<h3 class="subsubtitle task-title">Metadata Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/titleLoaded">&nbsp;&nbsp;titleLoaded</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/metadata">&nbsp;&nbsp;metadata</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -933,78 +869,6 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 						</ul>
 						
 						
-						<a title="Forms Methods" name="task_Forms Methods"></a>
-						<h3 class="subsubtitle task-title">Forms Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/formsEnabled">&nbsp;&nbsp;formsEnabled</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/formParser">&nbsp;&nbsp;formParser</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="DataDetection Methods" name="task_DataDetection Methods"></a>
-						<h3 class="subsubtitle task-title">DataDetection Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;autodetectTextLinkTypes</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/annotationsFromDetectingLinkTypes:pagesInRange:progress:error:">&ndash;&nbsp;annotationsFromDetectingLinkTypes:pagesInRange:progress:error:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Advanced Methods" name="task_Advanced Methods"></a>
-						<h3 class="subsubtitle task-title">Advanced Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/PDFBox">&nbsp;&nbsp;PDFBox</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/boxRect:forPage:error:">&ndash;&nbsp;boxRect:forPage:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/aspectRatioVariance">&ndash;&nbsp;aspectRatioVariance</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/aspectRatioEqual">&nbsp;&nbsp;aspectRatioEqual</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
 						<a title="Rendering Methods" name="task_Rendering Methods"></a>
 						<h3 class="subsubtitle task-title">Rendering Methods</h3>
 
@@ -1032,6 +896,108 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 		<code><a href="#//api/name/renderAnnotationTypes">&nbsp;&nbsp;renderAnnotationTypes</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="ObjectFinder Methods" name="task_ObjectFinder Methods"></a>
+						<h3 class="subsubtitle task-title">ObjectFinder Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsAtPDFPoint:page:options:">&ndash;&nbsp;objectsAtPDFPoint:page:options:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsAtPDFRect:page:options:">&ndash;&nbsp;objectsAtPDFRect:page:options:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textParserForPage:">&ndash;&nbsp;textParserForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasLoadedTextParserForPage:">&ndash;&nbsp;hasLoadedTextParserForPage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textParserHideGlyphsOutsidePageRect">&nbsp;&nbsp;textParserHideGlyphsOutsidePageRect</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Forms Methods" name="task_Forms Methods"></a>
+						<h3 class="subsubtitle task-title">Forms Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formsEnabled">&nbsp;&nbsp;formsEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formParser">&nbsp;&nbsp;formParser</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Annotations Methods" name="task_Annotations Methods"></a>
+						<h3 class="subsubtitle task-title">Annotations Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationsEnabled">&nbsp;&nbsp;annotationsEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationsForPage:type:">&ndash;&nbsp;annotationsForPage:type:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotations:">&ndash;&nbsp;addAnnotations:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotations:">&ndash;&nbsp;removeAnnotations:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allAnnotationsOfType:">&ndash;&nbsp;allAnnotationsOfType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/annotationManagerForPage:">&ndash;&nbsp;annotationManagerForPage:</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -1082,6 +1048,90 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 		<code><a href="#//api/name/hasDirtyAnnotations">&ndash;&nbsp;hasDirtyAnnotations</a></code>
 	</span>
 	
+	
+</li>
+						</ul>
+						
+						
+						<a title="PageLabels Methods" name="task_PageLabels Methods"></a>
+						<h3 class="subsubtitle task-title">PageLabels Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageLabelsEnabled">&nbsp;&nbsp;pageLabelsEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageLabelForPage:substituteWithPlainLabel:">&ndash;&nbsp;pageLabelForPage:substituteWithPlainLabel:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageForPageLabel:partialMatching:">&ndash;&nbsp;pageForPageLabel:partialMatching:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Advanced Methods" name="task_Advanced Methods"></a>
+						<h3 class="subsubtitle task-title">Advanced Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/PDFBox">&nbsp;&nbsp;PDFBox</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/boxRect:forPage:error:">&ndash;&nbsp;boxRect:forPage:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/aspectRatioVariance">&ndash;&nbsp;aspectRatioVariance</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/aspectRatioEqual">&nbsp;&nbsp;aspectRatioEqual</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Metadata Methods" name="task_Metadata Methods"></a>
+						<h3 class="subsubtitle task-title">Metadata Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/titleLoaded">&nbsp;&nbsp;titleLoaded</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/metadata">&nbsp;&nbsp;metadata</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -1143,95 +1193,19 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 						</ul>
 						
 						
-						<a title="Annotations Methods" name="task_Annotations Methods"></a>
-						<h3 class="subsubtitle task-title">Annotations Methods</h3>
+						<a title="DataDetection Methods" name="task_DataDetection Methods"></a>
+						<h3 class="subsubtitle task-title">DataDetection Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/annotationsEnabled">&nbsp;&nbsp;annotationsEnabled</a></code>
+		<code><a href="#//api/name/autodetectTextLinkTypes">&nbsp;&nbsp;autodetectTextLinkTypes</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/annotationsForPage:type:">&ndash;&nbsp;annotationsForPage:type:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotations:">&ndash;&nbsp;addAnnotations:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAnnotations:">&ndash;&nbsp;removeAnnotations:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/allAnnotationsOfType:">&ndash;&nbsp;allAnnotationsOfType:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/annotationManagerForPage:">&ndash;&nbsp;annotationManagerForPage:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Bookmarks Methods" name="task_Bookmarks Methods"></a>
-						<h3 class="subsubtitle task-title">Bookmarks Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarksEnabled">&nbsp;&nbsp;bookmarksEnabled</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarkParser">&nbsp;&nbsp;bookmarkParser</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/bookmarks">&ndash;&nbsp;bookmarks</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="PageLabels Methods" name="task_PageLabels Methods"></a>
-						<h3 class="subsubtitle task-title">PageLabels Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/pageLabelsEnabled">&nbsp;&nbsp;pageLabelsEnabled</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/pageLabelForPage:substituteWithPlainLabel:">&ndash;&nbsp;pageLabelForPage:substituteWithPlainLabel:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/pageForPageLabel:partialMatching:">&ndash;&nbsp;pageForPageLabel:partialMatching:</a></code>
+		<code><a href="#//api/name/annotationsFromDetectingLinkTypes:pagesInRange:progress:error:">&ndash;&nbsp;annotationsFromDetectingLinkTypes:pagesInRange:progress:error:</a></code>
 	</span>
 	
 	
@@ -1282,6 +1256,32 @@ If you change the underlying <a href="#//api/name/files">files</a> the PSPDFDocu
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/pageInfoForPage:pageRef:">&ndash;&nbsp;pageInfoForPage:pageRef:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Bookmarks Methods" name="task_Bookmarks Methods"></a>
+						<h3 class="subsubtitle task-title">Bookmarks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarksEnabled">&nbsp;&nbsp;bookmarksEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarkParser">&nbsp;&nbsp;bookmarkParser</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bookmarks">&ndash;&nbsp;bookmarks</a></code>
 	</span>
 	
 	
@@ -1470,7 +1470,7 @@ Can also be overridden manually.</p></div>
 	
 	<div class="method-subsection brief-description">
 		<p>Control if and where PSPDFObjectsAnnotationKey are saved.
-Possible options are PSPDFAnnotationSaveModeDisabled, PSPDFAnnotationSaveModeExternalFile, PSPDFAnnotationSaveModeEmbedded and PSPDFAnnotationSaveModeEmbeddedWithExternalFileAsFallback. (default)</p>
+Possible options are <code>PSPDFAnnotationSaveModeDisabled</code>, <code>PSPDFAnnotationSaveModeExternalFile</code>, <code>PSPDFAnnotationSaveModeEmbedded</code> and <code>PSPDFAnnotationSaveModeEmbeddedWithExternalFileAsFallback</code>. (Default)</p>
 	</div>		
 	
     
@@ -1508,7 +1508,7 @@ Possible options are PSPDFAnnotationSaveModeDisabled, PSPDFAnnotationSaveModeExt
 	<div class="method-subsection brief-description">
 		<p>Allows control over what annotation should get an AP stream.
 AP (Appearance Stream) generation takes more time but will maximize compatibility with PDF Viewers that don&rsquo;t implement the complete spec for annotations.
-The default value for this dict is @{PSPDFAnnotationWriteOptionsGenerateAppearanceStreamForTypeKey : @(PSPDFAnnotationTypeFreeText|PSPDFAnnotationTypeInk|PSPDFAnnotationTypePolygon|PSPDFAnnotationTypePolyLine|PSPDFAnnotationTypeLine|PSPDFAnnotationTypeSquare|PSPDFAnnotationTypeCircle)}</p>
+The default value for this dict is <code>@{PSPDFAnnotationWriteOptionsGenerateAppearanceStreamForTypeKey : @(PSPDFAnnotationTypeFreeText|PSPDFAnnotationTypeInk|PSPDFAnnotationTypePolygon|PSPDFAnnotationTypePolyLine|PSPDFAnnotationTypeLine|PSPDFAnnotationTypeSquare|PSPDFAnnotationTypeCircle)}</code></p>
 	</div>		
 	
     
@@ -1622,7 +1622,7 @@ The default value for this dict is @{PSPDFAnnotationWriteOptionsGenerateAppearan
 	
 	<div class="method-subsection brief-description">
 		<p>Set this property to allow automatic link detection. Will only add links where no link annotations already exist.
-Defaults to PSPDFTextCheckingTypeNone for performance reasons. Set to PSPDFTextCheckingTypeLink if you are see URLs in your <a href="#//api/name/document">document</a> that are not clickable. PSPDFTextCheckingTypeLink is the default behavior for desktop apps like Adobe Acrobat or Apple Preview.app.</p>
+Defaults to <code>PSPDFTextCheckingTypeNone</code> for performance reasons. Set to <code>PSPDFTextCheckingTypeLink</code> if you are see URLs in your <a href="#//api/name/document">document</a> that are not clickable. <code>PSPDFTextCheckingTypeLink</code> is the default behavior for desktop apps like Adobe Acrobat or Apple Preview.app.</p>
 	</div>		
 	
     
@@ -1737,7 +1737,7 @@ Defaults to white.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Accesses the bookmark parser.
-Bookmarks are handled on <a href="#//api/name/document">document</a> level, not on documentProvider.</p>
+Bookmarks are handled on <a href="#//api/name/document">document</a> level, not on <code>documentProvider</code>.</p>
 	</div>		
 	
     
@@ -1929,7 +1929,7 @@ This is a shortcut to the first entry of <a href="#//api/name/dataArray">dataArr
 	
 	<div class="method-subsection brief-description">
 		<p>Path where backup-able cache <a href="#//api/name/data">data</a> like <a href="#//api/name/bookmarks">bookmarks</a> or annotations (if they can&rsquo;t be embedded into the PDF) are saved.
-Defaults to &lt;AppDirectory&gt;/Library/PrivateDocuments/PSPDFKit. Cannot be nil.
+Defaults to <code>&amp;lt;AppDirectory&amp;gt;/Library/PrivateDocuments/PSPDFKit</code>. Cannot be nil.
 Will <em>always</em> be appended by <a href="#//api/name/UID">UID</a>. Don&rsquo;t manually append <a href="#//api/name/UID">UID</a>.</p>
 	</div>		
 	
@@ -2080,7 +2080,7 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Register a b<a href="#//api/name/lock">lock</a> that is called in didCreateDocumentProvider.</p>
+		<p>Register a b<a href="#//api/name/lock">lock</a> that is called in <a href="#//api/name/didCreateDocumentProvider:"><code>didCreateDocumentProvider:</code></a>.</p>
 	</div>		
 	
     
@@ -2121,9 +2121,9 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Overrides the global disk caching strategy in <a href="../Classes/PSPDFCache.html">PSPDFCache</a>.
-Defaults to -1; which equals to the setting in <a href="../Classes/PSPDFCache.html">PSPDFCache</a>.
-Set this to PSPDFDiskCacheNothing for sensible/encrypted documents!</p>
+		<p>Overrides the global disk caching strategy in <a href="../Classes/PSPDFCache.html"><code>PSPDFCache</code></a>.
+Defaults to -1; which equals to the setting in <a href="../Classes/PSPDFCache.html"><code>PSPDFCache</code></a>.
+Set this to <code>PSPDFDiskCacheNothing</code> for sensible/encrypted documents!</p>
 	</div>		
 	
     
@@ -2159,7 +2159,7 @@ Set this to PSPDFDiskCacheNothing for sensible/encrypted documents!</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Currently displayed page. Updated by <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>. Used to make the memory cache smarter.
+		<p>Currently displayed page. Updated by <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>. Used to make the memory cache smarter.
 Set to NSNotFound if no controller displays the <a href="#//api/name/document">document</a>.</p>
 	</div>		
 	
@@ -2196,7 +2196,7 @@ Set to NSNotFound if no controller displays the <a href="#//api/name/document">d
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If <a href="#//api/name/document">document</a> is displayed, returns currently active pdfController. Don&rsquo;t set this yourself. Optimizes caching.</p>
+		<p>If <a href="#//api/name/document">document</a> is displayed, returns currently active <code>pdfController</code>. Don&rsquo;t set this yourself. Optimizes caching.</p>
 	</div>		
 	
     
@@ -2233,7 +2233,7 @@ Set to NSNotFound if no controller displays the <a href="#//api/name/document">d
 	
 	<div class="method-subsection brief-description">
 		<p>Modify what annotations are editable and can be created. Set to nil to completely disable annotation editing/creation.
-Defaults to an ordered set with all available annotation string constants with the exception of PSPDFAnnotationStringLink.</p>
+Defaults to an ordered set with all available annotation string constants with the exception of <code>PSPDFAnnotationStringLink</code>.</p>
 	</div>		
 	
     
@@ -2252,10 +2252,10 @@ Defaults to an ordered set with all available annotation string constants with t
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> The order changes the order as items appear in the annotation toolbar.</p></div><div class="warning"><p><strong>Warning:</strong> Some annotation types are only behaviorally different in PSPDFKit but are mapped to basic annotation types,
 so adding those will only change the creation of those types, not editing.
-Example: If you add PSPDFAnnotationStringInk but not PSPDFAnnotationStringSignature,
+Example: If you add <code>PSPDFAnnotationStringInk</code> but not <code>PSPDFAnnotationStringSignature</code>,
 signatures added in previous session will still be editable (since they are Ink annotations).
-On the other hand, if you set PSPDFAnnotationStringSignature but not PSPDFAnnotationStringInk,
-then your newly created signatures will not be movable. See <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a>.h for comments</p></div>
+On the other hand, if you set <code>PSPDFAnnotationStringSignature</code> but not <code>PSPDFAnnotationStringInk</code>,
+then your newly created signatures will not be movable. See <code></code>PSPDFAnnotation<code>.h</code> for additional comments.</p></div>
 	</div>
 	
 	
@@ -2322,7 +2322,7 @@ See &ldquo;Adobe LifeCycle DRM, <a href="http://www.adobe.com/products/livecycle
 	
 	<div class="method-subsection brief-description">
 		<p>Usually, you have one single file URL representing the pdf. This is a shortcut setter for basePath* <a href="#//api/name/files">files</a>. Overrides all current settings if set.
-nil if the <a href="#//api/name/document">document</a> was initialized with initWithData:</p>
+nil if the <a href="#//api/name/document">document</a> was initialized with <code>initWithData:</code></p>
 	</div>		
 	
     
@@ -2358,8 +2358,8 @@ nil if the <a href="#//api/name/document">document</a> was initialized with init
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Array of NSString pdf files. If basePath is set, this will be combined with the file name.
-If basePath is not set, add the full path (as NSString) to the files.</p>
+		<p>Array of <code>NSString</code> pdf files. If basePath is set, this will be combined with the file name.
+If <code>basePath</code> is not set, add the full path (as <code>NSString</code>) to the files.</p>
 	</div>		
 	
     
@@ -2453,7 +2453,7 @@ If basePath is not set, add the full path (as NSString) to the files.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> Not all PSPDFKit variants do support AcroForms.</p></div><div class="warning"><p><strong>Warning:</strong> For <code>formsEnabled</code> to work, you need to also set <a href="#//api/name/annotationsEnabled"><code>annotationsEnabled</code></a> to YES, since forms are simply a special sub-type of Widget-annotations.</p></div>
+		<div class="note"><p><strong>Note:</strong> Not all PSPDFKit variants do support AcroForms.</p></div><div class="warning"><p><strong>Warning:</strong> For <code>formsEnabled</code> to work, you need to also set <a href="#//api/name/annotationsEnabled"><code>annotationsEnabled</code></a> to YES, since forms are simply a special sub-type of Widget annotations.</p></div>
 	</div>
 	
 	
@@ -2561,7 +2561,7 @@ If basePath is not set, add the full path (as NSString) to the files.</p>
 	<div class="method-subsection brief-description">
 		<p>Access the PDF meta<a href="#//api/name/data">data</a> of the first PDF <a href="#//api/name/document">document</a>.
 A PDF might not have any meta<a href="#//api/name/data">data</a> at all.
-See PSPDFMetadataKeyTitle and the following defines for keys that might be set.
+See <code>PSPDFMetadataKeyTitle</code> and the following defines for keys that might be set.
 It&rsquo;s possible that there are keys that don&rsquo;t have a PSPDFKit define, loop the dictionary to find them all.</p>
 	</div>		
 	
@@ -2734,7 +2734,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> Changing this will require a reloadData on the <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> and also a <a href="#//api/name/clearCache">clearCache</a> for this <a href="#//api/name/document">document</a> (as the cached pages will be different after changing this!)</p></div>
+		<div class="warning"><p><strong>Warning:</strong> Changing this will require a reloadData on the <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a> and also a <a href="#//api/name/clearCache"><code>clearCache</code></a> for this <a href="#//api/name/document">document</a> (as the cached pages will be different after changing this!)</p></div>
 	</div>
 	
 	
@@ -2851,7 +2851,7 @@ Options set here will override any options sent to imageForPage/renderPage.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> This is the perfect place to change the background fill color, e.g. you would do this for a black document:
-renderOptions = @{PSPDFRenderBackgroundFillColor : UIColor.blackColor};
+<code>renderOptions = @{PSPDFRenderBackgroundFillColor : UIColor.blackColor}</code>;
 This fixes tiny white/gray lines at the borders of a <a href="#//api/name/document">document</a> that else might show up.</p></div>
 	</div>
 	
@@ -2914,7 +2914,7 @@ Set this early before any page textParser is accessed.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Text extraction class for current <a href="#//api/name/document">document</a>.
-Be careful where you&rsquo;re setting the <a href="#//api/name/delegate">delegate</a>. You can also create a private <a href="../Classes/PSPDFTextSearch.html">PSPDFTextSearch</a> class.</p>
+Be careful where you&rsquo;re setting the <a href="#//api/name/delegate">delegate</a>. You can also create a custom <a href="../Classes/PSPDFTextSearch.html"><code>PSPDFTextSearch</code></a> class.</p>
 	</div>		
 	
     
@@ -3106,7 +3106,7 @@ Might need file operations to parse the <a href="#//api/name/document">document<
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize empty PSPDFDocument.</p>
+		<p>Initialize empty <code>PSPDFDocument</code>.</p>
 	</div>		
 	
     
@@ -3180,7 +3180,7 @@ For leading zeros, use the default printf syntax. (%04d = 0001)</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with distinct path and an array of <a href="#//api/name/files">files</a>.</p>
+		<p>Initialize <code>PSPDFDocument</code> with distinct path and an array of <a href="#//api/name/files">files</a>.</p>
 	</div>		
 	
     
@@ -3216,7 +3216,7 @@ For leading zeros, use the default printf syntax. (%04d = 0001)</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with <a href="#//api/name/data">data</a>.</p>
+		<p>Initialize <code>PSPDFDocument</code> with PDF <a href="#//api/name/data">data</a>.</p>
 	</div>		
 	
     
@@ -3233,8 +3233,8 @@ For leading zeros, use the default printf syntax. (%04d = 0001)</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> You might want to set a custom <a href="#//api/name/UID">UID</a> when initialized with NSData, else the <a href="#//api/name/UID">UID</a> will be calculated from the PDF contents, which might be the same for two equal <a href="#//api/name/files">files</a>.
-In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a> instead. When using NSData, PSPDFKit is unable to automatically save annotation changes back into the PDF. Also, keep in mind that iOS is an environment without virtual memory. Loading a 100MB PDF will simply get your app killed by the iOS watchdog while you try to allocate more memory than is available. If you use NSData because of encryption, look into CGDataProvider instead for a way to dynamically decrypt the needed portions of the PDF.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> You might want to set a custom <a href="#//api/name/UID">UID</a> when initialized with <code>NSData</code>, else the <a href="#//api/name/UID"><code>UID</code></a> will be calculated from the PDF contents, which might be the same for two equal <a href="#//api/name/files">files</a>.
+In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a> instead. When using <code>NSData</code>, PSPDFKit is unable to automatically save annotation changes back into the PDF. Also, keep in mind that iOS is an environment without virtual memory. Loading a 100MB PDF will simply get your app killed by the iOS watchdog while you try to allocate more memory than is available. If you use NSData because of encryption, look into <code>CGDataProvider</code> instead for a way to dynamically decrypt the needed portions of the PDF.</p></div>
 	</div>
 	
 	
@@ -3258,7 +3258,7 @@ In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with multiple <a href="#//api/name/data">data</a> objects</p>
+		<p>Initialize <code>PSPDFDocument</code> with multiple <a href="#//api/name/data">data</a> objects</p>
 	</div>		
 	
     
@@ -3294,7 +3294,7 @@ In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with a dataProvider.</p>
+		<p>Initialize <code>PSPDFDocument</code> with a <code>dataProvider</code>.</p>
 	</div>		
 	
     
@@ -3335,7 +3335,7 @@ In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with a dataProviders.</p>
+		<p>Initialize <code>PSPDFDocument</code> with one or multiple <code>dataProviders</code>.</p>
 	</div>		
 	
     
@@ -3371,7 +3371,7 @@ In most cases, you really want to use a <a href="#//api/name/fileURL">fileURL</a
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize PSPDFDocument with a single file.</p>
+		<p>Initialize <code>PSPDFDocument</code> with a single file.</p>
 	</div>		
 	
     
@@ -3588,8 +3588,8 @@ Will not add key entries for pages without annotations.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> Remember that page within the PSPDFAnnotationManager is relative to the documentProvider.
-Use NSUInteger compensatedPage = [self documentProviderRelativePageWithPageRangeCompensated:page] to compensate when working with the annotation parser.</p></div>
+		<div class="note"><p><strong>Note:</strong> Remember that page within the <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> is relative to the documentProvider.
+Use <code>NSUInteger compensatedPage = [self documentProviderRelativePageWithPageRangeCompensated:page]</code> to compensate when working with the annotation parser.</p></div>
 	</div>
 	
 	
@@ -3631,9 +3631,9 @@ Use NSUInteger compensatedPage = [self documentProviderRelativePageWithPageRange
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>This replaces following code:
-NSUInteger compensatedPage = [document documentProviderRelativePageWithPageRangeCompensated:self.page];
-<a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a> <em>annotationManager = [document annotationManagerForPage:self.page];
-NSArray </em>annotations = [annotationManager annotationsForPage:compensatedPage type:PSPDFAnnotationTypeAll];</p>
+<code>NSUInteger compensatedPage = [document documentProviderRelativePageWithPageRangeCompensated:self.page];</code>
+<code></code>PSPDFAnnotationManager<code> *annotationManager = [document annotationManagerForPage:self.page];</code>
+<code>NSArray *annotations = [annotationManager annotationsForPage:compensatedPage type:PSPDFAnnotationTypeAll];</code></p>
 	</div>
 	
 	
@@ -3676,7 +3676,7 @@ It is your responsibility to add the annotations to the <a href="#//api/name/doc
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> To analyze the whole <a href="#//api/name/document">document</a>, use [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, <a href="#//api/name/document">document</a>.<a href="#//api/name/pageCount">pageCount</a>)]</p></div><div class="warning"><p><strong>Warning:</strong> Performs text and annotation extraction and analysis. Might be slow.</p></div><div class="warning"><p><strong>Warning:</strong> <code>progressB</code>lock<code></code> might be called from different threads - ensure you dispatch to the main queue for progress updates.</p></div>
+		<div class="note"><p><strong>Note:</strong> To analyze the whole <a href="#//api/name/document">document</a>, use <code>[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, </code>document<code>.</code>pageCount<code>)]</code></p></div><div class="warning"><p><strong>Warning:</strong> Performs text and annotation extraction and analysis. Might be slow.</p></div><div class="warning"><p><strong>Warning:</strong> <code>progressB</code>lock<code></code> might be called from different threads - ensure you dispatch to the main queue for progress updates.</p></div>
 	</div>
 	
 	
@@ -3779,8 +3779,8 @@ If this returns 0 or a very small value, it&rsquo;s perfectly suitable for pageC
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Override if you want custom <em>page</em> background colors. Only displayed while loading, and when no thumbnail is yet available. Defaults to <a href="#//api/name/backgroundColor">backgroundColor</a>.
-Will use PSPDFRenderBackgroundFillColor if set in <a href="#//api/name/renderOptions">renderOptions</a>.</p>
+		<p>Override if you want custom <em>page</em> background colors. Only displayed while loading, and when no thumbnail is yet available. Defaults to <a href="#//api/name/backgroundColor"><code>backgroundColor</code></a>.
+Will use <code>PSPDFRenderBackgroundFillColor</code> if set in <a href="#//api/name/renderOptions">renderOptions</a>.</p>
 	</div>		
 	
     
@@ -3816,7 +3816,7 @@ Will use PSPDFRenderBackgroundFillColor if set in <a href="#//api/name/renderOpt
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the bookmarks, with the <a href="#//api/name/pageRange">pageRange</a> of the <a href="#//api/name/document">document</a> factored in.</p>
+		<p>Returns the bookmarks, with the <a href="#//api/name/pageRange"><code>pageRange</code></a> of the <a href="#//api/name/document">document</a> factored in.</p>
 	</div>		
 	
     
@@ -3833,7 +3833,7 @@ Will use PSPDFRenderBackgroundFillColor if set in <a href="#//api/name/renderOpt
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The <a href="../Classes/PSPDFBookmark.html">PSPDFBookmark</a> objects themselves are not changed, only those who are not visible are filtered out.</p></div>
+		<div class="note"><p><strong>Note:</strong> The <a href="../Classes/PSPDFBookmark.html"><code>PSPDFBookmark</code></a> objects themselves are not changed, only those who are not visible are filtered out.</p></div>
 	</div>
 	
 	
@@ -3900,7 +3900,7 @@ PSPDFKit will use the box value set in the <a href="#//api/name/PDFBox"><code>PD
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Will clear all cached objects (annotations, <a href="#//api/name/pageCount">pageCount</a>, outline, textParser, &hellip;)</p>
+		<p>Will clear all cached objects (<code>annotations</code>, <a href="#//api/name/pageCount"><code>pageCount</code></a>, <code>outline</code>, <code>textParse</code>r, &hellip;)</p>
 	</div>		
 	
     
@@ -3920,7 +3920,7 @@ PSPDFKit will use the box value set in the <a href="#//api/name/PDFBox"><code>PD
 		<p>This is called implicitly if you change the <a href="#//api/name/files">files</a> array or append a file.</p>
 
 <p>Important! Unless you disable it, PSPDFKit also has an image cache who is not affected by this. If you replace the PDF <a href="#//api/name/document">document</a> with new content, you also need to clear the image cache:
-[<a href="../Classes/PSPDFCache.html">PSPDFCache</a>.sharedCache removeCacheForDocument:<a href="#//api/name/document">document</a> deleteDocument:NO error:NULL];</p>
+<code>[</code>PSPDFCache<code>.sharedCache removeCacheForDocument:</code>document<code> deleteDocument:NO error:NULL];</code></p>
 	</div>
 	
 	
@@ -3945,8 +3945,8 @@ PSPDFKit will use the box value set in the <a href="#//api/name/PDFBox"><code>PD
 	
 	<div class="method-subsection brief-description">
 		<p>Hook to modify/return a different <a href="#//api/name/document">document</a> provider. Called each time a documentProvider is created (which is usually on first access, and cached afterwards)
-During PSPDFDocument lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
-This might be used to change the <a href="#//api/name/delegate">delegate</a> of the <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a>.</p>
+During <code>PSPDFDocument</code> lifetime, <a href="#//api/name/document">document</a> providers might be created at any time, lazily, and destroyed when memory is low.
+This might be used to change the <a href="#//api/name/delegate">delegate</a> of the <a href="../Classes/PSPDFDocumentProvider.html"><code>PSPDFDocumentProvider</code></a>.</p>
 	</div>		
 	
     
@@ -4181,7 +4181,7 @@ Will memory-map <a href="#//api/name/data">data</a> <a href="#//api/name/files">
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> If there is no file name available, this will use the PDF <a href="#//api/name/title">title</a> or &ldquo;Untitled PDF&rdquo; if all fails.
-Uses PSPDFDocumentProviders dataRepresentationWithError. Errors are only logged.</p></div>
+Uses <code>PSPDFDocumentProviders dataRepresentationWithError:</code>. Errors are only logged.</p></div>
 	</div>
 	
 	
@@ -4205,7 +4205,7 @@ Uses PSPDFDocumentProviders dataRepresentationWithError. Errors are only logged.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a NSURL <a href="#//api/name/files">files</a> array with the base path already added (if there is one)</p>
+		<p>Returns a <code>NSURL</code> <a href="#//api/name/files">files</a> array with the base path already added (if there is one)</p>
 	</div>		
 	
     
@@ -4503,9 +4503,9 @@ Uses PSPDFDocumentProviders dataRepresentationWithError. Errors are only logged.
 	
 	<div class="method-subsection brief-description">
 		<p>Find objects (glyphs, words, images, annotations) at the specified <code>pdfPoint</code>. Thread safe.
-If <code>options</code> is nil, we assume PSPDFObjectsText and PSPDFObjectsFullWords.
-Unless set otherwise, for points PSPDFObjectsTestIntersection is YES automatically.
-Returns objects in certain key dictionaries (PSPDFObjectsGlyphKey, etc)</p>
+If <code>options</code> is nil, we assume <code>PSPDFObjectsText</code> and <code>PSPDFObjectsFullWords</code>.
+Unless set otherwise, for points <code>PSPDFObjectsTestIntersection</code> is YES automatically.
+Returns objects in certain key dictionaries (<code>PSPDFObjectsGlyphKey</code>, etc)</p>
 	</div>		
 	
     
@@ -4542,8 +4542,8 @@ Returns objects in certain key dictionaries (PSPDFObjectsGlyphKey, etc)</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Find objects (glyphs, words, images, annotations) at the specified <code>pdfRect</code>. Thread safe.
-If <code>options</code> is nil, we assume PSPDFObjectsGlyphKey only.
-Returns objects in certain key dictionaries (PSPDFObjectsGlyphKey, etc)</p>
+If <code>options</code> is nil, we assume <code>PSPDFObjectsGlyphKey</code> only.
+Returns objects in certain key dictionaries (<code>PSPDFObjectsGlyphKey</code>, etc)</p>
 	</div>		
 	
     
@@ -4580,8 +4580,8 @@ Returns objects in certain key dictionaries (PSPDFObjectsGlyphKey, etc)</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Use this to use specific subclasses instead of the default PSPDF* classes.
-e.g. add an entry of <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a>.class / MyCustomAnnotationManager.class to use the custom subclass.
-(MyCustomAnnotationManager must be a subclass of <a href="../Classes/PSPDFAnnotationManager.html">PSPDFAnnotationManager</a>)
+e.g. add an entry of <code></code>PSPDFAnnotationManager<code>.class</code> / <code>MyCustomAnnotationManager.class</code> to use the custom subclass.
+(<code>MyCustomAnnotationManager</code> must be a subclass of <a href="../Classes/PSPDFAnnotationManager.html"><code>PSPDFAnnotationManager</code></a>)
 @throws an exception if the overriding class is not a subclass of the overridden class.</p>
 	</div>		
 	
@@ -4702,7 +4702,7 @@ if this returns nil for a site, we&rsquo;ll try to extract text ourselves.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Cached rotation and aspect ratio <a href="#//api/name/data">data</a> for specific page. Page starts at 0.
-Override the methods in <a href="../Classes/PSPDFDocumentProvider.html">PSPDFDocumentProvider</a> instead.</p>
+Override the methods in <a href="../Classes/PSPDFDocumentProvider.html"><code>PSPDFDocumentProvider</code></a> instead.</p>
 	</div>		
 	
     
@@ -4817,8 +4817,8 @@ If substituteWithPlainLabel is set to YES then this always returns a <a href="#/
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Get the page offset from a specific documentProvider.
-Can be used to calculate from the <a href="#//api/name/document">document</a> provider page to the PSPDFDocument page.</p>
+		<p>Get the page offset from a specific <code>documentProvider</code>.
+Can be used to calculate from the <a href="#//api/name/document">document</a> provider page to the <code>PSPDFDocument</code> page.</p>
 	</div>		
 	
     
@@ -4871,7 +4871,7 @@ Can be used to calculate from the <a href="#//api/name/document">document</a> pr
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> Uses fileIndexForPage and URLForFileIndex internally. Override those instead of pathForPage.</p></div>
+		<div class="note"><p><strong>Note:</strong> Uses <a href="#//api/name/fileIndexForPage:"><code>fileIndexForPage:</code></a> and <a href="#//api/name/URLForFileIndex:"><code>URLForFileIndex:</code></a> internally. Override those instead of pathForPage.</p></div>
 	</div>
 	
 	
@@ -5052,7 +5052,7 @@ Can be called on any thread.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Un<a href="#//api/name/lock">lock</a> documents with a <a href="#//api/name/password">password</a>.
-Only saves the <a href="#//api/name/password">password</a> if unlocking was successful (vs setPassword that saves the <a href="#//api/name/password">password</a> always)</p>
+Only saves the <a href="#//api/name/password">password</a> if unlocking was successful (vs <a href="#//api/name/password"><code>setPassword:</code></a> that saves the <a href="#//api/name/password">password</a> always)</p>
 	</div>		
 	
     
@@ -5076,12 +5076,12 @@ If the <a href="#//api/name/document">document</a> is unlocked with full owner p
 If the <a href="#//api/name/document">document</a> is unlocked with only user permissions, unlockWithPassword attempts to obtain full owner permissions with the <a href="#//api/name/password">password</a> string.
 If the string fails, the <a href="#//api/name/document">document</a> maintains its user permissions. In either case, this method returns YES.</p>
 
-<p>After unlocking a <a href="#//api/name/document">document</a>, you need to call reloadData on the <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>.</p>
+<p>After unlocking a <a href="#//api/name/document">document</a>, you need to call reloadData on the <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>.</p>
 
 <p>If you&rsquo;re using multiple <a href="#//api/name/files">files</a> or appendFile, all new <a href="#//api/name/files">files</a> will be unlocked with the <a href="#//api/name/password">password</a>.
 This doesn&rsquo;t harm if the <a href="#//api/name/document">document</a> is already unlocked.</p>
 
-<p>If you have a mixture of <a href="#//api/name/files">files</a> with multiple different passwords, you need to subclass <a href="#//api/name/didCreateDocumentProvider:">didCreateDocumentProvider:</a> and un<a href="#//api/name/lock">lock</a> the documentProvider directly there.</p>
+<p>If you have a mixture of <a href="#//api/name/files">files</a> with multiple different passwords, you need to subclass <a href="#//api/name/didCreateDocumentProvider:"><code>didCreateDocumentProvider:</code></a> and un<a href="#//api/name/lock">lock</a> the <code>documentProvider</code> directly there.</p>
 	</div>
 	
 	
@@ -5113,7 +5113,7 @@ This doesn&rsquo;t harm if the <a href="#//api/name/document">document</a> is al
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

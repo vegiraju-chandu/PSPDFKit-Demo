@@ -39,15 +39,31 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/pagePreviewImage">&nbsp;&nbsp;&nbsp;&nbsp;pagePreviewImage</option>
+	<option value="//api/name/document">&nbsp;&nbsp;&nbsp;&nbsp;document</option>
 	
-	<option value="//api/name/rotatedPageRect">&nbsp;&nbsp;&nbsp;&nbsp;rotatedPageRect</option>
+	<option value="//api/name/page">&nbsp;&nbsp;&nbsp;&nbsp;page</option>
+	
+	<option value="//api/name/pagePreviewImage">&nbsp;&nbsp;&nbsp;&nbsp;pagePreviewImage</option>
 	
 	<option value="//api/name/searchPreviewLabel">&nbsp;&nbsp;&nbsp;&nbsp;searchPreviewLabel</option>
 	
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/heightForSearchResult:numberOfPreviewLines:">&nbsp;&nbsp;&nbsp;&nbsp;+ heightForSearchResult:numberOfPreviewLines:</option>
+	
+	<option value="//api/name/textLabelFont">&nbsp;&nbsp;&nbsp;&nbsp;+ textLabelFont</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/configureWithSearchResult:">&nbsp;&nbsp;&nbsp;&nbsp;- configureWithSearchResult:</option>
+	
+	<option value="//api/name/placeholderImage">&nbsp;&nbsp;&nbsp;&nbsp;- placeholderImage</option>
 	
 	
 	
@@ -65,6 +81,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
 </ul></li>
 
 
@@ -73,9 +91,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pagePreviewImage">pagePreviewImage</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/document">document</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rotatedPageRect">rotatedPageRect</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/page">page</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pagePreviewImage">pagePreviewImage</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchPreviewLabel">searchPreviewLabel</a></span></li>
 	
@@ -83,7 +103,23 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/heightForSearchResult:numberOfPreviewLines:">heightForSearchResult:numberOfPreviewLines:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textLabelFont">textLabelFont</a></span></li>
+	
+</ul></li>
 
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/configureWithSearchResult:">configureWithSearchResult:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/placeholderImage">placeholderImage</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -109,6 +145,9 @@
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">UITableViewCell</td>
 </tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/PSPDFCacheDelegate.html">PSPDFCacheDelegate</a></td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PSPDFSearchResultCell.h</td>
 </tr>
@@ -120,7 +159,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Cell that is used to display a search result</p>
+						<p>Cell that is used to display a search result.</p>
 					</div>
 					
 					
@@ -133,7 +172,39 @@
 						
 						
 						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/configureWithSearchResult:">&ndash;&nbsp;configureWithSearchResult:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/heightForSearchResult:numberOfPreviewLines:">+&nbsp;heightForSearchResult:numberOfPreviewLines:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/document">&nbsp;&nbsp;document</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/page">&nbsp;&nbsp;page</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
 						
+						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -144,15 +215,21 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/rotatedPageRect">&nbsp;&nbsp;rotatedPageRect</a></code>
+		<code><a href="#//api/name/pagePreviewImage">&nbsp;&nbsp;pagePreviewImage</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pagePreviewImage">&nbsp;&nbsp;pagePreviewImage</a></code>
+		<code><a href="#//api/name/placeholderImage">&ndash;&nbsp;placeholderImage</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textLabelFont">+&nbsp;textLabelFont</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -166,6 +243,78 @@
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/document" title="document"></a>
+	<h3 class="subsubtitle method-title">document</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The associated document.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, weak, readonly) PSPDFDocument *document</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/page" title="page"></a>
+	<h3 class="subsubtitle method-title">page</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The search results page.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign, readonly) NSUInteger page</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/pagePreviewImage" title="pagePreviewImage"></a>
@@ -204,42 +353,6 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/rotatedPageRect" title="rotatedPageRect"></a>
-	<h3 class="subsubtitle method-title">rotatedPageRect</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Set the <a href="#//api/name/page">page</a> rect so that the image coords can be calculated even before the image is rendered/loaded from the cache.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGRect rotatedPageRect</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/searchPreviewLabel" title="searchPreviewLabel"></a>
 	<h3 class="subsubtitle method-title">searchPreviewLabel</h3>
 	
@@ -251,7 +364,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PSPDFAttributedLabel *searchPreviewLabel</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) PSPDFAttributedLabel *searchPreviewLabel</code></div>
 
     
 	
@@ -279,7 +392,163 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/heightForSearchResult:numberOfPreviewLines:" title="heightForSearchResult:numberOfPreviewLines:"></a>
+	<h3 class="subsubtitle method-title">heightForSearchResult:numberOfPreviewLines:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Height calculation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (CGFloat)heightForSearchResult:(PSPDFSearchResult *)<em>searchResult</em> numberOfPreviewLines:(NSUInteger)<em>numberOfPreviewLines</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/textLabelFont" title="textLabelFont"></a>
+	<h3 class="subsubtitle method-title">textLabelFont</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fonts used for the labels.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (UIFont *)textLabelFont</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/configureWithSearchResult:" title="configureWithSearchResult:"></a>
+	<h3 class="subsubtitle method-title">configureWithSearchResult:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will configure the cell with a search result model object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)configureWithSearchResult:(PSPDFSearchResult *)<em>searchResult</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/placeholderImage" title="placeholderImage"></a>
+	<h3 class="subsubtitle method-title">placeholderImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The placeholder image displayed while we&rsquo;re loading the <a href="#//api/name/page">page</a> image.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIImage *)placeholderImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResultCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     
@@ -294,7 +563,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

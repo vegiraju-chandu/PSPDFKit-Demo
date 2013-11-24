@@ -60,6 +60,8 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/initWithDocument:page:range:previewText:rangeInPreviewText:selection:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDocument:page:range:previewText:rangeInPreviewText:selection:</option>
+	
 	<option value="//api/name/isEqualToSearchResult:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToSearchResult:</option>
 	
 	
@@ -107,6 +109,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDocument:page:range:previewText:rangeInPreviewText:selection:">initWithDocument:page:range:previewText:rangeInPreviewText:selection:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToSearchResult:">isEqualToSearchResult:</a></span></li>
 	
@@ -165,6 +169,12 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/initWithDocument:page:range:previewText:rangeInPreviewText:selection:">&ndash;&nbsp;initWithDocument:page:range:previewText:rangeInPreviewText:selection:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/pageIndex">&nbsp;&nbsp;pageIndex</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -195,12 +205,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/cachedOutlineTitle">&nbsp;&nbsp;cachedOutlineTitle</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/document">&nbsp;&nbsp;document</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -210,6 +214,12 @@
 		<code><a href="#//api/name/isEqualToSearchResult:">&ndash;&nbsp;isEqualToSearchResult:</a></code>
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cachedOutlineTitle">&nbsp;&nbsp;cachedOutlineTitle</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -272,7 +282,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) PSPDFDocument *document</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readonly) PSPDFDocument *document</code></div>
 
     
 	
@@ -303,12 +313,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>referenced page.</p>
+		<p>Referenced page.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger pageIndex</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger pageIndex</code></div>
 
     
 	
@@ -339,12 +349,12 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>preview text snippet.</p>
+		<p>Preview text snippet.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *previewText</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *previewText</code></div>
 
     
 	
@@ -380,7 +390,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSRange range</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSRange range</code></div>
 
     
 	
@@ -416,7 +426,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSRange rangeInPreviewText</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSRange rangeInPreviewText</code></div>
 
     
 	
@@ -452,7 +462,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) PSPDFTextBlock *selection</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) PSPDFTextBlock *selection</code></div>
 
     
 	
@@ -487,13 +497,49 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/initWithDocument:page:range:previewText:rangeInPreviewText:selection:" title="initWithDocument:page:range:previewText:rangeInPreviewText:selection:"></a>
+	<h3 class="subsubtitle method-title">initWithDocument:page:range:previewText:rangeInPreviewText:selection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithDocument:(PSPDFDocument *)<em>document</em> page:(NSUInteger)<em>page</em> range:(NSRange)<em>range</em> previewText:(NSString *)<em>previewText</em> rangeInPreviewText:(NSRange)<em>rangeInPreviewText</em> selection:(PSPDFTextBlock *)<em>selection</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFSearchResult.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isEqualToSearchResult:" title="isEqualToSearchResult:"></a>
 	<h3 class="subsubtitle method-title">isEqualToSearchResult:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Compare.</p>
+		<p>Compare with other search result.</p>
 	</div>		
 	
     
@@ -537,7 +583,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

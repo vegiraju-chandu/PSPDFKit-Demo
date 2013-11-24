@@ -60,6 +60,17 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/captionViewClass">&nbsp;&nbsp;&nbsp;&nbsp;+ captionViewClass</option>
+	
+	<option value="//api/name/errorViewClass">&nbsp;&nbsp;&nbsp;&nbsp;+ errorViewClass</option>
+	
+	<option value="//api/name/imageViewClass">&nbsp;&nbsp;&nbsp;&nbsp;+ imageViewClass</option>
+	
+	<option value="//api/name/loadingViewClass">&nbsp;&nbsp;&nbsp;&nbsp;+ loadingViewClass</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
@@ -67,6 +78,8 @@
 	<option value="//api/name/initWithReuseIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithReuseIdentifier:</option>
 	
 	<option value="//api/name/prepareForReuse">&nbsp;&nbsp;&nbsp;&nbsp;- prepareForReuse</option>
+	
+	<option value="//api/name/updateSubviewVisibility">&nbsp;&nbsp;&nbsp;&nbsp;- updateSubviewVisibility</option>
 	
 	
 	
@@ -83,6 +96,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
 </ul></li>
 
@@ -114,6 +129,18 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captionViewClass">captionViewClass</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/errorViewClass">errorViewClass</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageViewClass">imageViewClass</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingViewClass">loadingViewClass</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
@@ -121,6 +148,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithReuseIdentifier:">initWithReuseIdentifier:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prepareForReuse">prepareForReuse</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateSubviewVisibility">updateSubviewVisibility</a></span></li>
 	
 </ul></li>
 
@@ -172,7 +201,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -238,6 +267,44 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/prepareForReuse">&ndash;&nbsp;prepareForReuse</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateSubviewVisibility">&ndash;&nbsp;updateSubviewVisibility</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/imageViewClass">+&nbsp;imageViewClass</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadingViewClass">+&nbsp;loadingViewClass</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/captionViewClass">+&nbsp;captionViewClass</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/errorViewClass">+&nbsp;errorViewClass</a></code>
 	</span>
 	
 	
@@ -583,6 +650,156 @@ reuse views to avoid performance issues.</p>
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/captionViewClass" title="captionViewClass"></a>
+	<h3 class="subsubtitle method-title">captionViewClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defaults to <a href="../Classes/PSPDFGalleryContentCaptionView.html">PSPDFGalleryContentCaptionView</a>.class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (Class)captionViewClass</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/errorViewClass" title="errorViewClass"></a>
+	<h3 class="subsubtitle method-title">errorViewClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defaults to <a href="../Classes/PSPDFGalleryErrorView.html">PSPDFGalleryErrorView</a>.class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (Class)errorViewClass</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/imageViewClass" title="imageViewClass"></a>
+	<h3 class="subsubtitle method-title">imageViewClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defaults to UIImageView.class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (Class)imageViewClass</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadingViewClass" title="loadingViewClass"></a>
+	<h3 class="subsubtitle method-title">loadingViewClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defaults to <a href="../Classes/PSPDFGalleryContentLoadingView.html">PSPDFGalleryContentLoadingView</a>.class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (Class)loadingViewClass</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -662,6 +879,43 @@ reuse content views to avoid performance issues. The API works exactly like UITa
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/updateSubviewVisibility" title="updateSubviewVisibility"></a>
+	<h3 class="subsubtitle method-title">updateSubviewVisibility</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the view state of the content view has changed and subview visiblity is likely
+going to change.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateSubviewVisibility</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -677,7 +931,7 @@ reuse content views to avoid performance issues. The API works exactly like UITa
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
