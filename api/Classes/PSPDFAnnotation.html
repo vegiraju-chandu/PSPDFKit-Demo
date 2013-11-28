@@ -45,6 +45,10 @@
 	
 	<option value="//api/name/alpha">&nbsp;&nbsp;&nbsp;&nbsp;alpha</option>
 	
+	<option value="//api/name/borderColor">&nbsp;&nbsp;&nbsp;&nbsp;borderColor</option>
+	
+	<option value="//api/name/borderColorWithAlpha">&nbsp;&nbsp;&nbsp;&nbsp;borderColorWithAlpha</option>
+	
 	<option value="//api/name/borderStyle">&nbsp;&nbsp;&nbsp;&nbsp;borderStyle</option>
 	
 	<option value="//api/name/boundingBox">&nbsp;&nbsp;&nbsp;&nbsp;boundingBox</option>
@@ -169,6 +173,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creation Methods">Creation Methods</a></span></li>
+	
 </ul></li>
 
 
@@ -182,6 +188,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/additionalActions">additionalActions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alpha">alpha</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/borderColor">borderColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/borderColorWithAlpha">borderColorWithAlpha</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/borderStyle">borderStyle</a></span></li>
 	
@@ -356,7 +366,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -475,19 +485,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/colorWithAlpha">&nbsp;&nbsp;colorWithAlpha</a></code>
+		<code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fillColorWithAlpha">&nbsp;&nbsp;fillColorWithAlpha</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -674,6 +678,32 @@
 </li>
 						</ul>
 						
+						
+						<a title="Creation Methods" name="task_Creation Methods"></a>
+						<h3 class="subsubtitle task-title">Creation Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/colorWithAlpha">&nbsp;&nbsp;colorWithAlpha</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fillColorWithAlpha">&nbsp;&nbsp;fillColorWithAlpha</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/borderColorWithAlpha">&nbsp;&nbsp;borderColorWithAlpha</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -792,6 +822,79 @@
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">PSPDFAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/borderColor" title="borderColor"></a>
+	<h3 class="subsubtitle method-title">borderColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Border Color usually redi<a href="#//api/name/rects">rects</a> to <a href="#//api/name/color">color</a>, unless overridden to have a real backing ivar.
+(<a href="../Classes/PSPDFWidgetAnnotation.html"><code>PSPDFWidgetAnnotation</code></a> has such a backing store)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIColor *borderColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/borderColorWithAlpha" title="borderColorWithAlpha"></a>
+	<h3 class="subsubtitle method-title">borderColorWithAlpha</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>BorderColor with added <a href="#//api/name/alpha">alpha</a> <a href="#//api/name/value">value</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIColor *borderColorWithAlpha</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotation+Private.h</code><br />
 	</div>				
 	
 	
@@ -936,7 +1039,7 @@ Note: use .<a href="#//api/name/alpha">alpha</a> for transparency, not the <a hr
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAnnotation.h</code><br />
+		<code class="declared-in-ref">PSPDFAnnotation+Private.h</code><br />
 	</div>				
 	
 	
@@ -1307,7 +1410,7 @@ FillColor will <em>share</em> the <a href="#//api/name/alpha">alpha</a> <a href=
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAnnotation.h</code><br />
+		<code class="declared-in-ref">PSPDFAnnotation+Private.h</code><br />
 	</div>				
 	
 	
@@ -2638,7 +2741,7 @@ for most annotations, except for the <a href="../Classes/PSPDFStampAnnotation.ht
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

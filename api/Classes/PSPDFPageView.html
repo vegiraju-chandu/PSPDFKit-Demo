@@ -182,9 +182,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Shadow settings">Shadow settings</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationViews Methods">AnnotationViews Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationMenu Methods">AnnotationMenu Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationViews Methods">AnnotationViews Methods</a></span></li>
 	
 </ul></li>
 
@@ -636,44 +636,6 @@ Events from a attached UIScrollView will be relayed to all visible PSPDFPageView
 						</ul>
 						
 						
-						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
-						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/selectedAnnotations">&nbsp;&nbsp;selectedAnnotations</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
 						<a title="AnnotationMenu Methods" name="task_AnnotationMenu Methods"></a>
 						<h3 class="subsubtitle task-title">AnnotationMenu Methods</h3>
 
@@ -759,6 +721,44 @@ Events from a attached UIScrollView will be relayed to all visible PSPDFPageView
 </li>
 						</ul>
 						
+						
+						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
+						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedAnnotations">&nbsp;&nbsp;selectedAnnotations</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -832,7 +832,7 @@ Events from a attached UIScrollView will be relayed to all visible PSPDFPageView
 		<p>This is just a named subclass of UIView that will always track the frame of the PSPDFPageView.
 It&rsquo;s useful to coordinate this with your own subviews to get the zIndex right.</p><div class="warning"><p><strong>Warning:</strong> Most annotations will not be rendered as overlays or only when they are currently being selected.
 Rendering annotations within the pageView has several advantages including performance or view color multiplication (in case of highlight annotations)
-Do not manually add/remove views into the container view. Contents is managed. Views should respond to the <a href="../Protocols/PSPDFAnnotationViewProtocol.html">PSPDFAnnotationViewProtocol</a> protocol, especially the annotation method.</p></div>
+Do not manually add/remove views into the container view. Contents is managed. Views should respond to the <a href="../Protocols/PSPDFAnnotationViewProtocol.html"><code>PSPDFAnnotationViewProtocol</code></a>, especially the annotation method.</p></div>
 	</div>
 	
 	
@@ -1217,7 +1217,7 @@ This is set to a good default already. You shouldn&rsquo;t need to touch this.</
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Is view currently rendering (either <a href="#//api/name/contentView">contentView</a> or <a href="#//api/name/renderView">renderView</a>)</p>
+		<p>Is view currently rendering (either <a href="#//api/name/contentView"><code>contentView</code></a> or <a href="#//api/name/renderView"><code>renderView</code></a>)</p>
 	</div>		
 	
     
@@ -1579,14 +1579,14 @@ This will not change anything on the data model below. Also add an annotation to
 		<div class="note"><p><strong>Note:</strong> In PSPDFKit, annotations are managed in two ways:</p>
 
 <p>1) Annotations that are fixed and rendered with the <a href="#//api/name/page">page</a> image.
-Those annotations are <a href="../Classes/PSPDFHighlightAnnotation.html">PSPDFHighlightAnnotation</a>, <a href="../Classes/PSPDFSquareAnnotation.html">PSPDFSquareAnnotation</a>, <a href="../Classes/PSPDFInkAnnotation.html">PSPDFInkAnnotation</a> and more.
+Those annotations are <a href="../Classes/PSPDFHighlightAnnotation.html"><code>PSPDFHighlightAnnotation</code></a>, <a href="../Classes/PSPDFSquareAnnotation.html"><code>PSPDFSquareAnnotation</code></a>, <a href="../Classes/PSPDFInkAnnotation.html"><code>PSPDFInkAnnotation</code></a> and more.
 Pretty much all more or less &ldquo;static&rdquo; annotations are handled this way.</p>
 
-<p>2) Then, there are the more dynamic annotations like <a href="../Classes/PSPDFLinkAnnotation.html">PSPDFLinkAnnotation</a> and <a href="../Classes/PSPDFNoteAnnotation.html">PSPDFNoteAnnotation</a>.
-Those annotations are not part of the rendered image but are actual subviews in PSPDFPageView.
+<p>2) Then, there are the more dynamic annotations like <a href="../Classes/PSPDFLinkAnnotation.html"><code>PSPDFLinkAnnotation</code></a> and <a href="../Classes/PSPDFNoteAnnotation.html"><code>PSPDFNoteAnnotation</code></a>.
+Those annotations are not part of the rendered image but are actual subviews in <code>PSPDFPageView</code>.
 Those annotations return YES on the isOverlay property.</p>
 
-<p>Especially with <a href="../Classes/PSPDFLinkAnnotation.html">PSPDFLinkAnnotation</a>, the resulting views are - depending on the subtype - <a href="../Classes/PSPDFVideoAnnotationView.html">PSPDFVideoAnnotationView</a>, <a href="../Classes/PSPDFWebAnnotationView.html">PSPDFWebAnnotationView</a> and much more. The classic PDF link is a <a href="../Classes/PSPDFLinkAnnotationView.html">PSPDFLinkAnnotationView</a>.</p>
+<p>Especially with <a href="../Classes/PSPDFLinkAnnotation.html"><code>PSPDFLinkAnnotation</code></a>, the resulting views are - depending on the subtype - <a href="../Classes/PSPDFVideoAnnotationView.html"><code>PSPDFVideoAnnotationView</code></a>, <a href="../Classes/PSPDFWebAnnotationView.html"><code>PSPDFWebAnnotationView</code></a> and much more. The classic PDF link is a <a href="../Classes/PSPDFLinkAnnotationView.html"><code>PSPDFLinkAnnotationView</code></a>.</p>
 
 <p>This method is called recursively with all annotation types except if they return isOverlay = NO. In case of isOverlay = NO, it will call <a href="#//api/name/updateView">updateView</a> to re-render the <a href="#//api/name/page">page</a>.</p></div>
 	</div>
@@ -1649,7 +1649,7 @@ Those annotations return YES on the isOverlay property.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Font sizes for the free text annotation menu. Defaults to @[@10, @12, @14, @18, @22, @26, @30, @36, @48, @64]</p>
+		<p>Font sizes for the free text annotation menu. Defaults to <code>@[@10, @12, @14, @18, @22, @26, @30, @36, @48, @64]</code></p>
 	</div>		
 	
     
@@ -1721,7 +1721,7 @@ Those annotations return YES on the isOverlay property.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns available PSPDFMenuItem&rsquo;s to change the color.
+		<p>Returns available <code>PSPDFMenuItem's</code> to change the color.
 The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
 	</div>		
 	
@@ -1795,8 +1795,7 @@ The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convert a PDF point to the corresponding view point.
-pageBounds usually is PSPDFPageView bounds.</p>
+		<p>Convert a PDF point to the corresponding view point.</p>
 	</div>		
 	
     
@@ -1810,6 +1809,11 @@ pageBounds usually is PSPDFPageView bounds.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> <code>pageBounds</code> usually is <code>PSPDFPageView</code> bounds.</p></div>
+	</div>
 	
 	
 	
@@ -1868,8 +1872,7 @@ pageBounds usually is PSPDFPageView bounds.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convert a view point to the corresponding PDF point.
-pageBounds usually is PSPDFPageView bounds.</p>
+		<p>Convert a view point to the corresponding PDF point.</p>
 	</div>		
 	
     
@@ -1883,6 +1886,11 @@ pageBounds usually is PSPDFPageView bounds.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> <code>pageBounds</code> usually is <code>PSPDFPageView</code> bounds.</p></div>
+	</div>
 	
 	
 	
@@ -1906,7 +1914,7 @@ pageBounds usually is PSPDFPageView bounds.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Convert a view rect to PDF glyph rect.
-This is equivalent to [self convertPDFRectToViewRect:CGRectApplyAffineTransform(glyphRect, <a href="#//api/name/pageInfo">pageInfo</a>.pageRotationTransform)]</p>
+This is equivalent to <code>[self convertPDFRectToViewRect:CGRectApplyAffineTransform(glyphRect, </code>pageInfo<code>.pageRotationTransform)]</code></p>
 	</div>		
 	
     
@@ -2014,7 +2022,7 @@ This is equivalent to [self convertPDFRectToViewRect:CGRectApplyAffineTransform(
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns available PSPDFMenuItem&rsquo;s to change the fill color (only applies to certain annotations)</p>
+		<p>Returns available <code>PSPDFMenuItem's</code> to change the fill color (only applies to certain annotations)</p>
 	</div>		
 	
     
@@ -2122,7 +2130,7 @@ This is equivalent to [self convertPDFRectToViewRect:CGRectApplyAffineTransform(
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns available PSPDFMenuItem&rsquo;s for the current annotation.
+		<p>Returns available <code>PSPDFMenuItem's</code> for the current annotation.
 The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
 	</div>		
 	
@@ -2159,7 +2167,7 @@ The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Menu for new annotations (can be disabled in <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>)</p>
+		<p>Menu for new annotations (can be disabled in <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>)</p>
 	</div>		
 	
     
@@ -2418,7 +2426,7 @@ By default this is fairly aggressive and returns the pdfController/navController
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Access parent <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a> if available. (zoom controller)</p>
+		<p>Access parent <a href="../Classes/PSPDFScrollView.html"><code>PSPDFScrollView</code></a> if available. (zoom controller)</p>
 	</div>		
 	
     
@@ -2436,7 +2444,7 @@ By default this is fairly aggressive and returns the pdfController/navController
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> this only lets you access the scrollView if it&rsquo;s in the view hierarchy.
-If we use pageCurl mode, we have a global scrollView which can be accessed with <a href="#//api/name/pdfController">pdfController</a>.pagingScrollView</p></div>
+If we use pageCurl mode, we have a global scrollView which can be accessed with <code></code>pdfController<code>.pagingScrollView</code></p></div>
 	</div>
 	
 	
@@ -2533,7 +2541,7 @@ If we use pageCurl mode, we have a global scrollView which can be accessed with 
 	
 	<div class="method-subsection brief-description">
 		<p>Called when a annotation was found ad the tapped location.
-This will usually call menuItemsForAnnotation to show a UIMenuController, except for PSPDFAnnotationTypeNote which is handled differently on iPad. (showNoteControllerForAnnotation)</p>
+This will usually call <code>menuItemsForAnnotation:</code> to show an <code>UIMenuController</code>, except for <code>PSPDFAnnotationTypeNote</code> which is handled differently on iPad. (<code>showNoteControllerForAnnotation</code>)</p>
 	</div>		
 	
     
@@ -2550,7 +2558,7 @@ This will usually call menuItemsForAnnotation to show a UIMenuController, except
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The better way to extend this is to use the shouldShowMenuItems:* delegates.</p></div>
+		<div class="note"><p><strong>Note:</strong> The better way to extend this is to use the <code>shouldShowMenuItems:*</code> delegates.</p></div>
 	</div>
 	
 	
@@ -2574,7 +2582,7 @@ This will usually call menuItemsForAnnotation to show a UIMenuController, except
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Shows a popover/modal controller to edit a <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a>.</p>
+		<p>Shows a popover/modal controller to edit a <a href="../Classes/PSPDFAnnotation.html"><code>PSPDFAnnotation</code></a>.</p>
 	</div>		
 	
     
@@ -2646,7 +2654,7 @@ This will usually call menuItemsForAnnotation to show a UIMenuController, except
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Hit-testing for a single PSPDFPage. This is usually a relayed event from the parent <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a>.
+		<p>Hit-testing for a single <code>PSPDFPageView</code>. This is usually a relayed event from the parent <a href="../Classes/PSPDFScrollView.html"><code>PSPDFScrollView</code></a>.
 Returns YES if the tap has been handled, else NO.</p>
 	</div>		
 	
@@ -2664,9 +2672,9 @@ Returns YES if the tap has been handled, else NO.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>All annotations for the current page are loaded and hit-tested (except PSPDFAnnotationTypeLink; which has already been handled by now)</p>
+		<p>All annotations for the current <a href="#//api/name/page">page</a> are loaded and hit-tested (except <code>PSPDFAnnotationTypeLink</code>; which has already been handled by now)</p>
 
-<p>If an annotation has been hit (via [annotation hitTest:tapPoint]; convert the tapPoint in PDF coordinate space via convertViewPointToPDFPoint) then we call showMenuForAnnotation.</p>
+<p>If an annotation has been hit (via <code>[annotation hitTest:tapPoint]</code>; convert the tapPoint in PDF coordinate space via convertViewPointToPDFPoint) then we call showMenuForAnnotation.</p>
 
 <p>If the tap didn&rsquo;t hit an annotation but we are showing a UIMenuController menu; we hide that and set the touch as processed.</p>
 	</div>
@@ -2800,7 +2808,7 @@ Returns YES if the tap has been handled, else NO.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns an array of UIView <a href="../Protocols/PSPDFAnnotationViewProtocol.html">PSPDFAnnotationViewProtocol</a> objects currently in the view hierarchy.</p>
+		<p>Returns an array of <code>UIView</code> <a href="../Protocols/PSPDFAnnotationViewProtocol.html"><code>PSPDFAnnotationViewProtocol</code></a> objects currently in the view hierarchy.</p>
 	</div>		
 	
     
@@ -2844,7 +2852,7 @@ Returns YES if the tap has been handled, else NO.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-24)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
