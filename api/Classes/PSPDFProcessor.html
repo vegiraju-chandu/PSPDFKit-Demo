@@ -313,7 +313,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> into data. &lsquo;options&rsquo; can also contain CGPDFContext options.</p>
+		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> into data. &lsquo;options&rsquo; can also contain <code>CGPDFContext</code> options.</p>
 	</div>		
 	
     
@@ -354,8 +354,8 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> into a file. &lsquo;options&rsquo; can also contain CGPDFContext options.
-For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)] to convert the whole document.</p>
+		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> into a file. <code>options</code> can also contain <code>CGPDFContext</code> options.
+For <code>pageRange</code> you can use <code>[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)]</code> to convert the whole document.</p>
 	</div>		
 	
     
@@ -406,6 +406,11 @@ For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NS
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Must be called from the main thread.</p></div>
+	</div>
+	
 	
 	
 	
@@ -427,8 +432,8 @@ For <code>pageRange</code> you can use [NSIndexSet indexSetWithIndexesInRange:NS
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Generates a PDF from a string. Does allow simple html tags.
-Will not work with complex HTML pages.</p>
+		<p>Generates a PDF from a string. Does allow simple html tags. Will not work with complex HTML pages.
+e.g. <code>@"This is a &lt;b&gt;test&lt;/b&gt;</code> in <code>&lt;span style='color:red'&gt;color.&lt;/span&gt;</code></p>
 	</div>		
 	
     
@@ -445,8 +450,7 @@ Will not work with complex HTML pages.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>e.g. @&ldquo;This is a <b>test</b> in <span style='color:red'>color.</span>&rdquo;
-Can be used in a thread and is pretty fast. Experimental feature.</p>
+		<div class="note"><p><strong>Note:</strong> Must be called from the main thread.</p></div>
 	</div>
 	
 	
@@ -506,8 +510,8 @@ Can be used in a thread and is pretty fast. Experimental feature.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Renders a PDF from a URL (web or fileURL). This will take a while and is non-blocking.
-Upon completion, the completionBlock will be called.</p>
+		<p>Renders a PDF from an <code>URL</code> (web or <code>fileURL</code>). This will take a while and is non-blocking.
+Upon completion, the <code>completionBlock</code> will be called.</p>
 	</div>		
 	
     
@@ -525,28 +529,32 @@ Upon completion, the completionBlock will be called.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Supported are web pages and certain file types like pages, keynote, word, powerpoint, excel, rtf, jpg, png, &hellip;
-See <a href="https://developer.apple.com/library/ios/">https://developer.apple.com/library/ios/</a>#qa/qa2008/qa1630.html for the full list.</p>
+See <a href="https://developer.apple.com/library/ios/">https://developer.apple.com/library/ios/</a>#qa/qa2008/qa1630.html for the full list.
+FILE/OFFICE CONVERSION IS AN EXPERIMENTAL FEATURE AND WE CAN&rsquo;T OFFER SUPPORT FOR CONVERSION ISSUES.
+If you require a 1:1 conversion, you need to convert those files on a server with a product that is specialized for this task.</p>
 
 <p>Certain documents might not have the correct pagination.
-(Try to manually define PSPDFProcessorPageRect to fine-tune this)</p>
+(Try to manually define <code>PSPDFProcessorPageRect</code> to fine-tune this.)</p>
 
-<p>&lsquo;options&rsquo; can contain both the PSPDF constants listed above and any kCGPDFContext constants.
+<p>&lsquo;options&rsquo; can contain both the PSPDF constants listed above and any <code>kCGPDFContext</code> constants.
 For example, to password protect the pdf, you can use:
-@{(id)kCGPDFContextUserPassword  : password,
+<code>@{(id)kCGPDFContextUserPassword  : password,
    (id)kCGPDFContextOwnerPassword : password,
-   (id)kCGPDFContextEncryptionKeyLength : @128}</p>
+   (id)kCGPDFContextEncryptionKeyLength : @128}</code></p>
 
 <p>Other useful properties are:
-- kCGPDFContextAllowsCopying
-- kCGPDFContextAllowsPrinting
-- kCGPDFContextKeywords
-- kCGPDFContextAuthor</p>
+- <code>kCGPDFContextAllowsCopying</code>
+- <code>kCGPDFContextAllowsPrinting</code>
+- <code>kCGPDFContextKeywords</code>
+- <code>kCGPDFContextAuthor</code></p>
 
-<p>Experimental feature.
-Don&rsquo;t manually override NSOperation&rsquo;s completionBlock.
-If this helper is used, operation will be automatically queued in <a href="#//api/name/conversionOperationQueue">conversionOperationQueue</a>.</p>
+<p>@note
+PSPDFKit Basic/Complete feature.</p>
 
-<p>PSPDFKit Basic/Complete feature.</p><div class="warning"><p><strong>Warning:</strong> When a password is set, only link annotations can be added as dictionary (this does not affect flattening)</p></div>
+<p>@warning
+Don&rsquo;t manually override NSOperation&rsquo;s <code>completionBlock</code>.
+If this helper is used, operation will be automatically queued in <a href="#//api/name/conversionOperationQueue"><code>conversionOperationQueue</code></a>.
+When a password is set, only link annotations can be added as dictionary (this does not affect flattening)</p>
 	</div>
 	
 	
@@ -578,7 +586,7 @@ If this helper is used, operation will be automatically queued in <a href="#//ap
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

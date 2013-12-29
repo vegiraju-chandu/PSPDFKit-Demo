@@ -36,7 +36,7 @@
 						
 						<h2>About PSPDFKit</h2>
 
-<p>PSPDFKit is your framework of choice for displaying and annotating PDFs on iOS. It includes tools to display PDFs, edit PDFs, create PDFs, create/edit annotations and fill out forms.</p>
+<p>PSPDFKit is your framework of choice for displaying and annotating PDFs on iOS. It includes tools to display PDFs, edit PDFs, create PDFs, create/edit annotations, fill out forms and verify digital signatures.</p>
 
 <h2>At a Glance</h2>
 
@@ -77,7 +77,7 @@
 <h2>License</h2>
 
 <p>PSPDFKit is commercially licensed. Visit <a href="http://pspdfkit.com/license.html">http://pspdfkit.com/license.html</a> for details or contact us at <a href="mailto:sales@pspdfkit.com">sales@pspdfkit.com</a>.
-All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
+Copyright © 2010-2014 PSPDFKit GmbH.</p>
 
 <h2>Support</h2>
 
@@ -95,6 +95,10 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 						<ul>
 							
 							<li><a href="Classes/PSPDFAESCryptoDataProvider.html">PSPDFAESCryptoDataProvider</a></li>
+							
+							<li><a href="Classes/PSPDFAESDecryptor.html">PSPDFAESDecryptor</a></li>
+							
+							<li><a href="Classes/PSPDFAESEncryptor.html">PSPDFAESEncryptor</a></li>
 							
 							<li><a href="Classes/PSPDFAbstractFormAction.html">PSPDFAbstractFormAction</a></li>
 							
@@ -135,8 +139,6 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							<li><a href="Classes/PSPDFAnnotationToolbar.html">PSPDFAnnotationToolbar</a></li>
 							
 							<li><a href="Classes/PSPDFAnnotationViewCache.html">PSPDFAnnotationViewCache</a></li>
-							
-							<li><a href="Classes/PSPDFAttributedLabel.html">PSPDFAttributedLabel</a></li>
 							
 							<li><a href="Classes/PSPDFAudioHelper.html">PSPDFAudioHelper</a></li>
 							
@@ -192,6 +194,16 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Classes/PSPDFDatabase.html">PSPDFDatabase</a></li>
 							
+							<li><a href="Classes/PSPDFDigitalSignatureDictionary.html">PSPDFDigitalSignatureDictionary</a></li>
+							
+							<li><a href="Classes/PSPDFDigitalSignatureManager.html">PSPDFDigitalSignatureManager</a></li>
+							
+							<li><a href="Classes/PSPDFDigitalSignatureReference.html">PSPDFDigitalSignatureReference</a></li>
+							
+							<li><a href="Classes/PSPDFDigitalSignatureVerificationController.html">PSPDFDigitalSignatureVerificationController</a></li>
+							
+							<li><a href="Classes/PSPDFDigitalSignatureX509VerificationStatus.html">PSPDFDigitalSignatureX509VerificationStatus</a></li>
+							
 							<li><a href="Classes/PSPDFDiskCache.html">PSPDFDiskCache</a></li>
 							
 							<li><a href="Classes/PSPDFDocument.html">PSPDFDocument</a></li>
@@ -219,6 +231,8 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							<li><a href="Classes/PSPDFDrawAction.html">PSPDFDrawAction</a></li>
 							
 							<li><a href="Classes/PSPDFDrawView.html">PSPDFDrawView</a></li>
+							
+							<li><a href="Classes/PSPDFDurationFormatter.html">PSPDFDurationFormatter</a></li>
 							
 							<li><a href="Classes/PSPDFEmailBarButtonItem.html">PSPDFEmailBarButtonItem</a></li>
 							
@@ -268,11 +282,17 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Classes/PSPDFGalleryErrorView.html">PSPDFGalleryErrorView</a></li>
 							
+							<li><a href="Classes/PSPDFGalleryImageContentView.html">PSPDFGalleryImageContentView</a></li>
+							
+							<li><a href="Classes/PSPDFGalleryImageItem.html">PSPDFGalleryImageItem</a></li>
+							
 							<li><a href="Classes/PSPDFGalleryItem.html">PSPDFGalleryItem</a></li>
 							
 							<li><a href="Classes/PSPDFGalleryLoadingView.html">PSPDFGalleryLoadingView</a></li>
 							
-							<li><a href="Classes/PSPDFGalleryScrollableContentView.html">PSPDFGalleryScrollableContentView</a></li>
+							<li><a href="Classes/PSPDFGalleryVideoContentView.html">PSPDFGalleryVideoContentView</a></li>
+							
+							<li><a href="Classes/PSPDFGalleryVideoItem.html">PSPDFGalleryVideoItem</a></li>
 							
 							<li><a href="Classes/PSPDFGalleryView.html">PSPDFGalleryView</a></li>
 							
@@ -298,11 +318,7 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Classes/PSPDFHighlightAnnotation.html">PSPDFHighlightAnnotation</a></li>
 							
-							<li><a href="Classes/PSPDFHighlightAnnotationView.html">PSPDFHighlightAnnotationView</a></li>
-							
 							<li><a href="Classes/PSPDFHostingAnnotationView.html">PSPDFHostingAnnotationView</a></li>
-							
-							<li><a href="Classes/PSPDFIconGenerator.html">PSPDFIconGenerator</a></li>
 							
 							<li><a href="Classes/PSPDFImageInfo.html">PSPDFImageInfo</a></li>
 							
@@ -338,11 +354,21 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Classes/PSPDFLoupeView.html">PSPDFLoupeView</a></li>
 							
+							<li><a href="Classes/PSPDFMediaPlayerAudioPlaceholderView.html">PSPDFMediaPlayerAudioPlaceholderView</a></li>
+							
+							<li><a href="Classes/PSPDFMediaPlayerController.html">PSPDFMediaPlayerController</a></li>
+							
+							<li><a href="Classes/PSPDFMediaPlayerCoverView.html">PSPDFMediaPlayerCoverView</a></li>
+							
+							<li><a href="Classes/PSPDFMediaPlayerScrubberView.html">PSPDFMediaPlayerScrubberView</a></li>
+							
+							<li><a href="Classes/PSPDFMediaPlayerToolbar.html">PSPDFMediaPlayerToolbar</a></li>
+							
+							<li><a href="Classes/PSPDFMediaPlayerView.html">PSPDFMediaPlayerView</a></li>
+							
 							<li><a href="Classes/PSPDFMemoryCache.html">PSPDFMemoryCache</a></li>
 							
 							<li><a href="Classes/PSPDFMenuItem.html">PSPDFMenuItem</a></li>
-							
-							<li><a href="Classes/PSPDFMoreBarButtonItem.html">PSPDFMoreBarButtonItem</a></li>
 							
 							<li><a href="Classes/PSPDFMultiDocumentThumbnailViewController.html">PSPDFMultiDocumentThumbnailViewController</a></li>
 							
@@ -532,6 +558,10 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Classes/PSPDFWebViewController.html">PSPDFWebViewController</a></li>
 							
+							<li><a href="Classes/PSPDFWebViewProgress.html">PSPDFWebViewProgress</a></li>
+							
+							<li><a href="Classes/PSPDFWebViewProgressView.html">PSPDFWebViewProgressView</a></li>
+							
 							<li><a href="Classes/PSPDFWidgetAnnotation.html">PSPDFWidgetAnnotation</a></li>
 							
 							<li><a href="Classes/PSPDFWord.html">PSPDFWord</a></li>
@@ -572,7 +602,7 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Protocols/PSPDFAnnotationViewProtocol.html">PSPDFAnnotationViewProtocol</a></li>
 							
-							<li><a href="Protocols/PSPDFAttributedLabelDelegate.html">PSPDFAttributedLabelDelegate</a></li>
+							<li><a href="Protocols/PSPDFAudioHelperDelegate.html">PSPDFAudioHelperDelegate</a></li>
 							
 							<li><a href="Protocols/PSPDFBookmarkTableViewCellDelegate.html">PSPDFBookmarkTableViewCellDelegate</a></li>
 							
@@ -587,6 +617,8 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							<li><a href="Protocols/PSPDFColorSelectionViewControllerDelegate.html">PSPDFColorSelectionViewControllerDelegate</a></li>
 							
 							<li><a href="Protocols/PSPDFContainerViewControllerDelegate.html">PSPDFContainerViewControllerDelegate</a></li>
+							
+							<li><a href="Protocols/PSPDFDigitalSignatureVerificationHandler.html">PSPDFDigitalSignatureVerificationHandler</a></li>
 							
 							<li><a href="Protocols/PSPDFDocumentDelegate.html">PSPDFDocumentDelegate</a></li>
 							
@@ -646,6 +678,8 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Protocols/PSPDFSignatureSelectorViewControllerDelegate.html">PSPDFSignatureSelectorViewControllerDelegate</a></li>
 							
+							<li><a href="Protocols/PSPDFSignatureVerificationStatus.html">PSPDFSignatureVerificationStatus</a></li>
+							
 							<li><a href="Protocols/PSPDFSignatureViewControllerDelegate.html">PSPDFSignatureViewControllerDelegate</a></li>
 							
 							<li><a href="Protocols/PSPDFSinglePageViewControllerDelegate.html">PSPDFSinglePageViewControllerDelegate</a></li>
@@ -674,11 +708,15 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 							
 							<li><a href="Protocols/PSPDFWebViewControllerDelegate.html">PSPDFWebViewControllerDelegate</a></li>
 							
+							<li><a href="Protocols/PSPDFWebViewProgressDelegate.html">PSPDFWebViewProgressDelegate</a></li>
+							
 						</ul>
 						
                         
 						<h2 class="index-title">Constant References</h2>
 						<ul>
+                        
+                        <li><a href="Constants/PSPDFAESEncryptorErrorCode.html">PSPDFAESEncryptorErrorCode</a></li>
                         
                         <li><a href="Constants/PSPDFActionType.html">PSPDFActionType</a></li>
                         
@@ -694,8 +732,6 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
                         
                         <li><a href="Constants/PSPDFAnnotationType.html">PSPDFAnnotationType</a></li>
                         
-                        <li><a href="Constants/PSPDFAttributedLabelVerticalAlignment.html">PSPDFAttributedLabelVerticalAlignment</a></li>
-                        
                         <li><a href="Constants/PSPDFButtonFlag.html">PSPDFButtonFlag</a></li>
                         
                         <li><a href="Constants/PSPDFCacheOptions.html">PSPDFCacheOptions</a></li>
@@ -710,11 +746,19 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
                         
                         <li><a href="Constants/PSPDFCryptorErrorCode.html">PSPDFCryptorErrorCode</a></li>
                         
+                        <li><a href="Constants/PSPDFDigitalSignatureManagerErrorCode.html">PSPDFDigitalSignatureManagerErrorCode</a></li>
+                        
+                        <li><a href="Constants/PSPDFDigitalSignatureReferenceTransformMethod.html">PSPDFDigitalSignatureReferenceTransformMethod</a></li>
+                        
+                        <li><a href="Constants/PSPDFDigitalSignatureVerificationStatusSeverity.html">PSPDFDigitalSignatureVerificationStatusSeverity</a></li>
+                        
                         <li><a href="Constants/PSPDFDiskCacheStrategy.html">PSPDFDiskCacheStrategy</a></li>
                         
                         <li><a href="Constants/PSPDFDocumentSharingOptions.html">PSPDFDocumentSharingOptions</a></li>
                         
                         <li><a href="Constants/PSPDFDownloadManagerObjectState.html">PSPDFDownloadManagerObjectState</a></li>
+                        
+                        <li><a href="Constants/PSPDFDurationResolution.html">PSPDFDurationResolution</a></li>
                         
                         <li><a href="Constants/PSPDFErrorCode.html">PSPDFErrorCode</a></li>
                         
@@ -724,6 +768,8 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
                         
                         <li><a href="Constants/PSPDFFormElementFlag.html">PSPDFFormElementFlag</a></li>
                         
+                        <li><a href="Constants/PSPDFGalleryVideoItemStatus.html">PSPDFGalleryVideoItemStatus</a></li>
+                        
                         <li><a href="Constants/PSPDFGalleryViewControllerState.html">PSPDFGalleryViewControllerState</a></li>
                         
                         <li><a href="Constants/PSPDFGradientViewDirection.html">PSPDFGradientViewDirection</a></li>
@@ -731,8 +777,6 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
                         <li><a href="Constants/PSPDFHUDViewAnimation.html">PSPDFHUDViewAnimation</a></li>
                         
                         <li><a href="Constants/PSPDFHUDViewMode.html">PSPDFHUDViewMode</a></li>
-                        
-                        <li><a href="Constants/PSPDFIconType.html">PSPDFIconType</a></li>
                         
                         <li><a href="Constants/PSPDFLabelStyle.html">PSPDFLabelStyle</a></li>
                         
@@ -816,25 +860,19 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
                         
                         <li><a href="Constants/PSPDFWebViewControllerAvailableActions.html">PSPDFWebViewControllerAvailableActions</a></li>
                         
-                        <li><a href="Constants/PSTCollectionElementCategory.html">PSTCollectionElementCategory</a></li>
-                        
-                        <li><a href="Constants/PSTCollectionUpdateAction.html">PSTCollectionUpdateAction</a></li>
-                        
-                        <li><a href="Constants/PSTCollectionViewItemType.html">PSTCollectionViewItemType</a></li>
-                        
-                        <li><a href="Constants/PSTCollectionViewScrollDirection.html">PSTCollectionViewScrollDirection</a></li>
-                        
-                        <li><a href="Constants/PSTCollectionViewScrollPosition.html">PSTCollectionViewScrollPosition</a></li>
-                        
-                        <li><a href="Constants/PSTFlowLayoutHorizontalAlignment.html">PSTFlowLayoutHorizontalAlignment</a></li>
-                        
 						</ul>
 						
 						
 						<h2 class="index-title">Category References</h2>
 						<ul>
 							
+							<li><a href="Categories/AVPlayerItem+PSPDFKitAdditions.html">AVPlayerItem(PSPDFKitAdditions)</a></li>
+							
 							<li><a href="Categories/NSDate+PSPDFKitAdditions.html">NSDate(PSPDFKitAdditions)</a></li>
+							
+							<li><a href="Categories/NSNumber+PSPDFKitAdditions.html">NSNumber(PSPDFKitAdditions)</a></li>
+							
+							<li><a href="Categories/NSObject+PSPDFKitAdditions.html">NSObject(PSPDFKitAdditions)</a></li>
 							
 							<li><a href="Categories/UIImage+PSPDFKitAdditions.html">UIImage(PSPDFKitAdditions)</a></li>
 							
@@ -849,7 +887,7 @@ All items and Source-Code is Copyright © 2010-2013 PSPDFKit GmbH.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

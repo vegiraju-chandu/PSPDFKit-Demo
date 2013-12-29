@@ -88,9 +88,9 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
 	
 </ul></li>
 
@@ -254,6 +254,20 @@
 						</ul>
 						
 						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Advanced Methods" name="task_Advanced Methods"></a>
 						<h3 class="subsubtitle task-title">Advanced Methods</h3>
 
@@ -269,20 +283,6 @@
 		<code><a href="#//api/name/annotationsPath">&nbsp;&nbsp;annotationsPath</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
-						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -305,7 +305,7 @@
 	
 	<div class="method-subsection brief-description">
 		<p>Path where annotations are being saved if saving to external file is enabled.
-Default&rsquo;s to self.<a href="#//api/name/documentProvider">documentProvider</a>.document.cacheDirectory + &ldquo;annotations_%d.pspdfkit&rdquo; (%d = number of the <a href="#//api/name/documentProvider">documentProvider</a>)
+Default&rsquo;s to <code>self.</code>documentProvider<code>.document.cacheDirectory</code> + &ldquo;annotations_%d.pspdfkit&rdquo; (%d = number of the <a href="#//api/name/documentProvider">documentProvider</a>)
 If set to nil, will revert back to the default value.</p>
 	</div>		
 	
@@ -342,7 +342,7 @@ If set to nil, will revert back to the default value.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set to enable auto-detection of various link types. Defaults to PSPDFTextCheckingTypeNone.</p>
+		<p>Set to enable auto-detection of various link types. Defaults to <code>PSPDFTextCheckingTypeNone</code>.</p>
 	</div>		
 	
     
@@ -420,7 +420,7 @@ Written as the &ldquo;T&rdquo; (title/user) property of newly created annotation
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Associated documentProvider.</p>
+		<p>Associated <code>documentProvider</code>.</p>
 	</div>		
 	
     
@@ -658,8 +658,8 @@ Links are not saved by default since some documents have a crazy high amount of 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Annotations are either removed (PSPDFAnnotationsRemovedNotification) or soft-deleted if they are already saved in the PDF.
-In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDeleted as keyPath is sent instead.</p>
+		<p>Annotations are either removed (<code>PSPDFAnnotationsRemovedNotification</code>) or soft-deleted if they are already saved in the PDF.
+In case they are soft-deleted, a <code>PSPDFAnnotationChangedNotification</code> with isDeleted as keyPath is sent instead.</p>
 	</div>		
 	
     
@@ -696,13 +696,13 @@ In case they are soft-deleted, a PSPDFAnnotationChangedNotification with isDelet
 	
 	<div class="method-subsection brief-description">
 		<p>PSPDFKit requests a save. Can be ignored if you&rsquo;re instantly persisting.
-Event is e.g. fired before the app goes into background, or when <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> is dismissed.
+Event is e.g. fired before the app goes into background, or when <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a> is dismissed.
 Return NO + error if saving failed.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithOptions:(NSDictionary *)<em>options</em> error:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)saveAnnotationsWithOptions:(NSDictionary *)<em>options</em> error:(NSError *__autoreleasing *)<em>error</em></code></div>
 
     
 	
@@ -752,7 +752,7 @@ Return NO + error if saving failed.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> Usually it&rsquo;s a better idea to implement a custom AnnotationProvider, but this is kept for backwards compatibility.</p>
 
-<p>You will override any already set annotations, so if you want to mix in annotations from the PDF, use addAnnotations:page: instead.
+<p>You will override any already set annotations, so if you want to mix in annotations from the PDF, use <code>addAnnotations:page:</code> instead.
 Setting nil as annotations will re-evaluate the pdf for annotations on the next access. Use an empty array if you want to clear annotations instead.</p></div>
 	</div>
 	
@@ -821,7 +821,7 @@ Setting nil as annotations will re-evaluate the pdf for annotations on the next 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

@@ -1,0 +1,822 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PSPDFDigitalSignatureManager Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PSPDFKit </a></h1>
+				<a id="developerHome" href="../index.html">PSPDFKit GmbH</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PSPDFDigitalSignatureManager Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/defaultHandler">&nbsp;&nbsp;&nbsp;&nbsp;defaultHandler</option>
+	
+	<option value="//api/name/useAdobeCA">&nbsp;&nbsp;&nbsp;&nbsp;useAdobeCA</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/sharedManager">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedManager</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addCertificate:error:">&nbsp;&nbsp;&nbsp;&nbsp;- addCertificate:error:</option>
+	
+	<option value="//api/name/certificates">&nbsp;&nbsp;&nbsp;&nbsp;- certificates</option>
+	
+	<option value="//api/name/deregisterFromReceivingRequestsToViewRevisions:">&nbsp;&nbsp;&nbsp;&nbsp;- deregisterFromReceivingRequestsToViewRevisions:</option>
+	
+	<option value="//api/name/registerForReceivingRequestsToViewRevisions:">&nbsp;&nbsp;&nbsp;&nbsp;- registerForReceivingRequestsToViewRevisions:</option>
+	
+	<option value="//api/name/removeCertificate:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCertificate:</option>
+	
+	<option value="//api/name/verificationHandlerForSignature:">&nbsp;&nbsp;&nbsp;&nbsp;- verificationHandlerForSignature:</option>
+	
+	<option value="//api/name/verificationHandlerInstanceForSignature:documentProvider:">&nbsp;&nbsp;&nbsp;&nbsp;- verificationHandlerInstanceForSignature:documentProvider:</option>
+	
+	<option value="//api/name/verificationHandlers">&nbsp;&nbsp;&nbsp;&nbsp;- verificationHandlers</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing Signature Handlers">Managing Signature Handlers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing Revision Delegates">Managing Revision Delegates</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing Certificates">Managing Certificates</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultHandler">defaultHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/useAdobeCA">useAdobeCA</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedManager">sharedManager</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCertificate:error:">addCertificate:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/certificates">certificates</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deregisterFromReceivingRequestsToViewRevisions:">deregisterFromReceivingRequestsToViewRevisions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerForReceivingRequestsToViewRevisions:">registerForReceivingRequestsToViewRevisions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCertificate:">removeCertificate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verificationHandlerForSignature:">verificationHandlerForSignature:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verificationHandlerInstanceForSignature:documentProvider:">verificationHandlerInstanceForSignature:documentProvider:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verificationHandlers">verificationHandlers</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PSPDFDigitalSignatureManager Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PSPDFDigitalSignatureManager Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PSPDFDigitalSignatureManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Manages signatures. Requires OpenSSL.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing Signature Handlers" name="task_Managing Signature Handlers"></a>
+						<h3 class="subsubtitle task-title">Managing Signature Handlers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultHandler">&nbsp;&nbsp;defaultHandler</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/verificationHandlerForSignature:">&ndash;&nbsp;verificationHandlerForSignature:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/verificationHandlerInstanceForSignature:documentProvider:">&ndash;&nbsp;verificationHandlerInstanceForSignature:documentProvider:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/verificationHandlers">&ndash;&nbsp;verificationHandlers</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing Revision Delegates" name="task_Managing Revision Delegates"></a>
+						<h3 class="subsubtitle task-title">Managing Revision Delegates</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerForReceivingRequestsToViewRevisions:">&ndash;&nbsp;registerForReceivingRequestsToViewRevisions:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deregisterFromReceivingRequestsToViewRevisions:">&ndash;&nbsp;deregisterFromReceivingRequestsToViewRevisions:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing Certificates" name="task_Managing Certificates"></a>
+						<h3 class="subsubtitle task-title">Managing Certificates</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/certificates">&ndash;&nbsp;certificates</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCertificate:error:">&ndash;&nbsp;addCertificate:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeCertificate:">&ndash;&nbsp;removeCertificate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/useAdobeCA">&nbsp;&nbsp;useAdobeCA</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultHandler" title="defaultHandler"></a>
+	<h3 class="subsubtitle method-title">defaultHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default handler, used when no other handler matches given filter and subFilter. The default default handler is <a href="../Classes/PSPDFDigitalSignatureVerificationController.html"><code>PSPDFDigitalSignatureVerificationController</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, strong) Class&lt;PSPDFDigitalSignatureVerificationHandler&gt; defaultHandler</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/useAdobeCA" title="useAdobeCA"></a>
+	<h3 class="subsubtitle method-title">useAdobeCA</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether or not to trust the Adobe CA certificate. Default is YES.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, assign) BOOL useAdobeCA</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="subsubtitle method-title">sharedManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the shared instance of the signature manager.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (PSPDFDigitalSignatureManager *)sharedManager</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addCertificate:error:" title="addCertificate:error:"></a>
+	<h3 class="subsubtitle method-title">addCertificate:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add your own trusted <a href="#//api/name/certificates">certificates</a> here.
+The expectation is that the data is in PKCS#7 format, as exported from Adobe Acrobat.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)addCertificate:(NSData *)<em>certificate</em> error:(NSError **)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/certificates" title="certificates"></a>
+	<h3 class="subsubtitle method-title">certificates</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The current list of trusted certificates.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)certificates</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deregisterFromReceivingRequestsToViewRevisions:" title="deregisterFromReceivingRequestsToViewRevisions:"></a>
+	<h3 class="subsubtitle method-title">deregisterFromReceivingRequestsToViewRevisions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deregister from being notified when signed revisions are requested.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)deregisterFromReceivingRequestsToViewRevisions:(id&lt;PSPDFDigitalSignatureRevisionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerForReceivingRequestsToViewRevisions:" title="registerForReceivingRequestsToViewRevisions:"></a>
+	<h3 class="subsubtitle method-title">registerForReceivingRequestsToViewRevisions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Register to be notified when signed revisions are requested, in order to show them in the UI.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerForReceivingRequestsToViewRevisions:(id&lt;PSPDFDigitalSignatureRevisionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeCertificate:" title="removeCertificate:"></a>
+	<h3 class="subsubtitle method-title">removeCertificate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove a certificate from the list of trusted <a href="#//api/name/certificates">certificates</a> (by reference).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeCertificate:(NSData *)<em>certificate</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/verificationHandlerForSignature:" title="verificationHandlerForSignature:"></a>
+	<h3 class="subsubtitle method-title">verificationHandlerForSignature:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Provide a handler for the given signature. A handler is chosen by searching for a filter match first, and then by subFilter.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Class&lt;PSPDFDigitalSignatureVerificationHandler&gt;)verificationHandlerForSignature:(PSPDFDigitalSignatureDictionary *)<em>signature</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/verificationHandlerInstanceForSignature:documentProvider:" title="verificationHandlerInstanceForSignature:documentProvider:"></a>
+	<h3 class="subsubtitle method-title">verificationHandlerInstanceForSignature:documentProvider:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convenience method that allocates and initialises a suitable handler.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;PSPDFDigitalSignatureVerificationHandler&gt;)verificationHandlerInstanceForSignature:(PSPDFDigitalSignatureDictionary *)<em>signature</em> documentProvider:(PSPDFDocumentProvider *)<em>documentProvider</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/verificationHandlers" title="verificationHandlers"></a>
+	<h3 class="subsubtitle method-title">verificationHandlers</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The current handlers keyed by the filter attribute. These are tried first.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)verificationHandlers</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFDigitalSignatureManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

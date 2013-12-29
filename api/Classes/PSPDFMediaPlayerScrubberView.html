@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFMoreBarButtonItem Class Reference</title>
+		<title>PSPDFMediaPlayerScrubberView Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFMoreBarButtonItem Class Reference</h1>
+				<h1 class="hideInXcode">PSPDFMediaPlayerScrubberView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -37,7 +39,15 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/actionSheet">&nbsp;&nbsp;&nbsp;&nbsp;actionSheet</option>
+	<option value="//api/name/currentTime">&nbsp;&nbsp;&nbsp;&nbsp;currentTime</option>
+	
+	<option value="//api/name/currentTimeLabel">&nbsp;&nbsp;&nbsp;&nbsp;currentTimeLabel</option>
+	
+	<option value="//api/name/duration">&nbsp;&nbsp;&nbsp;&nbsp;duration</option>
+	
+	<option value="//api/name/remainingTimeLabel">&nbsp;&nbsp;&nbsp;&nbsp;remainingTimeLabel</option>
+	
+	<option value="//api/name/slider">&nbsp;&nbsp;&nbsp;&nbsp;slider</option>
 	
 	
 	
@@ -52,6 +62,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -65,7 +77,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/actionSheet">actionSheet</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentTime">currentTime</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentTimeLabel">currentTimeLabel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/duration">duration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remainingTimeLabel">remainingTimeLabel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/slider">slider</a></span></li>
 	
 </ul></li>
 
@@ -78,7 +98,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFMoreBarButtonItem Class Reference" name="top"></a>
+				<a title="PSPDFMediaPlayerScrubberView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -87,7 +107,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFMoreBarButtonItem Class Reference</h1>
+						<h1 class="title title-header">PSPDFMediaPlayerScrubberView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -95,15 +115,26 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFBarButtonItem.html">PSPDFBarButtonItem</a> : UIBarButtonItem</td>
+	<td class="specification-value">UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFMoreBarButtonItem.h</td>
+	<td class="specification-value">PSPDFMediaPlayerScrubberView.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The scrubber view used in <a href="../Classes/PSPDFMediaPlayerView.html"><code>PSPDFMediaPlayerView</code></a>. This view displays a <a href="#//api/name/slider">slider</a>
+and two labels. The <a href="#//api/name/slider">slider</a> is used to display the current play progress and
+for seeking. The labels display the current time (= elapsed time) and the
+remaining time.</p>
+					</div>
+					
+					
 					
 					
 					
@@ -118,7 +149,31 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/actionSheet">&nbsp;&nbsp;actionSheet</a></code>
+		<code><a href="#//api/name/currentTime">&nbsp;&nbsp;currentTime</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentTimeLabel">&nbsp;&nbsp;currentTimeLabel</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/remainingTimeLabel">&nbsp;&nbsp;remainingTimeLabel</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/slider">&nbsp;&nbsp;slider</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -136,18 +191,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/actionSheet" title="actionSheet"></a>
-	<h3 class="subsubtitle method-title">actionSheet</h3>
+	<a name="//api/name/currentTime" title="currentTime"></a>
+	<h3 class="subsubtitle method-title">currentTime</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Saves the actionSheet if currently displayed.</p>
+		<p>The current time.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIActionSheet *actionSheet</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CMTime currentTime</code></div>
 
     
 	
@@ -165,7 +220,152 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFMoreBarButtonItem.h</code><br />
+		<code class="declared-in-ref">PSPDFMediaPlayerScrubberView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/currentTimeLabel" title="currentTimeLabel"></a>
+	<h3 class="subsubtitle method-title">currentTimeLabel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The current time label.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UILabel *currentTimeLabel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFMediaPlayerScrubberView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/duration" title="duration"></a>
+	<h3 class="subsubtitle method-title">duration</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The duration.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CMTime duration</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFMediaPlayerScrubberView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/remainingTimeLabel" title="remainingTimeLabel"></a>
+	<h3 class="subsubtitle method-title">remainingTimeLabel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The remaining time label.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UILabel *remainingTimeLabel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFMediaPlayerScrubberView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/slider" title="slider"></a>
+	<h3 class="subsubtitle method-title">slider</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The slider. <code>value</code> is considered relative, so the range of
+<code>value</code> should be between 0.0 and 1.0.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UISlider *slider</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFMediaPlayerScrubberView.h</code><br />
 	</div>				
 	
 	
@@ -190,7 +390,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

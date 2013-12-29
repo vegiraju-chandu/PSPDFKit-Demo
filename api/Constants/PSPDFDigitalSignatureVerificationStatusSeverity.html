@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFIconType Constants Reference</title>
+		<title>PSPDFDigitalSignatureVerificationStatusSeverity Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFIconType Constants Reference</h1>
+				<h1 class="hideInXcode">PSPDFDigitalSignatureVerificationStatusSeverity Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFIconType Constants Reference" name="top"></a>
+				<a title="PSPDFDigitalSignatureVerificationStatusSeverity Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFIconType Constants Reference</h1>
+						<h1 class="title title-header">PSPDFDigitalSignatureVerificationStatusSeverity Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFIconGenerator.h</td>
+	<td class="specification-value">PSPDFDigitalSignatureVerificationHandler.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,34 +74,19 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">PSPDFIconType</h3>
+                    <h3 class="subsubtitle method-title">PSPDFDigitalSignatureVerificationStatusSeverity</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p><div class="note"><p><strong>Note:</strong> As of iOS7, this is a NOP and will simply return <code>oldImage</code>.</p></div>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, PSPDFIconType ) {<br/>
+                        <code>typedef NS_ENUM(NSUInteger, PSPDFDigitalSignatureVerificationStatusSeverity ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeOutline</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFDigitalSignatureVerificationStatusSeverityOK</a> = 1,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypePage</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFDigitalSignatureVerificationStatusSeverityWarning</a> = 2,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeThumbnails</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeBackArrow</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeBackArrowSmall</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeForwardArrow</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">PSPDFIconTypeEmail</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFDigitalSignatureVerificationStatusSeverityError</a> = 3,<br/>
                             
                             };</code>
                     
@@ -111,128 +96,32 @@ This is not needed, UIBarButtonItemStylePlain is managed by the system.</p><div 
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="PSPDFIconTypeOutline"></a><code>PSPDFIconTypeOutline</code></dt>
+                            <dt><a name="" title="PSPDFDigitalSignatureVerificationStatusSeverityOK"></a><code>PSPDFDigitalSignatureVerificationStatusSeverityOK</code></dt>
 <dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFDigitalSignatureVerificationHandler.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFIconTypePage"></a><code>PSPDFIconTypePage</code></dt>
+                            <dt><a name="" title="PSPDFDigitalSignatureVerificationStatusSeverityWarning"></a><code>PSPDFDigitalSignatureVerificationStatusSeverityWarning</code></dt>
 <dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFDigitalSignatureVerificationHandler.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFIconTypeThumbnails"></a><code>PSPDFIconTypeThumbnails</code></dt>
+                            <dt><a name="" title="PSPDFDigitalSignatureVerificationStatusSeverityError"></a><code>PSPDFDigitalSignatureVerificationStatusSeverityError</code></dt>
 <dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="PSPDFIconTypeBackArrow"></a><code>PSPDFIconTypeBackArrow</code></dt>
-<dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="PSPDFIconTypeBackArrowSmall"></a><code>PSPDFIconTypeBackArrowSmall</code></dt>
-<dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="PSPDFIconTypeForwardArrow"></a><code>PSPDFIconTypeForwardArrow</code></dt>
-<dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="PSPDFIconTypeEmail"></a><code>PSPDFIconTypeEmail</code></dt>
-<dd>
-
-
-<p>Applies the barButton shadow if style is UIBarButtonItemStyleBorder.
-This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">PSPDFIconGenerator.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFDigitalSignatureVerificationHandler.h</code>.
 	</p>
 	
 </dd>
@@ -240,17 +129,6 @@ This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
                         </dl>
                     </div>
                     
-                    
-                    
-                    
-
-                    
-                    
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">PSPDFIconGenerator.h</code><br />
-                    </div>				
                     
                     
                     
@@ -264,7 +142,7 @@ This is not needed, UIBarButtonItemStylePlain is managed by the system.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

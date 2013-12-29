@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFIconGenerator Class Reference</title>
+		<title>PSPDFGalleryImageItem Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFIconGenerator Class Reference</h1>
+				<h1 class="hideInXcode">PSPDFGalleryImageItem Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,22 +37,19 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/loadingRemoteContent">&nbsp;&nbsp;&nbsp;&nbsp;loadingRemoteContent</option>
+	
+	<option value="//api/name/remoteContent">&nbsp;&nbsp;&nbsp;&nbsp;remoteContent</option>
+	
+	<option value="//api/name/remoteContentError">&nbsp;&nbsp;&nbsp;&nbsp;remoteContentError</option>
+	
+	<option value="//api/name/remoteContentProgress">&nbsp;&nbsp;&nbsp;&nbsp;remoteContentProgress</option>
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/sharedGenerator">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedGenerator</option>
 	
 	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/iconForType:">&nbsp;&nbsp;&nbsp;&nbsp;- iconForType:</option>
-	
-	<option value="//api/name/iconForType:barButtonStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- iconForType:barButtonStyle:</option>
-	
-	<option value="//api/name/iconForType:shadowOffset:shadowColor:">&nbsp;&nbsp;&nbsp;&nbsp;- iconForType:shadowOffset:shadowColor:</option>
 	
 	
 	
@@ -70,38 +67,36 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-</ul></li>
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedGenerator">sharedGenerator</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PSPDFRemoteContentObject">PSPDFRemoteContentObject</a></span></li>
 	
 </ul></li>
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iconForType:">iconForType:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingRemoteContent">loadingRemoteContent</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iconForType:barButtonStyle:">iconForType:barButtonStyle:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remoteContent">remoteContent</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iconForType:shadowOffset:shadowColor:">iconForType:shadowOffset:shadowColor:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remoteContentError">remoteContentError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remoteContentProgress">remoteContentProgress</a></span></li>
 	
 </ul></li>
+
+
+
+
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFIconGenerator Class Reference" name="top"></a>
+				<a title="PSPDFGalleryImageItem Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -110,7 +105,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFIconGenerator Class Reference</h1>
+						<h1 class="title title-header">PSPDFGalleryImageItem Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -118,10 +113,13 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value"><a href="../Classes/PSPDFGalleryItem.html">PSPDFGalleryItem</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/PSPDFRemoteContentObject.html">PSPDFRemoteContentObject</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFIconGenerator.h</td>
+	<td class="specification-value">PSPDFGalleryImageItem.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -131,7 +129,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Generates various icons on the fly and caches them for later use.</p>
+						<p>An image item in a gallery.</p>
 					</div>
 					
 					
@@ -143,33 +141,33 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="PSPDFRemoteContentObject" name="task_PSPDFRemoteContentObject"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">PSPDFRemoteContentObject</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sharedGenerator">+&nbsp;sharedGenerator</a></code>
+		<code><a href="#//api/name/remoteContent">&nbsp;&nbsp;remoteContent</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/iconForType:">&ndash;&nbsp;iconForType:</a></code>
+		<code><a href="#//api/name/loadingRemoteContent">&nbsp;&nbsp;loadingRemoteContent</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/iconForType:barButtonStyle:">&ndash;&nbsp;iconForType:barButtonStyle:</a></code>
+		<code><a href="#//api/name/remoteContentProgress">&nbsp;&nbsp;remoteContentProgress</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/iconForType:shadowOffset:shadowColor:">&ndash;&nbsp;iconForType:shadowOffset:shadowColor:</a></code>
+		<code><a href="#//api/name/remoteContentError">&nbsp;&nbsp;remoteContentError</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -180,25 +178,23 @@
 					
 					
 					
-					
-					
 					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/sharedGenerator" title="sharedGenerator"></a>
-	<h3 class="subsubtitle method-title">sharedGenerator</h3>
+	<a name="//api/name/loadingRemoteContent" title="loadingRemoteContent"></a>
+	<h3 class="subsubtitle method-title">loadingRemoteContent</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Access singleton.</p>
+		<p>The loading state of the object. This property is managed by <a href="../Classes/PSPDFDownloadManager.html"><code>PSPDFDownloadManager</code></a>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedGenerator</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isLoadingRemoteContent) BOOL loadingRemoteContent</code></div>
 
     
 	
@@ -207,11 +203,6 @@
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> can be overridden with changing global PSPDFIconGeneratorClassName.</p></div>
-	</div>
 	
 	
 	
@@ -221,7 +212,116 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFIconGenerator.h</code><br />
+		<code class="declared-in-ref">PSPDFGalleryImageItem.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/remoteContent" title="remoteContent"></a>
+	<h3 class="subsubtitle method-title">remoteContent</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The remote content of the object. This property is managed by <a href="../Classes/PSPDFDownloadManager.html"><code>PSPDFDownloadManager</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *remoteContent</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryImageItem.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/remoteContentError" title="remoteContentError"></a>
+	<h3 class="subsubtitle method-title">remoteContentError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The remote content error of the object. This property is managed by <a href="../Classes/PSPDFDownloadManager.html"><code>PSPDFDownloadManager</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSError *remoteContentError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryImageItem.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/remoteContentProgress" title="remoteContentProgress"></a>
+	<h3 class="subsubtitle method-title">remoteContentProgress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The download progress of the object. Only meaningful if <a href="#//api/name/loadingRemoteContent"><code>loadingRemoteContent</code></a> is YES.
+This property is managed by <a href="../Classes/PSPDFDownloadManager.html"><code>PSPDFDownloadManager</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat remoteContentProgress</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFGalleryImageItem.h</code><br />
 	</div>				
 	
 	
@@ -231,119 +331,7 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/iconForType:" title="iconForType:"></a>
-	<h3 class="subsubtitle method-title">iconForType:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Generates in-code images on the fly. Cached, Thread-safe.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)iconForType:(PSPDFIconType)<em>iconType</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFIconGenerator.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/iconForType:barButtonStyle:" title="iconForType:barButtonStyle:"></a>
-	<h3 class="subsubtitle method-title">iconForType:barButtonStyle:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Generates image on the fly, applies button shadow if needed. Thread-safe.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)iconForType:(PSPDFIconType)<em>iconType</em> barButtonStyle:(UIBarButtonItemStyle)<em>style</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFIconGenerator.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/iconForType:shadowOffset:shadowColor:" title="iconForType:shadowOffset:shadowColor:"></a>
-	<h3 class="subsubtitle method-title">iconForType:shadowOffset:shadowColor:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Generates in-code images on the fly. Thread-safe. Uses custom shadow settings.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (UIImage *)iconForType:(PSPDFIconType)<em>iconType</em> shadowOffset:(CGSize)<em>shadowOffset</em> shadowColor:(UIColor *)<em>shadowColor</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFIconGenerator.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
+					
 					
 					
                     
@@ -358,7 +346,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

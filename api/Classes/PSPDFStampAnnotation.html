@@ -43,6 +43,8 @@
 	
 	<option value="//api/name/imageTransform">&nbsp;&nbsp;&nbsp;&nbsp;imageTransform</option>
 	
+	<option value="//api/name/localizedSubject">&nbsp;&nbsp;&nbsp;&nbsp;localizedSubject</option>
+	
 	<option value="//api/name/subtext">&nbsp;&nbsp;&nbsp;&nbsp;subtext</option>
 	
 	
@@ -58,6 +60,8 @@
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/initWithImage:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithImage:</option>
 	
 	<option value="//api/name/initWithSubject:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSubject:</option>
 	
@@ -97,6 +101,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageTransform">imageTransform</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedSubject">localizedSubject</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subtext">subtext</a></span></li>
 	
 </ul></li>
@@ -114,6 +120,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithImage:">initWithImage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSubject:">initWithSubject:</a></span></li>
 	
@@ -198,7 +206,19 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/initWithImage:">&ndash;&nbsp;initWithImage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/subtext">&nbsp;&nbsp;subtext</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedSubject">&nbsp;&nbsp;localizedSubject</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -296,7 +316,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stamp <a href="#//api/name/image">image</a> transform. Defaults to CGAffineTransformIdentity.</p>
+		<p>Stamp <a href="#//api/name/image">image</a> transform. Defaults to <code>CGAffineTransformIdentity</code>.</p>
 	</div>		
 	
     
@@ -310,6 +330,47 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStampAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedSubject" title="localizedSubject"></a>
+	<h3 class="subsubtitle method-title">localizedSubject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If set, will be used instead of the subject for the rendered text.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *localizedSubject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> To translate the &ldquo;default&rdquo; stamps like &ldquo;Approved&rdquo; or &ldquo;Accepted&rdquo;, you should use <code>localizedSubject</code> instead of changing <a href="#//api/name/subtext">subtext</a>. Various strings are hardcoded to render differently accordin to the non-localized default stamps defined in the PDF spec. PSPDFKit renders appearance streams for stamps, so we can now localize the <a href="#//api/name/subtext">subtext</a> but will still save the original, unlocalized title for compatibility reasons with readers that can&rsquo;t render AP streams.</p></div>
+	</div>
 	
 	
 	
@@ -451,6 +512,42 @@ Used for custom stamps, will render beneath the subject or as the subject if sub
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/initWithImage:" title="initWithImage:"></a>
+	<h3 class="subsubtitle method-title">initWithImage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Init with <a href="#//api/name/image">image</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithImage:(UIImage *)<em>image</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFStampAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initWithSubject:" title="initWithSubject:"></a>
 	<h3 class="subsubtitle method-title">initWithSubject:</h3>
 	
@@ -494,7 +591,7 @@ Used for custom stamps, will render beneath the subject or as the subject if sub
 	
 	<div class="method-subsection brief-description">
 		<p>Parses the AP stream, searches for an <a href="#//api/name/image">image</a> and loads it.
-Will also update <a href="#//api/name/imageTransform">imageTransform</a>.</p>
+Will also update <a href="#//api/name/imageTransform"><code>imageTransform</code></a>.</p>
 	</div>		
 	
     
@@ -611,7 +708,7 @@ Will only work for simple stamp annotations with a <a href="#//api/name/subtext"
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

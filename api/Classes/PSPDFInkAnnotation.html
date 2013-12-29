@@ -41,6 +41,8 @@
 	
 	<option value="//api/name/bezierPath">&nbsp;&nbsp;&nbsp;&nbsp;bezierPath</option>
 	
+	<option value="//api/name/isSignature">&nbsp;&nbsp;&nbsp;&nbsp;isSignature</option>
+	
 	<option value="//api/name/lines">&nbsp;&nbsp;&nbsp;&nbsp;lines</option>
 	
 	
@@ -81,6 +83,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bezierPath">bezierPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSignature">isSignature</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lines">lines</a></span></li>
 	
@@ -136,7 +140,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>PDF Ink Annotation. (Free Drawing)
-Lines are automatically transformed when the boundingBox is changed.</p>
+Lines are automatically transformed when the <code>boundingBox</code> is changed.</p>
 					</div>
 					
 					
@@ -172,6 +176,12 @@ Lines are automatically transformed when the boundingBox is changed.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/isSignature">&nbsp;&nbsp;isSignature</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/setBoundingBox:transformLines:">&ndash;&nbsp;setBoundingBox:transformLines:</a></code>
 	</span>
 	
@@ -202,13 +212,49 @@ Lines are automatically transformed when the boundingBox is changed.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>UIBezierPath.
-Will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.</p>
+		<p>The <code>UIBezierPath</code> will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) UIBezierPath *bezierPath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFInkAnnotation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isSignature" title="isSignature"></a>
+	<h3 class="subsubtitle method-title">isSignature</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will return YES if this ink annotation is a PSPDFKit signature.
+This is a proprietary extension - other viewer will not be able to detect this.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isSignature</code></div>
 
     
 	
@@ -239,8 +285,8 @@ Will be dynamically crated from the <a href="#//api/name/lines">lines</a> array.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Array of arrays of boxed CGPoints.
-Example: annotation.lines = @[@[BOXED(CGPointMake(100,100)), BOXED(CGPointMake(100,200)), BOXED(CGPointMake(150,300))]];
+		<p>Array of arrays of boxed <code>CGPoints</code>.
+Example: <code>annotation.lines = @[@[BOXED(CGPointMake(100,100)), BOXED(CGPointMake(100,200)), BOXED(CGPointMake(150,300))]]</code>;
 @warning: After setting lines, the boundingBox will be automatically recalculated.</p>
 	</div>		
 	
@@ -288,7 +334,7 @@ Example: annotation.lines = @[@[BOXED(CGPointMake(100,100)), BOXED(CGPointMake(1
 	
 	<div class="method-subsection brief-description">
 		<p>Generate new line array by applying transform.
-This is used internally when boundingBox is changed.</p>
+This is used internally when <code>boundingBox</code> is changed.</p>
 	</div>		
 	
     
@@ -360,8 +406,8 @@ This is used internally when boundingBox is changed.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>By default, setting the boundingBox will transform all points in the <a href="#//api/name/lines">lines</a> array.
-Use this setter to manually change the boundingBox without changing <a href="#//api/name/lines">lines</a>.</p>
+		<p>By default, setting the <code>boundingBox</code> will transform all points in the <a href="#//api/name/lines">lines</a> array.
+Use this setter to manually change the <code>boundingBox</code> without changing <a href="#//api/name/lines">lines</a>.</p>
 	</div>		
 	
     
@@ -405,7 +451,7 @@ Use this setter to manually change the boundingBox without changing <a href="#//
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

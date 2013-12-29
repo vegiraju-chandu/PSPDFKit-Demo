@@ -177,14 +177,14 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The PSPDFLinkAnnotation represents both classic PDF page/document/web links, and more types not supported by other PDF readers (video, audio, image, etc)</p>
+						<p>The <code>PSPDFLinkAnnotation</code> represents both classic PDF page/document/web links, and more types not supported by other PDF readers (video, audio, image, etc)</p>
 
-<p>PSPDFKit will automatically figure out the type for PDF link annotations loaded from a document, based on the file type. (&ldquo;mpg&rdquo; belongs to PSPDFLinkAnnotationVideo; a YouTube<a href="#//api/name/URL">URL</a> to PSPDFLinkAnnotationYouTube, etc)</p>
+<p>PSPDFKit will automatically figure out the type for PDF link annotations loaded from a document, based on the file type. (&ldquo;mp4&rdquo; belongs to <code>PSPDFLinkAnnotationVideo</code>; a YouTube<a href="#//api/name/URL">URL</a> to <code>PSPDFLinkAnnotationYouTube</code>, etc)</p>
 
-<p>If you create a PSPDFLinkAnnotation at runtime, be sure to set the correct type and use the <a href="#//api/name/URL">URL</a> parameter for your link.
-BoundingBox defines the frame, in PDF space coordinates.</p>
+<p>If you create a <code>PSPDFLinkAnnotation</code> at runtime, be sure to set the correct type and use the <a href="#//api/name/URL">URL</a> parameter for your link.
+<code>boundingBox</code> defines the frame, in PDF space coordinates.</p>
 
-<p>If you want to customize how links look in the PDF, customize PSPDFLinkAnnotationView&rsquo;s properties. There&rsquo;s currently no mapping between color/lineWidth/etc and the properties of the view. This might change in future releases.</p>
+<p>If you want to customize how links look in the PDF, customize <code>PSPDFLinkAnnotationView's</code> properties. There&rsquo;s currently no mapping between color/lineWidth/etc and the properties of the view. This might change in future releases.</p>
 					</div>
 					
 					
@@ -318,7 +318,7 @@ BoundingBox defines the frame, in PDF space coordinates.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convenience method, will create a new <a href="../Classes/PSPDFURLAction.html">PSPDFURLAction</a> and get the URL from it.</p>
+		<p>Convenience method, will create a new <a href="../Classes/PSPDFURLAction.html"><code>PSPDFURLAction</code></a> and get the URL from it.</p>
 	</div>		
 	
     
@@ -372,7 +372,7 @@ Will update the <a href="#//api/name/linkType"><code>linkType</code></a> when se
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> Only evaluated if <a href="#//api/name/multimediaExtension">isMultimediaExtension</a> returns NO.</p></div>
+		<div class="note"><p><strong>Note:</strong> Only evaluated if <a href="#//api/name/multimediaExtension"><code>isMultimediaExtension</code></a> returns NO.</p></div>
 	</div>
 	
 	
@@ -396,7 +396,7 @@ Will update the <a href="#//api/name/linkType"><code>linkType</code></a> when se
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Autoplay video/audio. Only valid for PSPDFLinkAnnotationVideo and PSPDFLinkAnnotationAudio. Defaults to NO.</p>
+		<p>Autoplay video/audio. Only valid for <code>PSPDFLinkAnnotationVideo</code> and <code>PSPDFLinkAnnotationAudio</code>. Defaults to NO.</p>
 	</div>		
 	
     
@@ -432,9 +432,10 @@ Will update the <a href="#//api/name/linkType"><code>linkType</code></a> when se
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Show or hide controls. Only valid for PSPDFLinkAnnotationVideo and PSPDFLinkAnnotationAudio. Defaults to YES.
+		<p>Show or hide controls. Only valid for <code>PSPDFLinkAnnotationVideo</code> and <code>PSPDFLinkAnnotationAudio</code>. Defaults to YES.
 Some controls will add alternative ways to control if this is disabled.
-e.g. videos can be paused via touch on the view if this is set to NO.</p>
+The gallery will not receive touches if controlsEnabled is set to NO.
+e.g. Videos can be paused via touch on the view if this is set to NO.</p>
 	</div>		
 	
     
@@ -470,7 +471,7 @@ e.g. videos can be paused via touch on the view if this is set to NO.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>PSPDFKit addition - set if the pspdfkit:// protocol is detected.</p>
+		<p>PSPDFKit addition - will be updated if the <code>pspdfkit://</code> protocol is detected.</p>
 	</div>		
 	
     
@@ -506,7 +507,7 @@ e.g. videos can be paused via touch on the view if this is set to NO.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Loop media. Only valid for PSPDFLinkAnnotationVideo and PSPDFLinkAnnotationAudio. Defaults to NO.</p>
+		<p>Loop media. Only valid for <code>PSPDFLinkAnnotationVideo</code> and <code>PSPDFLinkAnnotationAudio</code>. Defaults to NO.</p>
 	</div>		
 	
     
@@ -543,7 +544,7 @@ e.g. videos can be paused via touch on the view if this is set to NO.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Returns YES if this link is specially handled by PSPDFKit.
-Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnnotationVideo &amp;&amp; <a href="#//api/name/linkType">linkType</a> &lt;= PSPDFLinkAnnotationBrowser.</p>
+Returns true for any <a href="#//api/name/linkType">linkType</a> >= <code>PSPDFLinkAnnotationVideo</code> &amp;&amp; <a href="#//api/name/linkType">linkType</a> &lt;= <code>PSPDFLinkAnnotationBrowser</code>.</p>
 	</div>		
 	
     
@@ -579,7 +580,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if isPopover/isModal is set to yes)</p>
+		<p>Will be YES if this is a regular link or a multimedia link annotation that should be displayed as link. (e.g. if <code>isPopover/isModal</code> is set to yes)</p>
 	</div>		
 	
     
@@ -625,7 +626,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Convenience cast. Will return the <a href="#//api/name/URL">URL</a> <a href="#//api/name/action">action</a> if <a href="#//api/name/action">action</a> is of type PSPDFActionType<a href="#//api/name/URL">URL</a>, else nil.</p>
+		<p>Convenience cast. Will return the <a href="#//api/name/URL">URL</a> <a href="#//api/name/action">action</a> if <a href="#//api/name/action">action</a> is of type <code>PSPDFActionType</code>URL<code></code>, else nil.</p>
 	</div>		
 	
     
@@ -661,7 +662,7 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Designated initializer for custom, at runtime created PSPDFLinkAnnotations.</p>
+		<p>Designated initializer for custom, at runtime created <code>PSPDFLinkAnnotations</code>.</p>
 	</div>		
 	
     
@@ -769,9 +770,9 @@ Returns true for any <a href="#//api/name/linkType">linkType</a> >= PSPDFLinkAnn
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize link annotation with target URL string.
+		<p>Initialize link annotation with target <a href="#//api/name/URL">URL</a> string.
 Can also be used for pspdfkit:// URLs.
-For example, to add a PSPDFKit image annotation, use [NSString stringWithFormat:@&ldquo;pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg&rdquo;, UIViewContentModeScaleAspectFill, [NSBundle.mainBundle bundlePath]] as URLString.</p>
+For example, to add a PSPDFKit image annotation, use <code>[NSString stringWithFormat:@"pspdfkit://[contentMode=%d]localhost/%@/exampleimage.jpg", UIViewContentModeScaleAspectFill, NSBundle.mainBundle.bundlePath]</code> as <code>URLString</code>.</p>
 	</div>		
 	
     
@@ -808,7 +809,7 @@ For example, to add a PSPDFKit image annotation, use [NSString stringWithFormat:
 	
 	<div class="method-subsection brief-description">
 		<p>Used for the preview string when the user long-presses on a link annotation.
-Forwards to <a href="#//api/name/action">action</a>.localizedDescription.</p>
+Forwards to <code></code>action<code>.localizedDescription</code>.</p>
 	</div>		
 	
     
@@ -893,7 +894,7 @@ Forwards to <a href="#//api/name/action">action</a>.localizedDescription.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

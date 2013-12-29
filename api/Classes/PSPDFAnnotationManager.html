@@ -45,11 +45,16 @@
 	
 	<option value="//api/name/fileAnnotationProvider">&nbsp;&nbsp;&nbsp;&nbsp;fileAnnotationProvider</option>
 	
-	<option value="//api/name/fileTypeTranslationTable">&nbsp;&nbsp;&nbsp;&nbsp;fileTypeTranslationTable</option>
-	
 	<option value="//api/name/protocolString">&nbsp;&nbsp;&nbsp;&nbsp;protocolString</option>
 	
 	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/fileTypeTranslationTable">&nbsp;&nbsp;&nbsp;&nbsp;+ fileTypeTranslationTable</option>
+	
+	<option value="//api/name/mediaFileTypes">&nbsp;&nbsp;&nbsp;&nbsp;+ mediaFileTypes</option>
 	
 	
 	
@@ -66,6 +71,8 @@
 	
 	<option value="//api/name/annotationsForPage:type:pageRef:">&nbsp;&nbsp;&nbsp;&nbsp;- annotationsForPage:type:pageRef:</option>
 	
+	<option value="//api/name/defaultAnnotationViewClassForAnnotation:">&nbsp;&nbsp;&nbsp;&nbsp;- defaultAnnotationViewClassForAnnotation:</option>
+	
 	<option value="//api/name/didChangeAnnotation:keyPaths:options:">&nbsp;&nbsp;&nbsp;&nbsp;- didChangeAnnotation:keyPaths:options:</option>
 	
 	<option value="//api/name/dirtyAnnotations">&nbsp;&nbsp;&nbsp;&nbsp;- dirtyAnnotations</option>
@@ -73,8 +80,6 @@
 	<option value="//api/name/hasLoadedAnnotationsForPage:">&nbsp;&nbsp;&nbsp;&nbsp;- hasLoadedAnnotationsForPage:</option>
 	
 	<option value="//api/name/initWithDocumentProvider:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDocumentProvider:</option>
-	
-	<option value="//api/name/mediaFileTypes">&nbsp;&nbsp;&nbsp;&nbsp;- mediaFileTypes</option>
 	
 	<option value="//api/name/removeAnnotations:">&nbsp;&nbsp;&nbsp;&nbsp;- removeAnnotations:</option>
 	
@@ -116,13 +121,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileAnnotationProvider">fileAnnotationProvider</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileTypeTranslationTable">fileTypeTranslationTable</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/protocolString">protocolString</a></span></li>
 	
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileTypeTranslationTable">fileTypeTranslationTable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mediaFileTypes">mediaFileTypes</a></span></li>
+	
+</ul></li>
 
 
 
@@ -138,6 +149,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/annotationsForPage:type:pageRef:">annotationsForPage:type:pageRef:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultAnnotationViewClassForAnnotation:">defaultAnnotationViewClassForAnnotation:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didChangeAnnotation:keyPaths:options:">didChangeAnnotation:keyPaths:options:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dirtyAnnotations">dirtyAnnotations</a></span></li>
@@ -145,8 +158,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasLoadedAnnotationsForPage:">hasLoadedAnnotationsForPage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDocumentProvider:">initWithDocumentProvider:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mediaFileTypes">mediaFileTypes</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotations:">removeAnnotations:</a></span></li>
 	
@@ -303,9 +314,9 @@ If you subclass, use overrideClass:withClass: in <a href="../Classes/PSPDFDocume
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/fileTypeTranslationTable">&nbsp;&nbsp;fileTypeTranslationTable</a></code>
+		<code><a href="#//api/name/fileTypeTranslationTable">+&nbsp;fileTypeTranslationTable</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
@@ -335,7 +346,13 @@ If you subclass, use overrideClass:withClass: in <a href="../Classes/PSPDFDocume
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/mediaFileTypes">&ndash;&nbsp;mediaFileTypes</a></code>
+		<code><a href="#//api/name/mediaFileTypes">+&nbsp;mediaFileTypes</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultAnnotationViewClassForAnnotation:">&ndash;&nbsp;defaultAnnotationViewClassForAnnotation:</a></code>
 	</span>
 	
 	
@@ -468,50 +485,13 @@ Will never be nil, but can be removed from the <a href="#//api/name/annotationPr
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/fileTypeTranslationTable" title="fileTypeTranslationTable"></a>
-	<h3 class="subsubtitle method-title">fileTypeTranslationTable</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The fileType translation table is used when we encounter pspdfkit:// links (or whatever is set to document.<a href="#//api/name/protocolString">protocolString</a>)
-Maps e.g. &ldquo;mpg&rdquo; to PSPDFLinkAnnotationVideo. (NSString -> NSNumber)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *fileTypeTranslationTable</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAnnotationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/protocolString" title="protocolString"></a>
 	<h3 class="subsubtitle method-title">protocolString</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Change the protocol that&rsquo;s used to parse pspdfkit-additions (links, audio, video). Defaults to &lsquo;pspdfkit://&rsquo;.</p>
+		<p>Change the protocol that&rsquo;s used to parse PSPDFKit-additions (links, audio, video). Defaults to <code>pspdfkit://</code>.</p>
 	</div>		
 	
     
@@ -549,6 +529,85 @@ Maps e.g. &ldquo;mpg&rdquo; to PSPDFLinkAnnotationVideo. (NSString -> NSNumber)<
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fileTypeTranslationTable" title="fileTypeTranslationTable"></a>
+	<h3 class="subsubtitle method-title">fileTypeTranslationTable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The fileType translation table is used when we encounter pspdfkit:// links (or whatever is set to <code>document.</code>protocolString<code></code>)
+Maps e.g. &ldquo;mpg&rdquo; to <code>PSPDFLinkAnnotationVideo</code>. (NSString -> NSNumber)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSDictionary *)fileTypeTranslationTable</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mediaFileTypes" title="mediaFileTypes"></a>
+	<h3 class="subsubtitle method-title">mediaFileTypes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Filtered <a href="#//api/name/fileTypeTranslationTable">fileTypeTranslationTable</a> that only returns video or audio elements.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)mediaFileTypes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -581,9 +640,9 @@ Maps e.g. &ldquo;mpg&rdquo; to PSPDFLinkAnnotationVideo. (NSString -> NSNumber)<
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> PSPDFAnnotationManager will query all registered <a href="#//api/name/annotationProviders">annotationProviders</a> until one returns YES on addAnnotations.
-Will return NO if no annotationProvider can handle the annotations. (By default, the <a href="../Classes/PSPDFFileAnnotationProvider.html">PSPDFFileAnnotationProvider</a> will handle all annotations.)</p>
+Will return NO if no annotationProvider can handle the annotations. (By default, the <a href="../Classes/PSPDFFileAnnotationProvider.html"><code>PSPDFFileAnnotationProvider</code></a> will handle all annotations.)</p>
 
-<p>If you&rsquo;re just interested in being notified, you can register a custom annotationProvider and set in the array before the file annotationProvider. Implement addAnnotations: and return NO. You&rsquo;ll be notified of all add operations.</p></div>
+<p>If you&rsquo;re just interested in being notified, you can register a custom <code>annotationProvider</code> and set in the array before the file <code>annotationProvider</code>. Implement <code>addAnnotations:</code> and return NO. You&rsquo;ll be notified of all add operations.</p></div>
 	</div>
 	
 	
@@ -648,8 +707,9 @@ Will return NO if no annotationProvider can handle the annotations. (By default,
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Any annotation that returns YES on isOverlay needs a view class to be displayed.
-Will be called on all <a href="#//api/name/annotationProviders">annotationProviders</a> until someone doesn&rsquo;t return nil.</p>
+		<p>Any annotation that returns YES on <code>isOverlay</code> needs a view class to be displayed.
+Will be called on all <a href="#//api/name/annotationProviders"><code>annotationProviders</code></a> until someone doesn&rsquo;t return nil.
+If no class is found, the view will be ignored.</p>
 	</div>		
 	
     
@@ -663,11 +723,6 @@ Will be called on all <a href="#//api/name/annotationProviders">annotationProvid
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>If no class is found, the view will be ignored.</p>
-	</div>
 	
 	
 	
@@ -733,8 +788,8 @@ For example, to get all annotations except links, use PSPDFAnnotationTypeAll &am
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Fast path, same as <a href="#//api/name/annotationsForPage:type:">annotationsForPage:type:</a> but with already opened pageRef.
-If you want to override annotationsForPage:type, override this instead.</p>
+		<p>Fast path, same as <a href="#//api/name/annotationsForPage:type:"><code>annotationsForPage:type:</code></a> but with already opened pageRef.
+If you want to override <a href="#//api/name/annotationsForPage:type:"><code>annotationsForPage:type:</code></a>, override this instead.</p>
 	</div>		
 	
     
@@ -764,6 +819,47 @@ If you want to override annotationsForPage:type, override this instead.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/defaultAnnotationViewClassForAnnotation:" title="defaultAnnotationViewClassForAnnotation:"></a>
+	<h3 class="subsubtitle method-title">defaultAnnotationViewClassForAnnotation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the view class that can host the specific annotation subtype.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Class)defaultAnnotationViewClassForAnnotation:(PSPDFAnnotation *)<em>annotation</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Usually you want to write an annotation provider and implement <a href="#//api/name/annotationViewClassForAnnotation:"><code>annotationViewClassForAnnotation:</code></a> instead of subclassing.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAnnotationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/didChangeAnnotation:keyPaths:options:" title="didChangeAnnotation:keyPaths:options:"></a>
 	<h3 class="subsubtitle method-title">didChangeAnnotation:keyPaths:options:</h3>
 	
@@ -771,7 +867,7 @@ If you want to override annotationsForPage:type, override this instead.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Will be called by PSPDF internally every time an annotation is changed.
-Call will be relayed to all <a href="#//api/name/annotationProviders">annotationProviders</a>.</p>
+Call will be relayed to all <a href="#//api/name/annotationProviders"><code>annotationProviders</code></a>.</p>
 	</div>		
 	
     
@@ -788,7 +884,7 @@ Call will be relayed to all <a href="#//api/name/annotationProviders">annotation
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This method will be called on ALL annotations, not just the ones that you provided.</p><div class="note"><p><strong>Note:</strong> If you have custom code that changes annotations and you rely on the didChangeAnnotation: event, you need to call it manually.</p>
+		<p>This method will be called on ALL annotations, not just the ones that you provided.</p><div class="note"><p><strong>Note:</strong> If you have custom code that changes annotations and you rely on the <code>didChangeAnnotation:</code> event, you need to call it manually.</p>
 
 <p>Options is used internally to determine of the file annotation provider should request an annotation update. (the userInfo notification dict will be forwarded.)</p></div>
 	</div>
@@ -894,42 +990,6 @@ This is used to determine if <a href="#//api/name/annotationsForPage:type:">anno
     
 
 	<div class="method-subsection method-declaration"><code>- (id)initWithDocumentProvider:(PSPDFDocumentProvider *)<em>documentProvider</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAnnotationManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/mediaFileTypes" title="mediaFileTypes"></a>
-	<h3 class="subsubtitle method-title">mediaFileTypes</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Filtered <a href="#//api/name/fileTypeTranslationTable">fileTypeTranslationTable</a> that only returns video or audio elements.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSArray *)mediaFileTypes</code></div>
 
     
 	
@@ -1075,7 +1135,7 @@ Usually you want to override the method in <a href="../Classes/PSPDFFileAnnotati
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Provided to the PSPDFAnnotationProviders via <a href="../Protocols/PSPDFAnnotationProviderChangeNotifier.html">PSPDFAnnotationProviderChangeNotifier</a>.
+		<p>Provided to the <code>PSPDFAnnotationProviders</code> via <a href="../Protocols/PSPDFAnnotationProviderChangeNotifier.html"><code>PSPDFAnnotationProviderChangeNotifier</code></a>.
 Will update any visible annotation.</p>
 	</div>		
 	
@@ -1120,7 +1180,7 @@ Will update any visible annotation.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

@@ -130,11 +130,11 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advanced Methods">Advanced Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PageRange Methods">PageRange Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_SubclassingHooks Methods">SubclassingHooks Methods</a></span></li>
 	
 </ul></li>
 
@@ -428,6 +428,20 @@ Each <a href="#//api/name/document">document</a> provider has exactly one <a hre
 						</ul>
 						
 						
+						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
+						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Advanced Methods" name="task_Advanced Methods"></a>
 						<h3 class="subsubtitle task-title">Advanced Methods</h3>
 
@@ -485,20 +499,6 @@ Each <a href="#//api/name/document">document</a> provider has exactly one <a hre
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/translateRealPageToCappedPage:">&ndash;&nbsp;translateRealPageToCappedPage:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="SubclassingHooks Methods" name="task_SubclassingHooks Methods"></a>
-						<h3 class="subsubtitle task-title">SubclassingHooks Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/saveAnnotationsWithOptions:error:">&ndash;&nbsp;saveAnnotationsWithOptions:error:</a></code>
 	</span>
 	
 	
@@ -596,7 +596,7 @@ Each <a href="#//api/name/document">document</a> provider has exactly one <a hre
 	<div class="method-subsection brief-description">
 		<p>Link annotation parser class for current PDF.
 Lazy initialized. Can be subclassed or set externally.
-If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> in didCreateDocumentProvider:.</p>
+If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> in <code>didCreateDocumentProvider:</code>.</p>
 	</div>		
 	
     
@@ -1032,7 +1032,7 @@ NOT readonly, since we may write back annotation data.</p>
 	<div class="method-subsection brief-description">
 		<p>Page labels found in the current PDF.
 Lazy initialized. Can be subclassed or set externally.
-If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> in didCreateDocumentProvider:.</p>
+If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> in <code>didCreateDocumentProvider:</code>.</p>
 	</div>		
 	
     
@@ -1085,7 +1085,7 @@ If you set this externally, do this ONLY in your subclass of <a href="../Classes
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> Meta<a href="#//api/name/data">data</a> is not guaranteed to be NSString. Check the type when accessing.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> Meta<a href="#//api/name/data">data</a> is not guaranteed to be <code>NSString</code>. Check the type when accessing.</p></div>
 	</div>
 	
 	
@@ -1147,7 +1147,7 @@ If you set this externally, do this ONLY in your subclass of <a href="../Classes
 	<div class="method-subsection brief-description">
 		<p>Outline extraction class for current PDF.
 Lazy initialized. Can be subclassed or set externally.
-If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> in didCreateDocumentProvider:.</p>
+If you set this externally, do this ONLY in your subclass of <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> in <code>didCreateDocumentProvider:</code>.</p>
 	</div>		
 	
     
@@ -1200,7 +1200,7 @@ If you set this externally, do this ONLY in your subclass of <a href="../Classes
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> Manually setting the pageCount usually is not recommended.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> Manually setting the <code>pageCount</code> usually is not recommended.</p></div>
 	</div>
 	
 	
@@ -1261,7 +1261,7 @@ If you set this externally, do this ONLY in your subclass of <a href="../Classes
 	
 	<div class="method-subsection brief-description">
 		<p>Limit pages to a certain page range. Defaults to nil.
-If <a href="#//api/name/document">document</a> has a pageRange set, the visible pages can be limited to a certain subset.</p>
+If <a href="#//api/name/document">document</a> has a <code>pageRange</code> set, the visible pages can be limited to a certain subset.</p>
 	</div>		
 	
     
@@ -1278,7 +1278,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> Changing this will require a reloadData on the <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> Changing this will require a reloadData on the <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>.</p></div>
 	</div>
 	
 	
@@ -1389,7 +1389,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a NSData representation, memory-maps files, tries to copy a CGDataProviderRef</p>
+		<p>Returns a NSData representation, memory-maps files, tries to copy a <code>CGDataProviderRef</code>.</p>
 	</div>		
 	
     
@@ -1461,7 +1461,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize with NSData. (can be memory or mapped <a href="#//api/name/data">data</a>)</p>
+		<p>Initialize with <code>NSData</code>. (can be memory or mapped <a href="#//api/name/data">data</a>)</p>
 	</div>		
 	
     
@@ -1497,7 +1497,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize with CGDataProviderRef. (can be used for dynamic decryption)</p>
+		<p>Initialize with <code>CGDataProviderRef</code>. (can be used for dynamic decryption)</p>
 	</div>		
 	
     
@@ -1622,7 +1622,7 @@ If <a href="#//api/name/document">document</a> has a pageRange set, the visible 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> You shouldn&rsquo;t call this method directly, use the high-level save method in <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> instead.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> You shouldn&rsquo;t call this method directly, use the high-level save method in <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> instead.</p></div>
 	</div>
 	
 	
@@ -1684,7 +1684,7 @@ Will parse the page contents before returning. Might take a while.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Translates the capped page to the real page.
-Will only return something different if <a href="#//api/name/pageRange">pageRange</a> is set.</p>
+Will only return something different if <a href="#//api/name/pageRange"><code>pageRange</code></a> is set.</p>
 	</div>		
 	
     
@@ -1721,7 +1721,7 @@ Will only return something different if <a href="#//api/name/pageRange">pageRang
 	
 	<div class="method-subsection brief-description">
 		<p>Translates the real page to the capped page.
-Will only return something different if <a href="#//api/name/pageRange">pageRange</a> is set.</p>
+Will only return something different if <a href="#//api/name/pageRange"><code>pageRange</code></a> is set.</p>
 	</div>		
 	
     
@@ -1802,7 +1802,7 @@ Will set .<a href="#//api/name/password">password</a> to this <a href="#//api/na
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

@@ -272,7 +272,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Implement this delegate in your UIViewController to get notified of <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> events.</p>
+						<p>Implement this delegate in your <code>UIViewController</code> to get notified of <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a> events.</p>
 					</div>
 					
 					
@@ -590,9 +590,9 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a pre-generated annotationView that can be modified before being added to the view.
-If no generator for a custom annotation is found, annotationView will be nil (as a replacement to viewForAnnotation)
-To get the targeted rect use [annotation rectForPageRect:pageView.bounds];</p>
+		<p>Returns a pre-generated <code>annotationView</code> that can be modified before being added to the view.
+If no generator for a custom annotation is found, <code>annotationView</code> will be nil (as a replacement to viewForAnnotation)
+To get the targeted rect use <code>[annotation rectForPageRect:pageView.bounds]</code>;</p>
 	</div>		
 	
     
@@ -717,7 +717,7 @@ To get the targeted rect use [annotation rectForPageRect:pageView.bounds];</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> This will also be called for nil and broken documents. use document.isValid to check.</p></div>
+		<div class="note"><p><strong>Note:</strong> This will also be called for nil and broken documents. use <code>document.isValid</code> to check.</p></div>
 	</div>
 	
 	
@@ -741,7 +741,7 @@ To get the targeted rect use [annotation rectForPageRect:pageView.bounds];</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Will be called when viewMode changes.</p>
+		<p>Will be called when <code>viewMode</code> changes.</p>
 	</div>		
 	
     
@@ -795,12 +795,12 @@ If decelerate is YES, this will be called again after deceleration is complete.<
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>You can also change the target with changing targetContentOffset.</p>
+		<p>You can also change the target with changing <code>targetContentOffset</code>.</p>
 
 <p>This delegate combines the following scrollViewDelegates:
-- scrollViewWillEndDragging / scrollViewDidEndDragging
-- scrollViewDidEndDecelerating</p><div class="note"><p><strong>Note:</strong> Be careful to not dereference a nil pointer in targetContentOffset.
-To get more delegate options, you can subclass <a href="../Classes/PSPDFScrollView.html">PSPDFScrollView</a> and use all available delegates of UIScrollViewDelegate (don&rsquo;t forget calling super)</p></div>
+- <code>scrollViewWillEndDragging:</code> / <code>scrollViewDidEndDragging:</code>
+- <code>scrollViewDidEndDecelerating:</code></p><div class="note"><p><strong>Note:</strong> Be careful to not dereference a nil pointer in <code>targetContentOffset</code>.
+To get more delegate options, you can subclass <a href="../Classes/PSPDFScrollView.html"><code>PSPDFScrollView</code></a> and use all available delegates of <code>UIScrollViewDelegate</code>. (don&rsquo;t forget calling super)</p></div>
 	</div>
 	
 	
@@ -932,7 +932,7 @@ To get more delegate options, you can subclass <a href="../Classes/PSPDFScrollVi
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called after pdf page has been loaded and added to the pagingScrollView.</p>
+		<p>Called after pdf page has been loaded and added to the <code>pagingScrollView</code>.</p>
 	</div>		
 	
     
@@ -968,7 +968,7 @@ To get more delegate options, you can subclass <a href="../Classes/PSPDFScrollVi
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Similar to didTapOnPageView; invoked after 0.35 sec of tap-holding. LongPress and tap are mutually exclusive. Return YES if you custom-process that event.</p>
+		<p>Similar to <code>didTapOnPageView:</code> invoked after 0.35 sec of tap-holding. LongPress and tap are mutually exclusive. Return YES if you custom-process that event.</p>
 	</div>		
 	
     
@@ -1085,7 +1085,7 @@ The gestureRecognizer helps you evaluating the state; as this delegate is called
 	
 	<div class="method-subsection brief-description">
 		<p>Called after text has been selected.
-Will also be called when text has been deselected. Deselection sometimes cannot be stopped, so the shouldSelectText: will be skipped.</p>
+Will also be called when text has been deselected. Deselection sometimes cannot be stopped, so the <code>shouldSelectText:</code> will be skipped.</p>
 	</div>		
 	
     
@@ -1138,8 +1138,8 @@ Will also be called when text has been deselected. Deselection sometimes cannot 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> This will only be called for annotations that render as an overlay (that return YES for isOverlay)
-PSPDFLinkAnnotations are handled differently (they don&rsquo;t have a selected state) - delegate will not be called for those.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> This will only be called for annotations that render as an overlay (that return YES for <code>isOverlay</code>)
+<code>PSPDFLinkAnnotations</code> are handled differently (they don&rsquo;t have a selected state) - delegate will not be called for those.</p></div>
 	</div>
 	
 	
@@ -1163,7 +1163,7 @@ PSPDFLinkAnnotations are handled differently (they don&rsquo;t have a selected s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called after the controller has been fully displayed. Isn&rsquo;t called for UIPopoverController&rsquo;s.</p>
+		<p>Called after the controller has been fully displayed. Isn&rsquo;t called for <code>UIPopoverController's</code>.</p>
 	</div>		
 	
     
@@ -1271,7 +1271,7 @@ PSPDFLinkAnnotations are handled differently (they don&rsquo;t have a selected s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate for tapping annotations. Will be called before the more general didTapOnPageView if an annotationView is hit.</p>
+		<p>Delegate for tapping annotations. Will be called before the more general <code>didTapOnPageView:</code> if an annotationView is hit.</p>
 	</div>		
 	
     
@@ -1293,8 +1293,8 @@ Default actions might be scroll to target page, open Safari, show a menu, &helli
 
 <p>Some annotations might not have an annotationView attached. (because they are rendered with the page content, for example highlight annotations)</p>
 
-<p>AnnotationPoint is the point relative to <a href="../Classes/PSPDFAnnotation.html">PSPDFAnnotation</a>, in PDF coordinate space.
-    viewPoint is the point relative to the <a href="../Classes/PSPDFPageView.html">PSPDFPageView</a>.</p>
+<p>AnnotationPoint is the point relative to <a href="../Classes/PSPDFAnnotation.html"><code>PSPDFAnnotation</code></a>, in PDF coordinate space.
+    viewPoint is the point relative to the <a href="../Classes/PSPDFPageView.html"><code>PSPDFPageView</code></a>.</p>
 	</div>
 	
 	
@@ -1318,7 +1318,7 @@ Default actions might be scroll to target page, open Safari, show a menu, &helli
 	
 	
 	<div class="method-subsection brief-description">
-		<p>didTapOnPageView will be called if a user taps on the screen. Taps outside pageView will be reported too (with negative offset)
+		<p><code>didTapOnPageView:</code> will be called if a user taps on the screen. Taps outside <code>pageView</code> will be reported too (with negative offset)
 Return YES if you want to set this touch as processed; this will disable automatic touch processing like showing/hiding the HUDView or scrolling to the next/previous page.</p>
 	</div>		
 	
@@ -1338,12 +1338,12 @@ Return YES if you want to set this touch as processed; this will disable automat
 		<h4 class="method-subtitle">Discussion</h4>
 		<div class="note"><p><strong>Note:</strong> This will not send events when the controller is in thumbnail view.</p>
 
-<p>PSPDFPageCoordinates has been replaced by just CGPoint viewPoint.
+<p>PSPDFPageCoordinates has been replaced by just <code>CGPoint</code> <code>viewPoint</code>.
 You can easily calculate other needed coordinates:
-e.g. to get the pdfPoint:    [pageView convertViewPointToPDFPoint:viewPoint]
-                 screenPoint: [pageView convertPoint:tapPosition fromView:pageView]
-                 zoomScale:    pageView.scrollView.zoomScale
-                 pageInfo:     pageView.pageInfo</p></div>
+e.g. to get the pdfPoint:    <code>[pageView convertViewPointToPDFPoint:viewPoint]</code>
+                 screenPoint: <code>[pageView convertPoint:tapPosition fromView:pageView]</code>
+                 zoomScale:    <code>pageView.scrollView.zoomScale</code>
+                 pageInfo:     <code>pageView.pageInfo</code></p></div>
 	</div>
 	
 	
@@ -1368,7 +1368,7 @@ e.g. to get the pdfPoint:    [pageView convertViewPointToPDFPoint:viewPoint]
 	
 	<div class="method-subsection brief-description">
 		<p>Return a <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a> for a relative path.
-If this returns nil, we try to find the PDF ourselves with using the current document&rsquo;s basePath.</p>
+If this returns nil, we try to find the PDF ourselves with using the current document&rsquo;s <code>basePath</code>.</p>
 	</div>		
 	
     
@@ -1405,8 +1405,8 @@ If this returns nil, we try to find the PDF ourselves with using the current doc
 	
 	<div class="method-subsection brief-description">
 		<p>If you implement your own super-custom toolbar, handle updates for bar buttons. (e.g. with re-setting the items array)
-One popular example is <a href="../Classes/PSPDFBookmarkBarButtonItem.html">PSPDFBookmarkBarButtonItem</a>, which needs to change its image after pressing the button.
-Ignore this if you&rsquo;re letting PSPDFKit manage your toolbar or if you&rsquo;re using a UIToolbar.
+One popular example is <a href="../Classes/PSPDFBookmarkBarButtonItem.html"><code>PSPDFBookmarkBarButtonItem</code></a>, which needs to change its image after pressing the button.
+Ignore this if you&rsquo;re letting PSPDFKit manage your toolbar or if you&rsquo;re using an <code>UIToolbar</code>.
 If you implement this delegate, the default UIToolbar-update-code will not be called.</p>
 	</div>		
 	
@@ -1595,7 +1595,7 @@ If NO is returned, viewForAnnotation will not be called.</p></div>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called before an annotation will be selected. (but after didTapOnAnnotation)</p>
+		<p>Called before an annotation will be selected. (but after <code>didTapOnAnnotation:</code>)</p>
 	</div>		
 	
     
@@ -1684,7 +1684,7 @@ If NO is returned, viewForAnnotation will not be called.</p></div>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The embeddedInController is either a UINavigationController, a UIPopoverController or nil. viewController is of type id because controller like UIPrintInteractionController are no subclasses of UIViewController.</p>
+		<p>The <code>embeddedInController</code> is either a <code>UINavigationController</code>, a <code>UIPopoverController</code> or nil. viewController is of type id because controller like <code>UIPrintInteractionController</code> are no subclasses of <code>UIViewController</code>.</p>
 
 <p>Return NO to process the displaying manually.</p>
 	</div>
@@ -1837,10 +1837,10 @@ All coordinates are in view coordinate space.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Using <a href="../Classes/PSPDFMenuItem.html">PSPDFMenuItem</a> will help with adding custom menu&rsquo;s w/o hacking the responder chain.
+		<p>Using <a href="../Classes/PSPDFMenuItem.html"><code>PSPDFMenuItem</code></a> will help with adding custom menu&rsquo;s w/o hacking the responder chain.
 Default returns menuItems if not implemented. Return nil or an empty array to not show the menu.</p>
 
-<p>Use PSPDFMenuItem&rsquo;s &lsquo;identifier&rsquo; to check and modify the menu items. This string will not be translated (vs the title property)</p>
+<p>Use <code>PSPDFMenuItem's</code> <code>identifier</code> property to check and modify the menu items. This string will not be translated. (vs the title property)</p>
 	</div>
 	
 	
@@ -1881,8 +1881,8 @@ Default returns menuItems if not implemented. Return nil or an empty array to no
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> This will only be called for annotations that render as an overlay (that return YES for isOverlay)
-PSPDFLinkAnnotations are handled differently (they don&rsquo;t have a selected state) - delegate will not be called for those.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> This will only be called for annotations that render as an overlay (that return YES for <code>isOverlay</code>)
+<code>PSPDFLinkAnnotations</code> are handled differently (they don&rsquo;t have a selected state) - delegate will not be called for those.</p></div>
 	</div>
 	
 	
@@ -1906,7 +1906,7 @@ PSPDFLinkAnnotations are handled differently (they don&rsquo;t have a selected s
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called before a pdf page will be unloaded and removed from the pagingScrollView.</p>
+		<p>Called before a pdf page will be unloaded and removed from the <code>pagingScrollView</code>.</p>
 	</div>		
 	
     
@@ -2033,7 +2033,7 @@ Called before PSPDFKit tries to save any dirty annotation.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

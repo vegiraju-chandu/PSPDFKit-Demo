@@ -45,9 +45,15 @@
 	
 	<option value="//api/name/decryptFromURL:toURL:key:error:">&nbsp;&nbsp;&nbsp;&nbsp;- decryptFromURL:toURL:key:error:</option>
 	
+	<option value="//api/name/decryptFromURL:toURL:passphrase:error:">&nbsp;&nbsp;&nbsp;&nbsp;- decryptFromURL:toURL:passphrase:error:</option>
+	
 	<option value="//api/name/encryptFromURL:toURL:key:error:">&nbsp;&nbsp;&nbsp;&nbsp;- encryptFromURL:toURL:key:error:</option>
 	
+	<option value="//api/name/encryptFromURL:toURL:passphrase:error:">&nbsp;&nbsp;&nbsp;&nbsp;- encryptFromURL:toURL:passphrase:error:</option>
+	
 	<option value="//api/name/keyFromPassphrase:salt:">&nbsp;&nbsp;&nbsp;&nbsp;- keyFromPassphrase:salt:</option>
+	
+	<option value="//api/name/keyFromPassphrase:salt:PRF:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- keyFromPassphrase:salt:PRF:rounds:</option>
 	
 	
 	
@@ -79,9 +85,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decryptFromURL:toURL:key:error:">decryptFromURL:toURL:key:error:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decryptFromURL:toURL:passphrase:error:">decryptFromURL:toURL:passphrase:error:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encryptFromURL:toURL:key:error:">encryptFromURL:toURL:key:error:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encryptFromURL:toURL:passphrase:error:">encryptFromURL:toURL:passphrase:error:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyFromPassphrase:salt:">keyFromPassphrase:salt:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyFromPassphrase:salt:PRF:rounds:">keyFromPassphrase:salt:PRF:rounds:</a></span></li>
 	
 </ul></li>
 
@@ -120,7 +132,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Simple class that encrypts/decrypts files in a format compatible to <a href="../Classes/PSPDFAESCryptoDataProvider.html">PSPDFAESCryptoDataProvider</a>.</p>
+						<p>Simple class that encrypts/decrypts files in a format compatible to <a href="../Classes/PSPDFAESCryptoDataProvider.html"><code>PSPDFAESCryptoDataProvider</code></a>.</p>
 					</div>
 					
 					
@@ -144,6 +156,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/keyFromPassphrase:salt:PRF:rounds:">&ndash;&nbsp;keyFromPassphrase:salt:PRF:rounds:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/encryptFromURL:toURL:key:error:">&ndash;&nbsp;encryptFromURL:toURL:key:error:</a></code>
 	</span>
 	
@@ -151,6 +169,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/decryptFromURL:toURL:key:error:">&ndash;&nbsp;decryptFromURL:toURL:key:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encryptFromURL:toURL:passphrase:error:">&ndash;&nbsp;encryptFromURL:toURL:passphrase:error:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decryptFromURL:toURL:passphrase:error:">&ndash;&nbsp;decryptFromURL:toURL:passphrase:error:</a></code>
 	</span>
 	
 	
@@ -178,12 +208,52 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Decrypt a file</p>
+		<p>Decrypt a file.
+Both the legacy and the current file formats are supported.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>- (BOOL)decryptFromURL:(NSURL *)<em>sourceURL</em> toURL:(NSURL *)<em>targetURL</em> key:(NSData *)<em>key</em> error:(NSError **)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFCryptor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decryptFromURL:toURL:passphrase:error:" title="decryptFromURL:toURL:passphrase:error:"></a>
+	<h3 class="subsubtitle method-title">decryptFromURL:toURL:passphrase:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Decrypt a file.
+Both the legacy and the current RNCryptor file formats are supported.
+For the current file format encryption salt from the file header will be used to construct the encryption key.
+<a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)decryptFromURL:(NSURL *)<em>sourceURL</em> toURL:(NSURL *)<em>targetURL</em> passphrase:(NSString *)<em>passphrase</em> error:(NSError **)<em>error</em></code></div>
 
     
 	
@@ -214,12 +284,50 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Encrypt a file.</p>
+		<p>Encrypt a file (DOES NOT store encryption salt in the file header)
+Using format <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a></p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>- (BOOL)encryptFromURL:(NSURL *)<em>sourceURL</em> toURL:(NSURL *)<em>targetURL</em> key:(NSData *)<em>key</em> error:(NSError **)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFCryptor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encryptFromURL:toURL:passphrase:error:" title="encryptFromURL:toURL:passphrase:error:"></a>
+	<h3 class="subsubtitle method-title">encryptFromURL:toURL:passphrase:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Encrypt a file (stores encryption salt in the file header)
+Using format <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)encryptFromURL:(NSURL *)<em>sourceURL</em> toURL:(NSURL *)<em>targetURL</em> passphrase:(NSString *)<em>passphrase</em> error:(NSError **)<em>error</em></code></div>
 
     
 	
@@ -250,12 +358,55 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Generate a key</p>
+		<p>Generates a key with (kCCPRFHmacAlgSHA1, 10k iterations, used in new file format - <a href="http://github.com/rnapier/RNCryptor/wiki/Data-Format">http://github.com/rnapier/RNCryptor/wiki/Data-Format)</a>)
+WARNING! In previous versions it generated (kCCPRFHmacAlgSHA256, 50k used in the legacy file format.
+Use - (NSData <em>)keyFromPassphrase:(NSString </em>)passphrase salt:(NSString *)salt PRF:(CCPseudoRandomAlgorithm)prf rounds:(uint)rounds;
+to generate key to decrypt legacy file format.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>- (NSData *)keyFromPassphrase:(NSString *)<em>passphrase</em> salt:(NSString *)<em>salt</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFCryptor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keyFromPassphrase:salt:PRF:rounds:" title="keyFromPassphrase:salt:PRF:rounds:"></a>
+	<h3 class="subsubtitle method-title">keyFromPassphrase:salt:PRF:rounds:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generate a key with custom number of iterations
+For the current (RNCryptor <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a> ) file format):
+The default PRF is kCCPRFHmacAlgSHA1.
+The default number of iterations is PSPDFAESDefaultPBKDFNumberOfRounds (10000).
+For the legacy file format use kCCPRFHmacAlgSHA256 and 50k rounds</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)keyFromPassphrase:(NSString *)<em>passphrase</em> salt:(NSString *)<em>salt</em> PRF:(CCPseudoRandomAlgorithm)<em>prf</em> rounds:(uint)<em>rounds</em></code></div>
 
     
 	
@@ -294,7 +445,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

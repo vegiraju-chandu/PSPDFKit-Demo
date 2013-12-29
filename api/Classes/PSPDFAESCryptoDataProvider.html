@@ -57,6 +57,10 @@
 	
 	<option value="//api/name/initWithURL:binaryKey:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:binaryKey:</option>
 	
+	<option value="//api/name/initWithURL:passphrase:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphrase:</option>
+	
+	<option value="//api/name/initWithURL:passphrase:PRF:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphrase:PRF:rounds:</option>
+	
 	<option value="//api/name/initWithURL:passphrase:salt:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphrase:salt:rounds:</option>
 	
 	<option value="//api/name/initWithURL:passphraseData:salt:rounds:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:passphraseData:salt:rounds:</option>
@@ -105,6 +109,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:binaryKey:">initWithURL:binaryKey:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphrase:">initWithURL:passphrase:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphrase:PRF:rounds:">initWithURL:passphrase:PRF:rounds:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphrase:salt:rounds:">initWithURL:passphrase:salt:rounds:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:passphraseData:salt:rounds:">initWithURL:passphraseData:salt:rounds:</a></span></li>
@@ -146,14 +154,15 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This class allows a transparent decryption of AES256 encrypted files (using CBC and an initial 16 byte IV vector)
-The IV vector for the file is written in the first 16 bytes of the file to read.
+						<p>This class allows a transparent decryption of AES256 encrypted files using
+the RNCryptor file format <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a>
+Legacy PSPDFKit old file format is also supported.
 Use the provided encryption tool to prepare your documents.</p>
 
 <p>Ensure your passphrase/salt are also protected within the binary, or at least obfuscated.</p>
 
 <p>Encryption marginally slows down rendering, since everything is decrypted on the fly.
-Only available in PSPDFKit Basic/Complete</p>
+Only available in PSPDFKit Basic/Complete.</p>
 					</div>
 					
 					
@@ -178,6 +187,18 @@ Only available in PSPDFKit Basic/Complete</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithURL:passphraseData:salt:rounds:">&ndash;&nbsp;initWithURL:passphraseData:salt:rounds:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:passphrase:">&ndash;&nbsp;initWithURL:passphrase:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:passphrase:PRF:rounds:">&ndash;&nbsp;initWithURL:passphrase:PRF:rounds:</a></code>
 	</span>
 	
 	
@@ -225,7 +246,7 @@ Only available in PSPDFKit Basic/Complete</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>PSPDFCryptoDataProvider will be retained as long as you retain this.</p>
+		<p><code>PSPDFCryptoDataProvider</code> will be retained as long as you retain this.</p>
 	</div>		
 	
     
@@ -269,7 +290,7 @@ Only available in PSPDFKit Basic/Complete</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Helper to detect if this CGDataProviderRef is handled by PSPDFAESCryptoDataProvider.</p>
+		<p>Helper to detect if this <code>CGDataProviderRef</code> is handled by <code>PSPDFAESCryptoDataProvider</code>.</p>
 	</div>		
 	
     
@@ -305,7 +326,7 @@ Only available in PSPDFKit Basic/Complete</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Feature only available in PSPDFKit Annotate.</p>
+		<p>Feature only available in PSPDFKit Basic/Complete.</p>
 	</div>		
 	
     
@@ -350,13 +371,97 @@ Only available in PSPDFKit Basic/Complete</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Designated initializer with a prepared, stretched, binary key.
-Warning: only use this if the key is cryptographically random and of length kCCKeySizeAES256.
+Warning: only use this if the key is cryptographically random and of length <code>kCCKeySizeAES256</code>.
+The default PRF is <code>kCCPRFHmacAlgSHA1</code>.
+The default number of iterations is <code>PSPDFAESDefaultPBKDFNumberOfRounds</code> (10000).
+For legacy file format use <code>kCCPRFHmacAlgSHA256</code> and 50000 rounds.
 URL must be a file-based URL.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> binaryKey:(NSData *)<em>key</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAESCryptoDataProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:passphrase:" title="initWithURL:passphrase:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:passphrase:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer with the passphrase. Salt will be loaded from the header of the
+file format (see <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a> )
+The default PRF is kCCPRFHmacAlgSHA1.
+The number of iterations will be the new default PSPDFAESDefaultPBKDFNumberOfRounds (10000)
+URL must be a file-based URL.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> passphrase:(NSString *)<em>passphrase</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFAESCryptoDataProvider.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:passphrase:PRF:rounds:" title="initWithURL:passphrase:PRF:rounds:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:passphrase:PRF:rounds:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer with the passphrase and customized PRF and iterations number.
+Salt will be loaded from the header of the
+file format (see <a href="https://github.com/rnapier/RNCryptor/wiki/Data-Format">https://github.com/rnapier/RNCryptor/wiki/Data-Format</a> )
+The default PRF is <code>kCCPRFHmacAlgSHA1</code>.
+The default number of iterations is <code>PSPDFAESDefaultPBKDFNumberOfRounds</code> (10000).
+URL must be a file-based URL.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>URL</em> passphrase:(NSString *)<em>passphrase</em> PRF:(CCPseudoRandomAlgorithm)<em>prf</em> rounds:(uint)<em>rounds</em></code></div>
 
     
 	
@@ -469,7 +574,7 @@ URL must be a file-based URL.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

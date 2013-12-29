@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFGalleryScrollableContentView Class Reference</title>
+		<title>PSPDFMediaPlayerAudioPlaceholderView Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFGalleryScrollableContentView Class Reference</h1>
+				<h1 class="hideInXcode">PSPDFMediaPlayerAudioPlaceholderView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -37,22 +39,15 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/maximumZoomScale">&nbsp;&nbsp;&nbsp;&nbsp;maximumZoomScale</option>
+	<option value="//api/name/gradientEndColor">&nbsp;&nbsp;&nbsp;&nbsp;gradientEndColor</option>
 	
-	<option value="//api/name/minimumZoomScale">&nbsp;&nbsp;&nbsp;&nbsp;minimumZoomScale</option>
+	<option value="//api/name/gradientStartColor">&nbsp;&nbsp;&nbsp;&nbsp;gradientStartColor</option>
 	
-	<option value="//api/name/zoomEnabled">&nbsp;&nbsp;&nbsp;&nbsp;zoomEnabled</option>
-	
-	<option value="//api/name/zoomScale">&nbsp;&nbsp;&nbsp;&nbsp;zoomScale</option>
+	<option value="//api/name/placeholderImageTemplate">&nbsp;&nbsp;&nbsp;&nbsp;placeholderImageTemplate</option>
 	
 	
 	
 	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/setZoomScale:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- setZoomScale:animated:</option>
 	
 	
 	
@@ -63,6 +58,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -76,32 +73,24 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maximumZoomScale">maximumZoomScale</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gradientEndColor">gradientEndColor</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minimumZoomScale">minimumZoomScale</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gradientStartColor">gradientStartColor</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomEnabled">zoomEnabled</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zoomScale">zoomScale</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/placeholderImageTemplate">placeholderImageTemplate</a></span></li>
 	
 </ul></li>
 
 
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setZoomScale:animated:">setZoomScale:animated:</a></span></li>
-	
-</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFGalleryScrollableContentView Class Reference" name="top"></a>
+				<a title="PSPDFMediaPlayerAudioPlaceholderView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -110,7 +99,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFGalleryScrollableContentView Class Reference</h1>
+						<h1 class="title title-header">PSPDFMediaPlayerAudioPlaceholderView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -118,15 +107,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFGalleryContentView.html">PSPDFGalleryContentView</a> : UIView</td>
+	<td class="specification-value">UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFGalleryScrollableContentView.h</td>
+	<td class="specification-value">PSPDFMediaPlayerAudioPlaceholderView.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A placeholder view that is displayed instead of the video if no video track is available.</p>
+					</div>
+					
+					
 					
 					
 					
@@ -141,33 +138,21 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/zoomEnabled">&nbsp;&nbsp;zoomEnabled</a></code>
+		<code><a href="#//api/name/placeholderImageTemplate">&nbsp;&nbsp;placeholderImageTemplate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/maximumZoomScale">&nbsp;&nbsp;maximumZoomScale</a></code>
+		<code><a href="#//api/name/gradientStartColor">&nbsp;&nbsp;gradientStartColor</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/minimumZoomScale">&nbsp;&nbsp;minimumZoomScale</a></code>
+		<code><a href="#//api/name/gradientEndColor">&nbsp;&nbsp;gradientEndColor</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/zoomScale">&nbsp;&nbsp;zoomScale</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setZoomScale:animated:">&ndash;&nbsp;setZoomScale:animated:</a></code>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -183,19 +168,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/maximumZoomScale" title="maximumZoomScale"></a>
-	<h3 class="subsubtitle method-title">maximumZoomScale</h3>
+	<a name="//api/name/gradientEndColor" title="gradientEndColor"></a>
+	<h3 class="subsubtitle method-title">gradientEndColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The maximum zoom scale that you want to allow. Only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES.
-Defaults to 5.0.</p>
+		<p>The end color of the gradient. The gradient goes from top to bottom.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat maximumZoomScale</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) UIColor *gradientEndColor</code></div>
 
     
 	
@@ -213,26 +197,25 @@ Defaults to 5.0.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
+		<code class="declared-in-ref">PSPDFMediaPlayerAudioPlaceholderView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/minimumZoomScale" title="minimumZoomScale"></a>
-	<h3 class="subsubtitle method-title">minimumZoomScale</h3>
+	<a name="//api/name/gradientStartColor" title="gradientStartColor"></a>
+	<h3 class="subsubtitle method-title">gradientStartColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The minimum zoom scale that you want to allow. Only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES.
-Defaults to 1.0.</p>
+		<p>The start color of the gradient. The gradient goes from top to bottom.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat minimumZoomScale</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) UIColor *gradientStartColor</code></div>
 
     
 	
@@ -250,26 +233,25 @@ Defaults to 1.0.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
+		<code class="declared-in-ref">PSPDFMediaPlayerAudioPlaceholderView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/zoomEnabled" title="zoomEnabled"></a>
-	<h3 class="subsubtitle method-title">zoomEnabled</h3>
+	<a name="//api/name/placeholderImageTemplate" title="placeholderImageTemplate"></a>
+	<h3 class="subsubtitle method-title">placeholderImageTemplate</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set this to YES if zooming should be enabled. This value only has an effect if an image
-is currently displayed. Defaults to NO.</p>
+		<p>The placeholder image. This should be considered a template and will be used as a mask.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isZoomEnabled) BOOL zoomEnabled</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *placeholderImageTemplate</code></div>
 
     
 	
@@ -287,43 +269,7 @@ is currently displayed. Defaults to NO.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/zoomScale" title="zoomScale"></a>
-	<h3 class="subsubtitle method-title">zoomScale</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The current zoom scale. This is only meaningful if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES. Defaults to 1.0.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat zoomScale</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
+		<code class="declared-in-ref">PSPDFMediaPlayerAudioPlaceholderView.h</code><br />
 	</div>				
 	
 	
@@ -334,49 +280,6 @@ is currently displayed. Defaults to NO.</p>
 					
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/setZoomScale:animated:" title="setZoomScale:animated:"></a>
-	<h3 class="subsubtitle method-title">setZoomScale:animated:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sets the current zoom scale, but only if <a href="#//api/name/zoomEnabled">zoomEnabled</a> is YES and
-<a href="#//api/name/minimumZoomScale">minimumZoomScale</a> &lt;= <a href="#//api/name/zoomScale">zoomScale</a> &lt;= <a href="#//api/name/maximumZoomScale">maximumZoomScale</a> is true.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setZoomScale:(CGFloat)<em>zoomScale</em> animated:(BOOL)<em>animated</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFGalleryScrollableContentView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
                     
@@ -391,7 +294,7 @@ is currently displayed. Defaults to NO.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

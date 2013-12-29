@@ -98,11 +98,11 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Mirrored properties from PSPDFViewController">Mirrored properties from PSPDFViewController</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Mirrored properties from `PSPDFViewController`">Mirrored properties from `PSPDFViewController`</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_PSPDFSubclassing Methods">PSPDFSubclassing Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
 	
 </ul></li>
 
@@ -196,19 +196,16 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>ScrollView that manages one or multiple PSPDFView&rsquo;s.</p>
+						<p>ScrollView that manages one or multiple <code>PSPDFView's</code>.</p>
 
-<p>Depending on the pageTransition, either every <a href="../Classes/PSPDFPageView.html">PSPDFPageView</a> is embedded in a PSPDFScrollView,
-or there is one global PSPDFScrollView for all PSPDFPageView&rsquo;s.
-This is also the center for all the gesture recognizers. Subclass to customize behavior (e.g. override gestureRecognizerShouldBegin)</p><div class="warning"><p><strong>Warning:</strong> If you manually zoom/change the contentOffset, you must use the methods with animation extension.
-(You don&rsquo;t have to animate, but those are overridden by PSPDFKit to properly inform the PSPDFPageViews to re-render. You can also use the default UIScrollView properties and manually call updateRenderView on each visible <a href="../Classes/PSPDFPageView.html">PSPDFPageView</a>)</p>
+<p>Depending on the <code>pageTransition</code>, either every <a href="../Classes/PSPDFPageView.html"><code>PSPDFPageView</code></a> is embedded in a <code>PSPDFScrollView</code>,
+or there is one global <code>PSPDFScrollView</code> for all <code>PSPDFPageView's</code>.
+This is also the center for all the gesture recognizers. Subclass to customize behavior (e.g. override <code>gestureRecognizerShouldBegin:</code>)</p><div class="warning"><p><strong>Warning:</strong> If you manually zoom/change the contentOffset, you must use the methods with animation extension.
+(You don&rsquo;t have to animate, but those are overridden by PSPDFKit to properly inform the <code>PSPDFPageViews</code> to re-render. You can also use the default <code>UIScrollView</code> properties and manually call updateRenderView on each visible <a href="../Classes/PSPDFPageView.html">PSPDFPageView</a>)</p>
 
-<ul>
-<li>(void)setZoomScale:(float)scale animated:(BOOL)animated;</li>
-<li>(void)zoomToRect:(CGRect)rect animated:(BOOL)animated;</li>
-<li>(void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;</li>
-</ul>
-</div>
+<p><code>- (void)setZoomScale:(float)scale animated:(BOOL)animated;</code>
+<code>- (void)zoomToRect:(CGRect)rect animated:(BOOL)animated;</code>
+<code>- (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;</code></p></div>
 					</div>
 					
 					
@@ -282,8 +279,8 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 						</ul>
 						
 						
-						<a title="Mirrored properties from PSPDFViewController" name="task_Mirrored properties from PSPDFViewController"></a>
-						<h3 class="subsubtitle task-title">Mirrored properties from PSPDFViewController</h3>
+						<a title="Mirrored properties from `PSPDFViewController`" name="task_Mirrored properties from `PSPDFViewController`"></a>
+						<h3 class="subsubtitle task-title">Mirrored properties from `PSPDFViewController`</h3>
 
 						<ul class="task-list">
 							<li>
@@ -326,6 +323,20 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 						</ul>
 						
 						
+						<a title="PSPDFSubclassing Methods" name="task_PSPDFSubclassing Methods"></a>
+						<h3 class="subsubtitle task-title">PSPDFSubclassing Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Private Methods" name="task_Private Methods"></a>
 						<h3 class="subsubtitle task-title">Private Methods</h3>
 
@@ -341,20 +352,6 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 		<code><a href="#//api/name/animatingZoomIn">&nbsp;&nbsp;animatingZoomIn</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="PSPDFSubclassing Methods" name="task_PSPDFSubclassing Methods"></a>
-						<h3 class="subsubtitle task-title">PSPDFSubclassing Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -376,8 +373,8 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Track animations of zoomToRect:animated: if we&rsquo;re zooming IN.
-(Used to decide when it&rsquo;s best to tile pages in ContinuousScroll)</p>
+		<p>Track animations of <code>zoomToRect:animated:</code> if we&rsquo;re zooming IN.
+(Used to decide when it&rsquo;s best to tile pages in continuous scroll)</p>
 	</div>		
 	
     
@@ -485,7 +482,7 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Shows first <a href="#//api/name/document">document</a> <a href="#//api/name/page">page</a> alone. Not relevant in PSPDFPageModeSingle.</p>
+		<p>Shows first <a href="#//api/name/document">document</a> <a href="#//api/name/page">page</a> alone. Not relevant in <code>PSPDFPageModeSingle</code>.</p>
 	</div>		
 	
     
@@ -557,7 +554,7 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Left <a href="#//api/name/page">page</a>. Always set. Not used if pageCurlEnabled.</p>
+		<p>Left <a href="#//api/name/page">page</a>. Always set. Not used in <code>PSPDFPageTransitionCurl</code>.</p>
 	</div>		
 	
     
@@ -809,7 +806,7 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Style of the <a href="#//api/name/page">page</a> shadow. Defaults to PSPDFShadowStyleFlat. Can be customized with overriding pathShadowForView.</p>
+		<p>Style of the <a href="#//api/name/page">page</a> shadow. Defaults to <code>PSPDFShadowStyleFlat</code>. Can be customized with overriding <a href="#//api/name/pathShadowForView:"><code>pathShadowForView:</code></a>.</p>
 	</div>		
 	
     
@@ -1016,16 +1013,16 @@ This is also the center for all the gesture recognizers. Subclass to customize b
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>PSPDFKit has a UITapGestureRecognizer to detects taps. There are several different actions called, if one succeeds further processing will be stopped.</p>
+		<p>PSPDFKit has a <code>UITapGestureRecognizer</code> to detects taps. There are several different actions called, if one succeeds further processing will be stopped.</p>
 
-<p>First, we check if we hit a <a href="../Classes/PSPDFLinkAnnotationView.html">PSPDFLinkAnnotationView</a> and invoke the delegates and default action if found.</p>
+<p>First, we check if we hit a <a href="../Classes/PSPDFLinkAnnotationView.html"><code>PSPDFLinkAnnotationView</code></a> and invoke the delegates and default action if found.</p>
 
 <p>Next, we check if there&rsquo;s text selection and discard if.
-Then, touches are relayed to all visible PSPDFPageView&rsquo;s and singleTapped: is called. If one <a href="#//api/name/page">page</a> reports that the touch has been processed; the loop is stopped.</p>
+Then, touches are relayed to all visible <code>PSPDFPageView's</code> and <code>singleTapped:</code> is called. If one <a href="#//api/name/page">page</a> reports that the touch has been processed; the loop is stopped.</p>
 
-<p>Next, the didTapOnPageView:atPoint: delegate is called if the touch still hasn&rsquo;t been processed.</p>
+<p>Next, the <code>didTapOnPageView:atPoint:</code> delegate is called if the touch still hasn&rsquo;t been processed.</p>
 
-<p>Lastly, if even the delegate returned NO, we look if <a href="#//api/name/scrollOnTapPageEndEnabled">isScrollOnTapPageEndEnabled</a> and scroll to the next/previous <a href="#//api/name/page">page</a> if the border is near enough; or just toggle the HUD (if that is allowed)</p>
+<p>Lastly, if even the delegate returned NO, we look if <a href="#//api/name/scrollOnTapPageEndEnabled"><code>isScrollOnTapPageEndEnabled</code></a> and scroll to the next/previous <a href="#//api/name/page">page</a> if the border is near enough; or just toggle the HUD (if that is allowed)</p>
 
 <p>Do note that the single and double tap gestures do not have dependencies. This has been made to improve single tap performance.
 If your app requires this, you can manually add this dependency.</p>
@@ -1060,7 +1057,7 @@ If your app requires this, you can manually add this dependency.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

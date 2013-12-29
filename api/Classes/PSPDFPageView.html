@@ -136,6 +136,8 @@
 	
 	<option value="//api/name/scrollView">&nbsp;&nbsp;&nbsp;&nbsp;- scrollView</option>
 	
+	<option value="//api/name/selectAnnotaton:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- selectAnnotaton:animated:</option>
+	
 	<option value="//api/name/showColorPickerForAnnotation:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- showColorPickerForAnnotation:animated:</option>
 	
 	<option value="//api/name/showFontPickerForAnnotation:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- showFontPickerForAnnotation:animated:</option>
@@ -182,9 +184,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Shadow settings">Shadow settings</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationMenu Methods">AnnotationMenu Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationViews Methods">AnnotationViews Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_AnnotationMenu Methods">AnnotationMenu Methods</a></span></li>
 	
 </ul></li>
 
@@ -291,6 +293,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAnnotation:animated:">removeAnnotation:animated:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollView">scrollView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectAnnotaton:animated:">selectAnnotaton:animated:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showColorPickerForAnnotation:animated:">showColorPickerForAnnotation:animated:</a></span></li>
 	
@@ -636,6 +640,50 @@ Events from a attached UIScrollView will be relayed to all visible PSPDFPageView
 						</ul>
 						
 						
+						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
+						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedAnnotations">&nbsp;&nbsp;selectedAnnotations</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectAnnotaton:animated:">&ndash;&nbsp;selectAnnotaton:animated:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="AnnotationMenu Methods" name="task_AnnotationMenu Methods"></a>
 						<h3 class="subsubtitle task-title">AnnotationMenu Methods</h3>
 
@@ -715,44 +763,6 @@ Events from a attached UIScrollView will be relayed to all visible PSPDFPageView
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/passthroughViewsForPopoverController">&ndash;&nbsp;passthroughViewsForPopoverController</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="AnnotationViews Methods" name="task_AnnotationViews Methods"></a>
-						<h3 class="subsubtitle task-title">AnnotationViews Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/selectedAnnotations">&nbsp;&nbsp;selectedAnnotations</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/singleTapped:">&ndash;&nbsp;singleTapped:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/longPress:">&ndash;&nbsp;longPress:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/addAnnotation:animated:">&ndash;&nbsp;addAnnotation:animated:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/removeAnnotation:animated:">&ndash;&nbsp;removeAnnotation:animated:</a></code>
 	</span>
 	
 	
@@ -1145,7 +1155,7 @@ This is set to a good default already. You shouldn&rsquo;t need to touch this.</
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Top right offset. Defaults to 30.</p>
+		<p>Top right offset. Defaults to 30.f.</p>
 	</div>		
 	
     
@@ -1294,7 +1304,7 @@ This is set to a good default already. You shouldn&rsquo;t need to touch this.</
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *selectedAnnotations</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *selectedAnnotations</code></div>
 
     
 	
@@ -1397,7 +1407,7 @@ This is set to a good default already. You shouldn&rsquo;t need to touch this.</
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set default shadowOpacity. Defaults to 0.7.</p>
+		<p>Set default shadowOpacity. Defaults to 0.7f.</p>
 	</div>		
 	
     
@@ -1557,7 +1567,7 @@ This is set to a good default already. You shouldn&rsquo;t need to touch this.</
 	
 	<div class="method-subsection brief-description">
 		<p>Add an <code>annotation</code> to the current pageView.
-This will either queue a re-render ofthe PDF, or add a UIView subclass for the matching annotation,
+This will either queue a re-render of the PDF, or add a UIView subclass for the matching annotation,
 depending on the annotation type and the value of <code>isOverlay</code>.
 This will not change anything on the data model below. Also add an annotation to the <a href="#//api/name/document">document</a> object.</p>
 	</div>		
@@ -1613,7 +1623,7 @@ Those annotations return YES on the isOverlay property.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>If annotations are already loaded, and the annotation is a view, access it here.
-(Most PDF annotations are actually rendered into the <a href="#//api/name/page">page</a>; except annotations that return YES for isOverlay, like links or notes.</p>
+(Most PDF annotations are actually rendered into the <a href="#//api/name/page">page</a>; except annotations that return YES for <code>isOverlay</code>, like links or notes.</p>
 	</div>		
 	
     
@@ -1685,7 +1695,7 @@ Those annotations return YES on the isOverlay property.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Line width options (ink, border). Defaults to @[@1, @3, @6, @9, @12, @16, @25, @40]</p>
+		<p>Line width options (ink, border). Defaults to <code>@[@1, @3, @6, @9, @12, @16, @25, @40]</code></p>
 	</div>		
 	
     
@@ -2131,7 +2141,7 @@ This is equivalent to <code>[self convertPDFRectToViewRect:CGRectApplyAffineTran
 	
 	<div class="method-subsection brief-description">
 		<p>Returns available <code>PSPDFMenuItem's</code> for the current annotation.
-The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
+The better way to extend this is to use the <code>shouldShowMenuItems:*</code> delegates.</p>
 	</div>		
 	
     
@@ -2240,7 +2250,7 @@ The better way to extend this is to use the shouldShowMenuItems:* delegates.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Get the glyphs/words on a specific rect.
-Usage e.g. NSDictionary *objects = [pageView objectsAtRect:rect options:@{PSPDFObjectsFullWords : @YES}];</p>
+Usage e.g. <code>NSDictionary *objects = [pageView objectsAtRect:rect options:@{PSPDFObjectsFullWords : @YES}]</code>;</p>
 	</div>		
 	
     
@@ -2313,7 +2323,7 @@ Usage e.g. NSDictionary *objects = [pageView objectsAtRect:rect options:@{PSPDFO
 	
 	<div class="method-subsection brief-description">
 		<p>Returns the passthrough views for the popover controllers (e.g. color picker).
-By default this is fairly aggressive and returns the pdfController/navController. If you dislike this behavior return nil to enforce the rule first touch after popover = no reaction. However the passthroughViews allow a faster editing of annotations.</p>
+By default this is fairly aggressive and returns the <a href="#//api/name/pdfController"><code>pdfController</code></a>/<code>navController</code>. If you dislike this behavior return nil to enforce the rule first touch after popover = no reaction. However the passthroughViews allow a faster editing of annotations.</p>
 	</div>		
 	
     
@@ -2446,6 +2456,42 @@ By default this is fairly aggressive and returns the pdfController/navController
 		<div class="note"><p><strong>Note:</strong> this only lets you access the scrollView if it&rsquo;s in the view hierarchy.
 If we use pageCurl mode, we have a global scrollView which can be accessed with <code></code>pdfController<code>.pagingScrollView</code></p></div>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFPageView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectAnnotaton:animated:" title="selectAnnotaton:animated:"></a>
+	<h3 class="subsubtitle method-title">selectAnnotaton:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Select annotation and show the menu for it</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)selectAnnotaton:(PSPDFAnnotation *)<em>annotation</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -2852,7 +2898,7 @@ Returns YES if the tap has been handled, else NO.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

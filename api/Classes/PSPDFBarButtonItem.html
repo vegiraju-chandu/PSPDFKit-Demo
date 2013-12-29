@@ -197,15 +197,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Custom subclass that handles a UIBarButtonItem within the UINavigationBar of <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>.</p>
+						<p>Custom subclass that handles an <code>UIBarButtonItem</code> within the <code>UINavigationBar</code> of <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>.</p>
 
-<p>The toolbar system in <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a> is designed to work with both stock UIBarButtonItem and PSPDFBarButtonItem; but if you want to use additionalRightBarButtonItems (where the items are listed inside a UIActionSheet) you must use a subclass of PSPDFBarButtonItem.</p>
+<p>The toolbar system in <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a> is designed to work with both stock <code>UIBarButtonItem</code> and <code>PSPDFBarButtonItem</code>; but if you want to use <code>additionalRightBarButtonItems</code> (where the items are listed inside an <code>UIActionSheet</code>) you must use a subclass of <code>PSPDFBarButtonItem</code>.</p>
 
-<p>PSPDFBarButtonItem also gives you access to the <a href="#//api/name/pdfController">pdfController</a> and ways to dynamically enable/disable your icon.</p>
+<p>PSPDFBarButtonItem also gives you access to the <a href="#//api/name/pdfController"><code>pdfController</code></a> and ways to dynamically enable/disable your icon.</p>
 
-<p>Call updateBarButtonItem:animated: if you need to change tie image/customView/systemImage after the barButton has been displayed.</p>
-
-<p>Do not change target/selector - if the case of UIActionSheet/moreButton we call target/selector of the selected barButtonItem but with the sender argument of the <a href="../Classes/PSPDFMoreBarButtonItem.html">PSPDFMoreBarButtonItem</a>. This is needed to get the correct coordinates in case a UIPopoverController follows (which will originate from that moreBarButtonItem). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p>
+<p>Call <code>updateBarButtonItem:animated:</code> if you need to change the <code>image</code>/<a href="#//api/name/customView"><code>customView</code></a>/<code>systemImage</code> after the barButton has been displayed.</p><div class="warning"><p><strong>Warning:</strong> Do not change <code>target</code>/<code>selector</code> - if the case of <code>UIActionSheet</code>/moreButton we call target/selector of the selected <code>barButtonItem</code> but with the sender argument of the <code>PSPDFMoreBarButtonItem</code>. This is needed to get the correct coordinates in case an <code>UIPopoverController</code> follows (which will originate from that <code>moreBarButtonItem</code>). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p></div>
 					</div>
 					
 					
@@ -393,8 +391,8 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Global helper to dismiss any open popover handled by <a href="../Classes/PSPDFViewController.html">PSPDFViewController</a>.
-This will even dismiss popovers that don&rsquo;t expose their popover, such as UIActionSheet or UIPrintInteractionController.</p>
+		<p>Global helper to dismiss any open popover handled by <a href="../Classes/PSPDFViewController.html"><code>PSPDFViewController</code></a>.
+This will even dismiss popovers that don&rsquo;t expose their popover, such as <code>UIActionSheet</code> or <code>UIPrintInteractionController</code>.</p>
 	</div>		
 	
     
@@ -466,7 +464,7 @@ This will even dismiss popovers that don&rsquo;t expose their popover, such as U
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Peeks into certain Apple classes to get the internal UIPopoverController. (e.g. UIPrintInteractionController. I&rsquo;ve written rdars to allow access to the internal popoverController - but this is the best way in the mean time)</p>
+		<p>Peeks into certain Apple classes to get the internal <code>UIPopoverController</code>. (e.g. <code>UIPrintInteractionController</code>. I&rsquo;ve written rdars to allow access to the internal <code>popoverController</code> - but this is the best way in the mean time)</p>
 	</div>		
 	
     
@@ -557,7 +555,7 @@ This will even dismiss popovers that don&rsquo;t expose their popover, such as U
 	
 	<div class="method-subsection brief-description">
 		<p>Always implement actionName in your subclass.
-This is needed to list the action in additionalRightBarButtonItems in an ActionSheet.</p>
+This is needed to list the action in <code>additionalRightBarButtonItems</code> in an <code>UIActionSheet</code>.</p>
 	</div>		
 	
     
@@ -593,7 +591,7 @@ This is needed to list the action in additionalRightBarButtonItems in an ActionS
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Implement customView, <a href="#//api/name/image">image</a> or <a href="#//api/name/systemItem">systemItem</a> in your subclass. (via overriding the method)</p>
+		<p>Implement <code>customView</code>, <a href="#//api/name/image"><code>image</code></a> or <a href="#//api/name/systemItem"><code>systemItem</code></a> in your subclass. (via overriding the method)</p>
 	</div>		
 	
     
@@ -629,7 +627,7 @@ This is needed to list the action in additionalRightBarButtonItems in an ActionS
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Init with <a href="#//api/name/pdfController">pdfController</a> reference (later calls presentModalViewController:embeddedInNavigationController:withCloseButton:animated:)</p>
+		<p>Init with <a href="#//api/name/pdfController">pdfController</a> reference (later calls <code>presentModalViewController:embeddedInNavigationController:withCloseButton:animated:</code>)</p>
 	</div>		
 	
     
@@ -646,7 +644,7 @@ This is needed to list the action in additionalRightBarButtonItems in an ActionS
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> This is the only allowed contructor for PSPDFBarButtonItem.</p></div>
+		<div class="note"><p><strong>Note:</strong> This is the only allowed contructor for <code>PSPDFBarButtonItem</code>.</p></div>
 	</div>
 	
 	
@@ -673,7 +671,7 @@ This is needed to list the action in additionalRightBarButtonItems in an ActionS
 		<p>Defaults to YES. Override if the bar button may not be available.
 Unavailable buttons will not be displayed in the toolbar.
 Can also be used to hide some options when the grid is displayed.
-e.g. return self.<a href="#//api/name/pdfController">pdfController</a>.document.isValid &amp;&amp; self.<a href="#//api/name/pdfController">pdfController</a>.viewMode == PSPDFViewModeDocument;</p>
+e.g. return <code>self.</code>pdfController<code>.document.isValid &amp;&amp; self.</code>pdfController<code>.viewMode == PSPDFViewModeDocument</code>;</p>
 	</div>		
 	
     
@@ -709,7 +707,7 @@ e.g. return self.<a href="#//api/name/pdfController">pdfController</a>.document.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>PSPDFBarButtonItem also supports long-press actions. Defaults to NO.</p>
+		<p><code>PSPDFBarButtonItem</code> also supports long-press actions. Defaults to NO.</p>
 	</div>		
 	
     
@@ -745,7 +743,7 @@ e.g. return self.<a href="#//api/name/pdfController">pdfController</a>.document.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Override if you want something different than UIBarButtonItemStylePlain</p>
+		<p>Override if you want something different than <code>UIBarButtonItemStylePlain</code>.</p>
 	</div>		
 	
     
@@ -817,7 +815,7 @@ e.g. return self.<a href="#//api/name/pdfController">pdfController</a>.document.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Subclass to react on long press events. Only invoked if <a href="#//api/name/isLongPressActionAvailable">isLongPressActionAvailable</a> is set to YES.</p>
+		<p>Subclass to react on long press events. Only invoked if <a href="#//api/name/isLongPressActionAvailable"><code>isLongPressActionAvailable</code></a> is set to YES.</p>
 	</div>		
 	
     
@@ -853,8 +851,8 @@ e.g. return self.<a href="#//api/name/pdfController">pdfController</a>.document.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Return a UIPopoverController if you presented a popover or a &ldquo;parent&rdquo; object if you indirectly presented a popover controller
-Sender can be either a UIBarButtonItem or a generic view.</p>
+		<p>Return an <code>UIPopoverController</code> if you presented a popover or a &ldquo;parent&rdquo; object if you indirectly presented a popover controller.
+Sender can be either an <code>UIBarButtonItem</code> or a generic view.</p>
 	</div>		
 	
     
@@ -927,7 +925,7 @@ Sender can be either a UIBarButtonItem or a generic view.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Use if presentModal needs to return nil because of a long-running process.
-Use this to correctly set up barButton dismissal logic for non-popover controls (e.g. UIDocumentInteractionController)</p>
+Use this to correctly set up barButton dismissal logic for non-popover controls (e.g. <code>UIDocumentInteractionController</code>)</p>
 	</div>		
 	
     
@@ -963,7 +961,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Defaults to (UIBarButtonSystemItem)-1. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the PSPDFSearchBarButtonItem class, register it at overrideClassNames, return (UIBarButtonSystemItem)-1 here and implement image/<a href="#//api/name/landscapeImagePhone">landscapeImagePhone</a>.</p>
+		<p>Defaults to <code>(UIBarButtonSystemItem)-1</code>. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the <code>PSPDFSearchBarButtonItem</code> class, register it at overrideClassNames, return <code>(UIBarButtonSystemItem)-1</code> here and implement <code>image</code>/<a href="#//api/name/landscapeImagePhone"><code>landscapeImagePhone</code></a>.</p>
 	</div>		
 	
     
@@ -999,7 +997,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Will be called when the pdfViewController updates the toolbar.
+		<p>Will be called when the <a href="#//api/name/pdfController"><code>pdfController</code></a> updates the toolbar.
 Default implementation determines if the button action can currently be invoked.
 Defaults to enabled, as long as a document is set and valid on pdfViewController.</p>
 	</div>		
@@ -1045,7 +1043,7 @@ Defaults to enabled, as long as a document is set and valid on pdfViewController
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-11-28)</span><br />
+						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
