@@ -137,8 +137,6 @@
 	
 	<option value="//api/name/copyToClipboard">&nbsp;&nbsp;&nbsp;&nbsp;- copyToClipboard</option>
 	
-	<option value="//api/name/drawInContext:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:</option>
-	
 	<option value="//api/name/drawInContext:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:withOptions:</option>
 	
 	<option value="//api/name/hitTest:">&nbsp;&nbsp;&nbsp;&nbsp;- hitTest:</option>
@@ -174,6 +172,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Drawing Methods">Drawing Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creation Methods">Creation Methods</a></span></li>
 	
@@ -284,8 +284,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/boundingBoxForPageRect:">boundingBoxForPageRect:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/copyToClipboard">copyToClipboard</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:">drawInContext:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:withOptions:">drawInContext:withOptions:</a></span></li>
 	
@@ -425,24 +423,6 @@ Annotation objects should only ever be edited on ONE thread. Modify properties o
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/boundingBoxForPageRect:">&ndash;&nbsp;boundingBoxForPageRect:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/drawInContext:">&ndash;&nbsp;drawInContext:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/drawInContext:withOptions:">&ndash;&nbsp;drawInContext:withOptions:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/imageWithSize:withOptions:">&ndash;&nbsp;imageWithSize:withOptions:</a></code>
 	</span>
 	
 	
@@ -677,6 +657,26 @@ Annotation objects should only ever be edited on ONE thread. Modify properties o
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/copyToClipboard">&ndash;&nbsp;copyToClipboard</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Drawing Methods" name="task_Drawing Methods"></a>
+						<h3 class="subsubtitle task-title">Drawing Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawInContext:withOptions:">&ndash;&nbsp;drawInContext:withOptions:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/imageWithSize:withOptions:">&ndash;&nbsp;imageWithSize:withOptions:</a></code>
 	</span>
 	
 	
@@ -1517,7 +1517,7 @@ This is a proprietary extension and saved into the PDF as &ldquo;PSPDF:GROUP&rdq
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> An appearance stream is a custom representation for annotations, much like a PDF within a PDF. PSPDFKit has only very limited support for appearance streams, currently only for stamp/ink annotations and that only under certain conditions.</p></div>
+		<div class="note"><p><strong>Note:</strong> An appearance stream is a custom representation for annotations, much like a PDF within a PDF.</p></div>
 	</div>
 	
 	
@@ -1541,7 +1541,7 @@ This is a proprietary extension and saved into the PDF as &ldquo;PSPDF:GROUP&rdq
 	
 	
 	<div class="method-subsection brief-description">
-		<p>If indexOnPage is set, it&rsquo;s a native PDF annotation.
+		<p>If <code>indexOnPage</code> is set, it&rsquo;s a native PDF annotation.
 If this is -1, it&rsquo;s not yet saved in the PDF or saved externally.</p>
 	</div>		
 	
@@ -2364,52 +2364,16 @@ Will return nil for invalid JSON or not recognized types.
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/drawInContext:" title="drawInContext:"></a>
-	<h3 class="subsubtitle method-title">drawInContext:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Draw current annotation in context. Coordinates here are in PDF coordinate space.
-Use <code>PSPDFConvertViewRectToPDFRect:</code> to convert your coordinates accordingly.
-(For performance considerations, you want to do this once, not every time <code>drawInContext:</code> is called)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)drawInContext:(CGContextRef)<em>context</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFAnnotation.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/drawInContext:withOptions:" title="drawInContext:withOptions:"></a>
 	<h3 class="subsubtitle method-title">drawInContext:withOptions:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows to customize the drawing process.
-Currently used to allow different annotation drawings during the annotation flattening process.</p>
+		<p>Draw current annotation in context. Coordinates here are in PDF coordinate space.
+Use <code>PSPDFConvertViewRectToPDFRect:</code> to convert your coordinates accordingly.
+(For performance considerations, you want to do this once, not every time <code>drawInContext:</code> is called)
+`options is currently used to allow different annotation drawings during the annotation flattening process.</p>
 	</div>		
 	
     
@@ -2661,7 +2625,7 @@ Currently used to allow different annotation drawings during the annotation flat
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns self.<a href="#//api/name/contents">contents</a> or something appropriate per annotation <a href="#//api/name/type">type</a> to describe the object.</p>
+		<p>Returns <code>self.</code>contents<code></code> or something appropriate per annotation <a href="#//api/name/type">type</a> to describe the object.</p>
 	</div>		
 	
     
@@ -2778,7 +2742,7 @@ for most annotations, except for the <a href="../Classes/PSPDFStampAnnotation.ht
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 PSPDFKit GmbH. All rights reserved. (Last updated: 2013-12-29)</span><br />
+						<p><span class="copyright">&copy; 2014 PSPDFKit GmbH. All rights reserved. (Last updated: 2014-01-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
