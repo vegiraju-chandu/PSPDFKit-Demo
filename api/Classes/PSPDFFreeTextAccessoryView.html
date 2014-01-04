@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFStatefulTableViewController Class Reference</title>
+		<title>PSPDFFreeTextAccessoryView Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFStatefulTableViewController Class Reference</h1>
+				<h1 class="hideInXcode">PSPDFFreeTextAccessoryView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,15 +39,16 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/controllerState">&nbsp;&nbsp;&nbsp;&nbsp;controllerState</option>
-	
-	<option value="//api/name/emptyView">&nbsp;&nbsp;&nbsp;&nbsp;emptyView</option>
-	
-	<option value="//api/name/loadingView">&nbsp;&nbsp;&nbsp;&nbsp;loadingView</option>
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithFrame:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:delegate:</option>
 	
 	
 	
@@ -73,11 +74,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/controllerState">controllerState</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/emptyView">emptyView</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingView">loadingView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
 </ul></li>
 
@@ -85,12 +82,18 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:delegate:">initWithFrame:delegate:</a></span></li>
+	
+</ul></li>
+
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFStatefulTableViewController Class Reference" name="top"></a>
+				<a title="PSPDFFreeTextAccessoryView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -99,7 +102,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFStatefulTableViewController Class Reference</h1>
+						<h1 class="title title-header">PSPDFFreeTextAccessoryView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -107,10 +110,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/PSPDFBaseTableViewController.html">PSPDFBaseTableViewController</a> : UITableViewController</td>
+	<td class="specification-value">UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFStatefulTableViewController.h</td>
+	<td class="specification-value">PSPDFFreeTextAccessoryView.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -120,7 +123,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Shows a message when the controller is empty.</p>
+						<p>Free Text accessory toolbar for faster styling.</p>
 					</div>
 					
 					
@@ -138,19 +141,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/emptyView">&nbsp;&nbsp;emptyView</a></code>
+		<code><a href="#//api/name/initWithFrame:delegate:">&ndash;&nbsp;initWithFrame:delegate:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/loadingView">&nbsp;&nbsp;loadingView</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/controllerState">&nbsp;&nbsp;controllerState</a></code>
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -168,18 +165,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/controllerState" title="controllerState"></a>
-	<h3 class="subsubtitle method-title">controllerState</h3>
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Changes the controller state and shows/hides the emptyView/<a href="#//api/name/loadingView">loadingView</a> depending on the state.</p>
+		<p>The input accessory delegate.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) PSPDFStatefulTableViewState controllerState</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;PSPDFFreeTextAccessoryViewDelegate&gt; delegate</code></div>
 
     
 	
@@ -197,79 +194,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFStatefulTableViewController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/emptyView" title="emptyView"></a>
-	<h3 class="subsubtitle method-title">emptyView</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Empty view.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIView *emptyView</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFStatefulTableViewController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/loadingView" title="loadingView"></a>
-	<h3 class="subsubtitle method-title">loadingView</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Loading view.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIView *loadingView</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFStatefulTableViewController.h</code><br />
+		<code class="declared-in-ref">PSPDFFreeTextAccessoryView.h</code><br />
 	</div>				
 	
 	
@@ -280,6 +205,48 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFrame:delegate:" title="initWithFrame:delegate:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Designated initializer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> delegate:(id&lt;PSPDFFreeTextAccessoryViewDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PSPDFFreeTextAccessoryView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     

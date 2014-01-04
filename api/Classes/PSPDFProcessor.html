@@ -50,9 +50,9 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRange:options:progressBlock:error:</option>
+	<option value="//api/name/generatePDFFromDocument:pageRanges:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRanges:options:progressBlock:error:</option>
 	
-	<option value="//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</option>
+	<option value="//api/name/generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:</option>
 	
 	<option value="//api/name/generatePDFFromHTMLString:options:">&nbsp;&nbsp;&nbsp;&nbsp;- generatePDFFromHTMLString:options:</option>
 	
@@ -98,9 +98,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">generatePDFFromDocument:pageRange:options:progressBlock:error:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRanges:options:progressBlock:error:">generatePDFFromDocument:pageRanges:options:progressBlock:error:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:">generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatePDFFromHTMLString:options:">generatePDFFromHTMLString:options:</a></span></li>
 	
@@ -171,13 +171,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</a></code>
+		<code><a href="#//api/name/generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRange:options:progressBlock:error:</a></code>
+		<code><a href="#//api/name/generatePDFFromDocument:pageRanges:options:progressBlock:error:">&ndash;&nbsp;generatePDFFromDocument:pageRanges:options:progressBlock:error:</a></code>
 	</span>
 	
 	
@@ -307,8 +307,8 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/generatePDFFromDocument:pageRange:options:progressBlock:error:" title="generatePDFFromDocument:pageRange:options:progressBlock:error:"></a>
-	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRange:options:progressBlock:error:</h3>
+	<a name="//api/name/generatePDFFromDocument:pageRanges:options:progressBlock:error:" title="generatePDFFromDocument:pageRanges:options:progressBlock:error:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRanges:options:progressBlock:error:</h3>
 	
 	
 	
@@ -318,7 +318,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSData *)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRange:(NSIndexSet *)<em>pageRange</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSData *)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRanges:(NSArray *)<em>pageRanges</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
 
     
 	
@@ -330,7 +330,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> Don&rsquo;t use with large files, since iOS has no virtual memory the process will be force-closed on exhaustive memory usage. 10-20MB should be the maximum for safe in-memory usage.</p></div>
+		<div class="note"><p><strong>Note:</strong> For <code>pageRanges</code> you can use <code>@[[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)]]</code> to convert the whole document.</p></div><div class="warning"><p><strong>Warning:</strong> Don&rsquo;t use with large files, since iOS has no virtual memory the process will be force-closed on exhaustive memory usage. 10-20MB should be the maximum for safe in-memory usage.</p></div>
 	</div>
 	
 	
@@ -348,19 +348,18 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:" title="generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:"></a>
-	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRange:outputFileURL:options:progressBlock:error:</h3>
+	<a name="//api/name/generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:" title="generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:"></a>
+	<h3 class="subsubtitle method-title">generatePDFFromDocument:pageRanges:outputFileURL:options:progressBlock:error:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> into a file. <code>options</code> can also contain <code>CGPDFContext</code> options.
-For <code>pageRange</code> you can use <code>[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)]</code> to convert the whole document.</p>
+		<p>Generate a PDF from a <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a> into a file. <code>options</code> can also contain <code>CGPDFContext</code> options.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRange:(NSIndexSet *)<em>pageRange</em> outputFileURL:(NSURL *)<em>fileURL</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)generatePDFFromDocument:(PSPDFDocument *)<em>document</em> pageRanges:(NSArray *)<em>pageRanges</em> outputFileURL:(NSURL *)<em>fileURL</em> options:(NSDictionary *)<em>options</em> progressBlock:(PSPDFProgressBlock)<em>progressBlock</em> error:(NSError **)<em>error</em></code></div>
 
     
 	
@@ -369,6 +368,11 @@ For <code>pageRange</code> you can use <code>[NSIndexSet indexSetWithIndexesInRa
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> For <code>pageRanges</code> you can use <code>@[[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, document.pageCount)]]</code> to convert the whole document.</p></div>
+	</div>
 	
 	
 	
@@ -586,7 +590,7 @@ When a password is set, only link annotations can be added as dictionary (this d
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 PSPDFKit GmbH. All rights reserved. (Last updated: 2014-01-02)</span><br />
+						<p><span class="copyright">&copy; 2014 PSPDFKit GmbH. All rights reserved. (Last updated: 2014-01-04)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
