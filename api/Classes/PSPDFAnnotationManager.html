@@ -207,12 +207,12 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Collects annotations from the various <a href="../Protocols/PSPDFAnnotationProvider.html">PSPDFAnnotationProvider</a> implementations.</p>
+						<p>Collects annotations from the various <a href="../Protocols/PSPDFAnnotationProvider.html"><code>PSPDFAnnotationProvider</code></a> implementations.</p>
 
 <p>Usually you want to add your custom <a href="../Protocols/PSPDFAnnotationProvider.html">PSPDFAnnotationProvider</a> instead of subclassing this class.
-If you subclass, use overrideClass:withClass: in <a href="../Classes/PSPDFDocument.html">PSPDFDocument</a>.</p>
+If you subclass, use <code>overrideClass:withClass:</code> in <a href="../Classes/PSPDFDocument.html"><code>PSPDFDocument</code></a>.</p>
 
-<p>This class will set the <a href="#//api/name/documentProvider"><code>documentProvider</code></a> on both annotation adding and retrieving. You don&rsquo;t have to handle this in your annotationProvider subclass.</p>
+<p>This class will set the <a href="#//api/name/documentProvider"><code>documentProvider</code></a> on both annotation adding and retrieving. You don&rsquo;t have to handle this in your <code>annotationProvider</code> subclass.</p>
 					</div>
 					
 					
@@ -376,8 +376,8 @@ If you subclass, use overrideClass:withClass: in <a href="../Classes/PSPDFDocume
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The simplest way to extend PSPDFAnnotationManager is to register a custom <a href="../Protocols/PSPDFAnnotationProvider.html">PSPDFAnnotationProvider</a>.
-You can even remove the default <a href="../Classes/PSPDFFileAnnotationProvider.html">PSPDFFileAnnotationProvider</a> if you don&rsquo;t want file-based annotations.</p>
+		<p>The simplest way to extend <code>PSPDFAnnotationManager</code> is to register a custom <a href="../Protocols/PSPDFAnnotationProvider.html"><code>PSPDFAnnotationProvider</code></a>.
+You can even remove the default <a href="../Classes/PSPDFFileAnnotationProvider.html"><code>PSPDFFileAnnotationProvider</code></a> if you don&rsquo;t want file-based annotations.</p>
 	</div>		
 	
     
@@ -454,8 +454,8 @@ You can even remove the default <a href="../Classes/PSPDFFileAnnotationProvider.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Direct access to the file annotation provider, who default is the only registered annotationProvider.
-Will never be nil, but can be removed from the <a href="#//api/name/annotationProviders">annotationProviders</a> list.</p>
+		<p>Direct access to the file annotation provider, who default is the only registered <code>annotationProvider</code>.
+Will never be nil, but can be removed from the <a href="#//api/name/annotationProviders"><code>annotationProviders</code></a> list.</p>
 	</div>		
 	
     
@@ -540,7 +540,7 @@ Will never be nil, but can be removed from the <a href="#//api/name/annotationPr
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The fileType translation table is used when we encounter pspdfkit:// links (or whatever is set to <code>document.</code>protocolString<code></code>)
+		<p>The fileType translation table is used when we encounter <code>pspdfkit://</code> links (or whatever is set to <code>document.</code>protocolString<code></code>)
 Maps e.g. &ldquo;mpg&rdquo; to <code>PSPDFLinkAnnotationVideo</code>. (NSString -> NSNumber)</p>
 	</div>		
 	
@@ -577,7 +577,7 @@ Maps e.g. &ldquo;mpg&rdquo; to <code>PSPDFLinkAnnotationVideo</code>. (NSString 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Filtered <a href="#//api/name/fileTypeTranslationTable">fileTypeTranslationTable</a> that only returns video or audio elements.</p>
+		<p>Filtered <a href="#//api/name/fileTypeTranslationTable"><code>fileTypeTranslationTable</code></a> that only returns video or audio elements.</p>
 	</div>		
 	
     
@@ -639,7 +639,7 @@ Maps e.g. &ldquo;mpg&rdquo; to <code>PSPDFLinkAnnotationVideo</code>. (NSString 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> PSPDFAnnotationManager will query all registered <a href="#//api/name/annotationProviders">annotationProviders</a> until one returns YES on addAnnotations.
+		<div class="note"><p><strong>Note:</strong> <code>PSPDFAnnotationManager</code> will query all registered <a href="#//api/name/annotationProviders">annotationProviders</a> until one returns YES on addAnnotations.
 Will return NO if no annotationProvider can handle the annotations. (By default, the <a href="../Classes/PSPDFFileAnnotationProvider.html"><code>PSPDFFileAnnotationProvider</code></a> will handle all annotations.)</p>
 
 <p>If you&rsquo;re just interested in being notified, you can register a custom <code>annotationProvider</code> and set in the array before the file <code>annotationProvider</code>. Implement <code>addAnnotations:</code> and return NO. You&rsquo;ll be notified of all add operations.</p></div>
@@ -666,7 +666,7 @@ Will return NO if no annotationProvider can handle the annotations. (By default,
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns all annotations of all <a href="#//api/name/annotationProviders">annotationProviders</a>.</p>
+		<p>Returns all annotations of all <a href="#//api/name/annotationProviders"><code>annotationProviders</code></a>.</p>
 	</div>		
 	
     
@@ -683,7 +683,7 @@ Will return NO if no annotationProvider can handle the annotations. (By default,
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns dictionary NSNumber->NSArray. Only adds entries for a page if there are annotations.</p><div class="warning"><p><strong>Warning:</strong> This might take some time if the annotation cache hasn&rsquo;t been built yet.</p></div>
+		<p>Returns dictionary <code>NSNumber</code>-><code>NSArray</code>. Only adds entries for a page if there are annotations.</p><div class="warning"><p><strong>Warning:</strong> This might take some time if the annotation cache hasn&rsquo;t been built yet.</p></div>
 	</div>
 	
 	
@@ -764,7 +764,7 @@ If no class is found, the view will be ignored.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>This method will be called OFTEN. Multiple times during a page display, and basically each time you&rsquo;re scrolling or zooming. Ensure it is fast.
 This will query all <a href="#//api/name/annotationProviders">annotationProviders</a> and merge the result.
-For example, to get all annotations except links, use PSPDFAnnotationTypeAll &amp;~ PSPDFAnnotationTypeLink as type.</p><div class="note"><p><strong>Note:</strong> Fetching annotations may take a while. You can do this in a background thread.</p></div>
+For example, to get all annotations except links, use <code>PSPDFAnnotationTypeAll &amp;~ PSPDFAnnotationTypeLink</code> as type.</p><div class="note"><p><strong>Note:</strong> Fetching annotations may take a while. You can do this in a background thread.</p></div>
 	</div>
 	
 	
@@ -886,7 +886,7 @@ Call will be relayed to all <a href="#//api/name/annotationProviders"><code>anno
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>This method will be called on ALL annotations, not just the ones that you provided.</p><div class="note"><p><strong>Note:</strong> If you have custom code that changes annotations and you rely on the <code>didChangeAnnotation:</code> event, you need to call it manually.</p>
 
-<p>Options is used internally to determine of the file annotation provider should request an annotation update. (the userInfo notification dict will be forwarded.)</p></div>
+<p><code>options</code> is used internally to determine of the file annotation provider should request an annotation update. (the <code>userInfo</code> notification dict will be forwarded.)</p></div>
 	</div>
 	
 	
@@ -1063,7 +1063,7 @@ This is used to determine if <a href="#//api/name/annotationsForPage:type:">anno
 	<div class="method-subsection brief-description">
 		<p>Save annotations. (returning NO + eventually an error if it fails)
 Saving will be forwarded to all annotation providers.
-Usually you want to override the method in <a href="../Classes/PSPDFFileAnnotationProvider.html">PSPDFFileAnnotationProvider</a> instead.</p>
+Usually you want to override the method in <a href="../Classes/PSPDFFileAnnotationProvider.html"><code>PSPDFFileAnnotationProvider</code></a> instead.</p>
 	</div>		
 	
     

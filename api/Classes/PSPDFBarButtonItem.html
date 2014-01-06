@@ -203,7 +203,7 @@
 
 <p>PSPDFBarButtonItem also gives you access to the <a href="#//api/name/pdfController"><code>pdfController</code></a> and ways to dynamically enable/disable your icon.</p>
 
-<p>Call <code>updateBarButtonItem:animated:</code> if you need to change the <code>image</code>/<a href="#//api/name/customView"><code>customView</code></a>/<code>systemImage</code> after the barButton has been displayed.</p><div class="warning"><p><strong>Warning:</strong> Do not change <code>target</code>/<code>selector</code> - if the case of <code>UIActionSheet</code>/moreButton we call target/selector of the selected <code>barButtonItem</code> but with the sender argument of the <code>PSPDFMoreBarButtonItem</code>. This is needed to get the correct coordinates in case an <code>UIPopoverController</code> follows (which will originate from that <code>moreBarButtonItem</code>). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p></div>
+<p>Call <code>updateBarButtonItem:animated:</code> if you need to change the <code>image</code>/<a href="#//api/name/customView"><code>customView</code></a>/<code>systemImage</code> after the barButton has been displayed.</p><div class="warning"><p><strong>Warning:</strong> Do not change <code>target</code>/<code>selector</code> - if the case of <code>UIActionSheet</code>/moreButton we call target/selector of the selected <code>barButtonItem</code> but with the sender argument of the <a href="../Classes/PSPDFMoreBarButtonItem.html"><code>PSPDFMoreBarButtonItem</code></a>. This is needed to get the correct coordinates in case an <code>UIPopoverController</code> follows (which will originate from that <code>moreBarButtonItem</code>). If you override target/selector to something generic, you&rsquo;ll never know what button has been selected.</p></div>
 					</div>
 					
 					
@@ -961,7 +961,7 @@ Use this to correctly set up barButton dismissal logic for non-popover controls 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Defaults to <code>(UIBarButtonSystemItem)-1</code>. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the <code>PSPDFSearchBarButtonItem</code> class, register it at overrideClassNames, return <code>(UIBarButtonSystemItem)-1</code> here and implement <code>image</code>/<a href="#//api/name/landscapeImagePhone"><code>landscapeImagePhone</code></a>.</p>
+		<p>Defaults to <code>(UIBarButtonSystemItem)-1</code>. If you want to e.g. override the searchBarButtonItem that uses a system item, you need to override the <a href="../Classes/PSPDFSearchBarButtonItem.html"><code>PSPDFSearchBarButtonItem</code></a> class, register it at overrideClassNames, return <code>(UIBarButtonSystemItem)-1</code> here and implement <code>image</code>/<a href="#//api/name/landscapeImagePhone"><code>landscapeImagePhone</code></a>.</p>
 	</div>		
 	
     

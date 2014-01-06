@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>PSPDFAnnotationBorderStyle Constants Reference</title>
+		<title>PSPDFKeychainErrorCode Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">PSPDFAnnotationBorderStyle Constants Reference</h1>
+				<h1 class="hideInXcode">PSPDFKeychainErrorCode Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="PSPDFAnnotationBorderStyle Constants Reference" name="top"></a>
+				<a title="PSPDFKeychainErrorCode Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">PSPDFAnnotationBorderStyle Constants Reference</h1>
+						<h1 class="title title-header">PSPDFKeychainErrorCode Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">PSPDFAnnotation.h</td>
+	<td class="specification-value">PSPDFKeychain.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,11 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">PSPDFAnnotationBorderStyle</h3>
+                    <h3 class="subsubtitle method-title">PSPDFKeychainErrorCode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Annotation border style types.</p>
+                        <p>Error codes that can be returned in NSError objects.</p>
 					</div>
 					
 					
@@ -86,21 +86,29 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, PSPDFAnnotationBorderStyle ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, PSPDFKeychainErrorCode ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleNone</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorNone</a> = noErr,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleSolid</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorBadArguments</a> = -1001,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleDashed</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorNoPassword</a> = -1002,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleBelved</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorInvalidParameter</a> = errSecParam,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleInset</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorFailedToAllocated</a> = errSecAllocate,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleUnderline</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorNotAvailable</a> = errSecNotAvailable,<br/>
                             
-                            &nbsp;&nbsp; <a href="">PSPDFAnnotationBorderStyleUnknown</a>,<br/>
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorAuthorizationFailed</a> = errSecAuthFailed,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorDuplicatedItem</a> = errSecDuplicateItem,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorNotFound</a> = errSecItemNotFound,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorInteractionNotAllowed</a> = errSecInteractionNotAllowed,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">PSPDFKeychainErrorFailedToDecode</a> = errSecDecode,<br/>
                             
                             };</code>
                     
@@ -110,11 +118,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleNone"></a><code>PSPDFAnnotationBorderStyleNone</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorNone"></a><code>PSPDFKeychainErrorNone</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>No error.</p>
 
     
 
@@ -122,16 +130,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleSolid"></a><code>PSPDFAnnotationBorderStyleSolid</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorBadArguments"></a><code>PSPDFKeychainErrorBadArguments</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>Some of the arguments were invalid.</p>
 
     
 
@@ -139,16 +147,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleDashed"></a><code>PSPDFAnnotationBorderStyleDashed</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorNoPassword"></a><code>PSPDFKeychainErrorNoPassword</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>There was no password.</p>
 
     
 
@@ -156,16 +164,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleBelved"></a><code>PSPDFAnnotationBorderStyleBelved</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorInvalidParameter"></a><code>PSPDFKeychainErrorInvalidParameter</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>One or more parameters passed internally were not valid.</p>
 
     
 
@@ -173,16 +181,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleInset"></a><code>PSPDFAnnotationBorderStyleInset</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorFailedToAllocated"></a><code>PSPDFKeychainErrorFailedToAllocated</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>Failed to allocate memory.</p>
 
     
 
@@ -190,16 +198,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleUnderline"></a><code>PSPDFAnnotationBorderStyleUnderline</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorNotAvailable"></a><code>PSPDFKeychainErrorNotAvailable</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>No trust results are available.</p>
 
     
 
@@ -207,16 +215,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="PSPDFAnnotationBorderStyleUnknown"></a><code>PSPDFAnnotationBorderStyleUnknown</code></dt>
+                            <dt><a name="" title="PSPDFKeychainErrorAuthorizationFailed"></a><code>PSPDFKeychainErrorAuthorizationFailed</code></dt>
 <dd>
 
 
-<p>Annotation border style types.</p>
+<p>Authorization/Authentication failed.</p>
 
     
 
@@ -224,7 +232,75 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">PSPDFAnnotation.h</code>.
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFKeychainErrorDuplicatedItem"></a><code>PSPDFKeychainErrorDuplicatedItem</code></dt>
+<dd>
+
+
+<p>The item already exists.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFKeychainErrorNotFound"></a><code>PSPDFKeychainErrorNotFound</code></dt>
+<dd>
+
+
+<p>The item cannot be found.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFKeychainErrorInteractionNotAllowed"></a><code>PSPDFKeychainErrorInteractionNotAllowed</code></dt>
+<dd>
+
+
+<p>Interaction with the Security Server is not allowed.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="PSPDFKeychainErrorFailedToDecode"></a><code>PSPDFKeychainErrorFailedToDecode</code></dt>
+<dd>
+
+
+<p>Unable to decode the provided data.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">PSPDFKeychain.h</code>.
 	</p>
 	
 </dd>
@@ -241,7 +317,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">PSPDFAnnotation.h</code><br />
+                        <code class="declared-in-ref">PSPDFKeychain.h</code><br />
                     </div>				
                     
                     

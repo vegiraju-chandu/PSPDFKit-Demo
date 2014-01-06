@@ -54,15 +54,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</option>
-	
 	<option value="//api/name/isCombo">&nbsp;&nbsp;&nbsp;&nbsp;- isCombo</option>
 	
 	<option value="//api/name/isEdit">&nbsp;&nbsp;&nbsp;&nbsp;- isEdit</option>
 	
 	<option value="//api/name/isMultiSelect">&nbsp;&nbsp;&nbsp;&nbsp;- isMultiSelect</option>
-	
-	<option value="//api/name/numberOfOptions">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfOptions</option>
 	
 	
 	
@@ -104,15 +100,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isCombo">isCombo</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEdit">isEdit</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMultiSelect">isMultiSelect</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfOptions">numberOfOptions</a></span></li>
 	
 </ul></li>
 
@@ -172,12 +164,6 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:">&ndash;&nbsp;initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/isCombo">&ndash;&nbsp;isCombo</a></code>
 	</span>
 	
@@ -217,12 +203,6 @@
 		<code><a href="#//api/name/topIndex">&nbsp;&nbsp;topIndex</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/numberOfOptions">&ndash;&nbsp;numberOfOptions</a></code>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -285,7 +265,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *options</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *options</code></div>
 
     
 	
@@ -392,42 +372,6 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:" title="initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:"></a>
-	<h3 class="subsubtitle method-title">initWithAnnotationDictionary:documentRef:parent:fieldsAddressMap:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Designated initializer.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)initWithAnnotationDictionary:(CGPDFDictionaryRef)<em>annotDict</em> documentRef:(CGPDFDocumentRef)<em>documentRef</em> parent:(PSPDFFormElement *)<em>parentFormElement</em> fieldsAddressMap:(NSMutableDictionary *)<em>fieldsAddressMap</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFChoiceFormElement.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/isCombo" title="isCombo"></a>
 	<h3 class="subsubtitle method-title">isCombo</h3>
 	
@@ -448,6 +392,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Evaluates <code>PSPDFChoiceFlagCombo</code> in the <code>fieldFlags</code> property.</p></div>
+	</div>
 	
 	
 	
@@ -485,6 +434,11 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Evaluates <code>PSPDFChoiceFlagEdit</code> in the <code>fieldFlags</code> property.</p></div>
+	</div>
+	
 	
 	
 	
@@ -521,6 +475,11 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Evaluates <code>PSPDFChoiceFlagMultiSelect</code> in the <code>fieldFlags</code> property.</p></div>
+	</div>
+	
 	
 	
 	
@@ -530,42 +489,6 @@
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">PSPDFChoiceFormElement.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/numberOfOptions" title="numberOfOptions"></a>
-	<h3 class="subsubtitle method-title">numberOfOptions</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Number of predefined choices excluding editable choice.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfOptions</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">PSPDFChoiceEditorViewController.h</code><br />
 	</div>				
 	
 	
