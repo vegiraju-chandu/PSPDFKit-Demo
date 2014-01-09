@@ -12,7 +12,7 @@
 
 #import "PSPDFStatefulTableViewController.h"
 #import "PSPDFStyleable.h"
-#import "PSPDFBookmarkTableViewCell.h"
+#import "PSPDFBookmarkCell.h"
 
 @class PSPDFDocument, PSPDFBookmark, PSPDFBookmarkViewController;
 
@@ -48,7 +48,7 @@
 @interface PSPDFBookmarkViewController (SubclassingHooks)
 
 - (void)createBarButtonItems;
-- (void)updateBookmarkView;
+- (void)updateBookmarkViewAnimated:(BOOL)animated;
 - (void)addBookmarkAction:(id)sender;
 - (void)doneAction:(id)sender;
 

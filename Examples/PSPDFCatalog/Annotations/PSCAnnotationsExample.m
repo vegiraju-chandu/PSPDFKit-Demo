@@ -184,6 +184,7 @@
     
     // we use a NSData document here but it'll work even better with a file-based variant.
     PSPDFDocument *document = [PSPDFDocument documentWithData:[NSData dataWithContentsOfURL:hackerMagURL options:NSDataReadingMappedIfSafe error:NULL]];
+    document.annotationSaveMode = PSPDFAnnotationSaveModeDisabled;
     document.title = @"Programmatically create annotations";
     
     NSMutableArray *annotations = [NSMutableArray array];
@@ -191,7 +192,7 @@
     for (int i=0; i<5; i++) {
         PSPDFNoteAnnotation *noteAnnotation = [PSPDFNoteAnnotation new];
         // width/height will be ignored for note annotations.
-        noteAnnotation.boundingBox = (CGRect){CGPointMake(100, 50 + i*maxHeight/5), PSPDFNoteAnnotationViewFixedSize};
+        noteAnnotation.boundingBox = (CGRect){CGPointMake(100.f, 50.f + i*maxHeight/5), PSPDFNoteAnnotationViewFixedSize};
         noteAnnotation.contents = [NSString stringWithFormat:@"Note %d", 5-i]; // notes are added bottom-up
         [annotations addObject:noteAnnotation];
     }
@@ -272,14 +273,16 @@
 - (UIViewController *)invokeWithDelegate:(id<PSCExampleRunner>)delegate {
     NSURL *samplesURL = [NSBundle.mainBundle.resourceURL URLByAppendingPathComponent:@"Samples"];
     NSURL *documentURL = [samplesURL URLByAppendingPathComponent:kHackerMagazineExample];
-    
+    //NSURL *documentURL = [samplesURL URLByAppendingPathComponent:@"eKneeBoardCourses.pdf"];
+
     // Load from an example XFDF file.
-    NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
     NSURL *fileXML = [NSURL fileURLWithPath:[docsFolder stringByAppendingPathComponent:@"XFDFTest.xfdf"]];
     NSLog(@"Using XFDF file at %@", fileXML.path);
     
     // Create an example XFDF from the current document if one doesn't already exist.
-    if (![[NSFileManager defaultManager] fileExistsAtPath:fileXML.path]) {
+    //[NSFileManager.defaultManager removeItemAtURL:fileXML error:NULL]; // DEBUG HELPER: delete existing file.
+    if (![NSFileManager.defaultManager fileExistsAtPath:fileXML.path]) {
         // Collect all existing annotations from the document
         PSPDFDocument *tempDocument = [PSPDFDocument documentWithURL:documentURL];
         NSMutableArray *annotations = [NSMutableArray array];
@@ -297,6 +300,7 @@
     
     // Create document and set up the XFDF provider
     PSPDFDocument *document = [PSPDFDocument documentWithURL:documentURL];
+    document.annotationSaveMode = PSPDFAnnotationSaveModeExternalFile;
     [document setDidCreateDocumentProviderBlock:^(PSPDFDocumentProvider *documentProvider) {
         PSPDFXFDFAnnotationProvider *XFDFProvider = [[PSPDFXFDFAnnotationProvider alloc] initWithDocumentProvider:documentProvider fileURL:fileXML];
         documentProvider.annotationManager.annotationProviders = @[XFDFProvider];

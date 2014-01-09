@@ -37,7 +37,7 @@
 - (void)removeViewController:(UIViewController *)controller;
 
 /// All added view controllers.
-@property (nonatomic, readonly) NSArray *viewControllers;
+@property (nonatomic, copy, readonly) NSArray *viewControllers;
 
 /// @name State
 
@@ -46,6 +46,10 @@
 
 /// Set the currently visible view controller index.
 - (void)setVisibleViewControllerIndex:(NSUInteger)visibleViewControllerIndex animated:(BOOL)animated;
+
+/// Set to YES if you want to animate content size changes. Defaults to NO.
+/// @note Animation can't be blocked on iOS 6.
+@property (nonatomic, assign) BOOL animateContentSizeChanges;
 
 @end
 

@@ -51,8 +51,8 @@ const char PSCAlertViewKey;
 
         // if input is just numeric, convert to page
         if (pageIndex == NSNotFound) {
-            if ([pageLabel length] > 0 && [pageLabel rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].length == 0) {
-                pageIndex = [pageLabel integerValue];
+            if (pageLabel.length > 0 && [pageLabel rangeOfCharacterFromSet:[NSCharacterSet.decimalDigitCharacterSet invertedSet]].length == 0) {
+                pageIndex = pageLabel.integerValue;
                 if (pageIndex == 0) pageIndex = NSNotFound; // 0 is invalid!
                 else pageIndex--; // convert from user-page (starts at 1) to system (starts at 0)
             }
@@ -67,7 +67,7 @@ const char PSCAlertViewKey;
     }];
 
     [[websitePrompt textFieldAtIndex:0] setDelegate:self]; // enable return key
-    objc_setAssociatedObject([websitePrompt textFieldAtIndex:0], &PSCAlertViewKey, websitePrompt, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject([websitePrompt textFieldAtIndex:0], &PSCAlertViewKey, websitePrompt, OBJC_ASSOCIATION_ASSIGN);
     [websitePrompt show];
 }
 

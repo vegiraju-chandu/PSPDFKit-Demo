@@ -23,8 +23,8 @@
 /// Designated initializer.
 - (id)initWithPDFController:(PSPDFViewController *)pdfController;
 
-/// Associated pdfController. (`unsafe_unretained` because we observe KVO on this)
-@property (nonatomic, unsafe_unretained) PSPDFViewController *pdfController;
+/// Associated `PSPDFViewController`.
+@property (nonatomic, weak) PSPDFViewController *pdfController;
 
 /// Associated scroll view. Might be nil if transition doesn't support zooming.
 @property (nonatomic, weak) PSPDFContentScrollView *scrollView;
@@ -33,6 +33,6 @@
 @property (nonatomic, assign) CGFloat pagePadding;
 
 /// Customized content offset for `PSPDFViewState`.
-- (CGPoint)compensatedContentOffset;
+@property(nonatomic, readonly) CGPoint compensatedContentOffset;
 
 @end

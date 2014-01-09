@@ -2,6 +2,79 @@
 
 Subscribe to updates: [RSS](https://github.com/PSPDFKit/PSPDFKit-Demo/commits/master.atom) | [Twitter](http://twitter.com/PSPDFKit)
 
+__v3.3.5 - 9/Jan/2013__
+
+*  The gallery now supports more options like autostart, cover views or control customizations.
+*  Improved the `highlightedString` feature by narrowing down the target rect. Reduces the chance to extract text above/below the marked text.
+*  The render activity view now has a slight delay and animates in and out, making it less disruptive.
+*  Extends support for OS 7 dynamic type to more controls and cells.
+*  Localization has been streamlined and requires less entries. If you rely in a specific `identifier` for `PSPDFMenuItem` checks, remove the "..." from the strings.
+*  The option view in `PSPDFNoteAnnotationViewController` now uses blur on iOS 7 instead of plain transparency.
+*  Adds further workarounds for issues in `UITextView` on iOS 7 which improves caret scrolling and visibility when using external keyboards.
+*  The "Clear All" action on `PSPDFAnnotationTableViewController` is now a single undo step instead of one per annotation.
+*  Fixes an issue where the redo action of the `PSPDFAnnotationToolbar` would always prefer drawing redos, potentially preferring the wrong actions first.
+*  Fixes an issue that blocked moving annotations if they are above a form field.
+*  Fixes an issue that could select the wrong annotations when sending a single extracted page from a document via email.
+
+__v3.3.4 - 7/Jan/2013__
+
+*  The annotation table view has been redesigned and also shows the creation user and the last modification date, if available.
+*  New property: `skipMenuForNoteAnnotationsOnIPad` to control how the note controller is displayed.
+*  Update selection style for the saved annotation cells to better match the iOS 7 design.
+*  Improves logic for popover resizing of the container controller.
+*  Various tweaks to the stamp controller and the text stamp controller. Now adds default date stamps, automatically shows keyboard once the `PSPDFTextStampViewController` appears and more.
+*  Various localization updates, including localization for stamps.
+*  The `localizedDescription` for PDF Form Fields is now smarter and won't create strings like Button: Button.
+*  The `PSPDFAnnotationToolbar` has a new `backButtonItem` hook to replace the default "Done" back button.
+*  Some more icon tweaks: delete now better fits into the iOS 7 `UIMenuController` and sound now is a microphone instead of a note.
+*  Fixes an issue with saving custom pspdfkit:// prefixed links via the XFDF provider.
+
+__v3.3.3 - 6/Jan/2013__
+
+*  Re-enables the Clear button in the new `PSPDFFreeTextAccessoryView` after text has been changed.
+*  Don't show the ".pdf" file ending in the `PSPDFDocumentPickerController`.
+*  The inspector now repositions itself if the annotation changes the `boundingBox`.
+*  Saving annotations into the PDF has been optimized and creates a smaller PDF.
+*  Form objects no longer are deletable when using the `PSPDFAnnotationTableViewController` but will be cleared instead.
+*  API: Removed PSPDFInitialAnnotationLoadDelay. This is no longer a performance problem and has thus been removed and optimized.
+*  Improves styling in `PSPDFWebViewController` for iOS 6 when the navigation bar style is dark.
+*  The activity button in `PSPDFWebViewController` is now always enabled, not only after the page finished loading.
+*  `PSPDFWebViewController` now offers to load the page in Google Chrome, if installed.
+*  Fixes an UI issue where the document title label could be offset under iOS 7/iPhone if the HUD was hidden when a modal VC is invoked.
+*  Fixes an issue that prevented forms from saving correctly when saved via the Send via Email/Open In feature from a readonly source. 
+*  Fixes multiple issues with building/preserving the appearance string for certain PDF form elements.
+
+__v3.3.2 - 4/Jan/2013__
+
+*  Adds new accessory view for free text annotations to quickly access the inspector.
+*  The font size in `PSPDFNoteAnnotationViewController` now adapts to iOS 7 content size.
+*  The gradient calculation used in `PSPDFNoteAnnotationViewController` now simply returns a default yellow if the base is white.
+*  The delete note icon in `PSPDFNoteAnnotationViewController` is now dynamically enabled/disabled depending if there's text in the `UITextView`.
+*  Improves the animation and various design details in `PSPDFSearchViewController`, especially on iOS 7.
+*  Improves the annotation summary to now repeat type and description if that's the same. (Ink, Ink)
+*  Various smaller design updates for the annotation inspector.
+*  API Update: `generatePDFFromDocument:` now accepts `pageRanges` as NSArray, which allows to easily re-order document pages (compared to a single NSIndexSet)
+*  Fixes an UI issue where the text view wouldn't properly adapt in `PSPDFNoteAnnotationViewController` on iPhone.
+*  Fixes an UI issue where the "No Bookmarks" label could be not exactly centered on first load.
+*  Fixes an issue where the annotation bar button item would be disabled with `PSPDFAnnotationSaveModeExternalFile`.
+*  Fixes an issue where the document sharing controller would sometimes not extract pages out of the PDF if only a subset of the pages are selected.
+*  Fixes an issue where wrong options could end up being used if `PSPDFDocumentSharingViewController` was preconfigured so it is invoked without showing the UI.
+
+__v3.3.1 - 2/Jan/2013__
+
+*  PSPDFKit now displays note indicators for annotations with note content.
+*  Annotations that can't be erased are no longer hidden while in erase mode.
+*  The view controller order in `PSPDFOutlineBarButtonItem` and in `PSPDFThumbnailViewController` has been changed - bookmark is now the last entry.
+*  PSPDFSearchViewController now has support for custom scopes with a new optional delegate method.
+*  On iOS 7 we now support `shouldAutomaticallyAdjustScrollViewInsets` with `PSPDFPageTransitionScrollContinuous` & `PSPDFScrollDirectionVertical`.
+*  The scroll-to-top feature when the status bar is tapped no longer breaks when showing/hiding the thumbnail controller.
+*  Fixes an issue with glyph position calculation for certain rotated documents that had a non-nil origin.
+*  Fixes an issue that prevented linking the precompiled PSPDFKit.framework with Xcode 4.6.
+*  Fixes a timing issue where the annotation menu wasn't always displayed wen selecting an annotation via the `PSPDFAnnotationTableViewController` on iPhone.
+*  Fixes a small issue where the `PSPDFNoteAnnotationViewController` could fail to show the keyboard when presented manually with a certain timing.
+*  Fixes an issue that could have kept a total 1-2 instances of `PSPDFPageView` around, even when the `PSPDFViewController` was deallocated.
+*  Fixes a potential retain cycle in the `PSPDFDocumentSharingViewController` on iOS 7.
+
 __v3.3.0 - 29/Dec/2013__
 
 Happy holidays!

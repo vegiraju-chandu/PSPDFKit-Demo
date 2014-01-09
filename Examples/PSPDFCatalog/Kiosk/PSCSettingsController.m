@@ -11,10 +11,6 @@
 #import "PSCSettingsController.h"
 #import "PSCBasicViewController.h"
 
-#if !__has_feature(objc_arc)
-#error "Compile this file with ARC"
-#endif
-
 #define _(string) NSLocalizedString(string, @"")
 
 @interface PSCSettingsController() {
@@ -60,7 +56,7 @@ static NSMutableDictionary *_settings;
 
 + (NSDictionary *)settings { return _settings; }
 
-// perform a appropriate choice of defaults.
+// Perform a appropriate choice of defaults.
 + (void)initialize {
     @autoreleasepool {
         if (self.class == [PSCSettingsController class]) {
@@ -88,9 +84,11 @@ static NSMutableDictionary *_settings;
             _settings[PROPERTY(emailButtonItem)] = @YES;
             _settings[PROPERTY(viewModeButtonItem)] = @YES;
             _settings[PROPERTY(useBorderedToolbarStyle)] = @NO;
-            _settings[@"renderBackgroundColor"] = [UIColor whiteColor];
+            _settings[@"renderBackgroundColor"] = UIColor.whiteColor;
             _settings[@"renderContentOpacity"] = @(1.f);
             _settings[PROPERTY(renderingMode)] = @(PSPDFPageRenderingModeThumbnailIfInMemoryThenFullPage);
+            //_settings[PROPERTY(pageTransition)] = @(PSPDFPageTransitionScrollContinuous);
+            //_settings[PROPERTY(scrollDirection)] = @(PSPDFScrollDirectionVertical);
         }
     }
 }
@@ -149,7 +147,7 @@ static NSMutableDictionary *_settings;
         _contentOpacityControl = [[UISegmentedControl alloc] initWithItems:@[@"100%", @"90%", @"80%", @"70%", @"60%"]];
     	[_contentOpacityControl addTarget:self action:@selector(contentOpacityChanged:) forControlEvents:UIControlEventValueChanged];
 
-        _paperColors = @[[UIColor whiteColor],
+        _paperColors = @[UIColor.whiteColor,
                          // 1-4: sepia, light to dark
                          [UIColor colorWithRed:0.980f green:0.976f blue:0.949f alpha:1.0f],
                          [UIColor colorWithRed:0.965f green:0.957f blue:0.906f alpha:1.0f],

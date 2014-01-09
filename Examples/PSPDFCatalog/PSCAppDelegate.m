@@ -70,15 +70,16 @@
     // Visit http://customers.pspdfkit.com to get your license key.
     PSPDFSetLicenseKey("DEMO");
 
+    // Configure callback for Open In Chrome feature. Optional.
+    PSPDFSetXCallbackString(@"pspdfcatalog://");
+
     // Create catalog controller delayed because we also dynamically load the license key.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        PSCatalogViewController *catalogController = [[PSCatalogViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        // PSPDFNavigationController is a simple subclass that forwards iOS6 rotation methods.
-        self.catalog = [[PSPDFNavigationController alloc] initWithRootViewController:catalogController];
-        self.window  = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        self.window.rootViewController = self.catalog;
-        [self.window makeKeyAndVisible];
-    });
+    PSCatalogViewController *catalogController = [[PSCatalogViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    // PSPDFNavigationController is a simple subclass that forwards iOS6 rotation methods.
+    self.catalog = [[PSPDFNavigationController alloc] initWithRootViewController:catalogController];
+    self.window  = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = self.catalog;
+    [self.window makeKeyAndVisible];
 
     // Enable global Undo/Redo
     application.applicationSupportsShakeToEdit = YES;
@@ -106,13 +107,15 @@
 
 - (BOOL)handleOpenURL:(NSURL *)launchURL {
     // Directly open the PDF.
-    if (launchURL.isFileURL && [[NSFileManager defaultManager] fileExistsAtPath:[launchURL path]]) {
+    if (launchURL.isFileURL && [NSFileManager.defaultManager fileExistsAtPath:launchURL.path]) {
         PSPDFDocument *document = [PSPDFDocument documentWithURL:launchURL];
         PSPDFViewController *pdfController = [self viewControllerForDocument:document];
         [self.catalog popToRootViewControllerAnimated:NO];
         [self.catalog pushViewController:pdfController animated:NO];
         return YES;
-    }else if ([launchURL.scheme.lowercaseString isEqualToString:@"pspdfcatalog"]) {
+
+    // Only show alert if there's content.
+    }else if ([launchURL.scheme.lowercaseString isEqualToString:@"pspdfcatalog"] && launchURL.absoluteString.length > @"pspdfcatalog://".length) {
         [[[UIAlertView alloc] initWithTitle:@"Custom Protocol Handler" message:launchURL.absoluteString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
     return NO;

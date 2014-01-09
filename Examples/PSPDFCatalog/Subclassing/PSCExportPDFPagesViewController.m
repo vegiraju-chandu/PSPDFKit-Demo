@@ -122,8 +122,8 @@ static NSString *const PSPDFActionBar = @"PSPDFActionBar";
             NSDictionary *options = flattened ? @{PSPDFProcessorAnnotationTypes : @(PSPDFAnnotationTypeAll&~PSPDFAnnotationTypeLink)} : @{PSPDFProcessorAnnotationAsDictionary : @YES};
             // TODO: use file-based version to support larger PDFs.
             NSError *error = nil;
-            NSData *data = [[PSPDFProcessor defaultProcessor] generatePDFFromDocument:self.document pageRange:selectedPages options:options progressBlock:^(NSUInteger currentPage, NSUInteger numberOfProcessedPages, NSUInteger totalPages) {
-                [PSPDFProgressHUD showProgress:(numberOfProcessedPages + 1) / (float)totalPages status:PSPDFLocalize(@"Preparing...")];
+            NSData *data = [PSPDFProcessor.defaultProcessor generatePDFFromDocument:self.document pageRanges:@[selectedPages] options:options progressBlock:^(NSUInteger currentPage, NSUInteger numberOfProcessedPages, NSUInteger totalPages) {
+                [PSPDFProgressHUD showProgress:(numberOfProcessedPages + 1) / (float)totalPages status:PSPDFLocalizeWithEllipsis(@"Preparing")];
             } error:&error];
 
             //

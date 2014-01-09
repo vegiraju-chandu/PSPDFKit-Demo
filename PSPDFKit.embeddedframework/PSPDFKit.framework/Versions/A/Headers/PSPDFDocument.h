@@ -360,12 +360,14 @@ typedef NS_ENUM(NSInteger, PSPDFAnnotationSaveMode) {
 /// `NSArray *annotations = [annotationManager annotationsForPage:compensatedPage type:PSPDFAnnotationTypeAll];`
 - (NSArray *)annotationsForPage:(NSUInteger)page type:(PSPDFAnnotationType)type;
 
-/// Add `annotations` to the current document.
+/// Add `annotations` to the current document (and the backing store `PSPDFAnnotationProvider`)
 /// @note For each, the `absolutePage` property of the annotation is used.
 /// @warning Might change the `page` property if multiple documentProviders are set.
 - (BOOL)addAnnotations:(NSArray *)annotations;
 
-/// Remove `annotations`.
+/// Remove `annotations` from the backing `PSPDFAnnotationProvider` object(s).
+/// @note Might return NO if one or multiple annotations couldn't be deleted.
+/// This might be the case for form annotations or other objects that return NO for `isDeletable`.
 - (BOOL)removeAnnotations:(NSArray *)annotations;
 
 /// Returns all annotations in this document in the form of an NSNumber->NSArray dictionary.
@@ -458,7 +460,7 @@ extern NSString *const PSPDFIgnoreDisplaySettings;   // Always draw pixels with 
 /// This fixes tiny white/gray lines at the borders of a document that else might show up.
 @property (nonatomic, copy) NSDictionary *renderOptions;
 
-/// Set what annotations should be rendered. Defaults to PSPDFAnnotationTypeAll.
+/// Set what annotations should be rendered. Defaults to `PSPDFAnnotationTypeAll`.
 @property (nonatomic, assign) PSPDFAnnotationType renderAnnotationTypes;
 
 @end
@@ -466,9 +468,9 @@ extern NSString *const PSPDFIgnoreDisplaySettings;   // Always draw pixels with 
 // Creates annotations based on the text content. See `detectLinkTypes:forPagesInRange:`.
 typedef NS_OPTIONS(NSUInteger, PSPDFTextCheckingType) {
     PSPDFTextCheckingTypeNone        = 0,
-    PSPDFTextCheckingTypeLink        = 1 << 0,  // URLs
-    PSPDFTextCheckingTypePhoneNumber = 1 << 1,  // Phone numbers
-    PSPDFTextCheckingTypeAll         = NSUIntegerMax
+    PSPDFTextCheckingTypeLink        = 1 << 0,       /// URLs.
+    PSPDFTextCheckingTypePhoneNumber = 1 << 1,       /// Phone numbers.
+    PSPDFTextCheckingTypeAll         = NSUIntegerMax /// All types. Currently URLs and phone numbers.
 };
 
 @interface PSPDFDocument (DataDetection)
