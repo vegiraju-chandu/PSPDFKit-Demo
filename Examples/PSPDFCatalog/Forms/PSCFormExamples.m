@@ -26,14 +26,7 @@ static PSPDFViewController *PSPDFFormExampleInvokeWithFilename(NSString *filenam
     
 }
 
-static PSPDFViewController *PSPDFFormExampleViewControllerForDocument(PSPDFDocument *document) {
-    PSPDFViewController *pdfController = [[PSPDFViewController alloc] initWithDocument:document];
-    pdfController.rightBarButtonItems = @[pdfController.searchButtonItem, pdfController.outlineButtonItem, pdfController.annotationButtonItem, pdfController.viewModeButtonItem];
-    pdfController.additionalBarButtonItems = @[pdfController.openInButtonItem, pdfController.bookmarkButtonItem, pdfController.brightnessButtonItem, pdfController.printButtonItem, pdfController.emailButtonItem];
-    return pdfController;
-}
-
-@interface PSCFormExampleSignatureDelegate : NSObject <PSPDFDigitalSignatureRevisionDelegate>
+@interface PSCFormExampleSignatureDelegate : NSObject <PSPDFDigitalSignatureRevisionDelegate, PSPDFDigitalSignatureSigningDelegate>
 + (PSCFormExampleSignatureDelegate *)sharedDelegate;
 @end
 
@@ -46,23 +39,38 @@ static PSPDFViewController *PSPDFFormExampleViewControllerForDocument(PSPDFDocum
     return delegate;
 }
 - (void)pdfRevisionRequested:(PSPDFDocument *)pdf verificationHandler:(id<PSPDFDigitalSignatureVerificationHandler>)handler {
-    PSPDFViewController *controller = PSPDFFormExampleViewControllerForDocument(pdf);
+    NSString *date = [NSDateFormatter localizedStringFromDate:handler.signature.timeSigned dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
+    NSString *title = [NSString stringWithFormat:@"%@ (%@ - %@)", handler.documentProvider.document.title, date, handler.signature.name];
+    [self showDocument:pdf withTitle:title];
+}
+- (void)pdfSigned:(PSPDFDocument *)pdf signingHandler:(id<PSPDFDigitalSignatureSigningHandler>)handler {
+    
+}
+- (void)showDocument:(PSPDFDocument *)document withTitle:(NSString *)title {
+    PSPDFViewController *controller = [self viewControllerForDocument:document];
     controller.rightBarButtonItems = @[controller.searchButtonItem, controller.outlineButtonItem, controller.viewModeButtonItem];
     
-    NSString *date = [NSDateFormatter localizedStringFromDate:handler.signature.timeSigned dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
-    pdf.title = [NSString stringWithFormat:@"%@ (%@ - %@)", handler.documentProvider.document.title, date, handler.signature.name];
+    if (title) document.title = title;
     
     PSCAppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
     [appDelegate.catalog pushViewController:controller animated:YES];
 }
+- (PSPDFViewController *)viewControllerForDocument:(PSPDFDocument *)document {
+    PSPDFViewController *pdfController = [[PSPDFViewController alloc] initWithDocument:document];
+    pdfController.rightBarButtonItems = @[pdfController.searchButtonItem, pdfController.outlineButtonItem, pdfController.annotationButtonItem, pdfController.viewModeButtonItem];
+    pdfController.additionalBarButtonItems = @[pdfController.openInButtonItem, pdfController.bookmarkButtonItem, pdfController.brightnessButtonItem, pdfController.printButtonItem, pdfController.emailButtonItem];
+    return pdfController;
+}
 @end
 
-static void PSPDFFormExampleRegisterForRevisionCallbacks() {
+static void PSPDFFormExampleRegisterForCallbacks() {
     [PSPDFDigitalSignatureManager.sharedManager registerForReceivingRequestsToViewRevisions:PSCFormExampleSignatureDelegate.sharedDelegate];
+    [PSPDFDigitalSignatureManager.sharedManager registerForReceivingSignedDocuments:PSCFormExampleSignatureDelegate.sharedDelegate];
 }
 
-static void PSPDFFormExampleDeregisterForRevisionCallbacks() {
+static void PSPDFFormExampleDeregisterForCallbacks() {
     [PSPDFDigitalSignatureManager.sharedManager deregisterFromReceivingRequestsToViewRevisions:PSCFormExampleSignatureDelegate.sharedDelegate];
+    [PSPDFDigitalSignatureManager.sharedManager deregisterFromReceivingSignedDocuments:PSCFormExampleSignatureDelegate.sharedDelegate];
 }
 
 @implementation PSCFormExample
@@ -76,13 +84,13 @@ static void PSPDFFormExampleDeregisterForRevisionCallbacks() {
         self.category = PSCExampleCategoryForms;
         self.priority = 20;
         PSPDFFormExampleAddTrustedCertificates();
-        PSPDFFormExampleRegisterForRevisionCallbacks();
+        PSPDFFormExampleRegisterForCallbacks();
     }
     return self;
 }
 
 - (void)dealloc {
-    PSPDFFormExampleDeregisterForRevisionCallbacks();
+    PSPDFFormExampleDeregisterForCallbacks();
 }
 
 - (UIViewController *)invokeWithDelegate:(id<PSCExampleRunner>)delegate {
@@ -102,13 +110,13 @@ static void PSPDFFormExampleDeregisterForRevisionCallbacks() {
         self.category = PSCExampleCategoryForms;
         self.priority = 10;
         PSPDFFormExampleAddTrustedCertificates();
-        PSPDFFormExampleRegisterForRevisionCallbacks();
+        PSPDFFormExampleRegisterForCallbacks();
     }
     return self;
 }
 
 - (void)dealloc {
-    PSPDFFormExampleDeregisterForRevisionCallbacks();
+    PSPDFFormExampleDeregisterForCallbacks();
 }
 
 - (UIViewController *)invokeWithDelegate:(id<PSCExampleRunner>)delegate {
