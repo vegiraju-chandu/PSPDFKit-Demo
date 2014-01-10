@@ -448,24 +448,32 @@ body.features ul.iphone-screenshots {
       clear: both; }
     /* line 41, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
     body.features ul.iphone-screenshots li .screenshot {
+      position: relative;
       display: block;
       margin: 0;
       height: 620px;
       background: transparent url("/images/features/iphone5s_600px.png") no-repeat 0px 0px;
       background-size: 300px 615px; }
-      /* line 47, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+      /* line 48, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+      body.features ul.iphone-screenshots li .screenshot figure {
+        position: absolute;
+        top: 92px;
+        left: 32px;
+        width: 240px;
+        height: 426px; }
+      /* line 56, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
       body.features ul.iphone-screenshots li .screenshot img {
         display: block;
-        width: 300px;
-        height: 615px; }
-    /* line 53, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+        width: 240px;
+        height: 426px; }
+    /* line 62, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
     body.features ul.iphone-screenshots li h2 {
       color: #085075;
       font-family: "Gotham", "Gotham A", "Gotham B", Helvetiva, sans-serif;
       font-weight: 300;
       font-size: 18px;
       text-align: left; }
-    /* line 60, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
+    /* line 69, /Users/steipete/Documents/Projects/PSPDFKit-Website-v3/source/stylesheets/features.scss */
     body.features ul.iphone-screenshots li p {
       color: #555;
       font-size: 14px;
